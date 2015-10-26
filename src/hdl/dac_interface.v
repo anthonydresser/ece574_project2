@@ -30,26 +30,24 @@ module dac_interface(
 	output reg sync
     );
     
-    parameter [1:0] s0 = 0, s1 = 1;
+    parameter [1:0] s0 = 1'b0, s1 = 1'b1;
 
 	reg [15:0]shift;
 	reg [4:0]cnt;
-	reg [1:0] current_state, next_state;
+	reg current_state, next_state;
 	
 	// state memory logic //
 	always @(posedge clk, posedge reset)
-	if(reset)
-	   current_state <= s0;
-    else
-        current_state <= next_state;
+        if(reset)
+           current_state <= s0;
+        else
+            current_state <= next_state;
         
     // next state logic //
     always @(current_state, cnt)
         case(current_state)
-            s0:
-                next_state <= s1;
-            s1:
-                if(cnt == 16)
+            s0: next_state <= s1;
+            s1: if(cnt == 16)
                     next_state <= s0;
                 else
                     next_state <= s1;
@@ -63,7 +61,7 @@ module dac_interface(
                     shift <= load;
                 end
             s1: begin
-                    sync = 0;
+                    sync <= 0;
                     shift <= {shift[14:0], 1'b0};
                 end
         endcase
@@ -72,10 +70,9 @@ module dac_interface(
     
     // counter
 	always @ (posedge clk)
-	   if(!sync)
+	   if(sync == 0)
 	       cnt <= cnt + 1;
        else
            cnt <= 0;
 			
-	
 endmodule

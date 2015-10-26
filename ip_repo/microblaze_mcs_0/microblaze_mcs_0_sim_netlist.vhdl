@@ -1,10 +1,10 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
--- Date        : Mon Oct 26 16:05:48 2015
--- Host        : AK113-13 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/addresser/Documents/Project
---               2/ip_repo/microblaze_mcs_0/microblaze_mcs_0_sim_netlist.vhdl}
+-- Tool Version: Vivado v.2015.3 (lin64) Build 1368829 Mon Sep 28 20:06:39 MDT 2015
+-- Date        : Mon Oct 26 19:15:27 2015
+-- Host        : anthony-VirtualBox running 64-bit Ubuntu 14.04.3 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/anthony/Documents/ece574_project2/ip_repo/microblaze_mcs_0/microblaze_mcs_0_sim_netlist.vhdl
 -- Design      : microblaze_mcs_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,10 +16,21 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_GPI_Module is
   port (
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \Using_FPGA.Native\ : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \Using_FPGA.Native_0\ : out STD_LOGIC;
+    \Using_FPGA.Native_1\ : out STD_LOGIC;
+    \Using_FPGA.Native_2\ : out STD_LOGIC;
+    \Using_FPGA.Native_3\ : out STD_LOGIC;
+    \Using_FPGA.Native_4\ : out STD_LOGIC;
+    \Using_FPGA.Native_5\ : out STD_LOGIC;
+    \Using_FPGA.Native_6\ : out STD_LOGIC;
+    INTC_CIPR : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    lmb_reg_read_Q_reg : in STD_LOGIC;
+    lmb_reg_write_reg : in STD_LOGIC;
+    \lmb_abus_Q_reg[1]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     lmb_reg_read_reg : in STD_LOGIC;
-    GPI1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    GPI1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     Clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -27,84 +38,237 @@ entity microblaze_mcs_0_GPI_Module is
 end microblaze_mcs_0_GPI_Module;
 
 architecture STRUCTURE of microblaze_mcs_0_GPI_Module is
-  signal \Using_GPI.GPI_In[7]_i_1_n_0\ : STD_LOGIC;
+  signal GPI_In : STD_LOGIC_VECTOR ( 15 downto 8 );
+  signal \Using_GPI.GPI_In[15]_i_1_n_0\ : STD_LOGIC;
 begin
-\Using_GPI.GPI_In[7]_i_1\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_2__15\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(9),
+      I1 => INTC_CIPR(1),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_0\
+    );
+\Using_FPGA.Native_i_2__16\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(10),
+      I1 => INTC_CIPR(2),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_1\
+    );
+\Using_FPGA.Native_i_2__17\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(11),
+      I1 => INTC_CIPR(3),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_2\
+    );
+\Using_FPGA.Native_i_2__18\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(12),
+      I1 => INTC_CIPR(4),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_3\
+    );
+\Using_FPGA.Native_i_2__19\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(13),
+      I1 => INTC_CIPR(5),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_4\
+    );
+\Using_FPGA.Native_i_2__20\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(14),
+      I1 => INTC_CIPR(6),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_5\
+    );
+\Using_FPGA.Native_i_2__21\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(15),
+      I1 => INTC_CIPR(7),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native_6\
+    );
+\Using_FPGA.Native_i_3__10\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"111F"
+    )
+        port map (
+      I0 => GPI_In(8),
+      I1 => INTC_CIPR(0),
+      I2 => lmb_reg_read_Q_reg,
+      I3 => lmb_reg_write_reg,
+      O => \Using_FPGA.Native\
+    );
+\Using_GPI.GPI_In[15]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFEFFFFFF"
     )
         port map (
-      I0 => Q(4),
-      I1 => Q(1),
-      I2 => Q(0),
-      I3 => Q(3),
+      I0 => \lmb_abus_Q_reg[1]\(4),
+      I1 => \lmb_abus_Q_reg[1]\(1),
+      I2 => \lmb_abus_Q_reg[1]\(0),
+      I3 => \lmb_abus_Q_reg[1]\(3),
       I4 => lmb_reg_read_reg,
-      I5 => Q(2),
-      O => \Using_GPI.GPI_In[7]_i_1_n_0\
+      I5 => \lmb_abus_Q_reg[1]\(2),
+      O => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(0),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(0),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(0),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(10),
+      Q => GPI_In(10),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(11),
+      Q => GPI_In(11),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(12),
+      Q => GPI_In(12),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(13),
+      Q => GPI_In(13),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(14),
+      Q => GPI_In(14),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(15),
+      Q => GPI_In(15),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(1),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(1),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(1),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(2),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(2),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(2),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(3),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(3),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(3),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(4),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(4),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(4),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(5),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(5),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(5),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(6),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(6),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(6),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 \Using_GPI.GPI_In_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
       D => GPI1(7),
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(7),
-      R => \Using_GPI.GPI_In[7]_i_1_n_0\
+      Q => Q(7),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(8),
+      Q => GPI_In(8),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
+    );
+\Using_GPI.GPI_In_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => '1',
+      D => GPI1(9),
+      Q => GPI_In(9),
+      R => \Using_GPI.GPI_In[15]_i_1_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -1360,14 +1524,15 @@ entity microblaze_mcs_0_MB_FDR is
     load_Store_i2 : out STD_LOGIC;
     d_AS_I15_out : out STD_LOGIC;
     mul_Executing0 : out STD_LOGIC;
-    inHibit_EX0 : out STD_LOGIC;
     inHibit_EX1 : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
+    jump2_I_reg : out STD_LOGIC;
     use_Reg_Neg_S_i28_out : out STD_LOGIC;
-    \Using_FPGA.Native_1\ : out STD_LOGIC;
+    \Using_FPGA.Native_0\ : out STD_LOGIC;
     force_Val1_i27_out : out STD_LOGIC;
     use_Reg_Neg_DI_i26_out : out STD_LOGIC;
+    Reg_Test_Equal_N_i7_out : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_1\ : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     \write_Addr_I_reg[4]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     pc_write_I : out STD_LOGIC;
@@ -1383,20 +1548,20 @@ entity microblaze_mcs_0_MB_FDR is
     nonvalid_IFetch_n_reg_0 : out STD_LOGIC;
     \Using_FPGA.set_BIP_I_reg\ : out STD_LOGIC;
     using_Imm_reg : out STD_LOGIC;
+    mbar_hold_I_reg : out STD_LOGIC;
     missed_IFetch_reg : out STD_LOGIC;
     \Using_FPGA.Native_2\ : out STD_LOGIC;
-    Compare_Instr_reg : out STD_LOGIC;
     \Using_FPGA.Native_3\ : out STD_LOGIC;
     write_Reg_reg : out STD_LOGIC;
-    jump2_I_reg : out STD_LOGIC;
     write_Carry_I_reg : out STD_LOGIC;
     Sext16_reg : out STD_LOGIC;
     Sext8_reg : out STD_LOGIC;
     select_ALU_Carry_reg : out STD_LOGIC;
-    load_Store_i_reg : out STD_LOGIC;
-    swx_ready_reg : out STD_LOGIC;
+    Compare_Instr_reg : out STD_LOGIC;
     is_swx_I_reg : out STD_LOGIC;
     is_lwx_I_reg : out STD_LOGIC;
+    load_Store_i_reg : out STD_LOGIC;
+    swx_ready_reg : out STD_LOGIC;
     \write_Addr_I_reg[4]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     doublet_i_reg : out STD_LOGIC;
     byte_i_reg : out STD_LOGIC;
@@ -1412,22 +1577,19 @@ entity microblaze_mcs_0_MB_FDR is
     inHibit_EX : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
-    mbar_first_reg : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
+    mbar_first_reg : in STD_LOGIC;
     Exception_Kind : in STD_LOGIC_VECTOR ( 0 to 0 );
-    nonvalid_IFetch_n_reg_1 : in STD_LOGIC;
-    Sl_Rdy : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
     mul_Executing_reg_0 : in STD_LOGIC;
     load_Store_i_reg_0 : in STD_LOGIC;
     load_Store_i : in STD_LOGIC;
@@ -1439,37 +1601,39 @@ entity microblaze_mcs_0_MB_FDR is
     swx_ready : in STD_LOGIC;
     jump2_I_reg_0 : in STD_LOGIC;
     mtsmsr_write_i_reg_0 : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\ : in STD_LOGIC;
     \Synchronize.use_sync_reset.sync_reg[2]\ : in STD_LOGIC;
     LMB_Ready : in STD_LOGIC;
+    nonvalid_IFetch_n_reg_1 : in STD_LOGIC;
     \Using_FPGA.set_BIP_I_reg_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5\ : in STD_LOGIC;
     Use_Imm_Reg : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6\ : in STD_LOGIC;
+    mbar_hold_I_reg_0 : in STD_LOGIC;
+    Sl_Rdy : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
     missed_IFetch : in STD_LOGIC;
     \Using_FPGA.Native_7\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5\ : in STD_LOGIC;
-    Compare_Instr : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\ : in STD_LOGIC;
     \Using_FPGA.take_Intr_2nd_Phase_reg_0\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\ : in STD_LOGIC;
     I214_out : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : in STD_LOGIC;
     write_Carry_I_reg_0 : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ : in STD_LOGIC;
     Sext16_reg_0 : in STD_LOGIC;
     Imm_Value : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ : in STD_LOGIC;
     \Using_FPGA.take_Intr_2nd_Phase_reg_1\ : in STD_LOGIC;
     Sext8_reg_0 : in STD_LOGIC;
     select_ALU_Carry : in STD_LOGIC;
-    \Using_LWX_SWX_instr.reservation_reg_1\ : in STD_LOGIC;
-    is_swx_I_reg_0 : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\ : in STD_LOGIC;
+    Compare_Instr : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8\ : in STD_LOGIC;
+    is_swx_I_reg_0 : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\ : in STD_LOGIC;
     is_lwx_I : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_5\ : in STD_LOGIC;
+    \Using_LWX_SWX_instr.reservation_reg_1\ : in STD_LOGIC;
     Doublet : in STD_LOGIC;
     Byte : in STD_LOGIC
   );
@@ -1483,55 +1647,55 @@ architecture STRUCTURE of microblaze_mcs_0_MB_FDR is
   signal S94_out : STD_LOGIC;
   signal \^size_17to32.imm_reg_reg[15]\ : STD_LOGIC;
   signal \^unsigned_op_reg\ : STD_LOGIC;
-  signal \^using_fpga.native_1\ : STD_LOGIC;
+  signal \^using_fpga.native_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_3__0_n_0\ : STD_LOGIC;
   signal \^byte_i12_out\ : STD_LOGIC;
   signal is_swx_I : STD_LOGIC;
   signal load_Store_i_i_2_n_0 : STD_LOGIC;
-  signal mbar_first_i_3_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of Compare_Instr_i_3 : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \Result_Sel[0]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of Unsigned_Op_i_1 : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of Compare_Instr_i_3 : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \Result_Sel[0]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of Unsigned_Op_i_1 : label is "soft_lutpair34";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native\ : label is "FDR";
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__49\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__51\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__52\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__43\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__44\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__45\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__47\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__51\ : label is "soft_lutpair32";
   attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__4\ : label is "soft_lutpair27";
   attribute SOFT_HLUTNM of \Using_FPGA.set_BIP_I_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \Using_FPGA.take_Intr_2nd_Phase_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \Using_FPGA.take_Intr_2nd_Phase_i_1\ : label is "soft_lutpair37";
   attribute SOFT_HLUTNM of \Using_LWX_SWX_instr.reservation_i_3\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of doublet_Read_i_i_2 : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of ex_Valid_i_1 : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of inHibit_EX_i_3 : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of inHibit_EX_i_4 : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of load_Store_i_i_2 : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of mbar_first_i_3 : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of doublet_Read_i_i_2 : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of ex_Valid_i_1 : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of load_Store_i_i_2 : label is "soft_lutpair36";
   attribute SOFT_HLUTNM of missed_IFetch_i_1 : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of select_ALU_Carry_i_1 : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of swx_ready_i_1 : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \write_Addr_I[1]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \write_Addr_I[4]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of write_Carry_I_i_1 : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of mtsmsr_write_i_i_1 : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of select_ALU_Carry_i_1 : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of swx_ready_i_1 : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \write_Addr_I[1]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \write_Addr_I[4]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of write_Carry_I_i_1 : label is "soft_lutpair31";
 begin
   R_0 <= \^r_0\;
   \Size_17to32.imm_Reg_reg[15]\ <= \^size_17to32.imm_reg_reg[15]\;
   Unsigned_Op_reg <= \^unsigned_op_reg\;
-  \Using_FPGA.Native_1\ <= \^using_fpga.native_1\;
+  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
   byte_i12_out <= \^byte_i12_out\;
 Compare_Instr_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000222E2222"
+      INIT => X"0000000022222E22"
     )
         port map (
       I0 => Compare_Instr,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8\,
+      I3 => Imm_Value(0),
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
       I5 => Compare_Instr_i_3_n_0,
       O => Compare_Instr_reg
     );
@@ -1572,8 +1736,8 @@ Sext16_i_1: unisim.vcomponents.LUT6
       I0 => Sext16_reg_0,
       I1 => mul_Executing_reg,
       I2 => Imm_Value(0),
-      I3 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\,
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
+      I3 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\(0),
+      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\,
       I5 => \Using_FPGA.take_Intr_2nd_Phase_reg_1\,
       O => Sext16_reg
     );
@@ -1584,23 +1748,22 @@ Sext8_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => Sext8_reg_0,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
-      I3 => Imm_Value(0),
-      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\,
+      I2 => Imm_Value(0),
+      I3 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\(0),
+      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\,
       I5 => \Using_FPGA.take_Intr_2nd_Phase_reg_1\,
       O => Sext8_reg
     );
-\Size_17to32.imm_Reg[0]_i_1\: unisim.vcomponents.LUT6
+\Size_17to32.imm_Reg[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000008000000"
+      INIT => X"00000002"
     )
         port map (
       I0 => \^size_17to32.imm_reg_reg[15]\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
-      I2 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
+      I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
       O => E(0)
     );
 Unsigned_Op_i_1: unisim.vcomponents.LUT3
@@ -1635,15 +1798,15 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
     );
 \Using_FPGA.Native_i_1__121\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEAEAEAEFEAEFEAE"
+      INIT => X"FEFEFEAEAEAEAEAE"
     )
         port map (
       I0 => S94_out,
       I1 => \Using_FPGA.Native_7\,
       I2 => mul_Executing_reg,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5\,
-      I4 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\,
+      I5 => \Using_FPGA.Native_i_3__0_n_0\,
       O => \Using_FPGA.Native_2\
     );
 \Using_FPGA.Native_i_1__128\: unisim.vcomponents.LUT6
@@ -1652,14 +1815,57 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
     )
         port map (
       I0 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
       I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
       I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\,
-      O => \^using_fpga.native_1\
+      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
+      O => \^using_fpga.native_0\
     );
-\Using_FPGA.Native_i_1__44\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__43\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2008"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\,
+      O => use_Reg_Neg_S_i28_out
+    );
+\Using_FPGA.Native_i_1__44\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"08"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
+      O => force_Val1_i27_out
+    );
+\Using_FPGA.Native_i_1__45\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2008"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
+      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\,
+      O => use_Reg_Neg_DI_i26_out
+    );
+\Using_FPGA.Native_i_1__47\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0220"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
+      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\,
+      O => Reg_Test_Equal_N_i7_out
+    );
+\Using_FPGA.Native_i_1__48\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AAABAAAABBBBBBBB"
     )
@@ -1669,42 +1875,10 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
       I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
       I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
-      I5 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\,
-      O => \Using_FPGA.Native_0\
+      I5 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
+      O => \Using_FPGA.Native_1\
     );
-\Using_FPGA.Native_i_1__49\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"2008"
-    )
-        port map (
-      I0 => \^using_fpga.native_1\,
-      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
-      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\,
-      O => use_Reg_Neg_S_i28_out
-    );
-\Using_FPGA.Native_i_1__50\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"08"
-    )
-        port map (
-      I0 => \^using_fpga.native_1\,
-      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
-      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      O => force_Val1_i27_out
-    );
-\Using_FPGA.Native_i_1__51\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"2008"
-    )
-        port map (
-      I0 => \^using_fpga.native_1\,
-      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
-      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\,
-      O => use_Reg_Neg_DI_i26_out
-    );
-\Using_FPGA.Native_i_1__52\: unisim.vcomponents.LUT2
+\Using_FPGA.Native_i_1__51\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
@@ -1713,7 +1887,7 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
       I1 => mul_Executing_reg_0,
       O => pc_write_I
     );
-\Using_FPGA.Native_i_1__54\: unisim.vcomponents.LUT3
+\Using_FPGA.Native_i_1__53\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"EA"
     )
@@ -1740,7 +1914,7 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
       I0 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       O => load_Store_i2
     );
-\Using_FPGA.Native_i_1__87\: unisim.vcomponents.LUT2
+\Using_FPGA.Native_i_1__86\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
@@ -1759,19 +1933,6 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
       I2 => \Using_FPGA.Native_4\,
       O => \Using_FPGA.Native_i_2_n_0\
     );
-\Using_FPGA.Native_i_2__38\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAFFFFAAAAFFBF"
-    )
-        port map (
-      I0 => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\,
-      O => \Using_FPGA.Native_3\
-    );
 \Using_FPGA.Native_i_2__4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
@@ -1781,13 +1942,39 @@ Unsigned_Op_i_1: unisim.vcomponents.LUT3
       I1 => inHibit_EX,
       O => S94_out
     );
+\Using_FPGA.Native_i_2__45\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBABBBBBBBBBBBB"
+    )
+        port map (
+      I0 => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
+      O => \Using_FPGA.Native_3\
+    );
+\Using_FPGA.Native_i_3__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFBFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      O => \Using_FPGA.Native_i_3__0_n_0\
+    );
 \Using_FPGA.set_BIP_I_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00080A0A"
     )
         port map (
       I0 => \Using_FPGA.set_BIP_I_reg_0\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5\,
       I2 => \out\(0),
       I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I4 => mul_Executing_reg,
@@ -1832,20 +2019,20 @@ byte_i_i_1: unisim.vcomponents.LUT6
       I0 => Byte,
       I1 => mul_Executing_reg,
       I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
       I4 => \^byte_i12_out\,
       I5 => \out\(0),
       O => byte_i_reg
     );
 d_AS_I_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0700000000000000"
+      INIT => X"0070000000000000"
     )
         port map (
       I0 => \Using_FPGA.Native_5\,
       I1 => inHibit_EX,
-      I2 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I3 => mul_Executing_reg,
+      I2 => mul_Executing_reg,
+      I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
       O => d_AS_I15_out
@@ -1868,7 +2055,7 @@ doublet_i_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => Doublet,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
       I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
       I4 => \^byte_i12_out\,
       I5 => \out\(0),
@@ -1886,40 +2073,16 @@ ex_Valid_i_1: unisim.vcomponents.LUT5
       I4 => mul_Executing_reg,
       O => ex_Valid_reg
     );
-inHibit_EX_i_3: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F8FFFFFF"
-    )
-        port map (
-      I0 => \Using_FPGA.Native_5\,
-      I1 => inHibit_EX,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      O => jump2_I_reg
-    );
-inHibit_EX_i_4: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"4F444444"
-    )
-        port map (
-      I0 => Exception_Kind(0),
-      I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I2 => nonvalid_IFetch_n_reg_1,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      O => inHibit_EX0
-    );
 is_lwx_I_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000022222E22"
+      INIT => X"000000002222222E"
     )
         port map (
       I0 => is_lwx_I,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_5\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\,
       I5 => is_swx_I,
       O => is_lwx_I_reg
     );
@@ -1938,16 +2101,29 @@ is_lwx_I_i_4: unisim.vcomponents.LUT6
     );
 is_swx_I_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000000002E222222"
+      INIT => X"00000000222E2222"
     )
         port map (
       I0 => is_swx_I_reg_0,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
       I5 => is_swx_I,
       O => is_swx_I_reg
+    );
+jump2_I_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFEFEFFFFFFFFFFF"
+    )
+        port map (
+      I0 => S94_out,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      O => jump2_I_reg
     );
 load_Store_i_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -1972,28 +2148,31 @@ load_Store_i_i_2: unisim.vcomponents.LUT3
       I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
       O => load_Store_i_i_2_n_0
     );
-mbar_first_i_1: unisim.vcomponents.LUT5
+mbar_first_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8888888"
+      INIT => X"FFEFEFEF00202020"
     )
         port map (
-      I0 => mbar_first_reg,
-      I1 => mbar_first_i_3_n_0,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I0 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      I2 => mul_Executing_reg,
+      I3 => inHibit_EX,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => mbar_first_reg,
       O => mul_Executing0
     );
-mbar_first_i_3: unisim.vcomponents.LUT4
+mbar_hold_I_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FDDD"
+      INIT => X"00000000303000AA"
     )
         port map (
-      I0 => mul_Executing_reg,
+      I0 => mbar_hold_I_reg_0,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I2 => inHibit_EX,
-      I3 => \Using_FPGA.Native_5\,
-      O => mbar_first_i_3_n_0
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I3 => mul_Executing_reg_0,
+      I4 => mul_Executing_reg,
+      I5 => \out\(0),
+      O => mbar_hold_I_reg
     );
 missed_IFetch_i_1: unisim.vcomponents.LUT5
     generic map(
@@ -2007,17 +2186,16 @@ missed_IFetch_i_1: unisim.vcomponents.LUT5
       I4 => \Using_FPGA.Native_5\,
       O => missed_IFetch_reg
     );
-mtsmsr_write_i_i_1: unisim.vcomponents.LUT6
+mtsmsr_write_i_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"003000A00030AAAA"
+      INIT => X"30A030AA"
     )
         port map (
       I0 => mtsmsr_write_i_reg_0,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\,
-      I3 => \Synchronize.use_sync_reset.sync_reg[2]\,
-      I4 => mul_Executing_reg,
-      I5 => \out\(0),
+      I2 => \Synchronize.use_sync_reset.sync_reg[2]\,
+      I3 => mul_Executing_reg,
+      I4 => \out\(0),
       O => mtsmsr_write_i_reg
     );
 nonvalid_IFetch_n_i_1: unisim.vcomponents.LUT6
@@ -2063,7 +2241,7 @@ using_Imm_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => Use_Imm_Reg,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6\,
       I3 => \Using_FPGA.Native_5\,
       I4 => inHibit_EX,
       I5 => \out\(0),
@@ -2107,8 +2285,8 @@ write_Reg_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => I214_out,
       I1 => mul_Executing_reg,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_4\,
-      I3 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
       I4 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I5 => \^unsigned_op_reg\,
       O => write_Reg_reg
@@ -2232,7 +2410,7 @@ begin
       Q => \^msr\(0),
       R => \Synchronize.use_sync_reset.sync_reg[2]\
     );
-\Using_FPGA.Native_i_1__11\: unisim.vcomponents.LUT3
+\Using_FPGA.Native_i_1__10\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -2285,7 +2463,7 @@ begin
       Q => \^msr\(0),
       R => MSR_Rst
     );
-\Using_FPGA.Native_i_1__10\: unisim.vcomponents.LUT3
+\Using_FPGA.Native_i_1__9\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -3429,9 +3607,9 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_mcs_0_MB_LUT4__parameterized21\ is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \microblaze_mcs_0_MB_LUT4__parameterized21\ : entity is "MB_LUT4";
@@ -3446,9 +3624,9 @@ begin
       INIT => X"00F0"
     )
         port map (
-      I0 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I0 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I1 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
       I3 => '0',
       O => \Using_FPGA.Native_0\
     );
@@ -10212,7 +10390,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_MULT_AND is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -10232,7 +10410,7 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I0 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I1 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
       O => \Using_FPGA.Native_0\
     );
@@ -15415,19 +15593,23 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E is
   port (
     \Result_Sel_reg[0]\ : out STD_LOGIC;
-    write_Reg_reg : out STD_LOGIC;
+    mtsmsr_write_i_reg : out STD_LOGIC;
+    \Size_17to32.imm_Reg_reg[15]\ : out STD_LOGIC;
     \Using_FPGA.Native\ : out STD_LOGIC;
+    \Using_FPGA.set_BIP_I_reg\ : out STD_LOGIC;
+    \Using_FPGA.Native_0\ : out STD_LOGIC;
     Compare_Instr_reg : out STD_LOGIC;
     writing_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
+    \Using_FPGA.Native_3\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
     \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC
@@ -15438,15 +15620,19 @@ end microblaze_mcs_0_MB_SRL16E;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E is
   signal \^result_sel_reg[0]\ : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of Compare_Instr_i_2 : label is "soft_lutpair21";
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_4\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of writing_i_1 : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \Using_FPGA.enable_Interrupts_I_i_2\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \Using_FPGA.set_BIP_I_i_3\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of mbar_decode_I_i_2 : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of mtsmsr_write_i_i_3 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of writing_i_1 : label is "soft_lutpair21";
 begin
   \Result_Sel_reg[0]\ <= \^result_sel_reg[0]\;
 Compare_Instr_i_2: unisim.vcomponents.LUT2
@@ -15464,29 +15650,18 @@ Compare_Instr_i_2: unisim.vcomponents.LUT2
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => \Using_FPGA.Native_0\,
-      A1 => \Using_FPGA.Native_1\,
-      A2 => \Using_FPGA.Native_2\,
+      A0 => \Using_FPGA.Native_1\,
+      A1 => \Using_FPGA.Native_2\,
+      A2 => \Using_FPGA.Native_3\,
       A3 => '0',
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
       Q => \^result_sel_reg[0]\
     );
-\Using_FPGA.Native_i_4\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_1__49\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"DFFF"
-    )
-        port map (
-      I0 => \^result_sel_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => \Using_FPGA.Native\
-    );
-write_Reg_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000002000"
+      INIT => X"1120110011001100"
     )
         port map (
       I0 => \^result_sel_reg[0]\,
@@ -15495,7 +15670,53 @@ write_Reg_i_4: unisim.vcomponents.LUT6
       I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
       I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
       I5 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
-      O => write_Reg_reg
+      O => \Using_FPGA.Native\
+    );
+\Using_FPGA.enable_Interrupts_I_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"DFFF"
+    )
+        port map (
+      I0 => \^result_sel_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      O => \Size_17to32.imm_Reg_reg[15]\
+    );
+\Using_FPGA.set_BIP_I_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00200000"
+    )
+        port map (
+      I0 => \^result_sel_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      O => \Using_FPGA.set_BIP_I_reg\
+    );
+mbar_decode_I_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFDFFFFF"
+    )
+        port map (
+      I0 => \^result_sel_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      O => \Using_FPGA.Native_0\
+    );
+mtsmsr_write_i_i_3: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"DFFF"
+    )
+        port map (
+      I0 => \^result_sel_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      O => mtsmsr_write_i_reg
     );
 writing_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -15515,22 +15736,29 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_26 is
   port (
-    \Using_FPGA.enable_Interrupts_I_reg\ : out STD_LOGIC;
+    \Using_FPGA.Native\ : out STD_LOGIC;
+    Reg_Test_Equal_i : out STD_LOGIC;
     enable_Interrupts_I : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\ : in STD_LOGIC;
+    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_26 : entity is "MB_SRL16E";
 end microblaze_mcs_0_MB_SRL16E_26;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_26 is
-  signal \^using_fpga.enable_interrupts_i_reg\ : STD_LOGIC;
+  signal \^using_fpga.native\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -15538,29 +15766,43 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_26 is
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[10].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
 begin
-  \Using_FPGA.enable_Interrupts_I_reg\ <= \^using_fpga.enable_interrupts_i_reg\;
+  \Using_FPGA.Native\ <= \^using_fpga.native\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
       INIT => X"0000",
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => \Using_FPGA.Native\,
-      A1 => \Using_FPGA.Native_0\,
-      A2 => \Using_FPGA.Native_1\,
+      A0 => \Using_FPGA.Native_0\,
+      A1 => \Using_FPGA.Native_1\,
+      A2 => \Using_FPGA.Native_2\,
       A3 => '0',
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => \^using_fpga.enable_interrupts_i_reg\
+      Q => \^using_fpga.native\
     );
-\Using_FPGA.enable_Interrupts_I_i_1\: unisim.vcomponents.LUT2
+\Using_FPGA.Native_i_1__46\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2"
+      INIT => X"F9FF"
     )
         port map (
-      I0 => \^using_fpga.enable_interrupts_i_reg\,
+      I0 => \^using_fpga.native\,
+      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      O => Reg_Test_Equal_i
+    );
+\Using_FPGA.enable_Interrupts_I_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000200"
+    )
+        port map (
+      I0 => \^using_fpga.native\,
       I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\,
+      I4 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       O => enable_Interrupts_I
     );
 end STRUCTURE;
@@ -15571,7 +15813,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_27 is
   port (
     jump2_I_reg : out STD_LOGIC;
-    jump2_I_reg_0 : out STD_LOGIC;
+    inHibit_EX_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native\ : in STD_LOGIC;
@@ -15580,9 +15822,8 @@ entity microblaze_mcs_0_MB_SRL16E_27 is
     Clk : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
     p_1_in45_in : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
-    inHibit_EX_reg : in STD_LOGIC
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_27 : entity is "MB_SRL16E";
@@ -15613,18 +15854,17 @@ begin
       D => DATA_OUTA(0),
       Q => \^jump2_i_reg\
     );
-jump2_I_i_1: unisim.vcomponents.LUT6
+inHibit_EX_i_3: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000000E2CCE200"
+      INIT => X"1D000000"
     )
         port map (
       I0 => \^jump2_i_reg\,
       I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
       I2 => p_1_in45_in,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I5 => inHibit_EX_reg,
-      O => jump2_I_reg_0
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      O => inHibit_EX_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -15633,20 +15873,23 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_28 is
   port (
+    \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : out STD_LOGIC;
+    D : out STD_LOGIC;
     \Using_FPGA.Native\ : out STD_LOGIC;
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
     \Using_FPGA.set_BIP_I_reg\ : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
+    Exception_Kind : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
     mul_Executing_reg : in STD_LOGIC;
@@ -15657,6 +15900,7 @@ entity microblaze_mcs_0_MB_SRL16E_28 is
 end microblaze_mcs_0_MB_SRL16E_28;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_28 is
+  signal \^using_b36_s4.the_brams[7].ramb36_i1\ : STD_LOGIC;
   signal \^using_fpga.native\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
@@ -15665,6 +15909,7 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_28 is
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[12].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
 begin
+  \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ <= \^using_b36_s4.the_brams[7].ramb36_i1\;
   \Using_FPGA.Native\ <= \^using_fpga.native\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
@@ -15672,34 +15917,44 @@ begin
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => \Using_FPGA.Native_1\,
-      A1 => \Using_FPGA.Native_2\,
-      A2 => \Using_FPGA.Native_3\,
+      A0 => \Using_FPGA.Native_0\,
+      A1 => \Using_FPGA.Native_1\,
+      A2 => \Using_FPGA.Native_2\,
       A3 => '0',
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => \^using_fpga.native\
+      Q => \^using_b36_s4.the_brams[7].ramb36_i1\
     );
-\Using_FPGA.Native_i_2__2\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__50\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFFFFFFF7FFFFFF"
+      INIT => X"02"
     )
         port map (
       I0 => \^using_fpga.native\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
-      O => \Using_FPGA.Native_0\
+      I1 => Exception_Kind(0),
+      I2 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      O => D
+    );
+\Using_FPGA.Native_i_2__3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF7FFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_b36_s4.the_brams[7].ramb36_i1\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      O => \^using_fpga.native\
     );
 \Using_FPGA.set_BIP_I_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"08FF0800"
     )
         port map (
-      I0 => \^using_fpga.native\,
+      I0 => \^using_b36_s4.the_brams[7].ramb36_i1\,
       I1 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
       I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
       I3 => mul_Executing_reg,
@@ -15714,18 +15969,25 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_29 is
   port (
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : out STD_LOGIC;
+    write_Reg_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
-    Clk : in STD_LOGIC
+    Clk : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_29 : entity is "MB_SRL16E";
 end microblaze_mcs_0_MB_SRL16E_29;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_29 is
+  signal \^using_b36_s4.the_brams[7].ramb36_i1\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -15733,6 +15995,7 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_29 is
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[13].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
 begin
+  \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ <= \^using_b36_s4.the_brams[7].ramb36_i1\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
       INIT => X"0000",
@@ -15746,7 +16009,20 @@ begin
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\
+      Q => \^using_b36_s4.the_brams[7].ramb36_i1\
+    );
+write_Reg_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"002FFFFF00FFFFFF"
+    )
+        port map (
+      I0 => \^using_b36_s4.the_brams[7].ramb36_i1\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      O => write_Reg_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -15755,7 +16031,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_30 is
   port (
-    mbar_first_reg : out STD_LOGIC;
+    mbar_decode_I_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native\ : in STD_LOGIC;
@@ -15788,7 +16064,7 @@ begin
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => mbar_first_reg
+      Q => mbar_decode_I_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -15892,13 +16168,6 @@ end microblaze_mcs_0_MB_SRL16E_32;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_32 is
   signal \^size_17to32.imm_reg_reg[0]\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__18_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__19_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__20_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__21_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__22_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__23_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__24_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2__25_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2__26_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2__27_n_0\ : STD_LOGIC;
@@ -15908,6 +16177,13 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_32 is
   signal \Using_FPGA.Native_i_2__31_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2__32_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2__33_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__34_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__35_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__36_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__37_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__38_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__39_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__40_n_0\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -15931,7 +16207,7 @@ begin
       D => DATA_OUTA(0),
       Q => \^size_17to32.imm_reg_reg[0]\
     );
-\Using_FPGA.Native_i_1__15\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__14\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -15944,7 +16220,7 @@ begin
       I5 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
       O => \Using_FPGA.Native\
     );
-\Using_FPGA.Native_i_1__16\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__15\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -15957,7 +16233,7 @@ begin
       I5 => Imm_Value(0),
       O => \Using_FPGA.Native_0\
     );
-\Using_FPGA.Native_i_1__17\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -15970,7 +16246,7 @@ begin
       I5 => Imm_Value(1),
       O => \Using_FPGA.Native_1\
     );
-\Using_FPGA.Native_i_1__18\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -15983,7 +16259,7 @@ begin
       I5 => Imm_Value(2),
       O => \Using_FPGA.Native_2\
     );
-\Using_FPGA.Native_i_1__19\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__18\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -15996,7 +16272,7 @@ begin
       I5 => Imm_Value(3),
       O => \Using_FPGA.Native_3\
     );
-\Using_FPGA.Native_i_1__20\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__19\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16009,7 +16285,7 @@ begin
       I5 => Imm_Value(4),
       O => \Using_FPGA.Native_4\
     );
-\Using_FPGA.Native_i_1__21\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__20\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16022,7 +16298,7 @@ begin
       I5 => Imm_Value(5),
       O => \Using_FPGA.Native_5\
     );
-\Using_FPGA.Native_i_1__22\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__21\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16035,7 +16311,7 @@ begin
       I5 => Imm_Value(6),
       O => \Using_FPGA.Native_6\
     );
-\Using_FPGA.Native_i_1__23\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__22\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16048,7 +16324,7 @@ begin
       I5 => Imm_Value(7),
       O => \Using_FPGA.Native_7\
     );
-\Using_FPGA.Native_i_1__24\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__23\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16061,7 +16337,7 @@ begin
       I5 => Imm_Value(8),
       O => \Using_FPGA.Native_8\
     );
-\Using_FPGA.Native_i_1__25\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__24\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16074,7 +16350,7 @@ begin
       I5 => Imm_Value(9),
       O => \Using_FPGA.Native_9\
     );
-\Using_FPGA.Native_i_1__26\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__25\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16087,7 +16363,7 @@ begin
       I5 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
       O => \Using_FPGA.Native_10\
     );
-\Using_FPGA.Native_i_1__27\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__26\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3202FFFF32020000"
     )
@@ -16100,199 +16376,199 @@ begin
       I5 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_11\
     );
-\Using_FPGA.Native_i_1__28\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__27\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__33_n_0\,
+      I0 => \Using_FPGA.Native_i_2__40_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(0),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_12\
     );
-\Using_FPGA.Native_i_1__29\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__28\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__32_n_0\,
+      I0 => \Using_FPGA.Native_i_2__39_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(1),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_13\
     );
-\Using_FPGA.Native_i_1__30\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__29\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__31_n_0\,
+      I0 => \Using_FPGA.Native_i_2__38_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(2),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_14\
     );
-\Using_FPGA.Native_i_1__31\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__30\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__30_n_0\,
+      I0 => \Using_FPGA.Native_i_2__37_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(3),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_15\
     );
-\Using_FPGA.Native_i_1__32\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__31\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__29_n_0\,
+      I0 => \Using_FPGA.Native_i_2__36_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(4),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_16\
     );
-\Using_FPGA.Native_i_1__33\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__32\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__28_n_0\,
+      I0 => \Using_FPGA.Native_i_2__35_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(5),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_17\
     );
-\Using_FPGA.Native_i_1__34\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__33\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__27_n_0\,
+      I0 => \Using_FPGA.Native_i_2__34_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(6),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_18\
     );
-\Using_FPGA.Native_i_1__35\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__34\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__26_n_0\,
+      I0 => \Using_FPGA.Native_i_2__33_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(7),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_19\
     );
-\Using_FPGA.Native_i_1__36\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__35\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__25_n_0\,
+      I0 => \Using_FPGA.Native_i_2__32_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(8),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_20\
     );
-\Using_FPGA.Native_i_1__37\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__36\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__24_n_0\,
+      I0 => \Using_FPGA.Native_i_2__31_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(9),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_21\
     );
-\Using_FPGA.Native_i_1__38\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__37\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__23_n_0\,
+      I0 => \Using_FPGA.Native_i_2__30_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(10),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_22\
     );
-\Using_FPGA.Native_i_1__39\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__38\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__22_n_0\,
+      I0 => \Using_FPGA.Native_i_2__29_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(11),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_23\
     );
-\Using_FPGA.Native_i_1__40\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__39\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__21_n_0\,
+      I0 => \Using_FPGA.Native_i_2__28_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(12),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_24\
     );
-\Using_FPGA.Native_i_1__41\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__40\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__20_n_0\,
+      I0 => \Using_FPGA.Native_i_2__27_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(13),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_25\
     );
-\Using_FPGA.Native_i_1__42\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__41\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__19_n_0\,
+      I0 => \Using_FPGA.Native_i_2__26_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(14),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_26\
     );
-\Using_FPGA.Native_i_1__43\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_1__42\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => \Using_FPGA.Native_i_2__18_n_0\,
+      I0 => \Using_FPGA.Native_i_2__25_n_0\,
       I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       I2 => \Size_17to32.imm_Reg_reg[0]_0\(15),
       I3 => Use_Imm_Reg,
       I4 => \^size_17to32.imm_reg_reg[0]\,
       O => \Using_FPGA.Native_27\
     );
-\Using_FPGA.Native_i_2__18\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__25\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16301,9 +16577,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(28),
-      O => \Using_FPGA.Native_i_2__18_n_0\
+      O => \Using_FPGA.Native_i_2__25_n_0\
     );
-\Using_FPGA.Native_i_2__19\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__26\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16312,9 +16588,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(27),
-      O => \Using_FPGA.Native_i_2__19_n_0\
+      O => \Using_FPGA.Native_i_2__26_n_0\
     );
-\Using_FPGA.Native_i_2__20\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__27\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16323,9 +16599,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(26),
-      O => \Using_FPGA.Native_i_2__20_n_0\
+      O => \Using_FPGA.Native_i_2__27_n_0\
     );
-\Using_FPGA.Native_i_2__21\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__28\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16334,9 +16610,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(25),
-      O => \Using_FPGA.Native_i_2__21_n_0\
+      O => \Using_FPGA.Native_i_2__28_n_0\
     );
-\Using_FPGA.Native_i_2__22\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__29\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16345,9 +16621,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(24),
-      O => \Using_FPGA.Native_i_2__22_n_0\
+      O => \Using_FPGA.Native_i_2__29_n_0\
     );
-\Using_FPGA.Native_i_2__23\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__30\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16356,9 +16632,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(23),
-      O => \Using_FPGA.Native_i_2__23_n_0\
+      O => \Using_FPGA.Native_i_2__30_n_0\
     );
-\Using_FPGA.Native_i_2__24\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__31\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16367,9 +16643,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(22),
-      O => \Using_FPGA.Native_i_2__24_n_0\
+      O => \Using_FPGA.Native_i_2__31_n_0\
     );
-\Using_FPGA.Native_i_2__25\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__32\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16378,9 +16654,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(21),
-      O => \Using_FPGA.Native_i_2__25_n_0\
+      O => \Using_FPGA.Native_i_2__32_n_0\
     );
-\Using_FPGA.Native_i_2__26\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__33\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16389,9 +16665,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(20),
-      O => \Using_FPGA.Native_i_2__26_n_0\
+      O => \Using_FPGA.Native_i_2__33_n_0\
     );
-\Using_FPGA.Native_i_2__27\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__34\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16400,9 +16676,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(19),
-      O => \Using_FPGA.Native_i_2__27_n_0\
+      O => \Using_FPGA.Native_i_2__34_n_0\
     );
-\Using_FPGA.Native_i_2__28\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__35\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16411,9 +16687,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(18),
-      O => \Using_FPGA.Native_i_2__28_n_0\
+      O => \Using_FPGA.Native_i_2__35_n_0\
     );
-\Using_FPGA.Native_i_2__29\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__36\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16422,9 +16698,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(17),
-      O => \Using_FPGA.Native_i_2__29_n_0\
+      O => \Using_FPGA.Native_i_2__36_n_0\
     );
-\Using_FPGA.Native_i_2__30\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__37\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16433,9 +16709,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(16),
-      O => \Using_FPGA.Native_i_2__30_n_0\
+      O => \Using_FPGA.Native_i_2__37_n_0\
     );
-\Using_FPGA.Native_i_2__31\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__38\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16444,9 +16720,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(15),
-      O => \Using_FPGA.Native_i_2__31_n_0\
+      O => \Using_FPGA.Native_i_2__38_n_0\
     );
-\Using_FPGA.Native_i_2__32\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__39\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16455,9 +16731,9 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(14),
-      O => \Using_FPGA.Native_i_2__32_n_0\
+      O => \Using_FPGA.Native_i_2__39_n_0\
     );
-\Using_FPGA.Native_i_2__33\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__40\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3202"
     )
@@ -16466,7 +16742,7 @@ begin
       I1 => Exception_Kind(0),
       I2 => Res_Forward2,
       I3 => EX_Result(13),
-      O => \Using_FPGA.Native_i_2__33_n_0\
+      O => \Using_FPGA.Native_i_2__40_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -16603,9 +16879,7 @@ entity microblaze_mcs_0_MB_SRL16E_36 is
   port (
     \Result_Sel_reg[1]\ : out STD_LOGIC;
     \Using_FPGA.Native\ : out STD_LOGIC;
-    \Size_17to32.imm_Reg_reg[15]\ : out STD_LOGIC;
     is_swx_I_reg : out STD_LOGIC;
-    using_Imm_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native_0\ : in STD_LOGIC;
@@ -16613,12 +16887,8 @@ entity microblaze_mcs_0_MB_SRL16E_36 is
     \Using_FPGA.Native_2\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
-    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
-    Imm_Value : in STD_LOGIC_VECTOR ( 0 to 0 )
+    Imm_Value : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_36 : entity is "MB_SRL16E";
@@ -16626,28 +16896,17 @@ end microblaze_mcs_0_MB_SRL16E_36;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_36 is
   signal \^result_sel_reg[1]\ : STD_LOGIC;
-  signal \^size_17to32.imm_reg_reg[15]\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Size_17to32.imm_Reg[0]_i_3\ : label is "soft_lutpair20";
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[1].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-  attribute SOFT_HLUTNM of is_lwx_I_i_2 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of is_lwx_I_i_2 : label is "soft_lutpair22";
 begin
   \Result_Sel_reg[1]\ <= \^result_sel_reg[1]\;
-  \Size_17to32.imm_Reg_reg[15]\ <= \^size_17to32.imm_reg_reg[15]\;
-\Size_17to32.imm_Reg[0]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => \^result_sel_reg[1]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      O => \^size_17to32.imm_reg_reg[15]\
-    );
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
       INIT => X"0000",
@@ -16663,17 +16922,13 @@ begin
       D => DATA_OUTA(0),
       Q => \^result_sel_reg[1]\
     );
-\Using_FPGA.enable_Interrupts_I_i_2\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_3__1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFFFFFBFFFFFFFFF"
+      INIT => X"B"
     )
         port map (
-      I0 => \^size_17to32.imm_reg_reg[15]\,
+      I0 => \^result_sel_reg[1]\,
       I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
       O => \Using_FPGA.Native\
     );
 is_lwx_I_i_2: unisim.vcomponents.LUT4
@@ -16682,23 +16937,10 @@ is_lwx_I_i_2: unisim.vcomponents.LUT4
     )
         port map (
       I0 => \^result_sel_reg[1]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I2 => Imm_Value(0),
       I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
       O => is_swx_I_reg
-    );
-using_Imm_i_2: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFBF"
-    )
-        port map (
-      I0 => \^size_17to32.imm_reg_reg[15]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => using_Imm_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -17427,7 +17669,7 @@ begin
       D => DATA_OUTA(0),
       Q => \^shift_oper_reg[1]\
     );
-\Using_FPGA.Native_i_1__14\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"88BB88B8888888B8"
     )
@@ -17570,7 +17812,7 @@ begin
       D => DATA_OUTA(0),
       Q => \^imm_value\(0)
     );
-\Using_FPGA.Native_i_1__13\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"BBBBBBB8BB88BBB8"
     )
@@ -17713,7 +17955,7 @@ begin
       D => DATA_OUTA(0),
       Q => \^imm_value\(0)
     );
-\Using_FPGA.Native_i_1__12\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__11\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"88BB88B8888888B8"
     )
@@ -17775,19 +18017,29 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_47 is
   port (
-    \Size_17to32.imm_Reg_reg[15]\ : out STD_LOGIC;
+    mbar_decode_I_reg : out STD_LOGIC;
+    using_Imm_reg : out STD_LOGIC;
+    of_mbar_decode : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
-    Clk : in STD_LOGIC
+    Clk : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_47 : entity is "MB_SRL16E";
 end microblaze_mcs_0_MB_SRL16E_47;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_47 is
+  signal \^mbar_decode_i_reg\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -17795,6 +18047,7 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_47 is
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[2].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
 begin
+  mbar_decode_I_reg <= \^mbar_decode_i_reg\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
       INIT => X"0000",
@@ -17808,7 +18061,31 @@ begin
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => \Size_17to32.imm_Reg_reg[15]\
+      Q => \^mbar_decode_i_reg\
+    );
+mbar_decode_I_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0008"
+    )
+        port map (
+      I0 => \^mbar_decode_i_reg\,
+      I1 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      O => of_mbar_decode
+    );
+using_Imm_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^mbar_decode_i_reg\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I5 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      O => using_Imm_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -17860,116 +18137,25 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_49 is
   port (
     \Size_17to32.imm_Reg_reg[15]\ : out STD_LOGIC;
-    \Using_FPGA.Native\ : out STD_LOGIC;
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
-    \Using_FPGA.Native_1\ : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    \Using_FPGA.Native_4\ : in STD_LOGIC;
-    Clk : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
-    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
-    MSR : in STD_LOGIC_VECTOR ( 1 downto 0 )
+    \Using_FPGA.Native\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    Clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_49 : entity is "MB_SRL16E";
 end microblaze_mcs_0_MB_SRL16E_49;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_49 is
-  signal \^size_17to32.imm_reg_reg[15]\ : STD_LOGIC;
-  signal \^using_fpga.native\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[31].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__122\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__127\ : label is "soft_lutpair21";
 begin
-  \Size_17to32.imm_Reg_reg[15]\ <= \^size_17to32.imm_reg_reg[15]\;
-  \Using_FPGA.Native\ <= \^using_fpga.native\;
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => \Using_FPGA.Native_2\,
-      A1 => \Using_FPGA.Native_3\,
-      A2 => \Using_FPGA.Native_4\,
-      A3 => '0',
-      CE => CI,
-      CLK => Clk,
-      D => DATA_OUTA(0),
-      Q => \^size_17to32.imm_reg_reg[15]\
-    );
-\Using_FPGA.Native_i_1__122\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \^using_fpga.native\,
-      I1 => MSR(0),
-      O => \Using_FPGA.Native_0\
-    );
-\Using_FPGA.Native_i_1__127\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \^using_fpga.native\,
-      I1 => MSR(1),
-      O => \Using_FPGA.Native_1\
-    );
-\Using_FPGA.Native_i_2__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000FE00"
-    )
-        port map (
-      I0 => \^size_17to32.imm_reg_reg[15]\,
-      I1 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I4 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      O => \^using_fpga.native\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_mcs_0_MB_SRL16E_50 is
-  port (
-    Select_Logic_reg : out STD_LOGIC;
-    is_swx_I_reg : out STD_LOGIC;
-    CI : in STD_LOGIC;
-    DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native\ : in STD_LOGIC;
-    \Using_FPGA.Native_0\ : in STD_LOGIC;
-    \Using_FPGA.Native_1\ : in STD_LOGIC;
-    Clk : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_50 : entity is "MB_SRL16E";
-end microblaze_mcs_0_MB_SRL16E_50;
-
-architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_50 is
-  signal \^select_logic_reg\ : STD_LOGIC;
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[3].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-  Select_Logic_reg <= \^select_logic_reg\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
       INIT => X"0000",
@@ -17983,16 +18169,49 @@ begin
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => \^select_logic_reg\
+      Q => \Size_17to32.imm_Reg_reg[15]\
     );
-is_swx_I_i_2: unisim.vcomponents.LUT2
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity microblaze_mcs_0_MB_SRL16E_50 is
+  port (
+    Select_Logic_reg : out STD_LOGIC;
+    CI : in STD_LOGIC;
+    DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    Clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_50 : entity is "MB_SRL16E";
+end microblaze_mcs_0_MB_SRL16E_50;
+
+architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_50 is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[3].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
-      INIT => X"2"
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
     )
         port map (
-      I0 => \^select_logic_reg\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => is_swx_I_reg
+      A0 => \Using_FPGA.Native\,
+      A1 => \Using_FPGA.Native_0\,
+      A2 => \Using_FPGA.Native_1\,
+      A3 => '0',
+      CE => CI,
+      CLK => Clk,
+      D => DATA_OUTA(0),
+      Q => Select_Logic_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -18002,36 +18221,36 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_51 is
   port (
     \Logic_Oper_reg[0]\ : out STD_LOGIC;
-    \Using_FPGA.Native\ : out STD_LOGIC;
+    jump2_I_reg : out STD_LOGIC;
     write_Reg_reg : out STD_LOGIC;
-    write_Reg_reg_0 : out STD_LOGIC;
-    Reg_Test_Equal_i : out STD_LOGIC;
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
-    \Size_17to32.imm_Reg_reg[15]\ : out STD_LOGIC;
-    is_lwx_I_reg : out STD_LOGIC;
-    \Using_FPGA.Native_1\ : out STD_LOGIC;
+    Sign_Extend_reg : out STD_LOGIC;
+    Sext16_reg : out STD_LOGIC;
+    mbar_hold_I_reg : out STD_LOGIC;
+    \Using_FPGA.Native\ : out STD_LOGIC;
     mtsmsr_write_i_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    \Using_FPGA.Native_4\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
+    p_1_in45_in : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
+    inHibit_EX_reg : in STD_LOGIC;
+    Imm_Value : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
+    Exception_Kind : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mul_Executing_reg : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
-    Imm_Value : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
-    \Using_FPGA.take_Intr_2nd_Phase_reg_0\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\ : in STD_LOGIC
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_51 : entity is "MB_SRL16E";
@@ -18039,198 +18258,20 @@ end microblaze_mcs_0_MB_SRL16E_51;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_51 is
   signal \^logic_oper_reg[0]\ : STD_LOGIC;
-  signal \^using_fpga.native_0\ : STD_LOGIC;
-  signal \^write_reg_reg_0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Size_17to32.imm_Reg[0]_i_2\ : label is "soft_lutpair23";
+  signal \^sign_extend_reg\ : STD_LOGIC;
+  signal write_Reg_i_4_n_0 : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[4].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__11\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__12\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of mtsmsr_write_i_i_2 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__13\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of write_Reg_i_4 : label is "soft_lutpair23";
 begin
   \Logic_Oper_reg[0]\ <= \^logic_oper_reg[0]\;
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
-  write_Reg_reg_0 <= \^write_reg_reg_0\;
-\Size_17to32.imm_Reg[0]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => \Size_17to32.imm_Reg_reg[15]\
-    );
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => \Using_FPGA.Native_2\,
-      A1 => \Using_FPGA.Native_3\,
-      A2 => \Using_FPGA.Native_4\,
-      A3 => '0',
-      CE => CI,
-      CLK => Clk,
-      D => DATA_OUTA(0),
-      Q => \^logic_oper_reg[0]\
-    );
-\Using_FPGA.Native_i_1__47\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFEFEFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      I2 => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
-      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
-      I4 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\,
-      O => Reg_Test_Equal_i
-    );
-\Using_FPGA.Native_i_2__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000CDCCCCCC"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I5 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      O => \Using_FPGA.Native\
-    );
-\Using_FPGA.Native_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I5 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => \^write_reg_reg_0\
-    );
-\Using_FPGA.Native_i_3__11\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
-      O => \Using_FPGA.Native_1\
-    );
-\Using_FPGA.Native_i_3__12\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F7FFFFFF"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => \^using_fpga.native_0\
-    );
-is_lwx_I_i_3: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => is_lwx_I_reg
-    );
-mtsmsr_write_i_i_2: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"04"
-    )
-        port map (
-      I0 => \^logic_oper_reg[0]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
-      O => mtsmsr_write_i_reg
-    );
-write_Reg_i_3: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF4FFF4FFF4F4F4"
-    )
-        port map (
-      I0 => \^write_reg_reg_0\,
-      I1 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
-      I4 => Imm_Value(1),
-      I5 => Imm_Value(0),
-      O => write_Reg_reg
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_mcs_0_MB_SRL16E_52 is
-  port (
-    \Logic_Oper_reg[1]\ : out STD_LOGIC;
-    mtsmsr_write_i_reg : out STD_LOGIC;
-    write_Reg_reg : out STD_LOGIC;
-    Sext16_reg : out STD_LOGIC;
-    Sign_Extend_reg : out STD_LOGIC;
-    \Using_FPGA.Native\ : out STD_LOGIC;
-    D : out STD_LOGIC;
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
-    of_mbar_decode : out STD_LOGIC;
-    mbar_hold_I_reg : out STD_LOGIC;
-    CI : in STD_LOGIC;
-    DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    Clk : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    Exception_Kind : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mul_Executing_reg : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ : in STD_LOGIC;
-    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\ : in STD_LOGIC;
-    mbar_hold_I_reg_0 : in STD_LOGIC;
-    mul_Executing_reg_0 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_52 : entity is "MB_SRL16E";
-end microblaze_mcs_0_MB_SRL16E_52;
-
-architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_52 is
-  signal \^logic_oper_reg[1]\ : STD_LOGIC;
-  signal \^sign_extend_reg\ : STD_LOGIC;
-  signal \^using_fpga.native_0\ : STD_LOGIC;
-  signal \^of_mbar_decode\ : STD_LOGIC;
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[5].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-  \Logic_Oper_reg[1]\ <= \^logic_oper_reg[1]\;
   Sign_Extend_reg <= \^sign_extend_reg\;
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
-  of_mbar_decode <= \^of_mbar_decode\;
 Sext8_i_2: unisim.vcomponents.LUT4
     generic map(
       INIT => X"EFCC"
@@ -18244,15 +18285,15 @@ Sext8_i_2: unisim.vcomponents.LUT4
     );
 Sign_Extend_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000400000000"
+      INIT => X"0000010000000000"
     )
         port map (
-      I0 => \^logic_oper_reg[1]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I0 => \^logic_oper_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
       I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
       O => \^sign_extend_reg\
     );
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
@@ -18261,99 +18302,237 @@ Sign_Extend_i_2: unisim.vcomponents.LUT6
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => \Using_FPGA.Native_1\,
-      A1 => \Using_FPGA.Native_2\,
-      A2 => \Using_FPGA.Native_3\,
+      A0 => \Using_FPGA.Native_0\,
+      A1 => \Using_FPGA.Native_1\,
+      A2 => \Using_FPGA.Native_2\,
+      A3 => '0',
+      CE => CI,
+      CLK => Clk,
+      D => DATA_OUTA(0),
+      Q => \^logic_oper_reg[0]\
+    );
+\Using_FPGA.Native_i_3__13\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => \^logic_oper_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      O => \Using_FPGA.Native\
+    );
+jump2_I_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000DAD0"
+    )
+        port map (
+      I0 => \^logic_oper_reg[0]\,
+      I1 => p_1_in45_in,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
+      I4 => inHibit_EX_reg,
+      O => jump2_I_reg
+    );
+mbar_first_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0020000000000000"
+    )
+        port map (
+      I0 => \^logic_oper_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
+      I4 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      O => mbar_hold_I_reg
+    );
+mtsmsr_write_i_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000001000000000"
+    )
+        port map (
+      I0 => \^logic_oper_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
+      I3 => \out\(0),
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
+      I5 => Imm_Value(0),
+      O => mtsmsr_write_i_reg
+    );
+write_Reg_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFE0E0FFE0"
+    )
+        port map (
+      I0 => Imm_Value(1),
+      I1 => Imm_Value(2),
+      I2 => \^sign_extend_reg\,
+      I3 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I5 => write_Reg_i_4_n_0,
+      O => write_Reg_reg
+    );
+write_Reg_i_4: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00400000"
+    )
+        port map (
+      I0 => \^logic_oper_reg[0]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      O => write_Reg_i_4_n_0
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity microblaze_mcs_0_MB_SRL16E_52 is
+  port (
+    \Logic_Oper_reg[1]\ : out STD_LOGIC;
+    \Using_FPGA.Native\ : out STD_LOGIC;
+    write_Reg_reg : out STD_LOGIC;
+    \Using_FPGA.Native_0\ : out STD_LOGIC;
+    is_swx_I_reg : out STD_LOGIC;
+    \Using_FPGA.Native_1\ : out STD_LOGIC;
+    \Using_FPGA.Native_2\ : out STD_LOGIC;
+    CI : in STD_LOGIC;
+    DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_3\ : in STD_LOGIC;
+    \Using_FPGA.Native_4\ : in STD_LOGIC;
+    \Using_FPGA.Native_5\ : in STD_LOGIC;
+    Clk : in STD_LOGIC;
+    Imm_Value : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ : in STD_LOGIC;
+    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ : in STD_LOGIC;
+    \Using_FPGA.take_Intr_2nd_Phase_reg_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ : in STD_LOGIC;
+    MSR : in STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_52 : entity is "MB_SRL16E";
+end microblaze_mcs_0_MB_SRL16E_52;
+
+architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_52 is
+  signal \^logic_oper_reg[1]\ : STD_LOGIC;
+  signal \^using_fpga.native\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_4_n_0\ : STD_LOGIC;
+  signal \^write_reg_reg\ : STD_LOGIC;
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[5].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__122\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__127\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_4\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of is_lwx_I_i_3 : label is "soft_lutpair24";
+begin
+  \Logic_Oper_reg[1]\ <= \^logic_oper_reg[1]\;
+  \Using_FPGA.Native\ <= \^using_fpga.native\;
+  write_Reg_reg <= \^write_reg_reg\;
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => \Using_FPGA.Native_3\,
+      A1 => \Using_FPGA.Native_4\,
+      A2 => \Using_FPGA.Native_5\,
       A3 => '0',
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
       Q => \^logic_oper_reg[1]\
     );
-\Using_FPGA.Native_i_1__45\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__122\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"004000AA000000AA"
+      INIT => X"8"
     )
         port map (
-      I0 => \^logic_oper_reg[1]\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I5 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
-      O => \Using_FPGA.Native\
+      I0 => \^using_fpga.native\,
+      I1 => MSR(0),
+      O => \Using_FPGA.Native_1\
     );
-\Using_FPGA.Native_i_1__46\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_1__127\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0007"
+      INIT => X"8"
     )
         port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1\,
-      I2 => Exception_Kind(0),
+      I0 => \^using_fpga.native\,
+      I1 => MSR(1),
+      O => \Using_FPGA.Native_2\
+    );
+\Using_FPGA.Native_i_2__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000FE0000"
+    )
+        port map (
+      I0 => Imm_Value(0),
+      I1 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
+      I2 => \^write_reg_reg\,
       I3 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      O => D
+      I4 => \Using_FPGA.Native_i_4_n_0\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      O => \^using_fpga.native\
     );
-\Using_FPGA.Native_i_2__39\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_2__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00400000"
+      INIT => X"00000000FFFF0008"
+    )
+        port map (
+      I0 => \^logic_oper_reg[1]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      I5 => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
+      O => \Using_FPGA.Native_0\
+    );
+\Using_FPGA.Native_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFF7FF"
+    )
+        port map (
+      I0 => \^logic_oper_reg[1]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
+      O => \^write_reg_reg\
+    );
+\Using_FPGA.Native_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"F7FFFFFF"
+    )
+        port map (
+      I0 => \^logic_oper_reg[1]\,
+      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
+      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\,
+      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\,
+      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      O => \Using_FPGA.Native_i_4_n_0\
+    );
+is_lwx_I_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
     )
         port map (
       I0 => \^logic_oper_reg[1]\,
       I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      O => \^using_fpga.native_0\
-    );
-mbar_decode_I_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"2000"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I2 => \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      O => \^of_mbar_decode\
-    );
-mbar_hold_I_i_1: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000CC0A"
-    )
-        port map (
-      I0 => mbar_hold_I_reg_0,
-      I1 => \^of_mbar_decode\,
-      I2 => mul_Executing_reg_0,
-      I3 => mul_Executing_reg,
-      I4 => \out\(0),
-      O => mbar_hold_I_reg
-    );
-mtsmsr_write_i_i_3: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFF7FFFFF"
-    )
-        port map (
-      I0 => \^logic_oper_reg[1]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[4].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
-      I5 => \out\(0),
-      O => mtsmsr_write_i_reg
-    );
-write_Reg_i_2: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3733373F3F3F3F3F"
-    )
-        port map (
-      I0 => \^logic_oper_reg[1]\,
-      I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\,
-      I2 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I4 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
-      I5 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
-      O => write_Reg_reg
+      O => is_swx_I_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -18363,23 +18542,18 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_MB_SRL16E_53 is
   port (
     p_1_in45_in : out STD_LOGIC;
-    inHibit_EX_reg : out STD_LOGIC;
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
-    Clk : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC
+    Clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_53 : entity is "MB_SRL16E";
 end microblaze_mcs_0_MB_SRL16E_53;
 
 architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_53 is
-  signal \^p_1_in45_in\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -18387,7 +18561,6 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_53 is
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[6].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
 begin
-  p_1_in45_in <= \^p_1_in45_in\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
     generic map(
       INIT => X"0000",
@@ -18401,18 +18574,7 @@ begin
       CE => CI,
       CLK => Clk,
       D => DATA_OUTA(0),
-      Q => \^p_1_in45_in\
-    );
-inHibit_EX_i_2: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"4700"
-    )
-        port map (
-      I0 => \^p_1_in45_in\,
-      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
-      O => inHibit_EX_reg
+      Q => p_1_in45_in
     );
 end STRUCTURE;
 library IEEE;
@@ -18478,7 +18640,6 @@ entity microblaze_mcs_0_MB_SRL16E_55 is
   port (
     \Using_FPGA.Native\ : out STD_LOGIC;
     force1_i29_out : out STD_LOGIC;
-    Reg_Test_Equal_N_i7_out : out STD_LOGIC;
     \write_Addr_I_reg[2]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     CI : in STD_LOGIC;
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -18486,11 +18647,10 @@ entity microblaze_mcs_0_MB_SRL16E_55 is
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
-    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ : in STD_LOGIC;
+    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MB_SRL16E_55 : entity is "MB_SRL16E";
@@ -18505,8 +18665,8 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_55 is
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[8].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__48\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__3\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__2\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \write_Addr_I[2]_i_1\ : label is "soft_lutpair26";
 begin
   \Using_FPGA.Native\ <= \^using_fpga.native\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
@@ -18524,27 +18684,14 @@ begin
       D => DATA_OUTA(0),
       Q => \^using_fpga.native\
     );
-\Using_FPGA.Native_i_1__48\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_2__2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"00000006"
+      INIT => X"04"
     )
         port map (
       I0 => \^using_fpga.native\,
-      I1 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\,
-      I2 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I3 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      I4 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
-      O => Reg_Test_Equal_N_i7_out
-    );
-\Using_FPGA.Native_i_2__3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0001"
-    )
-        port map (
-      I0 => \^using_fpga.native\,
-      I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      I1 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
       I2 => \Using_B36_S4.The_BRAMs[2].RAMB36_I1\,
-      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
       O => force1_i29_out
     );
 \write_Addr_I[2]_i_1\: unisim.vcomponents.LUT3
@@ -18574,6 +18721,8 @@ entity microblaze_mcs_0_MB_SRL16E_56 is
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
     \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -18589,9 +18738,6 @@ architecture STRUCTURE of microblaze_mcs_0_MB_SRL16E_56 is
   attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers ";
   attribute srl_name : string;
   attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[9].SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Using_FPGA.reset_BIP_I_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \write_Addr_I[3]_i_1\ : label is "soft_lutpair25";
 begin
   \Using_FPGA.reset_BIP_I_reg\ <= \^using_fpga.reset_bip_i_reg\;
 \Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
@@ -18609,23 +18755,26 @@ begin
       D => DATA_OUTA(0),
       Q => \^using_fpga.reset_bip_i_reg\
     );
-\Using_FPGA.reset_BIP_I_i_1\: unisim.vcomponents.LUT2
+\Using_FPGA.reset_BIP_I_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2"
+      INIT => X"00000200"
     )
         port map (
       I0 => \^using_fpga.reset_bip_i_reg\,
       I1 => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\,
+      I2 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\,
+      I3 => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      I4 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       O => reset_BIP_I8_out
     );
 \write_Addr_I[3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0E"
+      INIT => X"54"
     )
         port map (
-      I0 => \^using_fpga.reset_bip_i_reg\,
-      I1 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      I2 => \out\(0),
+      I0 => \out\(0),
+      I1 => \^using_fpga.reset_bip_i_reg\,
+      I2 => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       O => \write_Addr_I_reg[3]\(0)
     );
 end STRUCTURE;
@@ -20602,8 +20751,8 @@ entity microblaze_mcs_0_Uart_Control_Status is
     lmb_reg_read_Q_reg : in STD_LOGIC;
     lmb_reg_write_reg : in STD_LOGIC;
     INTC_CIPR : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \Using_GPI.GPI_In_reg[6]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \RX_Data_reg[6]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \lmb_abus_Q_reg[1]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     lmb_reg_read_reg : in STD_LOGIC;
     RX_Data_Received : in STD_LOGIC;
@@ -20681,7 +20830,7 @@ UART_Interrupt_INST_0: unisim.vcomponents.LUT3
       Q => UART_Status(6),
       R => \UART_Status[6]_i_1_n_0\
     );
-\Using_FPGA.Native_i_3__0\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_3__2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EEEEEEEEEEEEEEE0"
     )
@@ -20690,22 +20839,9 @@ UART_Interrupt_INST_0: unisim.vcomponents.LUT3
       I1 => lmb_reg_write_reg,
       I2 => UART_Status(0),
       I3 => INTC_CIPR(0),
-      I4 => \Using_GPI.GPI_In_reg[6]\(0),
-      I5 => Q(0),
+      I4 => Q(0),
+      I5 => \RX_Data_reg[6]\(0),
       O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\
-    );
-\Using_FPGA.Native_i_3__3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEEEEEEEEEEEEEE0"
-    )
-        port map (
-      I0 => lmb_reg_read_Q_reg,
-      I1 => lmb_reg_write_reg,
-      I2 => UART_Status(3),
-      I3 => INTC_CIPR(1),
-      I4 => \Using_GPI.GPI_In_reg[6]\(1),
-      I5 => Q(1),
-      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\
     );
 \Using_FPGA.Native_i_3__5\: unisim.vcomponents.LUT6
     generic map(
@@ -20714,13 +20850,26 @@ UART_Interrupt_INST_0: unisim.vcomponents.LUT3
         port map (
       I0 => lmb_reg_read_Q_reg,
       I1 => lmb_reg_write_reg,
+      I2 => UART_Status(3),
+      I3 => INTC_CIPR(1),
+      I4 => Q(1),
+      I5 => \RX_Data_reg[6]\(1),
+      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\
+    );
+\Using_FPGA.Native_i_3__7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEEEEEEEEEEEEEE0"
+    )
+        port map (
+      I0 => lmb_reg_read_Q_reg,
+      I1 => lmb_reg_write_reg,
       I2 => UART_Status(5),
       I3 => INTC_CIPR(2),
-      I4 => \Using_GPI.GPI_In_reg[6]\(2),
-      I5 => Q(2),
+      I4 => Q(2),
+      I5 => \RX_Data_reg[6]\(2),
       O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\
     );
-\Using_FPGA.Native_i_3__6\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_3__8\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EEEEEEEEEEEEEEE0"
     )
@@ -20729,8 +20878,8 @@ UART_Interrupt_INST_0: unisim.vcomponents.LUT3
       I1 => lmb_reg_write_reg,
       I2 => UART_Status(6),
       I3 => INTC_CIPR(3),
-      I4 => \Using_GPI.GPI_In_reg[6]\(3),
-      I5 => Q(3),
+      I4 => Q(3),
+      I5 => \RX_Data_reg[6]\(3),
       O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\
     );
 error_interrupt_i_1: unisim.vcomponents.LUT3
@@ -21211,10 +21360,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_intr_ctrl is
   port (
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    Extend_Data_Read : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \Using_FPGA.Native\ : out STD_LOGIC_VECTOR ( 11 downto 0 );
     Data_Read : out STD_LOGIC;
-    \Using_FPGA.Native\ : out STD_LOGIC;
     \Using_FPGA.Native_0\ : out STD_LOGIC;
     \Using_FPGA.Native_1\ : out STD_LOGIC;
     \Using_FPGA.Native_2\ : out STD_LOGIC;
@@ -21229,30 +21376,20 @@ entity microblaze_mcs_0_intr_ctrl is
     \Using_FPGA.Native_11\ : out STD_LOGIC;
     \Using_FPGA.Native_12\ : out STD_LOGIC;
     \Using_FPGA.Native_13\ : out STD_LOGIC;
+    \Using_FPGA.Native_14\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ : out STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ : out STD_LOGIC;
     Clk : in STD_LOGIC;
-    sel_LSB : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\ : in STD_LOGIC;
-    lmb_reg_write_reg : in STD_LOGIC;
-    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
-    DATA_OUTB : in STD_LOGIC_VECTOR ( 23 downto 0 );
     Sl_Rdy : in STD_LOGIC;
     lmb_as : in STD_LOGIC;
-    lmb_reg_write_reg_0 : in STD_LOGIC;
+    DATA_OUTB : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    lmb_reg_write_reg : in STD_LOGIC;
     lmb_reg_read_Q_reg : in STD_LOGIC;
-    \Using_GPI.GPI_In_reg[7]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \RX_Data_reg[7]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \lmb_abus_Q_reg[1]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     lmb_reg_read_reg : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -21260,25 +21397,8 @@ entity microblaze_mcs_0_intr_ctrl is
 end microblaze_mcs_0_intr_ctrl;
 
 architecture STRUCTURE of microblaze_mcs_0_intr_ctrl is
-  signal \^data_read\ : STD_LOGIC;
-  signal \^extend_data_read\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal INTC_CIPR : STD_LOGIC_VECTOR ( 31 downto 1 );
   signal R : STD_LOGIC;
-  signal \^using_fpga.native\ : STD_LOGIC;
-  signal \^using_fpga.native_0\ : STD_LOGIC;
-  signal \^using_fpga.native_1\ : STD_LOGIC;
-  signal \^using_fpga.native_10\ : STD_LOGIC;
-  signal \^using_fpga.native_11\ : STD_LOGIC;
-  signal \^using_fpga.native_12\ : STD_LOGIC;
-  signal \^using_fpga.native_13\ : STD_LOGIC;
-  signal \^using_fpga.native_2\ : STD_LOGIC;
-  signal \^using_fpga.native_3\ : STD_LOGIC;
-  signal \^using_fpga.native_4\ : STD_LOGIC;
-  signal \^using_fpga.native_5\ : STD_LOGIC;
-  signal \^using_fpga.native_6\ : STD_LOGIC;
-  signal \^using_fpga.native_7\ : STD_LOGIC;
-  signal \^using_fpga.native_8\ : STD_LOGIC;
-  signal \^using_fpga.native_9\ : STD_LOGIC;
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \cipr_rd_dff_all[0].fdr_i\ : label is "FDR";
   attribute box_type : string;
@@ -21346,209 +21466,18 @@ architecture STRUCTURE of microblaze_mcs_0_intr_ctrl is
   attribute XILINX_LEGACY_PRIM of \cipr_rd_dff_all[9].fdr_i\ : label is "FDR";
   attribute box_type of \cipr_rd_dff_all[9].fdr_i\ : label is "PRIMITIVE";
 begin
-  Data_Read <= \^data_read\;
-  Extend_Data_Read(15 downto 0) <= \^extend_data_read\(15 downto 0);
-  \Using_FPGA.Native\ <= \^using_fpga.native\;
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
-  \Using_FPGA.Native_1\ <= \^using_fpga.native_1\;
-  \Using_FPGA.Native_10\ <= \^using_fpga.native_10\;
-  \Using_FPGA.Native_11\ <= \^using_fpga.native_11\;
-  \Using_FPGA.Native_12\ <= \^using_fpga.native_12\;
-  \Using_FPGA.Native_13\ <= \^using_fpga.native_13\;
-  \Using_FPGA.Native_2\ <= \^using_fpga.native_2\;
-  \Using_FPGA.Native_3\ <= \^using_fpga.native_3\;
-  \Using_FPGA.Native_4\ <= \^using_fpga.native_4\;
-  \Using_FPGA.Native_5\ <= \^using_fpga.native_5\;
-  \Using_FPGA.Native_6\ <= \^using_fpga.native_6\;
-  \Using_FPGA.Native_7\ <= \^using_fpga.native_7\;
-  \Using_FPGA.Native_8\ <= \^using_fpga.native_8\;
-  \Using_FPGA.Native_9\ <= \^using_fpga.native_9\;
-\Using_FPGA.Native_i_1__55\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(8),
-      I1 => \^data_read\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\,
-      O => \^extend_data_read\(0)
-    );
-\Using_FPGA.Native_i_1__56\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(9),
-      I1 => \^using_fpga.native\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\,
-      O => \^extend_data_read\(1)
-    );
-\Using_FPGA.Native_i_1__57\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(10),
-      I1 => \^using_fpga.native_0\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\,
-      O => \^extend_data_read\(2)
-    );
-\Using_FPGA.Native_i_1__58\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(11),
-      I1 => \^using_fpga.native_1\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\,
-      O => \^extend_data_read\(3)
-    );
-\Using_FPGA.Native_i_1__59\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(12),
-      I1 => \^using_fpga.native_2\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\,
-      O => \^extend_data_read\(4)
-    );
-\Using_FPGA.Native_i_1__60\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(13),
-      I1 => \^using_fpga.native_3\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\,
-      O => \^extend_data_read\(5)
-    );
-\Using_FPGA.Native_i_1__61\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(14),
-      I1 => \^using_fpga.native_4\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\,
-      O => \^extend_data_read\(6)
-    );
-\Using_FPGA.Native_i_1__62\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FCAA00AA"
-    )
-        port map (
-      I0 => \^extend_data_read\(15),
-      I1 => \^using_fpga.native_5\,
-      I2 => sel_LSB(1),
-      I3 => sel_LSB(0),
-      I4 => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\,
-      O => \^extend_data_read\(7)
-    );
-\Using_FPGA.Native_i_1__63\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(9),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(1),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_7\,
-      O => \^extend_data_read\(9)
-    );
-\Using_FPGA.Native_i_1__64\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(10),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(2),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_8\,
-      O => \^extend_data_read\(10)
-    );
-\Using_FPGA.Native_i_1__65\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(11),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(3),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_9\,
-      O => \^extend_data_read\(11)
-    );
-\Using_FPGA.Native_i_1__66\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(12),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(4),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_10\,
-      O => \^extend_data_read\(12)
-    );
-\Using_FPGA.Native_i_1__67\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(13),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(5),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_11\,
-      O => \^extend_data_read\(13)
-    );
-\Using_FPGA.Native_i_1__68\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(14),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(6),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_12\,
-      O => \^extend_data_read\(14)
-    );
 \Using_FPGA.Native_i_1__69\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8F88FFFF8F880000"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(15),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(7),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_13\,
-      O => \^extend_data_read\(15)
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(1),
+      I3 => INTC_CIPR(17),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_0\
     );
 \Using_FPGA.Native_i_1__70\: unisim.vcomponents.LUT6
     generic map(
@@ -21557,11 +21486,11 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(9),
-      I3 => INTC_CIPR(17),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(2),
+      I3 => INTC_CIPR(18),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native\
+      O => \Using_FPGA.Native_1\
     );
 \Using_FPGA.Native_i_1__71\: unisim.vcomponents.LUT6
     generic map(
@@ -21570,11 +21499,11 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(10),
-      I3 => INTC_CIPR(18),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(3),
+      I3 => INTC_CIPR(19),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native_0\
+      O => \Using_FPGA.Native_2\
     );
 \Using_FPGA.Native_i_1__72\: unisim.vcomponents.LUT6
     generic map(
@@ -21583,11 +21512,11 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(11),
-      I3 => INTC_CIPR(19),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(4),
+      I3 => INTC_CIPR(20),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native_1\
+      O => \Using_FPGA.Native_3\
     );
 \Using_FPGA.Native_i_1__73\: unisim.vcomponents.LUT6
     generic map(
@@ -21596,11 +21525,11 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(12),
-      I3 => INTC_CIPR(20),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(5),
+      I3 => INTC_CIPR(21),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native_2\
+      O => \Using_FPGA.Native_4\
     );
 \Using_FPGA.Native_i_1__74\: unisim.vcomponents.LUT6
     generic map(
@@ -21609,11 +21538,11 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(13),
-      I3 => INTC_CIPR(21),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(6),
+      I3 => INTC_CIPR(22),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native_3\
+      O => \Using_FPGA.Native_5\
     );
 \Using_FPGA.Native_i_1__75\: unisim.vcomponents.LUT6
     generic map(
@@ -21622,11 +21551,11 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(14),
-      I3 => INTC_CIPR(22),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(7),
+      I3 => INTC_CIPR(23),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native_4\
+      O => \Using_FPGA.Native_6\
     );
 \Using_FPGA.Native_i_1__76\: unisim.vcomponents.LUT6
     generic map(
@@ -21635,128 +21564,102 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(15),
-      I3 => INTC_CIPR(23),
-      I4 => lmb_reg_write_reg_0,
+      I2 => DATA_OUTB(8),
+      I3 => INTC_CIPR(24),
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^using_fpga.native_5\
+      O => \Using_FPGA.Native_7\
     );
 \Using_FPGA.Native_i_1__77\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(24),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(16),
-      O => \^using_fpga.native_6\
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(9),
+      I3 => INTC_CIPR(25),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_8\
     );
 \Using_FPGA.Native_i_1__78\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(25),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(17),
-      O => \^using_fpga.native_7\
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(10),
+      I3 => INTC_CIPR(26),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_9\
     );
 \Using_FPGA.Native_i_1__79\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(26),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(18),
-      O => \^using_fpga.native_8\
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(11),
+      I3 => INTC_CIPR(27),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_10\
     );
 \Using_FPGA.Native_i_1__80\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(27),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(19),
-      O => \^using_fpga.native_9\
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(12),
+      I3 => INTC_CIPR(28),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_11\
     );
 \Using_FPGA.Native_i_1__81\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(28),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(20),
-      O => \^using_fpga.native_10\
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(13),
+      I3 => INTC_CIPR(29),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_12\
     );
 \Using_FPGA.Native_i_1__82\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(29),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(21),
-      O => \^using_fpga.native_11\
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(14),
+      I3 => INTC_CIPR(30),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_13\
     );
 \Using_FPGA.Native_i_1__83\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
+      INIT => X"FF80FF80FF808080"
     )
         port map (
-      I0 => INTC_CIPR(30),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(22),
-      O => \^using_fpga.native_12\
-    );
-\Using_FPGA.Native_i_1__84\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFA8A8A8A8A8A8A8"
-    )
-        port map (
-      I0 => INTC_CIPR(31),
-      I1 => lmb_reg_write_reg_0,
-      I2 => lmb_reg_read_Q_reg,
-      I3 => Sl_Rdy,
-      I4 => lmb_as,
-      I5 => DATA_OUTB(23),
-      O => \^using_fpga.native_13\
-    );
-\Using_FPGA.Native_i_2__13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8F88FFFF8F880000"
-    )
-        port map (
-      I0 => INTC_CIPR(8),
-      I1 => lmb_reg_write_reg,
-      I2 => \No_ECC.Sl_Rdy_reg\,
-      I3 => DATA_OUTB(0),
-      I4 => sel_LSB(1),
-      I5 => \^using_fpga.native_6\,
-      O => \^extend_data_read\(8)
+      I0 => Sl_Rdy,
+      I1 => lmb_as,
+      I2 => DATA_OUTB(15),
+      I3 => INTC_CIPR(31),
+      I4 => lmb_reg_write_reg,
+      I5 => lmb_reg_read_Q_reg,
+      O => \Using_FPGA.Native_14\
     );
 \Using_FPGA.Native_i_2__14\: unisim.vcomponents.LUT6
     generic map(
@@ -21765,35 +21668,23 @@ begin
         port map (
       I0 => Sl_Rdy,
       I1 => lmb_as,
-      I2 => DATA_OUTB(8),
+      I2 => DATA_OUTB(0),
       I3 => INTC_CIPR(16),
-      I4 => lmb_reg_write_reg_0,
+      I4 => lmb_reg_write_reg,
       I5 => lmb_reg_read_Q_reg,
-      O => \^data_read\
+      O => Data_Read
     );
-\Using_FPGA.Native_i_3__1\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_3__3\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"EEEEEEE0"
     )
         port map (
       I0 => lmb_reg_read_Q_reg,
-      I1 => lmb_reg_write_reg_0,
+      I1 => lmb_reg_write_reg,
       I2 => INTC_CIPR(1),
-      I3 => \Using_GPI.GPI_In_reg[7]\(0),
+      I3 => Q(0),
       I4 => \RX_Data_reg[7]\(0),
       O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\
-    );
-\Using_FPGA.Native_i_3__2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"EEEEEEE0"
-    )
-        port map (
-      I0 => lmb_reg_read_Q_reg,
-      I1 => lmb_reg_write_reg_0,
-      I2 => INTC_CIPR(2),
-      I3 => \Using_GPI.GPI_In_reg[7]\(1),
-      I4 => \RX_Data_reg[7]\(1),
-      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\
     );
 \Using_FPGA.Native_i_3__4\: unisim.vcomponents.LUT5
     generic map(
@@ -21801,23 +21692,35 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg,
-      I1 => lmb_reg_write_reg_0,
-      I2 => INTC_CIPR(4),
-      I3 => \Using_GPI.GPI_In_reg[7]\(2),
-      I4 => \RX_Data_reg[7]\(2),
-      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\
+      I1 => lmb_reg_write_reg,
+      I2 => INTC_CIPR(2),
+      I3 => Q(1),
+      I4 => \RX_Data_reg[7]\(1),
+      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\
     );
-\Using_FPGA.Native_i_3__7\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_3__6\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"EEEEEEE0"
     )
         port map (
       I0 => lmb_reg_read_Q_reg,
-      I1 => lmb_reg_write_reg_0,
+      I1 => lmb_reg_write_reg,
+      I2 => INTC_CIPR(4),
+      I3 => Q(2),
+      I4 => \RX_Data_reg[7]\(2),
+      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\
+    );
+\Using_FPGA.Native_i_3__9\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EEEEEEE0"
+    )
+        port map (
+      I0 => lmb_reg_read_Q_reg,
+      I1 => lmb_reg_write_reg,
       I2 => INTC_CIPR(7),
-      I3 => \Using_GPI.GPI_In_reg[7]\(3),
+      I3 => Q(3),
       I4 => \RX_Data_reg[7]\(3),
-      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\
+      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\
     );
 \cipr_rd_dff_all[0].fdr_i\: unisim.vcomponents.FDRE
     generic map(
@@ -21827,7 +21730,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(0),
+      Q => \Using_FPGA.Native\(0),
       R => R
     );
 \cipr_rd_dff_all[0].fdr_i_i_1\: unisim.vcomponents.LUT6
@@ -21835,12 +21738,12 @@ begin
       INIT => X"EFFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => Q(4),
-      I1 => Q(1),
-      I2 => Q(0),
-      I3 => Q(3),
+      I0 => \lmb_abus_Q_reg[1]\(4),
+      I1 => \lmb_abus_Q_reg[1]\(1),
+      I2 => \lmb_abus_Q_reg[1]\(0),
+      I3 => \lmb_abus_Q_reg[1]\(3),
       I4 => lmb_reg_read_reg,
-      I5 => Q(2),
+      I5 => \lmb_abus_Q_reg[1]\(2),
       O => R
     );
 \cipr_rd_dff_all[10].fdr_i\: unisim.vcomponents.FDRE
@@ -21851,7 +21754,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(10),
+      Q => \Using_FPGA.Native\(6),
       R => R
     );
 \cipr_rd_dff_all[11].fdr_i\: unisim.vcomponents.FDRE
@@ -21862,7 +21765,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(11),
+      Q => \Using_FPGA.Native\(7),
       R => R
     );
 \cipr_rd_dff_all[12].fdr_i\: unisim.vcomponents.FDRE
@@ -21873,7 +21776,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(12),
+      Q => \Using_FPGA.Native\(8),
       R => R
     );
 \cipr_rd_dff_all[13].fdr_i\: unisim.vcomponents.FDRE
@@ -21884,7 +21787,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(13),
+      Q => \Using_FPGA.Native\(9),
       R => R
     );
 \cipr_rd_dff_all[14].fdr_i\: unisim.vcomponents.FDRE
@@ -21895,7 +21798,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(14),
+      Q => \Using_FPGA.Native\(10),
       R => R
     );
 \cipr_rd_dff_all[15].fdr_i\: unisim.vcomponents.FDRE
@@ -21906,7 +21809,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(15),
+      Q => \Using_FPGA.Native\(11),
       R => R
     );
 \cipr_rd_dff_all[16].fdr_i\: unisim.vcomponents.FDRE
@@ -22115,7 +22018,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(1),
+      Q => \Using_FPGA.Native\(1),
       R => R
     );
 \cipr_rd_dff_all[4].fdr_i\: unisim.vcomponents.FDRE
@@ -22137,7 +22040,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(2),
+      Q => \Using_FPGA.Native\(2),
       R => R
     );
 \cipr_rd_dff_all[6].fdr_i\: unisim.vcomponents.FDRE
@@ -22148,7 +22051,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(3),
+      Q => \Using_FPGA.Native\(3),
       R => R
     );
 \cipr_rd_dff_all[7].fdr_i\: unisim.vcomponents.FDRE
@@ -22170,7 +22073,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(8),
+      Q => \Using_FPGA.Native\(4),
       R => R
     );
 \cipr_rd_dff_all[9].fdr_i\: unisim.vcomponents.FDRE
@@ -22181,7 +22084,7 @@ begin
       C => Clk,
       CE => '1',
       D => '0',
-      Q => INTC_CIPR(9),
+      Q => \Using_FPGA.Native\(5),
       R => R
     );
 end STRUCTURE;
@@ -22193,40 +22096,67 @@ entity microblaze_mcs_0_lmb_bram_if_cntlr is
   port (
     lmb_as : out STD_LOGIC;
     Sl_Rdy : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ : out STD_LOGIC;
-    is_lwx_I_reg : out STD_LOGIC;
+    Extend_Data_Read : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    load_Store_i_reg : out STD_LOGIC;
     \Using_LWX_SWX_instr.reservation_reg\ : in STD_LOGIC;
     Clk : in STD_LOGIC;
     POR_FF_I : in STD_LOGIC;
+    Data_Read : in STD_LOGIC;
+    sel_LSB : in STD_LOGIC_VECTOR ( 1 downto 0 );
     lmb_reg_read_Q_reg : in STD_LOGIC;
-    sel_LSB : in STD_LOGIC_VECTOR ( 0 to 0 );
-    DATA_OUTB : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    DATA_OUTB : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \No_ECC.Sl_Rdy_reg_0\ : in STD_LOGIC;
     lmb_reg_read_Q_reg_0 : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_1\ : in STD_LOGIC;
     lmb_reg_read_Q_reg_1 : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_2\ : in STD_LOGIC;
     lmb_reg_read_Q_reg_2 : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_3\ : in STD_LOGIC;
     lmb_reg_read_Q_reg_3 : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_4\ : in STD_LOGIC;
     lmb_reg_read_Q_reg_4 : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_5\ : in STD_LOGIC;
     lmb_reg_read_Q_reg_5 : in STD_LOGIC;
-    lmb_reg_read_Q_reg_6 : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg_6\ : in STD_LOGIC;
+    lmb_reg_read_Q_reg_6 : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[8]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_7\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[9]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_8\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[10]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_9\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[11]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_10\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[12]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_11\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[13]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_12\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[14]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_13\ : in STD_LOGIC;
+    \Using_GPI.GPI_In_reg[15]\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_14\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end microblaze_mcs_0_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of microblaze_mcs_0_lmb_bram_if_cntlr is
+  signal \^extend_data_read\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \^sl_rdy\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__10_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__11_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__12_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__5_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__6_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__7_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__8_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__9_n_0\ : STD_LOGIC;
   signal \^lmb_as\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__5\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_4__0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__8\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \Using_LWX_SWX_instr.reservation_i_5\ : label is "soft_lutpair0";
 begin
+  Extend_Data_Read(15 downto 0) <= \^extend_data_read\(15 downto 0);
   Sl_Rdy <= \^sl_rdy\;
   lmb_as <= \^lmb_as\;
 \No_ECC.Sl_Rdy_reg\: unisim.vcomponents.FDRE
@@ -22245,17 +22175,204 @@ begin
       Q => \^lmb_as\,
       R => '0'
     );
+\Using_FPGA.Native_i_1__54\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(8),
+      I1 => Data_Read,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__5_n_0\,
+      O => \^extend_data_read\(0)
+    );
+\Using_FPGA.Native_i_1__55\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(9),
+      I1 => \No_ECC.Sl_Rdy_reg_0\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__6_n_0\,
+      O => \^extend_data_read\(1)
+    );
+\Using_FPGA.Native_i_1__56\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(10),
+      I1 => \No_ECC.Sl_Rdy_reg_1\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__7_n_0\,
+      O => \^extend_data_read\(2)
+    );
+\Using_FPGA.Native_i_1__57\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(11),
+      I1 => \No_ECC.Sl_Rdy_reg_2\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__8_n_0\,
+      O => \^extend_data_read\(3)
+    );
+\Using_FPGA.Native_i_1__58\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(12),
+      I1 => \No_ECC.Sl_Rdy_reg_3\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__9_n_0\,
+      O => \^extend_data_read\(4)
+    );
+\Using_FPGA.Native_i_1__59\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(13),
+      I1 => \No_ECC.Sl_Rdy_reg_4\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__10_n_0\,
+      O => \^extend_data_read\(5)
+    );
+\Using_FPGA.Native_i_1__60\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(14),
+      I1 => \No_ECC.Sl_Rdy_reg_5\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__11_n_0\,
+      O => \^extend_data_read\(6)
+    );
+\Using_FPGA.Native_i_1__61\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FCAA00AA"
+    )
+        port map (
+      I0 => \^extend_data_read\(15),
+      I1 => \No_ECC.Sl_Rdy_reg_6\,
+      I2 => sel_LSB(1),
+      I3 => sel_LSB(0),
+      I4 => \Using_FPGA.Native_i_2__12_n_0\,
+      O => \^extend_data_read\(7)
+    );
+\Using_FPGA.Native_i_1__62\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(9),
+      I3 => \Using_GPI.GPI_In_reg[9]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_8\,
+      O => \^extend_data_read\(9)
+    );
+\Using_FPGA.Native_i_1__63\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(10),
+      I3 => \Using_GPI.GPI_In_reg[10]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_9\,
+      O => \^extend_data_read\(10)
+    );
+\Using_FPGA.Native_i_1__64\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(11),
+      I3 => \Using_GPI.GPI_In_reg[11]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_10\,
+      O => \^extend_data_read\(11)
+    );
+\Using_FPGA.Native_i_1__65\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(12),
+      I3 => \Using_GPI.GPI_In_reg[12]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_11\,
+      O => \^extend_data_read\(12)
+    );
+\Using_FPGA.Native_i_1__66\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(13),
+      I3 => \Using_GPI.GPI_In_reg[13]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_12\,
+      O => \^extend_data_read\(13)
+    );
+\Using_FPGA.Native_i_1__67\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(14),
+      I3 => \Using_GPI.GPI_In_reg[14]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_13\,
+      O => \^extend_data_read\(14)
+    );
+\Using_FPGA.Native_i_1__68\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(15),
+      I3 => \Using_GPI.GPI_In_reg[15]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_14\,
+      O => \^extend_data_read\(15)
+    );
 \Using_FPGA.Native_i_2__10\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FBBBBBBB"
     )
         port map (
       I0 => lmb_reg_read_Q_reg_4,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(5),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\
+      O => \Using_FPGA.Native_i_2__10_n_0\
     );
 \Using_FPGA.Native_i_2__11\: unisim.vcomponents.LUT5
     generic map(
@@ -22263,11 +22380,11 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg_5,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(6),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\
+      O => \Using_FPGA.Native_i_2__11_n_0\
     );
 \Using_FPGA.Native_i_2__12\: unisim.vcomponents.LUT5
     generic map(
@@ -22275,11 +22392,24 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg_6,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(7),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\
+      O => \Using_FPGA.Native_i_2__12_n_0\
+    );
+\Using_FPGA.Native_i_2__13\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"80FFFFFF80FF0000"
+    )
+        port map (
+      I0 => \^sl_rdy\,
+      I1 => \^lmb_as\,
+      I2 => DATA_OUTB(8),
+      I3 => \Using_GPI.GPI_In_reg[8]\,
+      I4 => sel_LSB(1),
+      I5 => \No_ECC.Sl_Rdy_reg_7\,
+      O => \^extend_data_read\(8)
     );
 \Using_FPGA.Native_i_2__5\: unisim.vcomponents.LUT5
     generic map(
@@ -22287,11 +22417,11 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(0),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\
+      O => \Using_FPGA.Native_i_2__5_n_0\
     );
 \Using_FPGA.Native_i_2__6\: unisim.vcomponents.LUT5
     generic map(
@@ -22299,11 +22429,11 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg_0,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(1),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\
+      O => \Using_FPGA.Native_i_2__6_n_0\
     );
 \Using_FPGA.Native_i_2__7\: unisim.vcomponents.LUT5
     generic map(
@@ -22311,11 +22441,11 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg_1,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(2),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\
+      O => \Using_FPGA.Native_i_2__7_n_0\
     );
 \Using_FPGA.Native_i_2__8\: unisim.vcomponents.LUT5
     generic map(
@@ -22323,11 +22453,11 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg_2,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(3),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\
+      O => \Using_FPGA.Native_i_2__8_n_0\
     );
 \Using_FPGA.Native_i_2__9\: unisim.vcomponents.LUT5
     generic map(
@@ -22335,20 +22465,20 @@ begin
     )
         port map (
       I0 => lmb_reg_read_Q_reg_3,
-      I1 => sel_LSB(0),
+      I1 => sel_LSB(1),
       I2 => DATA_OUTB(4),
       I3 => \^lmb_as\,
       I4 => \^sl_rdy\,
-      O => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\
+      O => \Using_FPGA.Native_i_2__9_n_0\
     );
-\Using_FPGA.Native_i_4__0\: unisim.vcomponents.LUT2
+\Using_LWX_SWX_instr.reservation_i_5\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => \^sl_rdy\,
       I1 => \^lmb_as\,
-      O => is_lwx_I_reg
+      O => load_Store_i_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -22390,7 +22520,7 @@ begin
       Q => \^lmb_as\,
       R => '0'
     );
-\Using_FPGA.Native_i_1__53\: unisim.vcomponents.LUT2
+\Using_FPGA.Native_i_1__52\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
@@ -22526,7 +22656,7 @@ begin
       Q => sync(2),
       R => '0'
     );
-\Using_FPGA.Native_i_1__9\: unisim.vcomponents.LUT1
+\Using_FPGA.Native_i_1__88\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -22587,7 +22717,7 @@ begin
       Q => Carry_In,
       R => \out\(0)
     );
-\Using_FPGA.Native_i_1__88\: unisim.vcomponents.LUT2
+\Using_FPGA.Native_i_1__87\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
@@ -22596,7 +22726,7 @@ begin
       I1 => ex_Valid,
       O => Write_Carry
     );
-\Using_FPGA.Native_i_2__17\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_2__24\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"7F7F3FFF40400000"
     )
@@ -24713,7 +24843,7 @@ architecture STRUCTURE of microblaze_mcs_0_microblaze_v9_5_2_MB_FDRE_549 is
   attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__115\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__116\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__117\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__34\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__41\ : label is "soft_lutpair18";
 begin
   \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
 \Using_FPGA.Native\: unisim.vcomponents.FDRE
@@ -24895,7 +25025,7 @@ begin
       I3 => Sext8,
       O => \Using_FPGA.Native_14\
     );
-\Using_FPGA.Native_i_2__34\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_2__41\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"B888"
     )
@@ -25583,7 +25713,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_221\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25602,7 +25732,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[24].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -25618,7 +25748,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_223\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25637,7 +25767,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[25].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -25653,7 +25783,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_225\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25672,7 +25802,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[26].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -25688,7 +25818,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_227\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25707,7 +25837,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[27].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -25723,7 +25853,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_229\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25742,7 +25872,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[28].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -25826,7 +25956,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_235\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25845,7 +25975,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[29].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -26205,7 +26335,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_257\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -26224,7 +26354,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[30].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -26590,7 +26720,7 @@ entity \microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_279\ is
     \Result_Sel_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     I4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -26609,7 +26739,7 @@ begin
       I0 => \Result_Sel_reg[0]\(0),
       I1 => Select_Logic_reg,
       I2 => data_Read_Mask(0),
-      I3 => \cipr_rd_dff_all[31].fdr_i\,
+      I3 => \No_ECC.Sl_Rdy_reg\,
       I4 => I4,
       I5 => \Result_Sel_reg[0]\(1),
       O => EX_Result(0)
@@ -26622,8 +26752,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ : in STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ : in STD_LOGIC;
     write_Carry_I_reg : in STD_LOGIC;
     lopt : out STD_LOGIC;
     lopt_1 : in STD_LOGIC;
@@ -26661,11 +26791,11 @@ begin
       CYINIT => '0',
       DI(3 downto 2) => \NLW_Using_FPGA.Native_CARRY4_DI_UNCONNECTED\(3 downto 2),
       DI(1) => \^lopt_2\,
-      DI(0) => \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\,
+      DI(0) => \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\,
       O(3 downto 0) => \NLW_Using_FPGA.Native_CARRY4_O_UNCONNECTED\(3 downto 0),
       S(3 downto 2) => \NLW_Using_FPGA.Native_CARRY4_S_UNCONNECTED\(3 downto 2),
       S(1) => lopt_3,
-      S(0) => \Using_B36_S4.The_BRAMs[1].RAMB36_I1\
+      S(0) => \Using_B36_S4.The_BRAMs[0].RAMB36_I1\
     );
 end STRUCTURE;
 library IEEE;
@@ -26907,7 +27037,7 @@ entity microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_19 is
   port (
     CI : out STD_LOGIC;
     S : in STD_LOGIC;
-    Jump : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
     lopt : out STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -27382,7 +27512,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9 is
   port (
-    Jump : out STD_LOGIC;
+    nonvalid_IFetch_n_reg : out STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     CI60_in : in STD_LOGIC;
     lopt : in STD_LOGIC;
@@ -27394,11 +27524,11 @@ end microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9;
 
 architecture STRUCTURE of microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9 is
   signal \<const0>\ : STD_LOGIC;
-  signal \^jump\ : STD_LOGIC;
+  signal \^nonvalid_ifetch_n_reg\ : STD_LOGIC;
 begin
-  Jump <= \^jump\;
-  \^jump\ <= lopt;
+  \^nonvalid_ifetch_n_reg\ <= lopt;
   lopt_1 <= \<const0>\;
+  nonvalid_IFetch_n_reg <= \^nonvalid_ifetch_n_reg\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -33421,9 +33551,9 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     p_1_in : out STD_LOGIC_VECTOR ( 0 to 0 );
     p_1_in45_in : out STD_LOGIC;
     jump2_I_reg : out STD_LOGIC;
-    \Using_FPGA.Native\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ : out STD_LOGIC;
-    mbar_first_reg : out STD_LOGIC;
+    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ : out STD_LOGIC;
+    mbar_decode_I_reg : out STD_LOGIC;
     Reg1_Addr : out STD_LOGIC_VECTOR ( 0 to 0 );
     \Size_17to32.imm_Reg_reg[0]\ : out STD_LOGIC;
     \Size_17to32.imm_Reg_reg[1]\ : out STD_LOGIC;
@@ -33433,8 +33563,9 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     load_Store_i2 : out STD_LOGIC;
     d_AS_I15_out : out STD_LOGIC;
     mul_Executing0 : out STD_LOGIC;
-    inHibit_EX0 : out STD_LOGIC;
     inHibit_EX1 : out STD_LOGIC;
+    jump2_I_reg_0 : out STD_LOGIC;
+    \Using_FPGA.Native\ : out STD_LOGIC;
     \Using_FPGA.Native_0\ : out STD_LOGIC;
     \Using_FPGA.Native_1\ : out STD_LOGIC;
     \Using_FPGA.Native_2\ : out STD_LOGIC;
@@ -33469,23 +33600,21 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     \Using_FPGA.Native_31\ : out STD_LOGIC;
     \Using_FPGA.Native_32\ : out STD_LOGIC;
     Sign_Extend_reg : out STD_LOGIC;
-    jump2_I_reg_0 : out STD_LOGIC;
-    jump2_I_reg_1 : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    enable_Interrupts_I : out STD_LOGIC;
-    reset_BIP_I8_out : out STD_LOGIC;
+    use_Reg_Neg_S_i28_out : out STD_LOGIC;
     \Using_FPGA.Native_33\ : out STD_LOGIC;
-    \Using_FPGA.Native_34\ : out STD_LOGIC;
-    \Using_FPGA.Native_35\ : out STD_LOGIC;
-    D : out STD_LOGIC;
-    of_mbar_decode : out STD_LOGIC;
+    force_Val1_i27_out : out STD_LOGIC;
+    use_Reg_Neg_DI_i26_out : out STD_LOGIC;
     force1_i29_out : out STD_LOGIC;
     Reg_Test_Equal_i : out STD_LOGIC;
     Reg_Test_Equal_N_i7_out : out STD_LOGIC;
-    use_Reg_Neg_S_i28_out : out STD_LOGIC;
+    enable_Interrupts_I : out STD_LOGIC;
+    reset_BIP_I8_out : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_34\ : out STD_LOGIC;
+    \Using_FPGA.Native_35\ : out STD_LOGIC;
     \Using_FPGA.Native_36\ : out STD_LOGIC;
-    force_Val1_i27_out : out STD_LOGIC;
-    use_Reg_Neg_DI_i26_out : out STD_LOGIC;
+    D : out STD_LOGIC;
+    of_mbar_decode : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     \write_Addr_I_reg[4]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     pc_write_I : out STD_LOGIC;
@@ -33507,7 +33636,6 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     mbar_hold_I_reg : out STD_LOGIC;
     missed_IFetch_reg : out STD_LOGIC;
     \Using_FPGA.Native_38\ : out STD_LOGIC;
-    Compare_Instr_reg : out STD_LOGIC;
     \Using_FPGA.Native_39\ : out STD_LOGIC;
     \Using_FPGA.Native_40\ : out STD_LOGIC;
     write_Reg_reg : out STD_LOGIC;
@@ -33515,10 +33643,11 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     Sext16_reg : out STD_LOGIC;
     Sext8_reg : out STD_LOGIC;
     select_ALU_Carry_reg : out STD_LOGIC;
-    load_Store_i_reg : out STD_LOGIC;
-    swx_ready_reg : out STD_LOGIC;
+    Compare_Instr_reg : out STD_LOGIC;
     is_swx_I_reg : out STD_LOGIC;
     is_lwx_I_reg : out STD_LOGIC;
+    load_Store_i_reg : out STD_LOGIC;
+    swx_ready_reg : out STD_LOGIC;
     writing_reg : out STD_LOGIC;
     doublet_i_reg : out STD_LOGIC;
     byte_i_reg : out STD_LOGIC;
@@ -33533,11 +33662,8 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     mul_Executing_reg : in STD_LOGIC;
     \Using_FPGA.take_Intr_2nd_Phase_reg\ : in STD_LOGIC;
     inHibit_EX : in STD_LOGIC;
-    mbar_first_reg_0 : in STD_LOGIC;
+    mbar_first_reg : in STD_LOGIC;
     Exception_Kind : in STD_LOGIC_VECTOR ( 0 to 0 );
-    nonvalid_IFetch_n_reg_1 : in STD_LOGIC;
-    Sl_Rdy : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
     Reg2_Data : in STD_LOGIC_VECTOR ( 0 to 31 );
     Res_Forward2 : in STD_LOGIC;
     EX_Result : in STD_LOGIC_VECTOR ( 0 to 31 );
@@ -33552,21 +33678,24 @@ entity microblaze_mcs_0_PreFetch_Buffer is
     \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
     lmb_reg_write_reg : in STD_LOGIC;
     swx_ready : in STD_LOGIC;
-    jump2_I_reg_2 : in STD_LOGIC;
+    jump2_I_reg_1 : in STD_LOGIC;
     mtsmsr_write_i_reg_0 : in STD_LOGIC;
     LMB_Ready : in STD_LOGIC;
+    nonvalid_IFetch_n_reg_1 : in STD_LOGIC;
     \Using_FPGA.set_BIP_I_reg_0\ : in STD_LOGIC;
+    Sl_Rdy : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
     \Using_FPGA.Native_42\ : in STD_LOGIC;
-    Compare_Instr : in STD_LOGIC;
     MSR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     I214_out : in STD_LOGIC;
     write_Carry_I_reg_0 : in STD_LOGIC;
     Sext16_reg_0 : in STD_LOGIC;
     Sext8_reg_0 : in STD_LOGIC;
     select_ALU_Carry : in STD_LOGIC;
-    \Using_LWX_SWX_instr.reservation_reg_1\ : in STD_LOGIC;
+    Compare_Instr : in STD_LOGIC;
     is_swx_I_reg_0 : in STD_LOGIC;
     is_lwx_I : in STD_LOGIC;
+    \Using_LWX_SWX_instr.reservation_reg_1\ : in STD_LOGIC;
     Doublet : in STD_LOGIC;
     Byte : in STD_LOGIC;
     lopt : out STD_LOGIC;
@@ -33589,26 +33718,22 @@ architecture STRUCTURE of microblaze_mcs_0_PreFetch_Buffer is
   signal \^logic_oper_reg[0]\ : STD_LOGIC;
   signal \PreFetch_Buffers[0].SRL16E_I_n_1\ : STD_LOGIC;
   signal \PreFetch_Buffers[0].SRL16E_I_n_2\ : STD_LOGIC;
-  signal \PreFetch_Buffers[0].SRL16E_I_n_3\ : STD_LOGIC;
+  signal \PreFetch_Buffers[0].SRL16E_I_n_4\ : STD_LOGIC;
+  signal \PreFetch_Buffers[0].SRL16E_I_n_5\ : STD_LOGIC;
+  signal \PreFetch_Buffers[0].SRL16E_I_n_6\ : STD_LOGIC;
   signal \PreFetch_Buffers[10].SRL16E_I_n_0\ : STD_LOGIC;
-  signal \PreFetch_Buffers[12].SRL16E_I_n_2\ : STD_LOGIC;
-  signal \PreFetch_Buffers[1].SRL16E_I_n_1\ : STD_LOGIC;
+  signal \PreFetch_Buffers[12].SRL16E_I_n_3\ : STD_LOGIC;
+  signal \PreFetch_Buffers[13].SRL16E_I_n_1\ : STD_LOGIC;
   signal \PreFetch_Buffers[1].SRL16E_I_n_2\ : STD_LOGIC;
-  signal \PreFetch_Buffers[1].SRL16E_I_n_3\ : STD_LOGIC;
-  signal \PreFetch_Buffers[1].SRL16E_I_n_4\ : STD_LOGIC;
   signal \PreFetch_Buffers[25].SRL16E_I_n_1\ : STD_LOGIC;
-  signal \PreFetch_Buffers[3].SRL16E_I_n_1\ : STD_LOGIC;
-  signal \PreFetch_Buffers[4].SRL16E_I_n_1\ : STD_LOGIC;
+  signal \PreFetch_Buffers[2].SRL16E_I_n_1\ : STD_LOGIC;
   signal \PreFetch_Buffers[4].SRL16E_I_n_2\ : STD_LOGIC;
-  signal \PreFetch_Buffers[4].SRL16E_I_n_3\ : STD_LOGIC;
+  signal \PreFetch_Buffers[4].SRL16E_I_n_4\ : STD_LOGIC;
   signal \PreFetch_Buffers[4].SRL16E_I_n_5\ : STD_LOGIC;
-  signal \PreFetch_Buffers[4].SRL16E_I_n_6\ : STD_LOGIC;
   signal \PreFetch_Buffers[4].SRL16E_I_n_7\ : STD_LOGIC;
-  signal \PreFetch_Buffers[4].SRL16E_I_n_9\ : STD_LOGIC;
-  signal \PreFetch_Buffers[5].SRL16E_I_n_1\ : STD_LOGIC;
   signal \PreFetch_Buffers[5].SRL16E_I_n_2\ : STD_LOGIC;
   signal \PreFetch_Buffers[5].SRL16E_I_n_3\ : STD_LOGIC;
-  signal \PreFetch_Buffers[5].SRL16E_I_n_7\ : STD_LOGIC;
+  signal \PreFetch_Buffers[5].SRL16E_I_n_4\ : STD_LOGIC;
   signal \PreFetch_Buffers[8].SRL16E_I_n_0\ : STD_LOGIC;
   signal \PreFetch_Buffers[9].SRL16E_I_n_0\ : STD_LOGIC;
   signal R_0 : STD_LOGIC;
@@ -33620,18 +33745,20 @@ architecture STRUCTURE of microblaze_mcs_0_PreFetch_Buffer is
   signal \^sign_extend_reg\ : STD_LOGIC;
   signal \^size_17to32.imm_reg_reg[1]\ : STD_LOGIC;
   signal \^using_b36_s4.the_brams[7].ramb36_i1\ : STD_LOGIC;
-  signal \^using_fpga.native\ : STD_LOGIC;
-  signal \^using_fpga.native_34\ : STD_LOGIC;
+  signal \^using_b36_s4.the_brams[7].ramb36_i1_0\ : STD_LOGIC;
+  signal \^using_fpga.native_32\ : STD_LOGIC;
+  signal \^using_fpga.native_33\ : STD_LOGIC;
+  signal \^using_fpga.native_35\ : STD_LOGIC;
   signal \^jump2_i_reg\ : STD_LOGIC;
-  signal \^jump2_i_reg_1\ : STD_LOGIC;
   signal lopt_2 : STD_LOGIC;
   signal lopt_3 : STD_LOGIC;
   signal lopt_4 : STD_LOGIC;
-  signal \^mbar_first_reg\ : STD_LOGIC;
+  signal \^mbar_decode_i_reg\ : STD_LOGIC;
   signal \^mbar_is_sleep_reg\ : STD_LOGIC;
   signal \^mbar_is_sleep_reg_0\ : STD_LOGIC;
   signal \^mbar_is_sleep_reg_1\ : STD_LOGIC;
-  signal of_valid_FDR_I_n_32 : STD_LOGIC;
+  signal of_valid_FDR_I_n_33 : STD_LOGIC;
+  signal of_valid_FDR_I_n_7 : STD_LOGIC;
   signal \^p_1_in\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^p_1_in45_in\ : STD_LOGIC;
 begin
@@ -33645,11 +33772,12 @@ begin
   Sign_Extend_reg <= \^sign_extend_reg\;
   \Size_17to32.imm_Reg_reg[1]\ <= \^size_17to32.imm_reg_reg[1]\;
   \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ <= \^using_b36_s4.the_brams[7].ramb36_i1\;
-  \Using_FPGA.Native\ <= \^using_fpga.native\;
-  \Using_FPGA.Native_34\ <= \^using_fpga.native_34\;
+  \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ <= \^using_b36_s4.the_brams[7].ramb36_i1_0\;
+  \Using_FPGA.Native_32\ <= \^using_fpga.native_32\;
+  \Using_FPGA.Native_33\ <= \^using_fpga.native_33\;
+  \Using_FPGA.Native_35\ <= \^using_fpga.native_35\;
   jump2_I_reg <= \^jump2_i_reg\;
-  jump2_I_reg_1 <= \^jump2_i_reg_1\;
-  mbar_first_reg <= \^mbar_first_reg\;
+  mbar_decode_I_reg <= \^mbar_decode_i_reg\;
   mbar_is_sleep_reg <= \^mbar_is_sleep_reg\;
   mbar_is_sleep_reg_0 <= \^mbar_is_sleep_reg_0\;
   mbar_is_sleep_reg_1 <= \^mbar_is_sleep_reg_1\;
@@ -33724,20 +33852,24 @@ begin
      port map (
       CI => CI,
       Clk => Clk,
-      Compare_Instr_reg => \PreFetch_Buffers[0].SRL16E_I_n_3\,
+      Compare_Instr_reg => \PreFetch_Buffers[0].SRL16E_I_n_6\,
       DATA_OUTA(0) => DATA_OUTA(0),
       \Result_Sel_reg[0]\ => \^result_sel_reg[0]\,
+      \Size_17to32.imm_Reg_reg[15]\ => \PreFetch_Buffers[0].SRL16E_I_n_2\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^result_sel_reg[1]\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^i2\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^logic_oper_reg[0]\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^p_1_in\(0),
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^i210_in\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
       \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^using_b36_s4.the_brams[7].ramb36_i1\,
-      \Using_FPGA.Native\ => \PreFetch_Buffers[0].SRL16E_I_n_2\,
-      \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\,
+      \Using_FPGA.Native\ => \Using_FPGA.Native_36\,
+      \Using_FPGA.Native_0\ => \PreFetch_Buffers[0].SRL16E_I_n_5\,
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg\,
+      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_0\,
+      \Using_FPGA.Native_3\ => \^mbar_is_sleep_reg_1\,
+      \Using_FPGA.set_BIP_I_reg\ => \PreFetch_Buffers[0].SRL16E_I_n_4\,
       \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      write_Reg_reg => \PreFetch_Buffers[0].SRL16E_I_n_1\,
+      mtsmsr_write_i_reg => \PreFetch_Buffers[0].SRL16E_I_n_1\,
       writing_reg => writing_reg
     );
 \PreFetch_Buffers[10].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_26
@@ -33745,11 +33877,18 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(10),
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \PreFetch_Buffers[1].SRL16E_I_n_1\,
-      \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
-      \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
-      \Using_FPGA.enable_Interrupts_I_reg\ => \PreFetch_Buffers[10].SRL16E_I_n_0\,
+      Reg_Test_Equal_i => Reg_Test_Equal_i,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \PreFetch_Buffers[0].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^using_fpga.native_33\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\ => \^p_1_in\(0),
+      \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \PreFetch_Buffers[8].SRL16E_I_n_0\,
+      \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ => \PreFetch_Buffers[9].SRL16E_I_n_0\,
+      \Using_FPGA.Native\ => \PreFetch_Buffers[10].SRL16E_I_n_0\,
+      \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
+      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\,
+      \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       enable_Interrupts_I => enable_Interrupts_I
     );
 \PreFetch_Buffers[11].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_27
@@ -33757,36 +33896,38 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(11),
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i210_in\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i2\,
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
-      inHibit_EX_reg => \^jump2_i_reg_1\,
+      inHibit_EX_reg => inHibit_EX_reg,
       jump2_I_reg => \^jump2_i_reg\,
-      jump2_I_reg_0 => jump2_I_reg_0,
       p_1_in45_in => \^p_1_in45_in\
     );
 \PreFetch_Buffers[12].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_28
      port map (
       CI => CI,
       Clk => Clk,
+      D => D,
       DATA_OUTA(0) => DATA_OUTA(12),
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^result_sel_reg[0]\,
+      Exception_Kind(0) => Exception_Kind(0),
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i2\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^result_sel_reg[1]\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^i2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^result_sel_reg[0]\,
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^logic_oper_reg[0]\,
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^p_1_in\(0),
       \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \^jump2_i_reg\,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^using_b36_s4.the_brams[7].ramb36_i1\,
-      \Using_FPGA.Native\ => \^using_fpga.native\,
-      \Using_FPGA.Native_0\ => \^using_fpga.native_34\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg\,
-      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_3\ => \^mbar_is_sleep_reg_1\,
-      \Using_FPGA.set_BIP_I_reg\ => \PreFetch_Buffers[12].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^using_b36_s4.the_brams[7].ramb36_i1_0\,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^using_b36_s4.the_brams[7].ramb36_i1\,
+      \Using_FPGA.Native\ => \^using_fpga.native_35\,
+      \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
+      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\,
+      \Using_FPGA.set_BIP_I_reg\ => \PreFetch_Buffers[12].SRL16E_I_n_3\,
       \Using_FPGA.set_BIP_I_reg_0\ => \Using_FPGA.set_BIP_I_reg_0\,
+      \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       mul_Executing_reg => mul_Executing_reg
     );
 \PreFetch_Buffers[13].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_29
@@ -33794,10 +33935,16 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(13),
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^using_b36_s4.the_brams[7].ramb36_i1\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^result_sel_reg[1]\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^result_sel_reg[0]\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^using_b36_s4.the_brams[7].ramb36_i1_0\,
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
+      write_Reg_reg => \PreFetch_Buffers[13].SRL16E_I_n_1\
     );
 \PreFetch_Buffers[14].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_30
      port map (
@@ -33807,7 +33954,7 @@ begin
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
-      mbar_first_reg => \^mbar_first_reg\
+      mbar_decode_I_reg => \^mbar_decode_i_reg\
     );
 \PreFetch_Buffers[15].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_31
      port map (
@@ -33891,39 +34038,39 @@ begin
       Use_Imm_Reg => Use_Imm_Reg,
       \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ => \^size_17to32.imm_reg_reg[1]\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^imm_value\(0),
-      \Using_FPGA.Native\ => \Using_FPGA.Native_4\,
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native_5\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_6\,
-      \Using_FPGA.Native_10\ => \Using_FPGA.Native_15\,
-      \Using_FPGA.Native_11\ => \Using_FPGA.Native_16\,
-      \Using_FPGA.Native_12\ => \Using_FPGA.Native_17\,
-      \Using_FPGA.Native_13\ => \Using_FPGA.Native_18\,
-      \Using_FPGA.Native_14\ => \Using_FPGA.Native_19\,
-      \Using_FPGA.Native_15\ => \Using_FPGA.Native_20\,
-      \Using_FPGA.Native_16\ => \Using_FPGA.Native_21\,
-      \Using_FPGA.Native_17\ => \Using_FPGA.Native_22\,
-      \Using_FPGA.Native_18\ => \Using_FPGA.Native_23\,
-      \Using_FPGA.Native_19\ => \Using_FPGA.Native_24\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_7\,
-      \Using_FPGA.Native_20\ => \Using_FPGA.Native_25\,
-      \Using_FPGA.Native_21\ => \Using_FPGA.Native_26\,
-      \Using_FPGA.Native_22\ => \Using_FPGA.Native_27\,
-      \Using_FPGA.Native_23\ => \Using_FPGA.Native_28\,
-      \Using_FPGA.Native_24\ => \Using_FPGA.Native_29\,
-      \Using_FPGA.Native_25\ => \Using_FPGA.Native_30\,
-      \Using_FPGA.Native_26\ => \Using_FPGA.Native_31\,
-      \Using_FPGA.Native_27\ => \Using_FPGA.Native_32\,
+      \Using_FPGA.Native\ => \Using_FPGA.Native_3\,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native_4\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_5\,
+      \Using_FPGA.Native_10\ => \Using_FPGA.Native_14\,
+      \Using_FPGA.Native_11\ => \Using_FPGA.Native_15\,
+      \Using_FPGA.Native_12\ => \Using_FPGA.Native_16\,
+      \Using_FPGA.Native_13\ => \Using_FPGA.Native_17\,
+      \Using_FPGA.Native_14\ => \Using_FPGA.Native_18\,
+      \Using_FPGA.Native_15\ => \Using_FPGA.Native_19\,
+      \Using_FPGA.Native_16\ => \Using_FPGA.Native_20\,
+      \Using_FPGA.Native_17\ => \Using_FPGA.Native_21\,
+      \Using_FPGA.Native_18\ => \Using_FPGA.Native_22\,
+      \Using_FPGA.Native_19\ => \Using_FPGA.Native_23\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_6\,
+      \Using_FPGA.Native_20\ => \Using_FPGA.Native_24\,
+      \Using_FPGA.Native_21\ => \Using_FPGA.Native_25\,
+      \Using_FPGA.Native_22\ => \Using_FPGA.Native_26\,
+      \Using_FPGA.Native_23\ => \Using_FPGA.Native_27\,
+      \Using_FPGA.Native_24\ => \Using_FPGA.Native_28\,
+      \Using_FPGA.Native_25\ => \Using_FPGA.Native_29\,
+      \Using_FPGA.Native_26\ => \Using_FPGA.Native_30\,
+      \Using_FPGA.Native_27\ => \Using_FPGA.Native_31\,
       \Using_FPGA.Native_28\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_29\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_8\,
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_7\,
       \Using_FPGA.Native_30\ => \^mbar_is_sleep_reg_1\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_9\,
-      \Using_FPGA.Native_5\ => \Using_FPGA.Native_10\,
-      \Using_FPGA.Native_6\ => \Using_FPGA.Native_11\,
-      \Using_FPGA.Native_7\ => \Using_FPGA.Native_12\,
-      \Using_FPGA.Native_8\ => \Using_FPGA.Native_13\,
-      \Using_FPGA.Native_9\ => \Using_FPGA.Native_14\,
-      \Using_FPGA.take_Intr_2nd_Phase_reg\ => of_valid_FDR_I_n_32
+      \Using_FPGA.Native_4\ => \Using_FPGA.Native_8\,
+      \Using_FPGA.Native_5\ => \Using_FPGA.Native_9\,
+      \Using_FPGA.Native_6\ => \Using_FPGA.Native_10\,
+      \Using_FPGA.Native_7\ => \Using_FPGA.Native_11\,
+      \Using_FPGA.Native_8\ => \Using_FPGA.Native_12\,
+      \Using_FPGA.Native_9\ => \Using_FPGA.Native_13\,
+      \Using_FPGA.take_Intr_2nd_Phase_reg\ => of_valid_FDR_I_n_33
     );
 \PreFetch_Buffers[17].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_33
      port map (
@@ -33962,19 +34109,13 @@ begin
       DATA_OUTA(0) => DATA_OUTA(1),
       Imm_Value(0) => \^imm_value\(10),
       \Result_Sel_reg[1]\ => \^result_sel_reg[1]\,
-      \Size_17to32.imm_Reg_reg[15]\ => \PreFetch_Buffers[1].SRL16E_I_n_2\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^result_sel_reg[0]\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^i210_in\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^result_sel_reg[0]\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^logic_oper_reg[0]\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^p_1_in\(0),
-      \Using_FPGA.Native\ => \PreFetch_Buffers[1].SRL16E_I_n_1\,
+      \Using_FPGA.Native\ => \^using_fpga.native_32\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\,
-      \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      is_swx_I_reg => \PreFetch_Buffers[1].SRL16E_I_n_3\,
-      using_Imm_reg => \PreFetch_Buffers[1].SRL16E_I_n_4\
+      is_swx_I_reg => \PreFetch_Buffers[1].SRL16E_I_n_2\
     );
 \PreFetch_Buffers[20].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_37
      port map (
@@ -34052,8 +34193,8 @@ begin
       Reg2_Data(0) => Reg2_Data(26),
       Res_Forward2 => Res_Forward2,
       \Shift_Oper_reg[1]\ => \^imm_value\(5),
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_1\,
-      \Using_FPGA.Native\ => \Using_FPGA.Native_3\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[5].SRL16E_I_n_3\,
+      \Using_FPGA.Native\ => \Using_FPGA.Native_2\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\
@@ -34068,8 +34209,8 @@ begin
       Imm_Value(0) => \^imm_value\(4),
       Reg2_Data(0) => Reg2_Data(27),
       Res_Forward2 => Res_Forward2,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_1\,
-      \Using_FPGA.Native\ => \Using_FPGA.Native_2\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[5].SRL16E_I_n_3\,
+      \Using_FPGA.Native\ => \Using_FPGA.Native_1\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\
@@ -34084,8 +34225,8 @@ begin
       Imm_Value(0) => \^imm_value\(3),
       Reg2_Data(0) => Reg2_Data(28),
       Res_Forward2 => Res_Forward2,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_1\,
-      \Using_FPGA.Native\ => \Using_FPGA.Native_1\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[5].SRL16E_I_n_3\,
+      \Using_FPGA.Native\ => \Using_FPGA.Native_0\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\
@@ -34105,10 +34246,19 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(2),
-      \Size_17to32.imm_Reg_reg[15]\ => \^i210_in\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^using_fpga.native_32\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \PreFetch_Buffers[0].SRL16E_I_n_5\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^mbar_decode_i_reg\,
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
+      \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
+      mbar_decode_I_reg => \^i210_in\,
+      of_mbar_decode => of_mbar_decode,
+      using_Imm_reg => \PreFetch_Buffers[2].SRL16E_I_n_1\
     );
 \PreFetch_Buffers[30].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_48
      port map (
@@ -34125,18 +34275,10 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(31),
-      MSR(1 downto 0) => MSR(1 downto 0),
       \Size_17to32.imm_Reg_reg[15]\ => \^imm_value\(0),
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \PreFetch_Buffers[0].SRL16E_I_n_2\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_3\,
-      \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ => \^size_17to32.imm_reg_reg[1]\,
-      \Using_FPGA.Native\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native_39\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_40\,
-      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg\,
-      \Using_FPGA.Native_3\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_4\ => \^mbar_is_sleep_reg_1\,
-      \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\
+      \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
+      \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\
     );
 \PreFetch_Buffers[3].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_50
      port map (
@@ -34144,78 +34286,71 @@ begin
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(3),
       Select_Logic_reg => \^i2\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
-      is_swx_I_reg => \PreFetch_Buffers[3].SRL16E_I_n_1\
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\
     );
 \PreFetch_Buffers[4].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_51
      port map (
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(4),
-      Imm_Value(1 downto 0) => \^imm_value\(3 downto 2),
+      Exception_Kind(0) => Exception_Kind(0),
+      Imm_Value(2 downto 1) => \^imm_value\(3 downto 2),
+      Imm_Value(0) => \^imm_value\(0),
       \Logic_Oper_reg[0]\ => \^logic_oper_reg[0]\,
-      Reg_Test_Equal_i => Reg_Test_Equal_i,
-      \Size_17to32.imm_Reg_reg[15]\ => \PreFetch_Buffers[4].SRL16E_I_n_6\,
+      Sext16_reg => \PreFetch_Buffers[4].SRL16E_I_n_4\,
+      Sign_Extend_reg => \^sign_extend_reg\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i210_in\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \PreFetch_Buffers[1].SRL16E_I_n_2\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^i2\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ => \PreFetch_Buffers[0].SRL16E_I_n_1\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ => \^result_sel_reg[1]\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ => \^result_sel_reg[0]\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^i2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^result_sel_reg[1]\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ => \^result_sel_reg[0]\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ => \^using_fpga.native_32\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ => \PreFetch_Buffers[0].SRL16E_I_n_1\,
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^sign_extend_reg\,
-      \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \PreFetch_Buffers[9].SRL16E_I_n_0\,
-      \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ => \PreFetch_Buffers[10].SRL16E_I_n_0\,
-      \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\ => \PreFetch_Buffers[8].SRL16E_I_n_0\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \PreFetch_Buffers[5].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \^jump2_i_reg\,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^mbar_decode_i_reg\,
       \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ => \^size_17to32.imm_reg_reg[1]\,
-      \Using_FPGA.Native\ => \PreFetch_Buffers[4].SRL16E_I_n_1\,
-      \Using_FPGA.Native_0\ => \PreFetch_Buffers[4].SRL16E_I_n_5\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_37\,
-      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg\,
-      \Using_FPGA.Native_3\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_4\ => \^mbar_is_sleep_reg_1\,
-      \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
-      \Using_FPGA.take_Intr_2nd_Phase_reg_0\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      is_lwx_I_reg => \PreFetch_Buffers[4].SRL16E_I_n_7\,
-      mtsmsr_write_i_reg => \PreFetch_Buffers[4].SRL16E_I_n_9\,
-      write_Reg_reg => \PreFetch_Buffers[4].SRL16E_I_n_2\,
-      write_Reg_reg_0 => \PreFetch_Buffers[4].SRL16E_I_n_3\
+      \Using_FPGA.Native\ => \Using_FPGA.Native_37\,
+      \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
+      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
+      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_1\,
+      inHibit_EX_reg => of_valid_FDR_I_n_7,
+      jump2_I_reg => jump2_I_reg_0,
+      mbar_hold_I_reg => \PreFetch_Buffers[4].SRL16E_I_n_5\,
+      mtsmsr_write_i_reg => \PreFetch_Buffers[4].SRL16E_I_n_7\,
+      mul_Executing_reg => mul_Executing_reg,
+      \out\(0) => \out\(0),
+      p_1_in45_in => \^p_1_in45_in\,
+      write_Reg_reg => \PreFetch_Buffers[4].SRL16E_I_n_2\
     );
 \PreFetch_Buffers[5].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_52
      port map (
       CI => CI,
       Clk => Clk,
-      D => D,
       DATA_OUTA(0) => DATA_OUTA(5),
-      Exception_Kind(0) => Exception_Kind(0),
+      Imm_Value(0) => \^imm_value\(0),
       \Logic_Oper_reg[1]\ => \^p_1_in\(0),
-      Sext16_reg => \PreFetch_Buffers[5].SRL16E_I_n_3\,
-      Sign_Extend_reg => \^sign_extend_reg\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^i2\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^i210_in\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^result_sel_reg[0]\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ => \^result_sel_reg[1]\,
+      MSR(1 downto 0) => MSR(1 downto 0),
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \PreFetch_Buffers[0].SRL16E_I_n_4\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^i2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^using_fpga.native_32\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ => \^i210_in\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ => \^result_sel_reg[1]\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ => \^result_sel_reg[0]\,
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^logic_oper_reg[0]\,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^using_fpga.native\,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\ => \^mbar_first_reg\,
       \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ => \^size_17to32.imm_reg_reg[1]\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^imm_value\(0),
-      \Using_FPGA.Native\ => \Using_FPGA.Native_35\,
-      \Using_FPGA.Native_0\ => \PreFetch_Buffers[5].SRL16E_I_n_7\,
-      \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg\,
-      \Using_FPGA.Native_2\ => \^mbar_is_sleep_reg_0\,
-      \Using_FPGA.Native_3\ => \^mbar_is_sleep_reg_1\,
+      \Using_FPGA.Native\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_0\ => \PreFetch_Buffers[5].SRL16E_I_n_3\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_39\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_40\,
+      \Using_FPGA.Native_3\ => \^mbar_is_sleep_reg\,
+      \Using_FPGA.Native_4\ => \^mbar_is_sleep_reg_0\,
+      \Using_FPGA.Native_5\ => \^mbar_is_sleep_reg_1\,
       \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
-      mbar_hold_I_reg => mbar_hold_I_reg,
-      mbar_hold_I_reg_0 => mbar_hold_I_reg_0,
-      mtsmsr_write_i_reg => \PreFetch_Buffers[5].SRL16E_I_n_1\,
-      mul_Executing_reg => mul_Executing_reg,
-      mul_Executing_reg_0 => mul_Executing_reg_0,
-      of_mbar_decode => of_mbar_decode,
-      \out\(0) => \out\(0),
+      \Using_FPGA.take_Intr_2nd_Phase_reg_0\ => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
+      is_swx_I_reg => \PreFetch_Buffers[5].SRL16E_I_n_4\,
       write_Reg_reg => \PreFetch_Buffers[5].SRL16E_I_n_2\
     );
 \PreFetch_Buffers[6].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_53
@@ -34223,13 +34358,9 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(6),
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^p_1_in\(0),
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
-      \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \^jump2_i_reg\,
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
-      inHibit_EX_reg => inHibit_EX_reg,
       p_1_in45_in => \^p_1_in45_in\
     );
 \PreFetch_Buffers[7].SRL16E_I\: entity work.microblaze_mcs_0_MB_SRL16E_54
@@ -34249,10 +34380,8 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(8),
-      Reg_Test_Equal_N_i7_out => Reg_Test_Equal_N_i7_out,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_5\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^using_fpga.native_33\,
       \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \PreFetch_Buffers[9].SRL16E_I_n_0\,
-      \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ => \PreFetch_Buffers[10].SRL16E_I_n_0\,
       \Using_FPGA.Native\ => \PreFetch_Buffers[8].SRL16E_I_n_0\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_0\,
@@ -34267,7 +34396,9 @@ begin
       CI => CI,
       Clk => Clk,
       DATA_OUTA(0) => DATA_OUTA(9),
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \PreFetch_Buffers[1].SRL16E_I_n_1\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \PreFetch_Buffers[0].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \^logic_oper_reg[0]\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^p_1_in\(0),
       \Using_FPGA.Native\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_0\ => \^mbar_is_sleep_reg_0\,
       \Using_FPGA.Native_1\ => \^mbar_is_sleep_reg_1\,
@@ -34289,11 +34420,12 @@ of_valid_FDR_I: entity work.microblaze_mcs_0_MB_FDR
       E(0) => E(0),
       Exception_Kind(0) => Exception_Kind(0),
       I214_out => I214_out,
-      Imm_Value(0) => \^imm_value\(6),
+      Imm_Value(0) => \^imm_value\(0),
       LMB_Ready => LMB_Ready,
       \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       R => R,
       R_0 => R_0,
+      Reg_Test_Equal_N_i7_out => Reg_Test_Equal_N_i7_out,
       S3_out => S3_out,
       SR(0) => SR(0),
       Select_Logic0 => Select_Logic0,
@@ -34303,48 +34435,46 @@ of_valid_FDR_I: entity work.microblaze_mcs_0_MB_FDR
       Sext8_reg_0 => Sext8_reg_0,
       \Size_17to32.imm_Reg_reg[15]\ => \^i175_in\,
       Sl_Rdy => Sl_Rdy,
-      \Synchronize.use_sync_reset.sync_reg[2]\ => \PreFetch_Buffers[5].SRL16E_I_n_1\,
+      \Synchronize.use_sync_reset.sync_reg[2]\ => \PreFetch_Buffers[4].SRL16E_I_n_7\,
       Unsigned_Op_reg => Unsigned_Op_reg,
       Use_Imm_Reg => Use_Imm_Reg,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \^result_sel_reg[1]\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \^result_sel_reg[0]\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1\ => \^i210_in\,
       \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2\ => \^i2\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ => \PreFetch_Buffers[1].SRL16E_I_n_2\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ => \PreFetch_Buffers[1].SRL16E_I_n_4\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5\ => \PreFetch_Buffers[1].SRL16E_I_n_1\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6\ => \PreFetch_Buffers[0].SRL16E_I_n_3\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\ => \PreFetch_Buffers[1].SRL16E_I_n_3\,
-      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8\ => \PreFetch_Buffers[3].SRL16E_I_n_1\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[5].SRL16E_I_n_7\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \PreFetch_Buffers[4].SRL16E_I_n_6\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3\ => \^using_fpga.native_32\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4\ => \PreFetch_Buffers[0].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5\ => \PreFetch_Buffers[0].SRL16E_I_n_4\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6\ => \PreFetch_Buffers[2].SRL16E_I_n_1\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7\ => \PreFetch_Buffers[0].SRL16E_I_n_5\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8\ => \PreFetch_Buffers[0].SRL16E_I_n_6\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9\ => \PreFetch_Buffers[1].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_5\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \^logic_oper_reg[0]\,
       \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1\ => \^p_1_in\(0),
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\ => \PreFetch_Buffers[4].SRL16E_I_n_9\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3\ => \^logic_oper_reg[0]\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_4\ => \PreFetch_Buffers[5].SRL16E_I_n_2\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_5\ => \PreFetch_Buffers[4].SRL16E_I_n_7\,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2\ => \PreFetch_Buffers[5].SRL16E_I_n_4\,
       \Using_B36_S4.The_BRAMs[2].RAMB36_I1\ => \PreFetch_Buffers[8].SRL16E_I_n_0\,
       \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0\ => \PreFetch_Buffers[9].SRL16E_I_n_0\,
       \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1\ => \PreFetch_Buffers[10].SRL16E_I_n_0\,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^mbar_first_reg\,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\ => \^using_fpga.native_34\,
-      \Using_B36_S4.The_BRAMs[4].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_2\,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => \^using_fpga.native_35\,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0\ => \PreFetch_Buffers[13].SRL16E_I_n_1\,
       \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ => \PreFetch_Buffers[25].SRL16E_I_n_1\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => \^imm_value\(5),
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^imm_value\(0),
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native_33\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_36\,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\(0) => \^imm_value\(6),
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ => \^imm_value\(5),
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \PreFetch_Buffers[4].SRL16E_I_n_2\,
+      \Using_FPGA.Native_0\ => \^using_fpga.native_33\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_34\,
       \Using_FPGA.Native_2\ => \Using_FPGA.Native_38\,
-      \Using_FPGA.Native_3\ => of_valid_FDR_I_n_32,
+      \Using_FPGA.Native_3\ => of_valid_FDR_I_n_33,
       \Using_FPGA.Native_4\ => \Buffer_DFFs[2].MUXCY_XOR_I_n_1\,
       \Using_FPGA.Native_5\ => \Using_FPGA.Native_41\,
       \Using_FPGA.Native_6\ => \^mbar_is_sleep_reg\,
       \Using_FPGA.Native_7\ => \Using_FPGA.Native_42\,
       \Using_FPGA.set_BIP_I_reg\ => \Using_FPGA.set_BIP_I_reg\,
-      \Using_FPGA.set_BIP_I_reg_0\ => \PreFetch_Buffers[12].SRL16E_I_n_2\,
+      \Using_FPGA.set_BIP_I_reg_0\ => \PreFetch_Buffers[12].SRL16E_I_n_3\,
       \Using_FPGA.take_Intr_2nd_Phase_reg\ => \Using_FPGA.take_Intr_2nd_Phase_reg\,
       \Using_FPGA.take_Intr_2nd_Phase_reg_0\ => \Using_FPGA.take_Intr_2nd_Phase_reg_0\,
-      \Using_FPGA.take_Intr_2nd_Phase_reg_1\ => \PreFetch_Buffers[5].SRL16E_I_n_3\,
+      \Using_FPGA.take_Intr_2nd_Phase_reg_1\ => \PreFetch_Buffers[4].SRL16E_I_n_4\,
       \Using_LWX_SWX_instr.reservation_reg\ => \Using_LWX_SWX_instr.reservation_reg\,
       \Using_LWX_SWX_instr.reservation_reg_0\ => \Using_LWX_SWX_instr.reservation_reg_0\,
       \Using_LWX_SWX_instr.reservation_reg_1\ => \Using_LWX_SWX_instr.reservation_reg_1\,
@@ -34356,14 +34486,13 @@ of_valid_FDR_I: entity work.microblaze_mcs_0_MB_FDR
       ex_Valid_reg => ex_Valid_reg,
       force_Val1_i27_out => force_Val1_i27_out,
       inHibit_EX => inHibit_EX,
-      inHibit_EX0 => inHibit_EX0,
       inHibit_EX1 => inHibit_EX1,
       is_lwx_I => is_lwx_I,
       is_lwx_I_reg => is_lwx_I_reg,
       is_swx_I_reg => is_swx_I_reg,
       is_swx_I_reg_0 => is_swx_I_reg_0,
-      jump2_I_reg => \^jump2_i_reg_1\,
-      jump2_I_reg_0 => jump2_I_reg_2,
+      jump2_I_reg => of_valid_FDR_I_n_7,
+      jump2_I_reg_0 => jump2_I_reg_1,
       lmb_as => lmb_as,
       lmb_reg_read_Q => lmb_reg_read_Q,
       lmb_reg_write => lmb_reg_write,
@@ -34372,7 +34501,9 @@ of_valid_FDR_I: entity work.microblaze_mcs_0_MB_FDR
       load_Store_i2 => load_Store_i2,
       load_Store_i_reg => load_Store_i_reg,
       load_Store_i_reg_0 => load_Store_i_reg_0,
-      mbar_first_reg => mbar_first_reg_0,
+      mbar_first_reg => mbar_first_reg,
+      mbar_hold_I_reg => mbar_hold_I_reg,
+      mbar_hold_I_reg_0 => mbar_hold_I_reg_0,
       missed_IFetch => missed_IFetch,
       missed_IFetch_reg => missed_IFetch_reg,
       mtsmsr_write_i_reg => mtsmsr_write_i_reg,
@@ -35754,7 +35885,7 @@ entity microblaze_mcs_0_Result_Mux_Bit is
     \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit : entity is "Result_Mux_Bit";
@@ -35767,9 +35898,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[31].fdr_i\ => \cipr_rd_dff_all[31].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_280\
@@ -36150,7 +36281,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_198 is
     \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_198 : entity is "Result_Mux_Bit";
@@ -36163,9 +36294,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[30].fdr_i\ => \cipr_rd_dff_all[30].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_258\
@@ -36534,7 +36665,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_209 is
     BRAM_Addr_B : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_209 : entity is "Result_Mux_Bit";
@@ -36547,9 +36678,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[29].fdr_i\ => \cipr_rd_dff_all[29].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_236\
@@ -36638,7 +36769,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_212 is
     BRAM_Addr_B : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_212 : entity is "Result_Mux_Bit";
@@ -36651,9 +36782,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[28].fdr_i\ => \cipr_rd_dff_all[28].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_230\
@@ -36674,7 +36805,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_213 is
     BRAM_Addr_B : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_213 : entity is "Result_Mux_Bit";
@@ -36687,9 +36818,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[27].fdr_i\ => \cipr_rd_dff_all[27].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_228\
@@ -36710,7 +36841,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_214 is
     BRAM_Addr_B : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_214 : entity is "Result_Mux_Bit";
@@ -36723,9 +36854,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[26].fdr_i\ => \cipr_rd_dff_all[26].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_226\
@@ -36746,7 +36877,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_215 is
     BRAM_Addr_B : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_215 : entity is "Result_Mux_Bit";
@@ -36759,9 +36890,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[25].fdr_i\ => \cipr_rd_dff_all[25].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_224\
@@ -36782,7 +36913,7 @@ entity microblaze_mcs_0_Result_Mux_Bit_216 is
     BRAM_Addr_B : in STD_LOGIC_VECTOR ( 0 to 0 );
     Select_Logic_reg : in STD_LOGIC;
     data_Read_Mask : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux_Bit_216 : entity is "Result_Mux_Bit";
@@ -36795,9 +36926,9 @@ Data_Shift_Mux: entity work.\microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__paramet
      port map (
       EX_Result(0) => EX_Result(0),
       I4 => I4,
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg,
-      \cipr_rd_dff_all[24].fdr_i\ => \cipr_rd_dff_all[24].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(0)
     );
 Mul_ALU_Mux: entity work.\microblaze_mcs_0_MB_LUT4__parameterized33_222\
@@ -40550,8 +40681,6 @@ entity microblaze_mcs_0_Decode is
     ALU_Carry : in STD_LOGIC;
     \Using_FPGA.Native_47\ : in STD_LOGIC;
     Reg_zero : in STD_LOGIC;
-    Sl_Rdy : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
     Reg2_Data : in STD_LOGIC_VECTOR ( 0 to 31 );
     EX_Result : in STD_LOGIC_VECTOR ( 0 to 31 );
     \Size_17to32.imm_Reg_reg[0]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -40564,6 +40693,8 @@ entity microblaze_mcs_0_Decode is
     \Using_FPGA.Native_49\ : in STD_LOGIC;
     \Using_FPGA.Native_50\ : in STD_LOGIC;
     \Using_FPGA.Native_51\ : in STD_LOGIC;
+    Sl_Rdy : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
     New_Value : in STD_LOGIC;
     \Using_FPGA.Native_52\ : in STD_LOGIC;
     reset_temp : in STD_LOGIC;
@@ -40604,6 +40735,7 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal LWX_SWX_Carry : STD_LOGIC;
   signal New_Carry : STD_LOGIC;
   signal PreFetch_Buffer_I_n_1 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_100 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_101 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_102 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_103 : STD_LOGIC;
@@ -40616,8 +40748,8 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal PreFetch_Buffer_I_n_110 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_111 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_112 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_113 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_114 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_115 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_116 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_117 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_118 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_119 : STD_LOGIC;
@@ -40629,23 +40761,22 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal PreFetch_Buffer_I_n_125 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_126 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_127 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_128 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_38 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_5 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_72 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_73 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_74 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_78 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_79 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_75 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_8 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_80 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_87 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_84 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_85 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_86 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_89 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_90 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_91 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_93 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_92 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_94 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_95 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_96 : STD_LOGIC;
+  signal PreFetch_Buffer_I_n_97 : STD_LOGIC;
   signal PreFetch_Buffer_I_n_98 : STD_LOGIC;
-  signal PreFetch_Buffer_I_n_99 : STD_LOGIC;
   signal R : STD_LOGIC;
   signal \^reg1_addr\ : STD_LOGIC_VECTOR ( 0 to 4 );
   signal Reg_Test_Equal_N_i7_out : STD_LOGIC;
@@ -40676,10 +40807,10 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal \Using_FPGA.Intr_Carry_MUXCY_n_0\ : STD_LOGIC;
   signal \Using_FPGA.MULT_AND_I_n_0\ : STD_LOGIC;
   signal \Using_FPGA.MUXCY_JUMP_CARRY_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_2__16_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_3__10_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_3__9_n_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_4__1_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_2__23_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_3__11_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_3__12_n_0\ : STD_LOGIC;
+  signal \Using_FPGA.Native_i_4__0_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_5_n_0\ : STD_LOGIC;
   signal \Using_FPGA.OpSel1_SPR_Select_LUT_1_n_0\ : STD_LOGIC;
   signal \Using_FPGA.OpSel1_SPR_Select_LUT_2_n_0\ : STD_LOGIC;
@@ -40719,9 +40850,9 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal iFetch_In_Progress : STD_LOGIC;
   signal iFetch_In_Progress_i_1_n_0 : STD_LOGIC;
   signal inHibit_EX : STD_LOGIC;
-  signal inHibit_EX0 : STD_LOGIC;
   signal inHibit_EX1 : STD_LOGIC;
   signal inHibit_EX_i_1_n_0 : STD_LOGIC;
+  signal inHibit_EX_i_2_n_0 : STD_LOGIC;
   signal is_lwx_I : STD_LOGIC;
   signal is_swx_I_reg_n_0 : STD_LOGIC;
   signal jump2_I_reg_n_0 : STD_LOGIC;
@@ -40748,7 +40879,7 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal lopt_8 : STD_LOGIC;
   signal lopt_9 : STD_LOGIC;
   signal mbar_decode_I : STD_LOGIC;
-  signal mbar_first_i_2_n_0 : STD_LOGIC;
+  signal mbar_first_i_3_n_0 : STD_LOGIC;
   signal mbar_first_reg_n_0 : STD_LOGIC;
   signal mbar_hold_I_reg_n_0 : STD_LOGIC;
   signal mbar_is_sleep : STD_LOGIC;
@@ -40775,30 +40906,30 @@ architecture STRUCTURE of microblaze_mcs_0_Decode is
   signal write_Carry_I_reg_n_0 : STD_LOGIC;
   signal writing_reg_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \No_ECC.lmb_as_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \No_ECC.lmb_as_i_1__0\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__100\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__101\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__102\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__118\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__119\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__92\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__93\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__95\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__96\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__97\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__98\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__99\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__16\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__35\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__37\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__10\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__9\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_4__1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \No_ECC.lmb_as_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \No_ECC.lmb_as_i_1__0\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__100\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__101\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__102\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__118\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__119\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__92\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__93\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__95\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__96\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__97\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__98\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__99\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__23\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__42\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__44\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__11\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_3__12\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_4__0\ : label is "soft_lutpair39";
   attribute SOFT_HLUTNM of \Using_LWX_SWX_instr.reservation_i_2\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of iFetch_In_Progress_i_1 : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of lmb_reg_read_i_2 : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of lmb_reg_write_i_2 : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of iFetch_In_Progress_i_1 : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of lmb_reg_read_i_2 : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of lmb_reg_write_i_2 : label is "soft_lutpair43";
 begin
   Byte <= \^byte\;
   Compare_Instr <= \^compare_instr\;
@@ -40825,7 +40956,7 @@ Compare_Instr_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_114,
+      D => PreFetch_Buffer_I_n_120,
       Q => \^compare_instr\,
       R => '0'
     );
@@ -40871,7 +41002,7 @@ PreFetch_Buffer_I: entity work.microblaze_mcs_0_PreFetch_Buffer
       CI => \^mbar_is_sleep_reg_0\,
       Clk => Clk,
       Compare_Instr => \^compare_instr\,
-      Compare_Instr_reg => PreFetch_Buffer_I_n_114,
+      Compare_Instr_reg => PreFetch_Buffer_I_n_120,
       D => D,
       DATA_OUTA(0 to 31) => DATA_OUTA(0 to 31),
       Doublet => \^doublet\,
@@ -40910,118 +41041,117 @@ PreFetch_Buffer_I: entity work.microblaze_mcs_0_PreFetch_Buffer
       \Result_Sel_reg[0]\ => PreFetch_Buffer_I_n_1,
       \Result_Sel_reg[1]\ => PreFetch_Buffer_I_n_5,
       S => S,
-      SR(0) => PreFetch_Buffer_I_n_90,
+      SR(0) => PreFetch_Buffer_I_n_89,
       Select_Logic0 => Select_Logic0,
-      Sext16_reg => PreFetch_Buffer_I_n_119,
+      Sext16_reg => PreFetch_Buffer_I_n_117,
       Sext16_reg_0 => \^sext16\,
-      Sext8_reg => PreFetch_Buffer_I_n_120,
+      Sext8_reg => PreFetch_Buffer_I_n_118,
       Sext8_reg_0 => \^sext8\,
-      Sign_Extend_reg => PreFetch_Buffer_I_n_72,
+      Sign_Extend_reg => PreFetch_Buffer_I_n_73,
       \Size_17to32.imm_Reg_reg[0]\ => \^imm_value\(0),
       \Size_17to32.imm_Reg_reg[0]_0\(15 downto 0) => \Size_17to32.imm_Reg_reg[0]\(15 downto 0),
       \Size_17to32.imm_Reg_reg[1]\ => \^imm_value\(1),
       Sl_Rdy => Sl_Rdy,
-      Unsigned_Op_reg => PreFetch_Buffer_I_n_99,
+      Unsigned_Op_reg => PreFetch_Buffer_I_n_98,
       Use_Imm_Reg => Use_Imm_Reg,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^reg1_addr\(2),
-      \Using_FPGA.Native\ => \^reg1_addr\(1),
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_10\ => \Using_FPGA.Native_9\,
-      \Using_FPGA.Native_11\ => \Using_FPGA.Native_10\,
-      \Using_FPGA.Native_12\ => \Using_FPGA.Native_11\,
-      \Using_FPGA.Native_13\ => \Using_FPGA.Native_12\,
-      \Using_FPGA.Native_14\ => \Using_FPGA.Native_13\,
-      \Using_FPGA.Native_15\ => \Using_FPGA.Native_14\,
-      \Using_FPGA.Native_16\ => \Using_FPGA.Native_15\,
-      \Using_FPGA.Native_17\ => \Using_FPGA.Native_16\,
-      \Using_FPGA.Native_18\ => \Using_FPGA.Native_17\,
-      \Using_FPGA.Native_19\ => \Using_FPGA.Native_18\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_20\ => \Using_FPGA.Native_19\,
-      \Using_FPGA.Native_21\ => \Using_FPGA.Native_20\,
-      \Using_FPGA.Native_22\ => \Using_FPGA.Native_21\,
-      \Using_FPGA.Native_23\ => \Using_FPGA.Native_22\,
-      \Using_FPGA.Native_24\ => \Using_FPGA.Native_23\,
-      \Using_FPGA.Native_25\ => \Using_FPGA.Native_24\,
-      \Using_FPGA.Native_26\ => \Using_FPGA.Native_25\,
-      \Using_FPGA.Native_27\ => \Using_FPGA.Native_26\,
-      \Using_FPGA.Native_28\ => \Using_FPGA.Native_27\,
-      \Using_FPGA.Native_29\ => \Using_FPGA.Native_28\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
-      \Using_FPGA.Native_30\ => \Using_FPGA.Native_29\,
-      \Using_FPGA.Native_31\ => \Using_FPGA.Native_30\,
-      \Using_FPGA.Native_32\ => \Using_FPGA.Native_31\,
-      \Using_FPGA.Native_33\ => PreFetch_Buffer_I_n_78,
-      \Using_FPGA.Native_34\ => PreFetch_Buffer_I_n_79,
-      \Using_FPGA.Native_35\ => PreFetch_Buffer_I_n_80,
-      \Using_FPGA.Native_36\ => PreFetch_Buffer_I_n_87,
-      \Using_FPGA.Native_37\ => PreFetch_Buffer_I_n_106,
-      \Using_FPGA.Native_38\ => PreFetch_Buffer_I_n_113,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \^reg1_addr\(1),
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => \^reg1_addr\(2),
+      \Using_FPGA.Native\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native_0\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_1\,
+      \Using_FPGA.Native_10\ => \Using_FPGA.Native_10\,
+      \Using_FPGA.Native_11\ => \Using_FPGA.Native_11\,
+      \Using_FPGA.Native_12\ => \Using_FPGA.Native_12\,
+      \Using_FPGA.Native_13\ => \Using_FPGA.Native_13\,
+      \Using_FPGA.Native_14\ => \Using_FPGA.Native_14\,
+      \Using_FPGA.Native_15\ => \Using_FPGA.Native_15\,
+      \Using_FPGA.Native_16\ => \Using_FPGA.Native_16\,
+      \Using_FPGA.Native_17\ => \Using_FPGA.Native_17\,
+      \Using_FPGA.Native_18\ => \Using_FPGA.Native_18\,
+      \Using_FPGA.Native_19\ => \Using_FPGA.Native_19\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native_20\ => \Using_FPGA.Native_20\,
+      \Using_FPGA.Native_21\ => \Using_FPGA.Native_21\,
+      \Using_FPGA.Native_22\ => \Using_FPGA.Native_22\,
+      \Using_FPGA.Native_23\ => \Using_FPGA.Native_23\,
+      \Using_FPGA.Native_24\ => \Using_FPGA.Native_24\,
+      \Using_FPGA.Native_25\ => \Using_FPGA.Native_25\,
+      \Using_FPGA.Native_26\ => \Using_FPGA.Native_26\,
+      \Using_FPGA.Native_27\ => \Using_FPGA.Native_27\,
+      \Using_FPGA.Native_28\ => \Using_FPGA.Native_28\,
+      \Using_FPGA.Native_29\ => \Using_FPGA.Native_29\,
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_3\,
+      \Using_FPGA.Native_30\ => \Using_FPGA.Native_30\,
+      \Using_FPGA.Native_31\ => \Using_FPGA.Native_31\,
+      \Using_FPGA.Native_32\ => PreFetch_Buffer_I_n_72,
+      \Using_FPGA.Native_33\ => PreFetch_Buffer_I_n_75,
+      \Using_FPGA.Native_34\ => PreFetch_Buffer_I_n_84,
+      \Using_FPGA.Native_35\ => PreFetch_Buffer_I_n_85,
+      \Using_FPGA.Native_36\ => PreFetch_Buffer_I_n_86,
+      \Using_FPGA.Native_37\ => PreFetch_Buffer_I_n_105,
+      \Using_FPGA.Native_38\ => PreFetch_Buffer_I_n_112,
       \Using_FPGA.Native_39\ => \Using_FPGA.Native_44\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_3\,
+      \Using_FPGA.Native_4\ => \Using_FPGA.Native_4\,
       \Using_FPGA.Native_40\ => \Using_FPGA.Native_45\,
       \Using_FPGA.Native_41\ => \^jump\,
       \Using_FPGA.Native_42\ => \Using_FPGA.Force_Val2_FDRSE_n_0\,
-      \Using_FPGA.Native_5\ => \Using_FPGA.Native_4\,
-      \Using_FPGA.Native_6\ => \Using_FPGA.Native_5\,
-      \Using_FPGA.Native_7\ => \Using_FPGA.Native_6\,
-      \Using_FPGA.Native_8\ => \Using_FPGA.Native_7\,
-      \Using_FPGA.Native_9\ => \Using_FPGA.Native_8\,
-      \Using_FPGA.set_BIP_I_reg\ => PreFetch_Buffer_I_n_109,
+      \Using_FPGA.Native_5\ => \Using_FPGA.Native_5\,
+      \Using_FPGA.Native_6\ => \Using_FPGA.Native_6\,
+      \Using_FPGA.Native_7\ => \Using_FPGA.Native_7\,
+      \Using_FPGA.Native_8\ => \Using_FPGA.Native_8\,
+      \Using_FPGA.Native_9\ => \Using_FPGA.Native_9\,
+      \Using_FPGA.set_BIP_I_reg\ => PreFetch_Buffer_I_n_108,
       \Using_FPGA.set_BIP_I_reg_0\ => \Using_FPGA.set_BIP_I_reg_n_0\,
       \Using_FPGA.take_Intr_2nd_Phase_reg\ => \^select_logic_reg_0\,
       \Using_FPGA.take_Intr_2nd_Phase_reg_0\ => \Using_FPGA.Using_Breakable_Pipe.Take_Intr_MUXCY_2_n_0\,
-      \Using_LWX_SWX_instr.reservation_reg\ => PreFetch_Buffer_I_n_95,
-      \Using_LWX_SWX_instr.reservation_reg_0\ => PreFetch_Buffer_I_n_96,
+      \Using_LWX_SWX_instr.reservation_reg\ => PreFetch_Buffer_I_n_94,
+      \Using_LWX_SWX_instr.reservation_reg_0\ => PreFetch_Buffer_I_n_95,
       \Using_LWX_SWX_instr.reservation_reg_1\ => \Using_LWX_SWX_instr.reservation_reg_n_0\,
       byte_i12_out => byte_i12_out,
-      byte_i_reg => PreFetch_Buffer_I_n_128,
+      byte_i_reg => PreFetch_Buffer_I_n_127,
       d_AS_I15_out => d_AS_I15_out,
-      doublet_i_reg => PreFetch_Buffer_I_n_127,
+      doublet_i_reg => PreFetch_Buffer_I_n_126,
       enable_Interrupts_I => enable_Interrupts_I,
       ex_Valid => ex_Valid,
-      ex_Valid_reg => PreFetch_Buffer_I_n_93,
+      ex_Valid_reg => PreFetch_Buffer_I_n_92,
       force1_i29_out => force1_i29_out,
       force_Val1_i27_out => force_Val1_i27_out,
       inHibit_EX => inHibit_EX,
-      inHibit_EX0 => inHibit_EX0,
       inHibit_EX1 => inHibit_EX1,
-      inHibit_EX_reg => PreFetch_Buffer_I_n_105,
+      inHibit_EX_reg => PreFetch_Buffer_I_n_104,
       is_lwx_I => is_lwx_I,
-      is_lwx_I_reg => PreFetch_Buffer_I_n_125,
-      is_swx_I_reg => PreFetch_Buffer_I_n_124,
+      is_lwx_I_reg => PreFetch_Buffer_I_n_122,
+      is_swx_I_reg => PreFetch_Buffer_I_n_121,
       is_swx_I_reg_0 => is_swx_I_reg_n_0,
       jump2_I_reg => \^reg1_addr\(0),
-      jump2_I_reg_0 => PreFetch_Buffer_I_n_73,
-      jump2_I_reg_1 => PreFetch_Buffer_I_n_74,
-      jump2_I_reg_2 => jump2_I_reg_n_0,
+      jump2_I_reg_0 => PreFetch_Buffer_I_n_38,
+      jump2_I_reg_1 => jump2_I_reg_n_0,
       lmb_as => lmb_as,
       lmb_reg_read_Q => lmb_reg_read_Q,
       lmb_reg_write => lmb_reg_write,
       lmb_reg_write_reg => lmb_reg_write_reg,
       load_Store_i => load_Store_i,
       load_Store_i2 => load_Store_i2,
-      load_Store_i_reg => PreFetch_Buffer_I_n_122,
+      load_Store_i_reg => PreFetch_Buffer_I_n_123,
       load_Store_i_reg_0 => \Using_FPGA.Force2_FDRE_n_1\,
       lopt => \^lopt_3\,
       lopt_1 => \^lopt_4\,
-      mbar_first_reg => \^reg1_addr\(3),
-      mbar_first_reg_0 => mbar_first_i_2_n_0,
-      mbar_hold_I_reg => PreFetch_Buffer_I_n_111,
+      mbar_decode_I_reg => \^reg1_addr\(3),
+      mbar_first_reg => mbar_first_i_3_n_0,
+      mbar_hold_I_reg => PreFetch_Buffer_I_n_110,
       mbar_hold_I_reg_0 => mbar_hold_I_reg_n_0,
       mbar_is_sleep_reg => Buffer_Addr(0),
       mbar_is_sleep_reg_0 => Buffer_Addr(1),
       mbar_is_sleep_reg_1 => Buffer_Addr(2),
       missed_IFetch => missed_IFetch,
-      missed_IFetch_reg => PreFetch_Buffer_I_n_112,
-      mtsmsr_write_i_reg => PreFetch_Buffer_I_n_107,
+      missed_IFetch_reg => PreFetch_Buffer_I_n_111,
+      mtsmsr_write_i_reg => PreFetch_Buffer_I_n_106,
       mtsmsr_write_i_reg_0 => mtsmsr_write_i_reg_n_0,
       mul_Executing0 => mul_Executing0,
       mul_Executing_reg => \^normal_piperun\,
       mul_Executing_reg_0 => \^using_b36_s4.the_brams[7].ramb36_i1\,
-      nonvalid_IFetch_n_reg => PreFetch_Buffer_I_n_98,
-      nonvalid_IFetch_n_reg_0 => PreFetch_Buffer_I_n_108,
+      nonvalid_IFetch_n_reg => PreFetch_Buffer_I_n_97,
+      nonvalid_IFetch_n_reg_0 => PreFetch_Buffer_I_n_107,
       nonvalid_IFetch_n_reg_1 => nonvalid_IFetch_n_reg_n_0,
       of_mbar_decode => of_mbar_decode,
       \out\(0) => \out\(0),
@@ -41030,21 +41160,21 @@ PreFetch_Buffer_I: entity work.microblaze_mcs_0_PreFetch_Buffer
       pc_write_I => pc_write_I,
       reset_BIP_I8_out => reset_BIP_I8_out,
       select_ALU_Carry => select_ALU_Carry,
-      select_ALU_Carry_reg => PreFetch_Buffer_I_n_121,
+      select_ALU_Carry_reg => PreFetch_Buffer_I_n_119,
       swx_ready => swx_ready,
-      swx_ready_reg => PreFetch_Buffer_I_n_123,
+      swx_ready_reg => PreFetch_Buffer_I_n_124,
       use_Reg_Neg_DI_i26_out => use_Reg_Neg_DI_i26_out,
       use_Reg_Neg_S_i28_out => use_Reg_Neg_S_i28_out,
-      using_Imm_reg => PreFetch_Buffer_I_n_110,
-      \write_Addr_I_reg[1]\(3) => PreFetch_Buffer_I_n_101,
-      \write_Addr_I_reg[1]\(2) => PreFetch_Buffer_I_n_102,
-      \write_Addr_I_reg[1]\(1) => PreFetch_Buffer_I_n_103,
-      \write_Addr_I_reg[1]\(0) => PreFetch_Buffer_I_n_104,
-      \write_Addr_I_reg[4]\(0) => PreFetch_Buffer_I_n_91,
-      write_Carry_I_reg => PreFetch_Buffer_I_n_118,
+      using_Imm_reg => PreFetch_Buffer_I_n_109,
+      \write_Addr_I_reg[1]\(3) => PreFetch_Buffer_I_n_100,
+      \write_Addr_I_reg[1]\(2) => PreFetch_Buffer_I_n_101,
+      \write_Addr_I_reg[1]\(1) => PreFetch_Buffer_I_n_102,
+      \write_Addr_I_reg[1]\(0) => PreFetch_Buffer_I_n_103,
+      \write_Addr_I_reg[4]\(0) => PreFetch_Buffer_I_n_90,
+      write_Carry_I_reg => PreFetch_Buffer_I_n_116,
       write_Carry_I_reg_0 => write_Carry_I_reg_n_0,
-      write_Reg_reg => PreFetch_Buffer_I_n_117,
-      writing_reg => PreFetch_Buffer_I_n_126
+      write_Reg_reg => PreFetch_Buffer_I_n_115,
+      writing_reg => PreFetch_Buffer_I_n_125
     );
 \Result_Sel_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -41052,7 +41182,7 @@ PreFetch_Buffer_I: entity work.microblaze_mcs_0_PreFetch_Buffer
       CE => \^normal_piperun\,
       D => PreFetch_Buffer_I_n_1,
       Q => \Using_FPGA.Native_46\(1),
-      R => PreFetch_Buffer_I_n_90
+      R => PreFetch_Buffer_I_n_89
     );
 \Result_Sel_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -41060,7 +41190,7 @@ PreFetch_Buffer_I: entity work.microblaze_mcs_0_PreFetch_Buffer
       CE => \^normal_piperun\,
       D => PreFetch_Buffer_I_n_5,
       Q => \Using_FPGA.Native_46\(0),
-      R => PreFetch_Buffer_I_n_90
+      R => PreFetch_Buffer_I_n_89
     );
 Select_Logic_reg: unisim.vcomponents.FDRE
      port map (
@@ -41074,7 +41204,7 @@ Sext16_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_119,
+      D => PreFetch_Buffer_I_n_117,
       Q => \^sext16\,
       R => '0'
     );
@@ -41082,7 +41212,7 @@ Sext8_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_120,
+      D => PreFetch_Buffer_I_n_118,
       Q => \^sext8\,
       R => '0'
     );
@@ -41118,7 +41248,7 @@ Sign_Extend_i_1: unisim.vcomponents.LUT6
       I0 => \^imm_value\(10),
       I1 => \^imm_value\(9),
       I2 => \^normal_piperun\,
-      I3 => PreFetch_Buffer_I_n_72,
+      I3 => PreFetch_Buffer_I_n_73,
       I4 => Exception_Kind(30),
       I5 => \^sign_extend\,
       O => Sign_Extend_i_1_n_0
@@ -41137,7 +41267,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       CE => \^normal_piperun\,
       D => \^imm_value\(14),
       Q => Unsigned_Op,
-      R => PreFetch_Buffer_I_n_99
+      R => PreFetch_Buffer_I_n_98
     );
 \Using_B36_S4.The_BRAMs[0].RAMB36_I1_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -41194,8 +41324,8 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
     );
 \Using_FPGA.ALU_Carry_MUXCY\: entity work.microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY
      port map (
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => \Using_FPGA.I_correct_Carry_Select_n_0\,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => \Using_FPGA.MULT_AND_I_n_0\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => \Using_FPGA.I_correct_Carry_Select_n_0\,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0\ => \Using_FPGA.MULT_AND_I_n_0\,
       \Using_FPGA.Native_0\ => \Using_FPGA.ALU_Carry_MUXCY_n_0\,
       lopt => \^lopt_5\,
       lopt_1 => \^lopt_6\,
@@ -41214,7 +41344,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
      port map (
       ALU_Op(0) => ALU_Op(1),
       Clk => Clk,
-      \Using_FPGA.take_Intr_2nd_Phase_reg\ => PreFetch_Buffer_I_n_78,
+      \Using_FPGA.take_Intr_2nd_Phase_reg\ => PreFetch_Buffer_I_n_84,
       mul_Executing_reg => \^normal_piperun\,
       \out\(0) => \out\(0)
     );
@@ -41240,7 +41370,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       Clk => Clk,
       I175_in => I175_in,
       R => R,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => PreFetch_Buffer_I_n_87,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => PreFetch_Buffer_I_n_75,
       ex_Valid_reg => \Using_FPGA.Force2_FDRE_n_1\,
       jump2_I_reg => jump2_I_reg_n_0,
       lmb_reg_read_Q_reg => lmb_reg_read_Q_reg,
@@ -41262,13 +41392,13 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       Clk => Clk,
       Exception_Kind(0) => Exception_Kind(30),
       \Using_FPGA.Native_0\ => \Using_FPGA.Force_Val2_FDRSE_n_0\,
-      \Using_FPGA.Native_1\ => PreFetch_Buffer_I_n_113
+      \Using_FPGA.Native_1\ => PreFetch_Buffer_I_n_112
     );
 \Using_FPGA.I_correct_Carry_Select\: entity work.\microblaze_mcs_0_MB_LUT4__parameterized21\
      port map (
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => PreFetch_Buffer_I_n_80,
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0\ => PreFetch_Buffer_I_n_106,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => PreFetch_Buffer_I_n_79,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => PreFetch_Buffer_I_n_86,
+      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => PreFetch_Buffer_I_n_105,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => PreFetch_Buffer_I_n_85,
       \Using_FPGA.Native_0\ => \Using_FPGA.I_correct_Carry_Select_n_0\
     );
 \Using_FPGA.Intr_Carry_MUXCY\: entity work.microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_6
@@ -41281,8 +41411,8 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
     );
 \Using_FPGA.MULT_AND_I\: entity work.microblaze_mcs_0_MB_MULT_AND
      port map (
-      \Using_B36_S4.The_BRAMs[1].RAMB36_I1\ => PreFetch_Buffer_I_n_80,
-      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => PreFetch_Buffer_I_n_79,
+      \Using_B36_S4.The_BRAMs[0].RAMB36_I1\ => PreFetch_Buffer_I_n_86,
+      \Using_B36_S4.The_BRAMs[3].RAMB36_I1\ => PreFetch_Buffer_I_n_85,
       \Using_FPGA.Native_0\ => \Using_FPGA.MULT_AND_I_n_0\
     );
 \Using_FPGA.MUXCY_JUMP_CARRY\: entity work.microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_7
@@ -41301,7 +41431,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       ex_Valid_reg => \Using_FPGA.force_jump2_LUT4_n_0\,
       lopt => \^lopt_7\,
       lopt_1 => lopt_8,
-      lopt_2 => PreFetch_Buffer_I_n_98,
+      lopt_2 => PreFetch_Buffer_I_n_97,
       lopt_3 => lopt_9,
       lopt_4 => S,
       lopt_5 => lopt_10,
@@ -41311,10 +41441,10 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
 \Using_FPGA.MUXCY_JUMP_CARRY3\: entity work.microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9
      port map (
       CI60_in => CI60_in,
-      Jump => \^jump\,
-      \Using_FPGA.Native_0\ => PreFetch_Buffer_I_n_98,
+      \Using_FPGA.Native_0\ => PreFetch_Buffer_I_n_97,
       lopt => \^lopt_7\,
-      lopt_1 => lopt_8
+      lopt_1 => lopt_8,
+      nonvalid_IFetch_n_reg => \^jump\
     );
 \Using_FPGA.Native_i_1__100\: unisim.vcomponents.LUT3
     generic map(
@@ -41368,13 +41498,13 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I2 => \Data_Flow_I/Result_Mux_I/p_0_in3_out\,
       O => data_Read_Mask(0)
     );
-\Using_FPGA.Native_i_1__85\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__84\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"BAAABABABAAABAAA"
     )
         port map (
       I0 => reset_delay,
-      I1 => \Using_FPGA.Native_i_2__16_n_0\,
+      I1 => \Using_FPGA.Native_i_2__23_n_0\,
       I2 => ex_Valid,
       I3 => I214_out,
       I4 => writing_reg_n_0,
@@ -41474,7 +41604,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I2 => \^sext16\,
       O => \Using_FPGA.Native_37\
     );
-\Using_FPGA.Native_i_2__15\: unisim.vcomponents.LUT1
+\Using_FPGA.Native_i_2__22\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -41482,7 +41612,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I0 => writing_reg_n_0,
       O => I186_in
     );
-\Using_FPGA.Native_i_2__16\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_2__23\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000001"
     )
@@ -41492,9 +41622,9 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I2 => \^write_addr\(0),
       I3 => \^write_addr\(1),
       I4 => \^write_addr\(2),
-      O => \Using_FPGA.Native_i_2__16_n_0\
+      O => \Using_FPGA.Native_i_2__23_n_0\
     );
-\Using_FPGA.Native_i_2__35\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_2__42\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FCECACEC"
     )
@@ -41506,20 +41636,20 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I4 => New_Value,
       O => \Using_FPGA.Native_41\
     );
-\Using_FPGA.Native_i_2__36\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_2__43\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FECE3202FFFFFFFF"
     )
         port map (
       I0 => MSR(1),
-      I1 => \Using_FPGA.Native_i_3__10_n_0\,
-      I2 => \Using_FPGA.Native_i_4__1_n_0\,
+      I1 => \Using_FPGA.Native_i_3__12_n_0\,
+      I2 => \Using_FPGA.Native_i_4__0_n_0\,
       I3 => \Using_FPGA.Native_52\,
       I4 => LWX_SWX_Carry,
       I5 => \Using_FPGA.Native_i_5_n_0\,
       O => \Using_FPGA.Native_42\
     );
-\Using_FPGA.Native_i_2__37\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_2__44\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FCECACEC"
     )
@@ -41531,18 +41661,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I4 => Op1_Low(0),
       O => \Using_FPGA.Native_43\
     );
-\Using_FPGA.Native_i_3__10\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8880"
-    )
-        port map (
-      I0 => load_Store_i,
-      I1 => ex_Valid,
-      I2 => is_lwx_I,
-      I3 => is_swx_I_reg_n_0,
-      O => \Using_FPGA.Native_i_3__10_n_0\
-    );
-\Using_FPGA.Native_i_3__9\: unisim.vcomponents.LUT5
+\Using_FPGA.Native_i_3__11\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFFFE"
     )
@@ -41552,16 +41671,27 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I2 => \^write_addr\(0),
       I3 => \^write_addr\(4),
       I4 => \^write_addr\(3),
-      O => \Using_FPGA.Native_i_3__9_n_0\
+      O => \Using_FPGA.Native_i_3__11_n_0\
     );
-\Using_FPGA.Native_i_4__1\: unisim.vcomponents.LUT2
+\Using_FPGA.Native_i_3__12\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8880"
+    )
+        port map (
+      I0 => load_Store_i,
+      I1 => ex_Valid,
+      I2 => is_lwx_I,
+      I3 => is_swx_I_reg_n_0,
+      O => \Using_FPGA.Native_i_3__12_n_0\
+    );
+\Using_FPGA.Native_i_4__0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => mtsmsr_write_i_reg_n_0,
       I1 => ex_Valid,
-      O => \Using_FPGA.Native_i_4__1_n_0\
+      O => \Using_FPGA.Native_i_4__0_n_0\
     );
 \Using_FPGA.Native_i_5\: unisim.vcomponents.LUT2
     generic map(
@@ -41790,8 +41920,8 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
 \Using_FPGA.iFetch_MuxCY_1\: entity work.microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_19
      port map (
       CI => CI,
-      Jump => \^jump\,
       S => S,
+      \Using_FPGA.Native_0\ => \^jump\,
       lopt => lopt_9
     );
 \Using_FPGA.iFetch_MuxCY_2\: entity work.microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_20
@@ -41836,7 +41966,7 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_109,
+      D => PreFetch_Buffer_I_n_108,
       Q => \Using_FPGA.set_BIP_I_reg_n_0\,
       R => '0'
     );
@@ -41856,9 +41986,9 @@ Unsigned_Op_reg: unisim.vcomponents.FDRE
       I0 => \Using_LWX_SWX_instr.reservation_reg_n_0\,
       I1 => is_lwx_I,
       I2 => Set_BIP,
-      I3 => PreFetch_Buffer_I_n_96,
+      I3 => PreFetch_Buffer_I_n_95,
       I4 => is_swx_I_reg_n_0,
-      I5 => PreFetch_Buffer_I_n_95,
+      I5 => PreFetch_Buffer_I_n_94,
       O => \Using_LWX_SWX_instr.reservation_i_1_n_0\
     );
 \Using_LWX_SWX_instr.reservation_i_2\: unisim.vcomponents.LUT2
@@ -41882,7 +42012,7 @@ byte_i_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_128,
+      D => PreFetch_Buffer_I_n_127,
       Q => \^byte\,
       R => '0'
     );
@@ -41899,8 +42029,8 @@ doublet_Read_i_i_1: unisim.vcomponents.LUT5
       INIT => X"FFEFFFE0"
     )
         port map (
-      I0 => p_1_in(0),
-      I1 => PreFetch_Buffer_I_n_8,
+      I0 => PreFetch_Buffer_I_n_8,
+      I1 => p_1_in(0),
       I2 => \^normal_piperun\,
       I3 => byte_i12_out,
       I4 => \Data_Flow_I/Result_Mux_I/p_0_in3_out\,
@@ -41918,7 +42048,7 @@ doublet_i_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_127,
+      D => PreFetch_Buffer_I_n_126,
       Q => \^doublet\,
       R => '0'
     );
@@ -41926,7 +42056,7 @@ ex_Valid_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_93,
+      D => PreFetch_Buffer_I_n_92,
       Q => ex_Valid,
       R => \out\(0)
     );
@@ -41959,16 +42089,29 @@ iFetch_In_Progress_reg: unisim.vcomponents.FDRE
     );
 inHibit_EX_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000CECEFECE"
+      INIT => X"AA2AAA2A0000AA2A"
     )
         port map (
-      I0 => inHibit_EX,
-      I1 => Exception_Kind(30),
-      I2 => \^normal_piperun\,
-      I3 => PreFetch_Buffer_I_n_105,
-      I4 => PreFetch_Buffer_I_n_74,
-      I5 => inHibit_EX0,
+      I0 => inHibit_EX_i_2_n_0,
+      I1 => lmb_as,
+      I2 => Sl_Rdy,
+      I3 => nonvalid_IFetch_n_reg_n_0,
+      I4 => \^select_logic_reg_0\,
+      I5 => Exception_Kind(30),
       O => inHibit_EX_i_1_n_0
+    );
+inHibit_EX_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF10FFFFFF5000"
+    )
+        port map (
+      I0 => PreFetch_Buffer_I_n_72,
+      I1 => \^jump\,
+      I2 => PreFetch_Buffer_I_n_104,
+      I3 => \^normal_piperun\,
+      I4 => Exception_Kind(30),
+      I5 => inHibit_EX,
+      O => inHibit_EX_i_2_n_0
     );
 inHibit_EX_reg: unisim.vcomponents.FDRE
      port map (
@@ -41982,7 +42125,7 @@ is_lwx_I_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_125,
+      D => PreFetch_Buffer_I_n_122,
       Q => is_lwx_I,
       R => '0'
     );
@@ -41990,7 +42133,7 @@ is_swx_I_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_124,
+      D => PreFetch_Buffer_I_n_121,
       Q => is_swx_I_reg_n_0,
       R => '0'
     );
@@ -41998,7 +42141,7 @@ jump2_I_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => \^normal_piperun\,
-      D => PreFetch_Buffer_I_n_73,
+      D => PreFetch_Buffer_I_n_38,
       Q => jump2_I_reg_n_0,
       R => \out\(0)
     );
@@ -42060,7 +42203,7 @@ load_Store_i_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_122,
+      D => PreFetch_Buffer_I_n_123,
       Q => load_Store_i,
       R => '0'
     );
@@ -42072,7 +42215,7 @@ mbar_decode_I_reg: unisim.vcomponents.FDRE
       Q => mbar_decode_I,
       R => \out\(0)
     );
-mbar_first_i_2: unisim.vcomponents.LUT5
+mbar_first_i_3: unisim.vcomponents.LUT5
     generic map(
       INIT => X"A8A8AAA8"
     )
@@ -42082,7 +42225,7 @@ mbar_first_i_2: unisim.vcomponents.LUT5
       I2 => mbar_sleep,
       I3 => iFetch_In_Progress,
       I4 => \^write_addr\(4),
-      O => mbar_first_i_2_n_0
+      O => mbar_first_i_3_n_0
     );
 mbar_first_reg: unisim.vcomponents.FDRE
     generic map(
@@ -42099,7 +42242,7 @@ mbar_hold_I_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_111,
+      D => PreFetch_Buffer_I_n_110,
       Q => mbar_hold_I_reg_n_0,
       R => '0'
     );
@@ -42136,7 +42279,7 @@ missed_IFetch_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_112,
+      D => PreFetch_Buffer_I_n_111,
       Q => missed_IFetch,
       R => \out\(0)
     );
@@ -42144,7 +42287,7 @@ mtsmsr_write_i_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_107,
+      D => PreFetch_Buffer_I_n_106,
       Q => mtsmsr_write_i_reg_n_0,
       R => '0'
     );
@@ -42160,17 +42303,17 @@ nonvalid_IFetch_n_reg: unisim.vcomponents.FDSE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_108,
+      D => PreFetch_Buffer_I_n_107,
       Q => nonvalid_IFetch_n_reg_n_0,
       S => \out\(0)
     );
 quadlet_Read_i_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF4FFF40"
+      INIT => X"FF2FFF20"
     )
         port map (
-      I0 => p_1_in(0),
-      I1 => PreFetch_Buffer_I_n_8,
+      I0 => PreFetch_Buffer_I_n_8,
+      I1 => p_1_in(0),
       I2 => \^normal_piperun\,
       I3 => byte_i12_out,
       I4 => \Data_Flow_I/Result_Mux_I/p_0_in2_out\,
@@ -42199,7 +42342,7 @@ select_ALU_Carry_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_121,
+      D => PreFetch_Buffer_I_n_119,
       Q => select_ALU_Carry,
       R => '0'
     );
@@ -42207,7 +42350,7 @@ swx_ready_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_123,
+      D => PreFetch_Buffer_I_n_124,
       Q => swx_ready,
       R => '0'
     );
@@ -42215,7 +42358,7 @@ using_Imm_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_110,
+      D => PreFetch_Buffer_I_n_109,
       Q => Use_Imm_Reg,
       R => '0'
     );
@@ -42242,32 +42385,32 @@ using_Imm_reg: unisim.vcomponents.FDRE
 \write_Addr_I_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => PreFetch_Buffer_I_n_91,
-      D => PreFetch_Buffer_I_n_101,
+      CE => PreFetch_Buffer_I_n_90,
+      D => PreFetch_Buffer_I_n_100,
       Q => \^write_addr\(1),
       R => '0'
     );
 \write_Addr_I_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => PreFetch_Buffer_I_n_91,
-      D => PreFetch_Buffer_I_n_102,
+      CE => PreFetch_Buffer_I_n_90,
+      D => PreFetch_Buffer_I_n_101,
       Q => \^write_addr\(2),
       R => '0'
     );
 \write_Addr_I_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => PreFetch_Buffer_I_n_91,
-      D => PreFetch_Buffer_I_n_103,
+      CE => PreFetch_Buffer_I_n_90,
+      D => PreFetch_Buffer_I_n_102,
       Q => \^write_addr\(3),
       R => '0'
     );
 \write_Addr_I_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => PreFetch_Buffer_I_n_91,
-      D => PreFetch_Buffer_I_n_104,
+      CE => PreFetch_Buffer_I_n_90,
+      D => PreFetch_Buffer_I_n_103,
       Q => \^write_addr\(4),
       R => '0'
     );
@@ -42275,7 +42418,7 @@ write_Carry_I_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_118,
+      D => PreFetch_Buffer_I_n_116,
       Q => write_Carry_I_reg_n_0,
       R => '0'
     );
@@ -42285,13 +42428,13 @@ write_Reg_I_LUT: entity work.microblaze_mcs_0_MB_LUT4
       I214_out => I214_out,
       I3 => I3,
       lmb_reg_read_Q_reg => lmb_reg_read_Q_reg,
-      \write_Addr_I_reg[2]\ => \Using_FPGA.Native_i_3__9_n_0\
+      \write_Addr_I_reg[2]\ => \Using_FPGA.Native_i_3__11_n_0\
     );
 write_Reg_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => '1',
-      D => PreFetch_Buffer_I_n_117,
+      D => PreFetch_Buffer_I_n_115,
       Q => I214_out,
       R => '0'
     );
@@ -42299,7 +42442,7 @@ writing_reg: unisim.vcomponents.FDRE
      port map (
       C => Clk,
       CE => \^normal_piperun\,
-      D => PreFetch_Buffer_I_n_126,
+      D => PreFetch_Buffer_I_n_125,
       Q => writing_reg_n_0,
       R => \out\(0)
     );
@@ -44089,22 +44232,22 @@ entity microblaze_mcs_0_Result_Mux is
     Select_Logic_reg_21 : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_5\ : in STD_LOGIC;
     Select_Logic_reg_22 : in STD_LOGIC;
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_6\ : in STD_LOGIC;
     Select_Logic_reg_23 : in STD_LOGIC;
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_7\ : in STD_LOGIC;
     Select_Logic_reg_24 : in STD_LOGIC;
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_8\ : in STD_LOGIC;
     Select_Logic_reg_25 : in STD_LOGIC;
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_9\ : in STD_LOGIC;
     Select_Logic_reg_26 : in STD_LOGIC;
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_10\ : in STD_LOGIC;
     Select_Logic_reg_27 : in STD_LOGIC;
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_11\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Select_Logic_reg_28 : in STD_LOGIC;
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_12\ : in STD_LOGIC;
     Select_Logic_reg_29 : in STD_LOGIC;
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg_13\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Result_Mux : entity is "Result_Mux";
@@ -44115,10 +44258,10 @@ begin
 \Result_Mux_Bits[0].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit
      port map (
       EX_Result(0) => EX_Result(0),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_13\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_29,
       \Using_FPGA.Native\(0) => \Using_FPGA.Native_0\(1),
-      \cipr_rd_dff_all[31].fdr_i\ => \cipr_rd_dff_all[31].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[10].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_188
@@ -44214,10 +44357,10 @@ begin
 \Result_Mux_Bits[1].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_198
      port map (
       EX_Result(0) => EX_Result(1),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_12\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_28,
       \Using_FPGA.Native\(0) => \Using_FPGA.Native_0\(0),
-      \cipr_rd_dff_all[30].fdr_i\ => \cipr_rd_dff_all[30].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[20].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_199
@@ -44308,9 +44451,9 @@ begin
      port map (
       BRAM_Addr_B(0) => BRAM_Addr_B(14),
       EX_Result(0) => EX_Result(2),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_11\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_27,
-      \cipr_rd_dff_all[29].fdr_i\ => \cipr_rd_dff_all[29].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[30].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_210
@@ -44333,45 +44476,45 @@ begin
      port map (
       BRAM_Addr_B(0) => BRAM_Addr_B(13),
       EX_Result(0) => EX_Result(3),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_10\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_26,
-      \cipr_rd_dff_all[28].fdr_i\ => \cipr_rd_dff_all[28].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[4].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_213
      port map (
       BRAM_Addr_B(0) => BRAM_Addr_B(12),
       EX_Result(0) => EX_Result(4),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_9\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_25,
-      \cipr_rd_dff_all[27].fdr_i\ => \cipr_rd_dff_all[27].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[5].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_214
      port map (
       BRAM_Addr_B(0) => BRAM_Addr_B(11),
       EX_Result(0) => EX_Result(5),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_8\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_24,
-      \cipr_rd_dff_all[26].fdr_i\ => \cipr_rd_dff_all[26].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[6].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_215
      port map (
       BRAM_Addr_B(0) => BRAM_Addr_B(10),
       EX_Result(0) => EX_Result(6),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_7\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_23,
-      \cipr_rd_dff_all[25].fdr_i\ => \cipr_rd_dff_all[25].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[7].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_216
      port map (
       BRAM_Addr_B(0) => BRAM_Addr_B(9),
       EX_Result(0) => EX_Result(7),
+      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_6\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Select_Logic_reg_22,
-      \cipr_rd_dff_all[24].fdr_i\ => \cipr_rd_dff_all[24].fdr_i\,
       data_Read_Mask(0) => data_Read_Mask(1)
     );
 \Result_Mux_Bits[8].Result_Mux_Bit_I\: entity work.microblaze_mcs_0_Result_Mux_Bit_217
@@ -44980,14 +45123,14 @@ entity microblaze_mcs_0_Data_Flow is
     \No_ECC.Sl_Rdy_reg_6\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_7\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_8\ : in STD_LOGIC;
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_9\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_10\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_11\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_12\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_13\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_14\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_15\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_16\ : in STD_LOGIC;
     Jump : in STD_LOGIC;
     nonvalid_IFetch_n_reg_0 : in STD_LOGIC;
     Buffer_Addr : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -45537,10 +45680,18 @@ Result_Mux_I: entity work.microblaze_mcs_0_Result_Mux
       \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg_2\,
       \No_ECC.Sl_Rdy_reg_0\ => \No_ECC.Sl_Rdy_reg_3\,
       \No_ECC.Sl_Rdy_reg_1\ => \No_ECC.Sl_Rdy_reg_4\,
+      \No_ECC.Sl_Rdy_reg_10\ => \No_ECC.Sl_Rdy_reg_13\,
+      \No_ECC.Sl_Rdy_reg_11\ => \No_ECC.Sl_Rdy_reg_14\,
+      \No_ECC.Sl_Rdy_reg_12\ => \No_ECC.Sl_Rdy_reg_15\,
+      \No_ECC.Sl_Rdy_reg_13\ => \No_ECC.Sl_Rdy_reg_16\,
       \No_ECC.Sl_Rdy_reg_2\ => \No_ECC.Sl_Rdy_reg_5\,
       \No_ECC.Sl_Rdy_reg_3\ => \No_ECC.Sl_Rdy_reg_6\,
       \No_ECC.Sl_Rdy_reg_4\ => \No_ECC.Sl_Rdy_reg_7\,
       \No_ECC.Sl_Rdy_reg_5\ => \No_ECC.Sl_Rdy_reg_8\,
+      \No_ECC.Sl_Rdy_reg_6\ => \No_ECC.Sl_Rdy_reg_9\,
+      \No_ECC.Sl_Rdy_reg_7\ => \No_ECC.Sl_Rdy_reg_10\,
+      \No_ECC.Sl_Rdy_reg_8\ => \No_ECC.Sl_Rdy_reg_11\,
+      \No_ECC.Sl_Rdy_reg_9\ => \No_ECC.Sl_Rdy_reg_12\,
       \Result_Sel_reg[0]\(1 downto 0) => \Result_Sel_reg[0]\(1 downto 0),
       Select_Logic_reg => Shift_Logic_Res31_out,
       Select_Logic_reg_0 => Shift_Logic_Res30_out,
@@ -45576,14 +45727,6 @@ Result_Mux_I: entity work.microblaze_mcs_0_Result_Mux
       Shift_Logic_Res => Shift_Logic_Res32_out,
       \Using_FPGA.Native\ => ALU_I_n_4,
       \Using_FPGA.Native_0\(1 downto 0) => \^no_ecc.sl_rdy_reg_1\(1 downto 0),
-      \cipr_rd_dff_all[24].fdr_i\ => \cipr_rd_dff_all[24].fdr_i\,
-      \cipr_rd_dff_all[25].fdr_i\ => \cipr_rd_dff_all[25].fdr_i\,
-      \cipr_rd_dff_all[26].fdr_i\ => \cipr_rd_dff_all[26].fdr_i\,
-      \cipr_rd_dff_all[27].fdr_i\ => \cipr_rd_dff_all[27].fdr_i\,
-      \cipr_rd_dff_all[28].fdr_i\ => \cipr_rd_dff_all[28].fdr_i\,
-      \cipr_rd_dff_all[29].fdr_i\ => \cipr_rd_dff_all[29].fdr_i\,
-      \cipr_rd_dff_all[30].fdr_i\ => \cipr_rd_dff_all[30].fdr_i\,
-      \cipr_rd_dff_all[31].fdr_i\ => \cipr_rd_dff_all[31].fdr_i\,
       data_Read_Mask(1 downto 0) => data_Read_Mask(1 downto 0)
     );
 Shift_Logic_Module_I: entity work.microblaze_mcs_0_Shift_Logic_Module
@@ -45736,7 +45879,6 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_mcs_0_Iomodule_core is
   port (
     UART_Tx : out STD_LOGIC;
-    Extend_Data_Read : out STD_LOGIC_VECTOR ( 15 downto 0 );
     Data_Read : out STD_LOGIC;
     \Using_FPGA.Native\ : out STD_LOGIC;
     \Using_FPGA.Native_0\ : out STD_LOGIC;
@@ -45761,32 +45903,29 @@ entity microblaze_mcs_0_Iomodule_core is
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ : out STD_LOGIC;
+    \Using_FPGA.Native_14\ : out STD_LOGIC;
+    \Using_FPGA.Native_15\ : out STD_LOGIC;
+    \Using_FPGA.Native_16\ : out STD_LOGIC;
+    \Using_FPGA.Native_17\ : out STD_LOGIC;
+    \Using_FPGA.Native_18\ : out STD_LOGIC;
+    \Using_FPGA.Native_19\ : out STD_LOGIC;
+    \Using_FPGA.Native_20\ : out STD_LOGIC;
+    \Using_FPGA.Native_21\ : out STD_LOGIC;
     UART_Interrupt : out STD_LOGIC;
     GPO1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Clk : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     UART_Rx : in STD_LOGIC;
-    sel_LSB : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6\ : in STD_LOGIC;
-    lmb_reg_write_reg : in STD_LOGIC;
-    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
-    DATA_OUTB : in STD_LOGIC_VECTOR ( 23 downto 0 );
     Sl_Rdy : in STD_LOGIC;
     lmb_as : in STD_LOGIC;
-    lmb_reg_write_reg_0 : in STD_LOGIC;
+    DATA_OUTB : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    lmb_reg_write_reg : in STD_LOGIC;
     lmb_reg_read_Q_reg : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 5 downto 0 );
     lmb_reg_read_reg : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    GPI1 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    GPI1 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_Iomodule_core : entity is "Iomodule_core";
@@ -45794,7 +45933,7 @@ end microblaze_mcs_0_Iomodule_core;
 
 architecture STRUCTURE of microblaze_mcs_0_Iomodule_core is
   signal GPI_In : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal INTC_CIPR : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal INTC_CIPR : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal RX_Data : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal RX_Data_Exists : STD_LOGIC;
   signal RX_Data_Received : STD_LOGIC;
@@ -45809,10 +45948,21 @@ begin
 GPI_I1: entity work.microblaze_mcs_0_GPI_Module
      port map (
       Clk => Clk,
-      GPI1(7 downto 0) => GPI1(7 downto 0),
-      Q(4 downto 0) => Q(4 downto 0),
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(7 downto 0) => GPI_In(7 downto 0),
-      lmb_reg_read_reg => lmb_reg_read_reg
+      GPI1(15 downto 0) => GPI1(15 downto 0),
+      INTC_CIPR(7 downto 0) => INTC_CIPR(15 downto 8),
+      Q(7 downto 0) => GPI_In(7 downto 0),
+      \Using_FPGA.Native\ => \Using_FPGA.Native_14\,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native_15\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_16\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_17\,
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_18\,
+      \Using_FPGA.Native_4\ => \Using_FPGA.Native_19\,
+      \Using_FPGA.Native_5\ => \Using_FPGA.Native_20\,
+      \Using_FPGA.Native_6\ => \Using_FPGA.Native_21\,
+      \lmb_abus_Q_reg[1]\(4 downto 0) => Q(4 downto 0),
+      lmb_reg_read_Q_reg => lmb_reg_read_Q_reg,
+      lmb_reg_read_reg => lmb_reg_read_reg,
+      lmb_reg_write_reg => lmb_reg_write_reg
     );
 GPO_I1: entity work.microblaze_mcs_0_GPO_Module
      port map (
@@ -45821,7 +45971,7 @@ GPO_I1: entity work.microblaze_mcs_0_GPO_Module
       GPO1(7 downto 0) => GPO1(7 downto 0),
       Q(5 downto 0) => Q(5 downto 0),
       SR(0) => SR(0),
-      lmb_reg_write_reg => lmb_reg_write_reg_0
+      lmb_reg_write_reg => lmb_reg_write_reg
     );
 \Using_UART.No_Dynamic_BaudRate.UART_FIT_I\: entity work.microblaze_mcs_0_FIT_Module
      port map (
@@ -45835,10 +45985,13 @@ GPO_I1: entity work.microblaze_mcs_0_GPO_Module
       INTC_CIPR(3 downto 2) => INTC_CIPR(6 downto 5),
       INTC_CIPR(1) => INTC_CIPR(3),
       INTC_CIPR(0) => INTC_CIPR(0),
-      Q(3 downto 2) => RX_Data(6 downto 5),
-      Q(1) => RX_Data(3),
-      Q(0) => RX_Data(0),
+      Q(3 downto 2) => GPI_In(6 downto 5),
+      Q(1) => GPI_In(3),
+      Q(0) => GPI_In(0),
       RX_Data_Received => RX_Data_Received,
+      \RX_Data_reg[6]\(3 downto 2) => RX_Data(6 downto 5),
+      \RX_Data_reg[6]\(1) => RX_Data(3),
+      \RX_Data_reg[6]\(0) => RX_Data(0),
       RX_Frame_Error => RX_Frame_Error,
       SR(0) => SR(0),
       TX_Data_Transmitted => TX_Data_Transmitted,
@@ -45847,14 +46000,11 @@ GPO_I1: entity work.microblaze_mcs_0_GPO_Module
       \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\,
-      \Using_GPI.GPI_In_reg[6]\(3 downto 2) => GPI_In(6 downto 5),
-      \Using_GPI.GPI_In_reg[6]\(1) => GPI_In(3),
-      \Using_GPI.GPI_In_reg[6]\(0) => GPI_In(0),
       frame_error_reg_0 => \Using_UART_RX.UART_RX_I1_n_4\,
       \lmb_abus_Q_reg[1]\(4 downto 0) => Q(4 downto 0),
       lmb_reg_read_Q_reg => lmb_reg_read_Q_reg,
       lmb_reg_read_reg => lmb_reg_read_reg,
-      lmb_reg_write_reg => lmb_reg_write_reg_0,
+      lmb_reg_write_reg => lmb_reg_write_reg,
       overrun_error_reg_0 => \Using_UART.Uart_Control_Status_I1_n_6\,
       rx_data_exists_i_reg => \Using_UART_RX.UART_RX_I1_n_2\,
       tx_buffer_empty_i_reg(1) => p_0_out(3),
@@ -45891,54 +46041,43 @@ GPO_I1: entity work.microblaze_mcs_0_GPO_Module
 intr_ctrl_I1: entity work.microblaze_mcs_0_intr_ctrl
      port map (
       Clk => Clk,
-      DATA_OUTB(23 downto 0) => DATA_OUTB(23 downto 0),
+      DATA_OUTB(15 downto 0) => DATA_OUTB(15 downto 0),
       Data_Read => Data_Read,
-      Extend_Data_Read(15 downto 0) => Extend_Data_Read(15 downto 0),
-      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
-      Q(4 downto 0) => Q(4 downto 0),
+      Q(3) => GPI_In(7),
+      Q(2) => GPI_In(4),
+      Q(1 downto 0) => GPI_In(2 downto 1),
       \RX_Data_reg[7]\(3) => RX_Data(7),
       \RX_Data_reg[7]\(2) => RX_Data(4),
       \RX_Data_reg[7]\(1 downto 0) => RX_Data(2 downto 1),
       Sl_Rdy => Sl_Rdy,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(3 downto 2) => INTC_CIPR(6 downto 5),
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(1) => INTC_CIPR(3),
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\(0) => INTC_CIPR(0),
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6\,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1\,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6\,
-      \Using_FPGA.Native\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_10\ => \Using_FPGA.Native_10\,
-      \Using_FPGA.Native_11\ => \Using_FPGA.Native_11\,
-      \Using_FPGA.Native_12\ => \Using_FPGA.Native_12\,
-      \Using_FPGA.Native_13\ => \Using_FPGA.Native_13\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_2\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_3\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_4\,
-      \Using_FPGA.Native_5\ => \Using_FPGA.Native_5\,
-      \Using_FPGA.Native_6\ => \Using_FPGA.Native_6\,
-      \Using_FPGA.Native_7\ => \Using_FPGA.Native_7\,
-      \Using_FPGA.Native_8\ => \Using_FPGA.Native_8\,
-      \Using_FPGA.Native_9\ => \Using_FPGA.Native_9\,
-      \Using_GPI.GPI_In_reg[7]\(3) => GPI_In(7),
-      \Using_GPI.GPI_In_reg[7]\(2) => GPI_In(4),
-      \Using_GPI.GPI_In_reg[7]\(1 downto 0) => GPI_In(2 downto 1),
+      \Using_FPGA.Native\(11 downto 4) => INTC_CIPR(15 downto 8),
+      \Using_FPGA.Native\(3 downto 2) => INTC_CIPR(6 downto 5),
+      \Using_FPGA.Native\(1) => INTC_CIPR(3),
+      \Using_FPGA.Native\(0) => INTC_CIPR(0),
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
+      \Using_FPGA.Native_10\ => \Using_FPGA.Native_9\,
+      \Using_FPGA.Native_11\ => \Using_FPGA.Native_10\,
+      \Using_FPGA.Native_12\ => \Using_FPGA.Native_11\,
+      \Using_FPGA.Native_13\ => \Using_FPGA.Native_12\,
+      \Using_FPGA.Native_14\ => \Using_FPGA.Native_13\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native_4\ => \Using_FPGA.Native_3\,
+      \Using_FPGA.Native_5\ => \Using_FPGA.Native_4\,
+      \Using_FPGA.Native_6\ => \Using_FPGA.Native_5\,
+      \Using_FPGA.Native_7\ => \Using_FPGA.Native_6\,
+      \Using_FPGA.Native_8\ => \Using_FPGA.Native_7\,
+      \Using_FPGA.Native_9\ => \Using_FPGA.Native_8\,
+      \lmb_abus_Q_reg[1]\(4 downto 0) => Q(4 downto 0),
       lmb_as => lmb_as,
       lmb_reg_read_Q_reg => lmb_reg_read_Q_reg,
       lmb_reg_read_reg => lmb_reg_read_reg,
-      lmb_reg_write_reg => lmb_reg_write_reg,
-      lmb_reg_write_reg_0 => lmb_reg_write_reg_0,
-      sel_LSB(1 downto 0) => sel_LSB(1 downto 0)
+      lmb_reg_write_reg => lmb_reg_write_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -45967,12 +46106,12 @@ entity microblaze_mcs_0_MicroBlaze_Area is
     \Synchronize.use_sync_reset.sync_reg[2]\ : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Synchronize.use_sync_reset.sync_reg[2]_0\ : in STD_LOGIC;
-    Sl_Rdy : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
     lmb_reg_read_Q : in STD_LOGIC;
     lmb_reg_write : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_0\ : in STD_LOGIC;
     lmb_reg_write_reg : in STD_LOGIC;
+    Sl_Rdy : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
     reset_temp : in STD_LOGIC;
     POR_FF_I : in STD_LOGIC;
     Extend_Data_Read : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -45984,14 +46123,14 @@ entity microblaze_mcs_0_MicroBlaze_Area is
     \No_ECC.Sl_Rdy_reg_5\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_6\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_7\ : in STD_LOGIC;
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg_8\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_9\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_10\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_11\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_12\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_13\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_14\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_15\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MicroBlaze_Area : entity is "MicroBlaze_Area";
@@ -46242,6 +46381,13 @@ Data_Flow_I: entity work.microblaze_mcs_0_Data_Flow
       \No_ECC.Sl_Rdy_reg_0\ => \No_ECC.Sl_Rdy_reg\,
       \No_ECC.Sl_Rdy_reg_1\(1) => BRAM_Addr_B(0),
       \No_ECC.Sl_Rdy_reg_1\(0) => BRAM_Addr_B(1),
+      \No_ECC.Sl_Rdy_reg_10\ => \No_ECC.Sl_Rdy_reg_9\,
+      \No_ECC.Sl_Rdy_reg_11\ => \No_ECC.Sl_Rdy_reg_10\,
+      \No_ECC.Sl_Rdy_reg_12\ => \No_ECC.Sl_Rdy_reg_11\,
+      \No_ECC.Sl_Rdy_reg_13\ => \No_ECC.Sl_Rdy_reg_12\,
+      \No_ECC.Sl_Rdy_reg_14\ => \No_ECC.Sl_Rdy_reg_13\,
+      \No_ECC.Sl_Rdy_reg_15\ => \No_ECC.Sl_Rdy_reg_14\,
+      \No_ECC.Sl_Rdy_reg_16\ => \No_ECC.Sl_Rdy_reg_15\,
       \No_ECC.Sl_Rdy_reg_2\ => \No_ECC.Sl_Rdy_reg_1\,
       \No_ECC.Sl_Rdy_reg_3\ => \No_ECC.Sl_Rdy_reg_2\,
       \No_ECC.Sl_Rdy_reg_4\ => \No_ECC.Sl_Rdy_reg_3\,
@@ -46249,6 +46395,7 @@ Data_Flow_I: entity work.microblaze_mcs_0_Data_Flow
       \No_ECC.Sl_Rdy_reg_6\ => \No_ECC.Sl_Rdy_reg_5\,
       \No_ECC.Sl_Rdy_reg_7\ => \No_ECC.Sl_Rdy_reg_6\,
       \No_ECC.Sl_Rdy_reg_8\ => \No_ECC.Sl_Rdy_reg_7\,
+      \No_ECC.Sl_Rdy_reg_9\ => \No_ECC.Sl_Rdy_reg_8\,
       Op1_Low(0 to 1) => Op1_Low(0 to 1),
       Op1_Shift => \MSR_Reg_I/New_Value\,
       OpSel1_SPR => OpSel1_SPR,
@@ -46340,14 +46487,6 @@ Data_Flow_I: entity work.microblaze_mcs_0_Data_Flow
       \Using_FPGA.take_Intr_2nd_Phase_reg_9\ => Decode_I_n_59,
       WEB(0 to 3) => WEB(0 to 3),
       Write_Addr(0 to 4) => Write_Addr(0 to 4),
-      \cipr_rd_dff_all[24].fdr_i\ => \cipr_rd_dff_all[24].fdr_i\,
-      \cipr_rd_dff_all[25].fdr_i\ => \cipr_rd_dff_all[25].fdr_i\,
-      \cipr_rd_dff_all[26].fdr_i\ => \cipr_rd_dff_all[26].fdr_i\,
-      \cipr_rd_dff_all[27].fdr_i\ => \cipr_rd_dff_all[27].fdr_i\,
-      \cipr_rd_dff_all[28].fdr_i\ => \cipr_rd_dff_all[28].fdr_i\,
-      \cipr_rd_dff_all[29].fdr_i\ => \cipr_rd_dff_all[29].fdr_i\,
-      \cipr_rd_dff_all[30].fdr_i\ => \cipr_rd_dff_all[30].fdr_i\,
-      \cipr_rd_dff_all[31].fdr_i\ => \cipr_rd_dff_all[31].fdr_i\,
       data_Read_Mask(1) => \Result_Mux_I/data_Read_Mask\(15),
       data_Read_Mask(0) => \Result_Mux_I/data_Read_Mask\(23),
       load_Store_i_reg => Decode_I_n_86,
@@ -46521,7 +46660,6 @@ entity microblaze_mcs_0_iomodule is
     UART_Tx : out STD_LOGIC;
     lmb_reg_read_Q : out STD_LOGIC;
     lmb_reg_write : out STD_LOGIC;
-    Extend_Data_Read : out STD_LOGIC_VECTOR ( 15 downto 0 );
     Data_Read : out STD_LOGIC;
     \Using_FPGA.Native\ : out STD_LOGIC;
     \Using_FPGA.Native_0\ : out STD_LOGIC;
@@ -46530,7 +46668,6 @@ entity microblaze_mcs_0_iomodule is
     \Using_FPGA.Native_3\ : out STD_LOGIC;
     \Using_FPGA.Native_4\ : out STD_LOGIC;
     \Using_FPGA.Native_5\ : out STD_LOGIC;
-    is_lwx_I_reg : out STD_LOGIC;
     \Using_FPGA.Native_6\ : out STD_LOGIC;
     \Using_FPGA.Native_7\ : out STD_LOGIC;
     \Using_FPGA.Native_8\ : out STD_LOGIC;
@@ -46548,6 +46685,15 @@ entity microblaze_mcs_0_iomodule is
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ : out STD_LOGIC;
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ : out STD_LOGIC;
+    \Using_FPGA.Native_15\ : out STD_LOGIC;
+    \Using_FPGA.Native_16\ : out STD_LOGIC;
+    \Using_FPGA.Native_17\ : out STD_LOGIC;
+    \Using_FPGA.Native_18\ : out STD_LOGIC;
+    \Using_FPGA.Native_19\ : out STD_LOGIC;
+    \Using_FPGA.Native_20\ : out STD_LOGIC;
+    \Using_FPGA.Native_21\ : out STD_LOGIC;
+    \Using_FPGA.Native_22\ : out STD_LOGIC;
+    load_Store_i_reg : out STD_LOGIC;
     UART_Interrupt : out STD_LOGIC;
     GPO1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Clk : in STD_LOGIC;
@@ -46555,29 +46701,18 @@ entity microblaze_mcs_0_iomodule is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     UART_Rx : in STD_LOGIC;
     lmb_reg_write0 : in STD_LOGIC;
-    sel_LSB : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\ : in STD_LOGIC;
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6\ : in STD_LOGIC;
-    \No_ECC.Sl_Rdy_reg\ : in STD_LOGIC;
-    DATA_OUTB : in STD_LOGIC_VECTOR ( 23 downto 0 );
     Sl_Rdy : in STD_LOGIC;
     lmb_as : in STD_LOGIC;
+    DATA_OUTB : in STD_LOGIC_VECTOR ( 15 downto 0 );
     D : in STD_LOGIC_VECTOR ( 5 downto 0 );
     \write_Addr_I_reg[0]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    GPI1 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    GPI1 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_iomodule : entity is "iomodule";
 end microblaze_mcs_0_iomodule;
 
 architecture STRUCTURE of microblaze_mcs_0_iomodule is
-  signal \^is_lwx_i_reg\ : STD_LOGIC;
   signal \lmb_abus_Q_reg_n_0_[1]\ : STD_LOGIC;
   signal \lmb_abus_Q_reg_n_0_[2]\ : STD_LOGIC;
   signal \lmb_abus_Q_reg_n_0_[3]\ : STD_LOGIC;
@@ -46627,20 +46762,17 @@ architecture STRUCTURE of microblaze_mcs_0_iomodule is
   attribute KEEP of \write_data_reg[8]\ : label is "yes";
   attribute KEEP of \write_data_reg[9]\ : label is "yes";
 begin
-  is_lwx_I_reg <= \^is_lwx_i_reg\;
   lmb_reg_read_Q <= \^lmb_reg_read_q\;
   lmb_reg_write <= \^lmb_reg_write\;
 IOModule_Core_I1: entity work.microblaze_mcs_0_Iomodule_core
      port map (
       Clk => Clk,
       D(7 downto 0) => write_data(7 downto 0),
-      DATA_OUTB(23 downto 0) => DATA_OUTB(23 downto 0),
+      DATA_OUTB(15 downto 0) => DATA_OUTB(15 downto 0),
       Data_Read => Data_Read,
       E(0) => uart_tx_write,
-      Extend_Data_Read(15 downto 0) => Extend_Data_Read(15 downto 0),
-      GPI1(7 downto 0) => GPI1(7 downto 0),
+      GPI1(15 downto 0) => GPI1(15 downto 0),
       GPO1(7 downto 0) => GPO1(7 downto 0),
-      \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       Q(5) => p_0_in16_in,
       Q(4) => \lmb_abus_Q_reg_n_0_[1]\,
       Q(3) => \lmb_abus_Q_reg_n_0_[2]\,
@@ -46656,18 +46788,10 @@ IOModule_Core_I1: entity work.microblaze_mcs_0_Iomodule_core
       \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\,
       \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\,
       \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6\ => \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5\,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6\,
       \Using_FPGA.Native\ => \Using_FPGA.Native\,
       \Using_FPGA.Native_0\ => \Using_FPGA.Native_0\,
       \Using_FPGA.Native_1\ => \Using_FPGA.Native_1\,
@@ -46675,7 +46799,15 @@ IOModule_Core_I1: entity work.microblaze_mcs_0_Iomodule_core
       \Using_FPGA.Native_11\ => \Using_FPGA.Native_11\,
       \Using_FPGA.Native_12\ => \Using_FPGA.Native_12\,
       \Using_FPGA.Native_13\ => \Using_FPGA.Native_13\,
+      \Using_FPGA.Native_14\ => \Using_FPGA.Native_15\,
+      \Using_FPGA.Native_15\ => \Using_FPGA.Native_16\,
+      \Using_FPGA.Native_16\ => \Using_FPGA.Native_17\,
+      \Using_FPGA.Native_17\ => \Using_FPGA.Native_18\,
+      \Using_FPGA.Native_18\ => \Using_FPGA.Native_19\,
+      \Using_FPGA.Native_19\ => \Using_FPGA.Native_20\,
       \Using_FPGA.Native_2\ => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native_20\ => \Using_FPGA.Native_21\,
+      \Using_FPGA.Native_21\ => \Using_FPGA.Native_22\,
       \Using_FPGA.Native_3\ => \Using_FPGA.Native_3\,
       \Using_FPGA.Native_4\ => \Using_FPGA.Native_4\,
       \Using_FPGA.Native_5\ => \Using_FPGA.Native_5\,
@@ -46686,11 +46818,9 @@ IOModule_Core_I1: entity work.microblaze_mcs_0_Iomodule_core
       lmb_as => lmb_as,
       lmb_reg_read_Q_reg => \^lmb_reg_read_q\,
       lmb_reg_read_reg => lmb_reg_read_reg_n_0,
-      lmb_reg_write_reg => \^is_lwx_i_reg\,
-      lmb_reg_write_reg_0 => \^lmb_reg_write\,
-      sel_LSB(1 downto 0) => sel_LSB(1 downto 0)
+      lmb_reg_write_reg => \^lmb_reg_write\
     );
-\Using_FPGA.Native_i_1__86\: unisim.vcomponents.LUT4
+\Using_FPGA.Native_i_1__85\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FEEE"
     )
@@ -46701,14 +46831,14 @@ IOModule_Core_I1: entity work.microblaze_mcs_0_Iomodule_core
       I3 => Sl_Rdy,
       O => \Using_FPGA.Native_14\
     );
-\Using_FPGA.Native_i_3__8\: unisim.vcomponents.LUT2
+is_lwx_I_i_5: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => \^lmb_reg_write\,
       I1 => \^lmb_reg_read_q\,
-      O => \^is_lwx_i_reg\
+      O => load_Store_i_reg
     );
 \lmb_abus_Q_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -47083,12 +47213,12 @@ entity microblaze_mcs_0_MicroBlaze_Core is
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 31 );
     lmb_reg_read_Q_reg : in STD_LOGIC;
     LMB_Ready : in STD_LOGIC;
-    Sl_Rdy : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
     lmb_reg_read_Q : in STD_LOGIC;
     lmb_reg_write : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_0\ : in STD_LOGIC;
     lmb_reg_write_reg : in STD_LOGIC;
+    Sl_Rdy : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
     reset_temp : in STD_LOGIC;
     POR_FF_I : in STD_LOGIC;
     Extend_Data_Read : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -47100,14 +47230,14 @@ entity microblaze_mcs_0_MicroBlaze_Core is
     \No_ECC.Sl_Rdy_reg_5\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_6\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_7\ : in STD_LOGIC;
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg_8\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_9\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_10\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_11\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_12\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_13\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_14\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_15\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MicroBlaze_Core : entity is "MicroBlaze_Core";
@@ -47133,12 +47263,20 @@ begin
       \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \No_ECC.Sl_Rdy_reg_0\ => \No_ECC.Sl_Rdy_reg_0\,
       \No_ECC.Sl_Rdy_reg_1\ => \No_ECC.Sl_Rdy_reg_1\,
+      \No_ECC.Sl_Rdy_reg_10\ => \No_ECC.Sl_Rdy_reg_10\,
+      \No_ECC.Sl_Rdy_reg_11\ => \No_ECC.Sl_Rdy_reg_11\,
+      \No_ECC.Sl_Rdy_reg_12\ => \No_ECC.Sl_Rdy_reg_12\,
+      \No_ECC.Sl_Rdy_reg_13\ => \No_ECC.Sl_Rdy_reg_13\,
+      \No_ECC.Sl_Rdy_reg_14\ => \No_ECC.Sl_Rdy_reg_14\,
+      \No_ECC.Sl_Rdy_reg_15\ => \No_ECC.Sl_Rdy_reg_15\,
       \No_ECC.Sl_Rdy_reg_2\ => \No_ECC.Sl_Rdy_reg_2\,
       \No_ECC.Sl_Rdy_reg_3\ => \No_ECC.Sl_Rdy_reg_3\,
       \No_ECC.Sl_Rdy_reg_4\ => \No_ECC.Sl_Rdy_reg_4\,
       \No_ECC.Sl_Rdy_reg_5\ => \No_ECC.Sl_Rdy_reg_5\,
       \No_ECC.Sl_Rdy_reg_6\ => \No_ECC.Sl_Rdy_reg_6\,
       \No_ECC.Sl_Rdy_reg_7\ => \No_ECC.Sl_Rdy_reg_7\,
+      \No_ECC.Sl_Rdy_reg_8\ => \No_ECC.Sl_Rdy_reg_8\,
+      \No_ECC.Sl_Rdy_reg_9\ => \No_ECC.Sl_Rdy_reg_9\,
       \No_ECC.lmb_as_reg\ => \No_ECC.lmb_as_reg\,
       \No_ECC.lmb_as_reg_0\ => \No_ECC.lmb_as_reg_0\,
       POR_FF_I => POR_FF_I,
@@ -47148,14 +47286,6 @@ begin
       \Synchronize.use_sync_reset.sync_reg[2]_0\ => Reset_DFF_n_2,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => \Using_B36_S4.The_BRAMs[7].RAMB36_I1\,
       WEB(0 to 3) => WEB(0 to 3),
-      \cipr_rd_dff_all[24].fdr_i\ => \cipr_rd_dff_all[24].fdr_i\,
-      \cipr_rd_dff_all[25].fdr_i\ => \cipr_rd_dff_all[25].fdr_i\,
-      \cipr_rd_dff_all[26].fdr_i\ => \cipr_rd_dff_all[26].fdr_i\,
-      \cipr_rd_dff_all[27].fdr_i\ => \cipr_rd_dff_all[27].fdr_i\,
-      \cipr_rd_dff_all[28].fdr_i\ => \cipr_rd_dff_all[28].fdr_i\,
-      \cipr_rd_dff_all[29].fdr_i\ => \cipr_rd_dff_all[29].fdr_i\,
-      \cipr_rd_dff_all[30].fdr_i\ => \cipr_rd_dff_all[30].fdr_i\,
-      \cipr_rd_dff_all[31].fdr_i\ => \cipr_rd_dff_all[31].fdr_i\,
       lmb_as => lmb_as,
       lmb_reg_read0 => lmb_reg_read0,
       lmb_reg_read_Q => lmb_reg_read_Q,
@@ -47199,12 +47329,12 @@ entity microblaze_mcs_0_MicroBlaze is
     DATA_OUTA : in STD_LOGIC_VECTOR ( 0 to 31 );
     lmb_reg_read_Q_reg : in STD_LOGIC;
     LMB_Ready : in STD_LOGIC;
-    Sl_Rdy : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
     lmb_reg_read_Q : in STD_LOGIC;
     lmb_reg_write : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_0\ : in STD_LOGIC;
     lmb_reg_write_reg : in STD_LOGIC;
+    Sl_Rdy : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
     reset_temp : in STD_LOGIC;
     POR_FF_I : in STD_LOGIC;
     Extend_Data_Read : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -47216,14 +47346,14 @@ entity microblaze_mcs_0_MicroBlaze is
     \No_ECC.Sl_Rdy_reg_5\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_6\ : in STD_LOGIC;
     \No_ECC.Sl_Rdy_reg_7\ : in STD_LOGIC;
-    \cipr_rd_dff_all[24].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[25].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[26].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[27].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[28].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[29].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[30].fdr_i\ : in STD_LOGIC;
-    \cipr_rd_dff_all[31].fdr_i\ : in STD_LOGIC
+    \No_ECC.Sl_Rdy_reg_8\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_9\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_10\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_11\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_12\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_13\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_14\ : in STD_LOGIC;
+    \No_ECC.Sl_Rdy_reg_15\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_mcs_0_MicroBlaze : entity is "MicroBlaze";
@@ -47245,26 +47375,26 @@ MicroBlaze_Core_I: entity work.microblaze_mcs_0_MicroBlaze_Core
       \No_ECC.Sl_Rdy_reg\ => \No_ECC.Sl_Rdy_reg\,
       \No_ECC.Sl_Rdy_reg_0\ => \No_ECC.Sl_Rdy_reg_0\,
       \No_ECC.Sl_Rdy_reg_1\ => \No_ECC.Sl_Rdy_reg_1\,
+      \No_ECC.Sl_Rdy_reg_10\ => \No_ECC.Sl_Rdy_reg_10\,
+      \No_ECC.Sl_Rdy_reg_11\ => \No_ECC.Sl_Rdy_reg_11\,
+      \No_ECC.Sl_Rdy_reg_12\ => \No_ECC.Sl_Rdy_reg_12\,
+      \No_ECC.Sl_Rdy_reg_13\ => \No_ECC.Sl_Rdy_reg_13\,
+      \No_ECC.Sl_Rdy_reg_14\ => \No_ECC.Sl_Rdy_reg_14\,
+      \No_ECC.Sl_Rdy_reg_15\ => \No_ECC.Sl_Rdy_reg_15\,
       \No_ECC.Sl_Rdy_reg_2\ => \No_ECC.Sl_Rdy_reg_2\,
       \No_ECC.Sl_Rdy_reg_3\ => \No_ECC.Sl_Rdy_reg_3\,
       \No_ECC.Sl_Rdy_reg_4\ => \No_ECC.Sl_Rdy_reg_4\,
       \No_ECC.Sl_Rdy_reg_5\ => \No_ECC.Sl_Rdy_reg_5\,
       \No_ECC.Sl_Rdy_reg_6\ => \No_ECC.Sl_Rdy_reg_6\,
       \No_ECC.Sl_Rdy_reg_7\ => \No_ECC.Sl_Rdy_reg_7\,
+      \No_ECC.Sl_Rdy_reg_8\ => \No_ECC.Sl_Rdy_reg_8\,
+      \No_ECC.Sl_Rdy_reg_9\ => \No_ECC.Sl_Rdy_reg_9\,
       \No_ECC.lmb_as_reg\ => \No_ECC.lmb_as_reg\,
       \No_ECC.lmb_as_reg_0\ => \No_ECC.lmb_as_reg_0\,
       POR_FF_I => POR_FF_I,
       Sl_Rdy => Sl_Rdy,
       \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => LMB_AddrStrobe,
       WEB(0 to 3) => WEB(0 to 3),
-      \cipr_rd_dff_all[24].fdr_i\ => \cipr_rd_dff_all[24].fdr_i\,
-      \cipr_rd_dff_all[25].fdr_i\ => \cipr_rd_dff_all[25].fdr_i\,
-      \cipr_rd_dff_all[26].fdr_i\ => \cipr_rd_dff_all[26].fdr_i\,
-      \cipr_rd_dff_all[27].fdr_i\ => \cipr_rd_dff_all[27].fdr_i\,
-      \cipr_rd_dff_all[28].fdr_i\ => \cipr_rd_dff_all[28].fdr_i\,
-      \cipr_rd_dff_all[29].fdr_i\ => \cipr_rd_dff_all[29].fdr_i\,
-      \cipr_rd_dff_all[30].fdr_i\ => \cipr_rd_dff_all[30].fdr_i\,
-      \cipr_rd_dff_all[31].fdr_i\ => \cipr_rd_dff_all[31].fdr_i\,
       lmb_as => lmb_as,
       lmb_reg_read0 => lmb_reg_read0,
       lmb_reg_read_Q => lmb_reg_read_Q,
@@ -47319,7 +47449,7 @@ entity microblaze_mcs_0_microblaze_mcs is
     GPO2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     GPO3 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     GPO4 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    GPI1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    GPI1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     GPI1_Interrupt : out STD_LOGIC;
     GPI2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     GPI2_Interrupt : out STD_LOGIC;
@@ -47373,7 +47503,7 @@ entity microblaze_mcs_0_microblaze_mcs is
   attribute C_GPI1_INTERRUPT : integer;
   attribute C_GPI1_INTERRUPT of microblaze_mcs_0_microblaze_mcs : entity is 0;
   attribute C_GPI1_SIZE : integer;
-  attribute C_GPI1_SIZE of microblaze_mcs_0_microblaze_mcs : entity is 8;
+  attribute C_GPI1_SIZE of microblaze_mcs_0_microblaze_mcs : entity is 16;
   attribute C_GPI2_INTERRUPT : integer;
   attribute C_GPI2_INTERRUPT of microblaze_mcs_0_microblaze_mcs : entity is 0;
   attribute C_GPI2_SIZE : integer;
@@ -47532,17 +47662,18 @@ architecture STRUCTURE of microblaze_mcs_0_microblaze_mcs is
   signal Sl_DBus : STD_LOGIC_VECTOR ( 0 to 31 );
   signal Sl_Rdy : STD_LOGIC;
   signal Sl_Rdy_0 : STD_LOGIC;
-  signal dlmb_cntlr_n_10 : STD_LOGIC;
-  signal dlmb_cntlr_n_2 : STD_LOGIC;
-  signal dlmb_cntlr_n_3 : STD_LOGIC;
-  signal dlmb_cntlr_n_4 : STD_LOGIC;
-  signal dlmb_cntlr_n_5 : STD_LOGIC;
-  signal dlmb_cntlr_n_6 : STD_LOGIC;
-  signal dlmb_cntlr_n_7 : STD_LOGIC;
-  signal dlmb_cntlr_n_8 : STD_LOGIC;
-  signal dlmb_cntlr_n_9 : STD_LOGIC;
+  signal dlmb_cntlr_n_18 : STD_LOGIC;
   signal dlmb_n_0 : STD_LOGIC;
   signal ilmb_n_1 : STD_LOGIC;
+  signal iomodule_0_n_10 : STD_LOGIC;
+  signal iomodule_0_n_11 : STD_LOGIC;
+  signal iomodule_0_n_12 : STD_LOGIC;
+  signal iomodule_0_n_13 : STD_LOGIC;
+  signal iomodule_0_n_14 : STD_LOGIC;
+  signal iomodule_0_n_15 : STD_LOGIC;
+  signal iomodule_0_n_16 : STD_LOGIC;
+  signal iomodule_0_n_17 : STD_LOGIC;
+  signal iomodule_0_n_18 : STD_LOGIC;
   signal iomodule_0_n_19 : STD_LOGIC;
   signal iomodule_0_n_20 : STD_LOGIC;
   signal iomodule_0_n_21 : STD_LOGIC;
@@ -47554,6 +47685,7 @@ architecture STRUCTURE of microblaze_mcs_0_microblaze_mcs is
   signal iomodule_0_n_27 : STD_LOGIC;
   signal iomodule_0_n_28 : STD_LOGIC;
   signal iomodule_0_n_29 : STD_LOGIC;
+  signal iomodule_0_n_3 : STD_LOGIC;
   signal iomodule_0_n_30 : STD_LOGIC;
   signal iomodule_0_n_31 : STD_LOGIC;
   signal iomodule_0_n_32 : STD_LOGIC;
@@ -47561,14 +47693,12 @@ architecture STRUCTURE of microblaze_mcs_0_microblaze_mcs is
   signal iomodule_0_n_34 : STD_LOGIC;
   signal iomodule_0_n_35 : STD_LOGIC;
   signal iomodule_0_n_36 : STD_LOGIC;
-  signal iomodule_0_n_37 : STD_LOGIC;
-  signal iomodule_0_n_38 : STD_LOGIC;
-  signal iomodule_0_n_39 : STD_LOGIC;
-  signal iomodule_0_n_40 : STD_LOGIC;
-  signal iomodule_0_n_41 : STD_LOGIC;
-  signal iomodule_0_n_42 : STD_LOGIC;
-  signal iomodule_0_n_43 : STD_LOGIC;
-  signal iomodule_0_n_44 : STD_LOGIC;
+  signal iomodule_0_n_4 : STD_LOGIC;
+  signal iomodule_0_n_5 : STD_LOGIC;
+  signal iomodule_0_n_6 : STD_LOGIC;
+  signal iomodule_0_n_7 : STD_LOGIC;
+  signal iomodule_0_n_8 : STD_LOGIC;
+  signal iomodule_0_n_9 : STD_LOGIC;
   signal lmb_as : STD_LOGIC;
   signal lmb_as_1 : STD_LOGIC;
   signal lmb_reg_read0 : STD_LOGIC;
@@ -47993,6 +48123,14 @@ dlmb: entity work.\microblaze_mcs_0_lmb_v10__parameterized1\
 dlmb_cntlr: entity work.microblaze_mcs_0_lmb_bram_if_cntlr
      port map (
       Clk => Clk,
+      DATA_OUTB(15) => Sl_DBus(16),
+      DATA_OUTB(14) => Sl_DBus(17),
+      DATA_OUTB(13) => Sl_DBus(18),
+      DATA_OUTB(12) => Sl_DBus(19),
+      DATA_OUTB(11) => Sl_DBus(20),
+      DATA_OUTB(10) => Sl_DBus(21),
+      DATA_OUTB(9) => Sl_DBus(22),
+      DATA_OUTB(8) => Sl_DBus(23),
       DATA_OUTB(7) => Sl_DBus(24),
       DATA_OUTB(6) => Sl_DBus(25),
       DATA_OUTB(5) => Sl_DBus(26),
@@ -48001,28 +48139,60 @@ dlmb_cntlr: entity work.microblaze_mcs_0_lmb_bram_if_cntlr
       DATA_OUTB(2) => Sl_DBus(29),
       DATA_OUTB(1) => Sl_DBus(30),
       DATA_OUTB(0) => Sl_DBus(31),
+      Data_Read => iomodule_0_n_3,
+      Extend_Data_Read(15) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(16),
+      Extend_Data_Read(14) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(17),
+      Extend_Data_Read(13) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(18),
+      Extend_Data_Read(12) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(19),
+      Extend_Data_Read(11) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(20),
+      Extend_Data_Read(10) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(21),
+      Extend_Data_Read(9) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(22),
+      Extend_Data_Read(8) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(23),
+      Extend_Data_Read(7) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(24),
+      Extend_Data_Read(6) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(25),
+      Extend_Data_Read(5) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(26),
+      Extend_Data_Read(4) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(27),
+      Extend_Data_Read(3) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(28),
+      Extend_Data_Read(2) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(29),
+      Extend_Data_Read(1) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(30),
+      Extend_Data_Read(0) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(31),
+      \No_ECC.Sl_Rdy_reg_0\ => iomodule_0_n_4,
+      \No_ECC.Sl_Rdy_reg_1\ => iomodule_0_n_5,
+      \No_ECC.Sl_Rdy_reg_10\ => iomodule_0_n_14,
+      \No_ECC.Sl_Rdy_reg_11\ => iomodule_0_n_15,
+      \No_ECC.Sl_Rdy_reg_12\ => iomodule_0_n_16,
+      \No_ECC.Sl_Rdy_reg_13\ => iomodule_0_n_17,
+      \No_ECC.Sl_Rdy_reg_14\ => iomodule_0_n_18,
+      \No_ECC.Sl_Rdy_reg_2\ => iomodule_0_n_6,
+      \No_ECC.Sl_Rdy_reg_3\ => iomodule_0_n_7,
+      \No_ECC.Sl_Rdy_reg_4\ => iomodule_0_n_8,
+      \No_ECC.Sl_Rdy_reg_5\ => iomodule_0_n_9,
+      \No_ECC.Sl_Rdy_reg_6\ => iomodule_0_n_10,
+      \No_ECC.Sl_Rdy_reg_7\ => iomodule_0_n_11,
+      \No_ECC.Sl_Rdy_reg_8\ => iomodule_0_n_12,
+      \No_ECC.Sl_Rdy_reg_9\ => iomodule_0_n_13,
       POR_FF_I => microblaze_I_n_57,
       Sl_Rdy => Sl_Rdy,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ => dlmb_cntlr_n_6,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => dlmb_cntlr_n_7,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ => dlmb_cntlr_n_8,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ => dlmb_cntlr_n_9,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => dlmb_cntlr_n_2,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => dlmb_cntlr_n_3,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ => dlmb_cntlr_n_4,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ => dlmb_cntlr_n_5,
+      \Using_GPI.GPI_In_reg[10]\ => iomodule_0_n_30,
+      \Using_GPI.GPI_In_reg[11]\ => iomodule_0_n_31,
+      \Using_GPI.GPI_In_reg[12]\ => iomodule_0_n_32,
+      \Using_GPI.GPI_In_reg[13]\ => iomodule_0_n_33,
+      \Using_GPI.GPI_In_reg[14]\ => iomodule_0_n_34,
+      \Using_GPI.GPI_In_reg[15]\ => iomodule_0_n_35,
+      \Using_GPI.GPI_In_reg[8]\ => iomodule_0_n_28,
+      \Using_GPI.GPI_In_reg[9]\ => iomodule_0_n_29,
       \Using_LWX_SWX_instr.reservation_reg\ => microblaze_I_n_56,
-      is_lwx_I_reg => dlmb_cntlr_n_10,
       lmb_as => lmb_as,
-      lmb_reg_read_Q_reg => iomodule_0_n_37,
-      lmb_reg_read_Q_reg_0 => iomodule_0_n_38,
-      lmb_reg_read_Q_reg_1 => iomodule_0_n_39,
-      lmb_reg_read_Q_reg_2 => iomodule_0_n_40,
-      lmb_reg_read_Q_reg_3 => iomodule_0_n_41,
-      lmb_reg_read_Q_reg_4 => iomodule_0_n_42,
-      lmb_reg_read_Q_reg_5 => iomodule_0_n_43,
-      lmb_reg_read_Q_reg_6 => iomodule_0_n_44,
-      sel_LSB(0) => \MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB\(1)
+      lmb_reg_read_Q_reg => iomodule_0_n_20,
+      lmb_reg_read_Q_reg_0 => iomodule_0_n_21,
+      lmb_reg_read_Q_reg_1 => iomodule_0_n_22,
+      lmb_reg_read_Q_reg_2 => iomodule_0_n_23,
+      lmb_reg_read_Q_reg_3 => iomodule_0_n_24,
+      lmb_reg_read_Q_reg_4 => iomodule_0_n_25,
+      lmb_reg_read_Q_reg_5 => iomodule_0_n_26,
+      lmb_reg_read_Q_reg_6 => iomodule_0_n_27,
+      load_Store_i_reg => dlmb_cntlr_n_18,
+      sel_LSB(1 downto 0) => \MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB\(1 downto 0)
     );
 ilmb: entity work.microblaze_mcs_0_lmb_v10
      port map (
@@ -48049,94 +48219,68 @@ iomodule_0: entity work.microblaze_mcs_0_iomodule
       D(2) => BRAM_Addr_B(27),
       D(1) => BRAM_Addr_B(28),
       D(0) => BRAM_Addr_B(29),
-      DATA_OUTB(23) => Sl_DBus(0),
-      DATA_OUTB(22) => Sl_DBus(1),
-      DATA_OUTB(21) => Sl_DBus(2),
-      DATA_OUTB(20) => Sl_DBus(3),
-      DATA_OUTB(19) => Sl_DBus(4),
-      DATA_OUTB(18) => Sl_DBus(5),
-      DATA_OUTB(17) => Sl_DBus(6),
-      DATA_OUTB(16) => Sl_DBus(7),
-      DATA_OUTB(15) => Sl_DBus(8),
-      DATA_OUTB(14) => Sl_DBus(9),
-      DATA_OUTB(13) => Sl_DBus(10),
-      DATA_OUTB(12) => Sl_DBus(11),
-      DATA_OUTB(11) => Sl_DBus(12),
-      DATA_OUTB(10) => Sl_DBus(13),
-      DATA_OUTB(9) => Sl_DBus(14),
-      DATA_OUTB(8) => Sl_DBus(15),
-      DATA_OUTB(7) => Sl_DBus(16),
-      DATA_OUTB(6) => Sl_DBus(17),
-      DATA_OUTB(5) => Sl_DBus(18),
-      DATA_OUTB(4) => Sl_DBus(19),
-      DATA_OUTB(3) => Sl_DBus(20),
-      DATA_OUTB(2) => Sl_DBus(21),
-      DATA_OUTB(1) => Sl_DBus(22),
-      DATA_OUTB(0) => Sl_DBus(23),
-      Data_Read => iomodule_0_n_19,
-      Extend_Data_Read(15) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(16),
-      Extend_Data_Read(14) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(17),
-      Extend_Data_Read(13) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(18),
-      Extend_Data_Read(12) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(19),
-      Extend_Data_Read(11) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(20),
-      Extend_Data_Read(10) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(21),
-      Extend_Data_Read(9) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(22),
-      Extend_Data_Read(8) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(23),
-      Extend_Data_Read(7) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(24),
-      Extend_Data_Read(6) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(25),
-      Extend_Data_Read(5) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(26),
-      Extend_Data_Read(4) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(27),
-      Extend_Data_Read(3) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(28),
-      Extend_Data_Read(2) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(29),
-      Extend_Data_Read(1) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(30),
-      Extend_Data_Read(0) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(31),
-      GPI1(7 downto 0) => GPI1(7 downto 0),
+      DATA_OUTB(15) => Sl_DBus(0),
+      DATA_OUTB(14) => Sl_DBus(1),
+      DATA_OUTB(13) => Sl_DBus(2),
+      DATA_OUTB(12) => Sl_DBus(3),
+      DATA_OUTB(11) => Sl_DBus(4),
+      DATA_OUTB(10) => Sl_DBus(5),
+      DATA_OUTB(9) => Sl_DBus(6),
+      DATA_OUTB(8) => Sl_DBus(7),
+      DATA_OUTB(7) => Sl_DBus(8),
+      DATA_OUTB(6) => Sl_DBus(9),
+      DATA_OUTB(5) => Sl_DBus(10),
+      DATA_OUTB(4) => Sl_DBus(11),
+      DATA_OUTB(3) => Sl_DBus(12),
+      DATA_OUTB(2) => Sl_DBus(13),
+      DATA_OUTB(1) => Sl_DBus(14),
+      DATA_OUTB(0) => Sl_DBus(15),
+      Data_Read => iomodule_0_n_3,
+      GPI1(15 downto 0) => GPI1(15 downto 0),
       GPO1(7 downto 0) => GPO1(7 downto 0),
-      \No_ECC.Sl_Rdy_reg\ => dlmb_cntlr_n_10,
       SR(0) => LMB_Rst_reg_n_0,
       Sl_Rdy => Sl_Rdy,
       UART_Interrupt => UART_Interrupt,
       UART_Rx => UART_Rx,
       UART_Tx => UART_Tx,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ => iomodule_0_n_41,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => iomodule_0_n_42,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ => iomodule_0_n_43,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ => iomodule_0_n_44,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3\ => dlmb_cntlr_n_6,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4\ => dlmb_cntlr_n_7,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5\ => dlmb_cntlr_n_8,
-      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6\ => dlmb_cntlr_n_9,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => iomodule_0_n_37,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => iomodule_0_n_38,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ => iomodule_0_n_39,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ => iomodule_0_n_40,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3\ => dlmb_cntlr_n_2,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4\ => dlmb_cntlr_n_3,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5\ => dlmb_cntlr_n_4,
-      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6\ => dlmb_cntlr_n_5,
-      \Using_FPGA.Native\ => iomodule_0_n_20,
-      \Using_FPGA.Native_0\ => iomodule_0_n_21,
-      \Using_FPGA.Native_1\ => iomodule_0_n_22,
-      \Using_FPGA.Native_10\ => iomodule_0_n_32,
-      \Using_FPGA.Native_11\ => iomodule_0_n_33,
-      \Using_FPGA.Native_12\ => iomodule_0_n_34,
-      \Using_FPGA.Native_13\ => iomodule_0_n_35,
-      \Using_FPGA.Native_14\ => iomodule_0_n_36,
-      \Using_FPGA.Native_2\ => iomodule_0_n_23,
-      \Using_FPGA.Native_3\ => iomodule_0_n_24,
-      \Using_FPGA.Native_4\ => iomodule_0_n_25,
-      \Using_FPGA.Native_5\ => iomodule_0_n_26,
-      \Using_FPGA.Native_6\ => iomodule_0_n_28,
-      \Using_FPGA.Native_7\ => iomodule_0_n_29,
-      \Using_FPGA.Native_8\ => iomodule_0_n_30,
-      \Using_FPGA.Native_9\ => iomodule_0_n_31,
-      is_lwx_I_reg => iomodule_0_n_27,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1\ => iomodule_0_n_24,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0\ => iomodule_0_n_25,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1\ => iomodule_0_n_26,
+      \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2\ => iomodule_0_n_27,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1\ => iomodule_0_n_20,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0\ => iomodule_0_n_21,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1\ => iomodule_0_n_22,
+      \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2\ => iomodule_0_n_23,
+      \Using_FPGA.Native\ => iomodule_0_n_4,
+      \Using_FPGA.Native_0\ => iomodule_0_n_5,
+      \Using_FPGA.Native_1\ => iomodule_0_n_6,
+      \Using_FPGA.Native_10\ => iomodule_0_n_15,
+      \Using_FPGA.Native_11\ => iomodule_0_n_16,
+      \Using_FPGA.Native_12\ => iomodule_0_n_17,
+      \Using_FPGA.Native_13\ => iomodule_0_n_18,
+      \Using_FPGA.Native_14\ => iomodule_0_n_19,
+      \Using_FPGA.Native_15\ => iomodule_0_n_28,
+      \Using_FPGA.Native_16\ => iomodule_0_n_29,
+      \Using_FPGA.Native_17\ => iomodule_0_n_30,
+      \Using_FPGA.Native_18\ => iomodule_0_n_31,
+      \Using_FPGA.Native_19\ => iomodule_0_n_32,
+      \Using_FPGA.Native_2\ => iomodule_0_n_7,
+      \Using_FPGA.Native_20\ => iomodule_0_n_33,
+      \Using_FPGA.Native_21\ => iomodule_0_n_34,
+      \Using_FPGA.Native_22\ => iomodule_0_n_35,
+      \Using_FPGA.Native_3\ => iomodule_0_n_8,
+      \Using_FPGA.Native_4\ => iomodule_0_n_9,
+      \Using_FPGA.Native_5\ => iomodule_0_n_10,
+      \Using_FPGA.Native_6\ => iomodule_0_n_11,
+      \Using_FPGA.Native_7\ => iomodule_0_n_12,
+      \Using_FPGA.Native_8\ => iomodule_0_n_13,
+      \Using_FPGA.Native_9\ => iomodule_0_n_14,
       lmb_as => lmb_as,
       lmb_reg_read0 => lmb_reg_read0,
       lmb_reg_read_Q => lmb_reg_read_Q,
       lmb_reg_write => lmb_reg_write,
       lmb_reg_write0 => lmb_reg_write0,
-      sel_LSB(1 downto 0) => \MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB\(1 downto 0),
+      load_Store_i_reg => iomodule_0_n_36,
       \write_Addr_I_reg[0]\(31) => BRAM_Din_B(0),
       \write_Addr_I_reg[0]\(30) => BRAM_Din_B(1),
       \write_Addr_I_reg[0]\(29) => BRAM_Din_B(2),
@@ -48238,7 +48382,7 @@ microblaze_I: entity work.microblaze_mcs_0_MicroBlaze
       Clk => Clk,
       DATA_INB(0 to 31) => BRAM_Din_B(0 to 31),
       DATA_OUTA(0 to 31) => LMB_ReadDBus(0 to 31),
-      Data_Read => iomodule_0_n_19,
+      Data_Read => iomodule_0_n_3,
       Extend_Data_Read(15) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(16),
       Extend_Data_Read(14) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(17),
       Extend_Data_Read(13) => \MicroBlaze_Core_I/Area.Core/Extend_Data_Read\(18),
@@ -48258,34 +48402,34 @@ microblaze_I: entity work.microblaze_mcs_0_MicroBlaze
       LMB_AddrStrobe => LMB_AddrStrobe,
       LMB_Ready => LMB_Ready,
       \No_ECC.Sl_Rdy_reg\ => microblaze_I_n_57,
-      \No_ECC.Sl_Rdy_reg_0\ => dlmb_cntlr_n_10,
-      \No_ECC.Sl_Rdy_reg_1\ => iomodule_0_n_20,
-      \No_ECC.Sl_Rdy_reg_2\ => iomodule_0_n_21,
-      \No_ECC.Sl_Rdy_reg_3\ => iomodule_0_n_22,
-      \No_ECC.Sl_Rdy_reg_4\ => iomodule_0_n_23,
-      \No_ECC.Sl_Rdy_reg_5\ => iomodule_0_n_24,
-      \No_ECC.Sl_Rdy_reg_6\ => iomodule_0_n_25,
-      \No_ECC.Sl_Rdy_reg_7\ => iomodule_0_n_26,
+      \No_ECC.Sl_Rdy_reg_0\ => dlmb_cntlr_n_18,
+      \No_ECC.Sl_Rdy_reg_1\ => iomodule_0_n_4,
+      \No_ECC.Sl_Rdy_reg_10\ => iomodule_0_n_13,
+      \No_ECC.Sl_Rdy_reg_11\ => iomodule_0_n_14,
+      \No_ECC.Sl_Rdy_reg_12\ => iomodule_0_n_15,
+      \No_ECC.Sl_Rdy_reg_13\ => iomodule_0_n_16,
+      \No_ECC.Sl_Rdy_reg_14\ => iomodule_0_n_17,
+      \No_ECC.Sl_Rdy_reg_15\ => iomodule_0_n_18,
+      \No_ECC.Sl_Rdy_reg_2\ => iomodule_0_n_5,
+      \No_ECC.Sl_Rdy_reg_3\ => iomodule_0_n_6,
+      \No_ECC.Sl_Rdy_reg_4\ => iomodule_0_n_7,
+      \No_ECC.Sl_Rdy_reg_5\ => iomodule_0_n_8,
+      \No_ECC.Sl_Rdy_reg_6\ => iomodule_0_n_9,
+      \No_ECC.Sl_Rdy_reg_7\ => iomodule_0_n_10,
+      \No_ECC.Sl_Rdy_reg_8\ => iomodule_0_n_11,
+      \No_ECC.Sl_Rdy_reg_9\ => iomodule_0_n_12,
       \No_ECC.lmb_as_reg\ => microblaze_I_n_55,
       \No_ECC.lmb_as_reg_0\ => microblaze_I_n_56,
       POR_FF_I => dlmb_n_0,
       Sl_Rdy => Sl_Rdy_0,
       WEB(0 to 3) => BRAM_WEN_B(0 to 3),
-      \cipr_rd_dff_all[24].fdr_i\ => iomodule_0_n_28,
-      \cipr_rd_dff_all[25].fdr_i\ => iomodule_0_n_29,
-      \cipr_rd_dff_all[26].fdr_i\ => iomodule_0_n_30,
-      \cipr_rd_dff_all[27].fdr_i\ => iomodule_0_n_31,
-      \cipr_rd_dff_all[28].fdr_i\ => iomodule_0_n_32,
-      \cipr_rd_dff_all[29].fdr_i\ => iomodule_0_n_33,
-      \cipr_rd_dff_all[30].fdr_i\ => iomodule_0_n_34,
-      \cipr_rd_dff_all[31].fdr_i\ => iomodule_0_n_35,
       lmb_as => lmb_as_1,
       lmb_reg_read0 => lmb_reg_read0,
       lmb_reg_read_Q => lmb_reg_read_Q,
-      lmb_reg_read_Q_reg => iomodule_0_n_36,
+      lmb_reg_read_Q_reg => iomodule_0_n_19,
       lmb_reg_write => lmb_reg_write,
       lmb_reg_write0 => lmb_reg_write0,
-      lmb_reg_write_reg => iomodule_0_n_27,
+      lmb_reg_write_reg => iomodule_0_n_36,
       reset_temp => \MicroBlaze_Core_I/reset_temp\,
       sel_LSB(1 downto 0) => \MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB\(1 downto 0)
     );
@@ -48325,7 +48469,7 @@ entity microblaze_mcs_0 is
     UART_Rx : in STD_LOGIC;
     UART_Tx : out STD_LOGIC;
     GPO1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    GPI1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    GPI1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     GPI1_Interrupt : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -48333,7 +48477,7 @@ entity microblaze_mcs_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of microblaze_mcs_0 : entity is "microblaze_mcs_0,microblaze_mcs,{}";
   attribute core_generation_info : string;
-  attribute core_generation_info of microblaze_mcs_0 : entity is "microblaze_mcs_0,microblaze_mcs,{x_ipProduct=Vivado 2015.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=microblaze_mcs,x_ipVersion=2.3,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_MICROBLAZE_INSTANCE=microblaze_mcs_0,C_AVOID_PRIMITIVES=0,C_PATH=mcs_0/U0,C_FREQ=100000000,C_MEMSIZE=32768,C_DEBUG_ENABLED=0,C_JTAG_CHAIN=2,C_TRACE=0,C_USE_IO_BUS=0,C_USE_UART_RX=1,C_USE_UART_TX=1,C_UART_BAUDRATE=9600,C_UART_DATA_BITS=8,C_UART_USE_PARITY=0,C_UART_ODD_PARITY=0,C_UART_RX_INTERRUPT=0,C_UART_TX_INTERRUPT=0,C_UART_ERROR_INTERRUPT=0,C_UART_PROG_BAUDRATE=0,C_USE_FIT1=0,C_FIT1_No_CLOCKS=6216,C_FIT1_INTERRUPT=0,C_USE_FIT2=0,C_FIT2_No_CLOCKS=6216,C_FIT2_INTERRUPT=0,C_USE_FIT3=0,C_FIT3_No_CLOCKS=6216,C_FIT3_INTERRUPT=0,C_USE_FIT4=0,C_FIT4_No_CLOCKS=6216,C_FIT4_INTERRUPT=0,C_USE_PIT1=0,C_PIT1_SIZE=32,C_PIT1_READABLE=1,C_PIT1_PRESCALER=0,C_PIT1_INTERRUPT=0,C_USE_PIT2=0,C_PIT2_SIZE=32,C_PIT2_READABLE=1,C_PIT2_PRESCALER=0,C_PIT2_INTERRUPT=0,C_USE_PIT3=0,C_PIT3_SIZE=32,C_PIT3_READABLE=1,C_PIT3_PRESCALER=0,C_PIT3_INTERRUPT=0,C_USE_PIT4=0,C_PIT4_SIZE=32,C_PIT4_READABLE=1,C_PIT4_PRESCALER=0,C_PIT4_INTERRUPT=0,C_USE_GPO1=1,C_GPO1_SIZE=8,C_GPO1_INIT=0x00000000,C_USE_GPO2=0,C_GPO2_SIZE=32,C_GPO2_INIT=0x00000000,C_USE_GPO3=0,C_GPO3_SIZE=32,C_GPO3_INIT=0x00000000,C_USE_GPO4=0,C_GPO4_SIZE=32,C_GPO4_INIT=0x00000000,C_USE_GPI1=1,C_GPI1_SIZE=8,C_GPI1_INTERRUPT=0,C_USE_GPI2=0,C_GPI2_SIZE=32,C_GPI2_INTERRUPT=0,C_USE_GPI3=0,C_GPI3_SIZE=32,C_GPI3_INTERRUPT=0,C_USE_GPI4=0,C_GPI4_SIZE=32,C_GPI4_INTERRUPT=0,C_INTC_USE_EXT_INTR=0,C_INTC_INTR_SIZE=1,C_INTC_LEVEL_EDGE=0x0000,C_INTC_POSITIVE=0xFFFF,C_INTC_ASYNC_INTR=0xFFFF,C_INTC_NUM_SYNC_FF=2}";
+  attribute core_generation_info of microblaze_mcs_0 : entity is "microblaze_mcs_0,microblaze_mcs,{x_ipProduct=Vivado 2015.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=microblaze_mcs,x_ipVersion=2.3,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_FAMILY=artix7,C_MICROBLAZE_INSTANCE=microblaze_mcs_0,C_AVOID_PRIMITIVES=0,C_PATH=mcs_0/U0,C_FREQ=100000000,C_MEMSIZE=32768,C_DEBUG_ENABLED=0,C_JTAG_CHAIN=2,C_TRACE=0,C_USE_IO_BUS=0,C_USE_UART_RX=1,C_USE_UART_TX=1,C_UART_BAUDRATE=9600,C_UART_DATA_BITS=8,C_UART_USE_PARITY=0,C_UART_ODD_PARITY=0,C_UART_RX_INTERRUPT=0,C_UART_TX_INTERRUPT=0,C_UART_ERROR_INTERRUPT=0,C_UART_PROG_BAUDRATE=0,C_USE_FIT1=0,C_FIT1_No_CLOCKS=6216,C_FIT1_INTERRUPT=0,C_USE_FIT2=0,C_FIT2_No_CLOCKS=6216,C_FIT2_INTERRUPT=0,C_USE_FIT3=0,C_FIT3_No_CLOCKS=6216,C_FIT3_INTERRUPT=0,C_USE_FIT4=0,C_FIT4_No_CLOCKS=6216,C_FIT4_INTERRUPT=0,C_USE_PIT1=0,C_PIT1_SIZE=32,C_PIT1_READABLE=1,C_PIT1_PRESCALER=0,C_PIT1_INTERRUPT=0,C_USE_PIT2=0,C_PIT2_SIZE=32,C_PIT2_READABLE=1,C_PIT2_PRESCALER=0,C_PIT2_INTERRUPT=0,C_USE_PIT3=0,C_PIT3_SIZE=32,C_PIT3_READABLE=1,C_PIT3_PRESCALER=0,C_PIT3_INTERRUPT=0,C_USE_PIT4=0,C_PIT4_SIZE=32,C_PIT4_READABLE=1,C_PIT4_PRESCALER=0,C_PIT4_INTERRUPT=0,C_USE_GPO1=1,C_GPO1_SIZE=8,C_GPO1_INIT=0x00000000,C_USE_GPO2=0,C_GPO2_SIZE=32,C_GPO2_INIT=0x00000000,C_USE_GPO3=0,C_GPO3_SIZE=32,C_GPO3_INIT=0x00000000,C_USE_GPO4=0,C_GPO4_SIZE=32,C_GPO4_INIT=0x00000000,C_USE_GPI1=1,C_GPI1_SIZE=16,C_GPI1_INTERRUPT=0,C_USE_GPI2=0,C_GPI2_SIZE=32,C_GPI2_INTERRUPT=0,C_USE_GPI3=0,C_GPI3_SIZE=32,C_GPI3_INTERRUPT=0,C_USE_GPI4=0,C_GPI4_SIZE=32,C_GPI4_INTERRUPT=0,C_INTC_USE_EXT_INTR=0,C_INTC_INTR_SIZE=1,C_INTC_LEVEL_EDGE=0x0000,C_INTC_POSITIVE=0xFFFF,C_INTC_ASYNC_INTR=0xFFFF,C_INTC_NUM_SYNC_FF=2}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_mcs_0 : entity is "yes";
   attribute x_core_info : string;
@@ -48414,7 +48558,7 @@ architecture STRUCTURE of microblaze_mcs_0 is
   attribute C_GPI1_INTERRUPT : integer;
   attribute C_GPI1_INTERRUPT of U0 : label is 0;
   attribute C_GPI1_SIZE : integer;
-  attribute C_GPI1_SIZE of U0 : label is 8;
+  attribute C_GPI1_SIZE of U0 : label is 16;
   attribute C_GPI2_INTERRUPT : integer;
   attribute C_GPI2_INTERRUPT of U0 : label is 0;
   attribute C_GPI2_SIZE : integer;
@@ -48565,7 +48709,7 @@ U0: entity work.microblaze_mcs_0_microblaze_mcs
       FIT3_Toggle => NLW_U0_FIT3_Toggle_UNCONNECTED,
       FIT4_Interrupt => NLW_U0_FIT4_Interrupt_UNCONNECTED,
       FIT4_Toggle => NLW_U0_FIT4_Toggle_UNCONNECTED,
-      GPI1(7 downto 0) => GPI1(7 downto 0),
+      GPI1(15 downto 0) => GPI1(15 downto 0),
       GPI1_Interrupt => GPI1_Interrupt,
       GPI2(31 downto 0) => B"00000000000000000000000000000000",
       GPI2_Interrupt => NLW_U0_GPI2_Interrupt_UNCONNECTED,

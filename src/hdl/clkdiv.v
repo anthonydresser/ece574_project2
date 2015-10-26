@@ -36,10 +36,10 @@ module clkdiv #(parameter div_val = 1)(
       counter <= 0;
     else
       if(counter == div_val - 1)
-        begin
+      begin
           counter <= 0;
           clk_out <= 1;
-        end
+      end
       else if(counter < half)
       begin
           clk_out <= 0;

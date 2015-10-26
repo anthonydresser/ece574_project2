@@ -24,10 +24,11 @@ module I2C_Interface(
     output SCL,
     input reset,
     inout SDA,
-    output reg [15:0] dout
+    output reg [15:0] dout,
+    input clk
     );
     
-    parameter [2:0] s0 = 2'b000, s1 = 2'b001, s2 = 2'b010, s3 = 2'b011, s4 = 3'b100, s5 = 3'b101, s6 = 3'b110;
+    parameter [2:0] s0 = 3'b000, s1 = 3'b001, s2 = 3'b010, s3 = 3'b011, s4 = 3'b100, s5 = 3'b101, s6 = 3'b110;
     parameter [6:0] MSBADDR = 7'b1010001, LSBADDR = 7'b1010011;
     
     reg [2:0] current_state, next_state;
@@ -35,14 +36,12 @@ module I2C_Interface(
     reg [6:0] addrShift;
     reg [7:0] count;
     reg startCount;
-    reg internalSDA;
-    reg writing;
+    reg SDA_reg;
+    reg OE;
     
     wire clk_200K;
     
-    assign SCL = current_state == s0 ? 1'b1 : clk_200K;
-    
-    assign SDA = writing ? internalSDA : 1'bz;
+    assign SCL = clk_200K;
     
     //state memory
     always @(posedge clk_200K, posedge reset)
@@ -84,53 +83,55 @@ module I2C_Interface(
         case(current_state)
             // start a transaction
             s0: begin
-                    writing <= 1'b1;
-                    internalSDA <= 1'b1;
+                    OE <= 1'b1;
+                    SDA_reg <= 1'b1;
                     startCount <= 1'b0;
                     addrShift <= MSBADDR;
                     dout <= {MSB, LSB};
                 end
             // pull SDA low
             s1: begin
-                    writing <= 1'b1;
-                    internalSDA <= 1'b0;
+                    OE <= 1'b1;
+                    SDA_reg <= 1'b0;
                     startCount <= 1'b0;
                     addrShift <= MSBADDR;
                 end
             //shift address
             s2: begin
-                    writing <= 1'b1;
+                    OE <= 1'b1;
                     startCount <= 1'b1;
-                    internalSDA <= addrShift[6];
+                    SDA_reg <= addrShift[6];
                     addrShift <= {addrShift[5:0], addrShift[6]};
                 end
             //reset counter before reading
             s3: begin
-                    writing <= 1'b0;
+                    OE <= 1'b0;
                     startCount <= 1'b0;
                     addrShift <= MSBADDR;
                 end
             // read MSB
             s4: begin
-                    writing <= 1'b0;
+                    OE <= 1'b0;
                     startCount <= 1'b1;
                     MSB <= {MSB[7:1], SDA};
                     addrShift <= MSBADDR;
                 end
             // reset before LSB
             s5: begin
-                    writing <= 1'b0;
+                    OE <= 1'b0;
                     startCount <= 1'b0;
                     addrShift <= MSBADDR;
                 end
             // read LSB
             s6: begin
-                    writing <= 1'b0;
+                    OE <= 1'b0;
                     startCount <= 1'b1;
                     LSB <= {LSB[7:1], SDA};
                     addrShift <= MSBADDR;
                 end
         endcase
+        
+    assign SDA = (OE == 1) ? SDA_reg : 1'bz;
         
     // counter
     always @(posedge clk_200K)
@@ -141,7 +142,7 @@ module I2C_Interface(
             
       clkdiv #(.div_val(50)) clk_div200K
       (
-        .clk_in(clk_10M),
+        .clk_in(clk),
         .reset(reset),
         .clk_out(clk_200K)
       );

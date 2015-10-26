@@ -60,7 +60,7 @@ microblaze_mcs_0 your_instance_name (
   .UART_Rx(UART_Rx),                // input wire UART_Rx
   .UART_Tx(UART_Tx),                // output wire UART_Tx
   .GPO1(GPO1),                      // output wire [7 : 0] GPO1
-  .GPI1(GPI1),                      // input wire [7 : 0] GPI1
+  .GPI1(GPI1),                      // input wire [15 : 0] GPI1
   .GPI1_Interrupt(GPI1_Interrupt)  // output wire GPI1_Interrupt
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

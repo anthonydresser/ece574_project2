@@ -31,7 +31,7 @@ module top_level(
     output sclk,
     output sync,
     output dout,
-    input [7:0] sw,
+//    input [7:0] sw,
     output [7:0]    leds
     );
     
@@ -43,12 +43,12 @@ module top_level(
     assign leds = gpo;
     
     microblaze_mcs_0 mcs_0 (
-      .Clk(clk_100M),                        // input wire Clk
-      .Reset(reset),                    // input wire Reset
-      .UART_Rx(rx),                // input wire UART_Rx
-      .UART_Tx(tx),                // output wire UART_Tx
-      .GPO1(gpo),                      // output wire [7 : 0] GPO1
-      .GPI1(temp_data[7:0]),                      // input wire [7 : 0] GPI1
+      .Clk(clk_100M), // input wire Clk
+      .Reset(reset), // input wire Reset
+      .UART_Rx(rx), // input wire UART_Rx
+      .UART_Tx(tx), // output wire UART_Tx
+      .GPO1(gpo), // output wire [7 : 0] GPO1
+      .GPI1(temp_data), // input wire [15 : 0] GPI1
       .GPI1_Interrupt()  // output wire GPI1_Interrupt
     );
     
@@ -76,7 +76,7 @@ module top_level(
         .SCL(SCL),
         .SDA(SDA),
         .reset(reset),
-        .dout(temp_data)
-      );
+        .dout(temp_data),
+        .clk(clk_10M));
     
 endmodule

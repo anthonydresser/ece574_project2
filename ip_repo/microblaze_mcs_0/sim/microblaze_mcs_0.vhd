@@ -63,7 +63,7 @@ ENTITY microblaze_mcs_0 IS
     UART_Rx : IN STD_LOGIC;
     UART_Tx : OUT STD_LOGIC;
     GPO1 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    GPI1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    GPI1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     GPI1_Interrupt : OUT STD_LOGIC
   );
 END microblaze_mcs_0;
@@ -195,7 +195,7 @@ ARCHITECTURE microblaze_mcs_0_arch OF microblaze_mcs_0 IS
       GPO2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       GPO3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       GPO4 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      GPI1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+      GPI1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       GPI1_Interrupt : OUT STD_LOGIC;
       GPI2 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       GPI2_Interrupt : OUT STD_LOGIC;
@@ -298,7 +298,7 @@ BEGIN
       C_GPO4_SIZE => 32,
       C_GPO4_INIT => X"00000000",
       C_USE_GPI1 => 1,
-      C_GPI1_SIZE => 8,
+      C_GPI1_SIZE => 16,
       C_GPI1_INTERRUPT => 0,
       C_USE_GPI2 => 0,
       C_GPI2_SIZE => 32,

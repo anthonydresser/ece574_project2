@@ -1,10 +1,10 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-// Date        : Mon Oct 26 16:05:47 2015
-// Host        : AK113-13 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim {c:/Users/addresser/Documents/Project
-//               2/ip_repo/microblaze_mcs_0/microblaze_mcs_0_sim_netlist.v}
+// Tool Version: Vivado v.2015.3 (lin64) Build 1368829 Mon Sep 28 20:06:39 MDT 2015
+// Date        : Mon Oct 26 19:15:26 2015
+// Host        : anthony-VirtualBox running 64-bit Ubuntu 14.04.3 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/anthony/Documents/ece574_project2/ip_repo/microblaze_mcs_0/microblaze_mcs_0_sim_netlist.v
 // Design      : microblaze_mcs_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "microblaze_mcs_0,microblaze_mcs,{}" *) (* core_generation_info = "microblaze_mcs_0,microblaze_mcs,{x_ipProduct=Vivado 2015.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=microblaze_mcs,x_ipVersion=2.3,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_MICROBLAZE_INSTANCE=microblaze_mcs_0,C_AVOID_PRIMITIVES=0,C_PATH=mcs_0/U0,C_FREQ=100000000,C_MEMSIZE=32768,C_DEBUG_ENABLED=0,C_JTAG_CHAIN=2,C_TRACE=0,C_USE_IO_BUS=0,C_USE_UART_RX=1,C_USE_UART_TX=1,C_UART_BAUDRATE=9600,C_UART_DATA_BITS=8,C_UART_USE_PARITY=0,C_UART_ODD_PARITY=0,C_UART_RX_INTERRUPT=0,C_UART_TX_INTERRUPT=0,C_UART_ERROR_INTERRUPT=0,C_UART_PROG_BAUDRATE=0,C_USE_FIT1=0,C_FIT1_No_CLOCKS=6216,C_FIT1_INTERRUPT=0,C_USE_FIT2=0,C_FIT2_No_CLOCKS=6216,C_FIT2_INTERRUPT=0,C_USE_FIT3=0,C_FIT3_No_CLOCKS=6216,C_FIT3_INTERRUPT=0,C_USE_FIT4=0,C_FIT4_No_CLOCKS=6216,C_FIT4_INTERRUPT=0,C_USE_PIT1=0,C_PIT1_SIZE=32,C_PIT1_READABLE=1,C_PIT1_PRESCALER=0,C_PIT1_INTERRUPT=0,C_USE_PIT2=0,C_PIT2_SIZE=32,C_PIT2_READABLE=1,C_PIT2_PRESCALER=0,C_PIT2_INTERRUPT=0,C_USE_PIT3=0,C_PIT3_SIZE=32,C_PIT3_READABLE=1,C_PIT3_PRESCALER=0,C_PIT3_INTERRUPT=0,C_USE_PIT4=0,C_PIT4_SIZE=32,C_PIT4_READABLE=1,C_PIT4_PRESCALER=0,C_PIT4_INTERRUPT=0,C_USE_GPO1=1,C_GPO1_SIZE=8,C_GPO1_INIT=0x00000000,C_USE_GPO2=0,C_GPO2_SIZE=32,C_GPO2_INIT=0x00000000,C_USE_GPO3=0,C_GPO3_SIZE=32,C_GPO3_INIT=0x00000000,C_USE_GPO4=0,C_GPO4_SIZE=32,C_GPO4_INIT=0x00000000,C_USE_GPI1=1,C_GPI1_SIZE=8,C_GPI1_INTERRUPT=0,C_USE_GPI2=0,C_GPI2_SIZE=32,C_GPI2_INTERRUPT=0,C_USE_GPI3=0,C_GPI3_SIZE=32,C_GPI3_INTERRUPT=0,C_USE_GPI4=0,C_GPI4_SIZE=32,C_GPI4_INTERRUPT=0,C_INTC_USE_EXT_INTR=0,C_INTC_INTR_SIZE=1,C_INTC_LEVEL_EDGE=0x0000,C_INTC_POSITIVE=0xFFFF,C_INTC_ASYNC_INTR=0xFFFF,C_INTC_NUM_SYNC_FF=2}" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_mcs_0,microblaze_mcs,{}" *) (* core_generation_info = "microblaze_mcs_0,microblaze_mcs,{x_ipProduct=Vivado 2015.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=microblaze_mcs,x_ipVersion=2.3,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_FAMILY=artix7,C_MICROBLAZE_INSTANCE=microblaze_mcs_0,C_AVOID_PRIMITIVES=0,C_PATH=mcs_0/U0,C_FREQ=100000000,C_MEMSIZE=32768,C_DEBUG_ENABLED=0,C_JTAG_CHAIN=2,C_TRACE=0,C_USE_IO_BUS=0,C_USE_UART_RX=1,C_USE_UART_TX=1,C_UART_BAUDRATE=9600,C_UART_DATA_BITS=8,C_UART_USE_PARITY=0,C_UART_ODD_PARITY=0,C_UART_RX_INTERRUPT=0,C_UART_TX_INTERRUPT=0,C_UART_ERROR_INTERRUPT=0,C_UART_PROG_BAUDRATE=0,C_USE_FIT1=0,C_FIT1_No_CLOCKS=6216,C_FIT1_INTERRUPT=0,C_USE_FIT2=0,C_FIT2_No_CLOCKS=6216,C_FIT2_INTERRUPT=0,C_USE_FIT3=0,C_FIT3_No_CLOCKS=6216,C_FIT3_INTERRUPT=0,C_USE_FIT4=0,C_FIT4_No_CLOCKS=6216,C_FIT4_INTERRUPT=0,C_USE_PIT1=0,C_PIT1_SIZE=32,C_PIT1_READABLE=1,C_PIT1_PRESCALER=0,C_PIT1_INTERRUPT=0,C_USE_PIT2=0,C_PIT2_SIZE=32,C_PIT2_READABLE=1,C_PIT2_PRESCALER=0,C_PIT2_INTERRUPT=0,C_USE_PIT3=0,C_PIT3_SIZE=32,C_PIT3_READABLE=1,C_PIT3_PRESCALER=0,C_PIT3_INTERRUPT=0,C_USE_PIT4=0,C_PIT4_SIZE=32,C_PIT4_READABLE=1,C_PIT4_PRESCALER=0,C_PIT4_INTERRUPT=0,C_USE_GPO1=1,C_GPO1_SIZE=8,C_GPO1_INIT=0x00000000,C_USE_GPO2=0,C_GPO2_SIZE=32,C_GPO2_INIT=0x00000000,C_USE_GPO3=0,C_GPO3_SIZE=32,C_GPO3_INIT=0x00000000,C_USE_GPO4=0,C_GPO4_SIZE=32,C_GPO4_INIT=0x00000000,C_USE_GPI1=1,C_GPI1_SIZE=16,C_GPI1_INTERRUPT=0,C_USE_GPI2=0,C_GPI2_SIZE=32,C_GPI2_INTERRUPT=0,C_USE_GPI3=0,C_GPI3_SIZE=32,C_GPI3_INTERRUPT=0,C_USE_GPI4=0,C_GPI4_SIZE=32,C_GPI4_INTERRUPT=0,C_INTC_USE_EXT_INTR=0,C_INTC_INTR_SIZE=1,C_INTC_LEVEL_EDGE=0x0000,C_INTC_POSITIVE=0xFFFF,C_INTC_ASYNC_INTR=0xFFFF,C_INTC_NUM_SYNC_FF=2}" *) (* downgradeipidentifiedwarnings = "yes" *) 
 (* x_core_info = "microblaze_mcs,Vivado 2015.3" *) 
 (* NotValidForBitStream *)
 module microblaze_mcs_0
@@ -28,11 +28,11 @@ module microblaze_mcs_0
   (* x_interface_info = "xilinx.com:interface:uart:1.0 UART RxD" *) input UART_Rx;
   (* x_interface_info = "xilinx.com:interface:uart:1.0 UART TxD" *) output UART_Tx;
   (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO1 TRI_O" *) output [7:0]GPO1;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO1 TRI_I" *) input [7:0]GPI1;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO1 TRI_I" *) input [15:0]GPI1;
   output GPI1_Interrupt;
 
   wire Clk;
-  wire [7:0]GPI1;
+  wire [15:0]GPI1;
   wire GPI1_Interrupt;
   wire [7:0]GPO1;
   wire Reset;
@@ -98,7 +98,7 @@ module microblaze_mcs_0
   (* C_FIT4_No_CLOCKS = "6216" *) 
   (* C_FREQ = "100000000" *) 
   (* C_GPI1_INTERRUPT = "0" *) 
-  (* C_GPI1_SIZE = "8" *) 
+  (* C_GPI1_SIZE = "16" *) 
   (* C_GPI2_INTERRUPT = "0" *) 
   (* C_GPI2_SIZE = "32" *) 
   (* C_GPI3_INTERRUPT = "0" *) 
@@ -3586,14 +3586,14 @@ module microblaze_mcs_0_Data_Flow
     \No_ECC.Sl_Rdy_reg_6 ,
     \No_ECC.Sl_Rdy_reg_7 ,
     \No_ECC.Sl_Rdy_reg_8 ,
-    \cipr_rd_dff_all[24].fdr_i ,
-    \cipr_rd_dff_all[25].fdr_i ,
-    \cipr_rd_dff_all[26].fdr_i ,
-    \cipr_rd_dff_all[27].fdr_i ,
-    \cipr_rd_dff_all[28].fdr_i ,
-    \cipr_rd_dff_all[29].fdr_i ,
-    \cipr_rd_dff_all[30].fdr_i ,
-    \cipr_rd_dff_all[31].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_9 ,
+    \No_ECC.Sl_Rdy_reg_10 ,
+    \No_ECC.Sl_Rdy_reg_11 ,
+    \No_ECC.Sl_Rdy_reg_12 ,
+    \No_ECC.Sl_Rdy_reg_13 ,
+    \No_ECC.Sl_Rdy_reg_14 ,
+    \No_ECC.Sl_Rdy_reg_15 ,
+    \No_ECC.Sl_Rdy_reg_16 ,
     Jump,
     nonvalid_IFetch_n_reg_0,
     Buffer_Addr,
@@ -3713,14 +3713,14 @@ module microblaze_mcs_0_Data_Flow
   input \No_ECC.Sl_Rdy_reg_6 ;
   input \No_ECC.Sl_Rdy_reg_7 ;
   input \No_ECC.Sl_Rdy_reg_8 ;
-  input \cipr_rd_dff_all[24].fdr_i ;
-  input \cipr_rd_dff_all[25].fdr_i ;
-  input \cipr_rd_dff_all[26].fdr_i ;
-  input \cipr_rd_dff_all[27].fdr_i ;
-  input \cipr_rd_dff_all[28].fdr_i ;
-  input \cipr_rd_dff_all[29].fdr_i ;
-  input \cipr_rd_dff_all[30].fdr_i ;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_9 ;
+  input \No_ECC.Sl_Rdy_reg_10 ;
+  input \No_ECC.Sl_Rdy_reg_11 ;
+  input \No_ECC.Sl_Rdy_reg_12 ;
+  input \No_ECC.Sl_Rdy_reg_13 ;
+  input \No_ECC.Sl_Rdy_reg_14 ;
+  input \No_ECC.Sl_Rdy_reg_15 ;
+  input \No_ECC.Sl_Rdy_reg_16 ;
   input Jump;
   input nonvalid_IFetch_n_reg_0;
   input [2:0]Buffer_Addr;
@@ -3769,6 +3769,13 @@ module microblaze_mcs_0_Data_Flow
   wire \No_ECC.Sl_Rdy_reg ;
   wire \No_ECC.Sl_Rdy_reg_0 ;
   wire [1:0]\No_ECC.Sl_Rdy_reg_1 ;
+  wire \No_ECC.Sl_Rdy_reg_10 ;
+  wire \No_ECC.Sl_Rdy_reg_11 ;
+  wire \No_ECC.Sl_Rdy_reg_12 ;
+  wire \No_ECC.Sl_Rdy_reg_13 ;
+  wire \No_ECC.Sl_Rdy_reg_14 ;
+  wire \No_ECC.Sl_Rdy_reg_15 ;
+  wire \No_ECC.Sl_Rdy_reg_16 ;
   wire \No_ECC.Sl_Rdy_reg_2 ;
   wire \No_ECC.Sl_Rdy_reg_3 ;
   wire \No_ECC.Sl_Rdy_reg_4 ;
@@ -3776,6 +3783,7 @@ module microblaze_mcs_0_Data_Flow
   wire \No_ECC.Sl_Rdy_reg_6 ;
   wire \No_ECC.Sl_Rdy_reg_7 ;
   wire \No_ECC.Sl_Rdy_reg_8 ;
+  wire \No_ECC.Sl_Rdy_reg_9 ;
   wire [0:1]Op1_Low;
   wire Op1_Shift;
   wire OpSel1_SPR;
@@ -3977,14 +3985,6 @@ module microblaze_mcs_0_Data_Flow
   wire \Zero_Detecting[3].nibble_Zero_reg ;
   wire \Zero_Detecting[4].nibble_Zero_reg ;
   wire \Zero_Detecting[5].nibble_Zero_reg ;
-  wire \cipr_rd_dff_all[24].fdr_i ;
-  wire \cipr_rd_dff_all[25].fdr_i ;
-  wire \cipr_rd_dff_all[26].fdr_i ;
-  wire \cipr_rd_dff_all[27].fdr_i ;
-  wire \cipr_rd_dff_all[28].fdr_i ;
-  wire \cipr_rd_dff_all[29].fdr_i ;
-  wire \cipr_rd_dff_all[30].fdr_i ;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire [1:0]data_Read_Mask;
   wire load_Store_i_reg;
   wire lopt;
@@ -4327,10 +4327,18 @@ module microblaze_mcs_0_Data_Flow
         .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_2 ),
         .\No_ECC.Sl_Rdy_reg_0 (\No_ECC.Sl_Rdy_reg_3 ),
         .\No_ECC.Sl_Rdy_reg_1 (\No_ECC.Sl_Rdy_reg_4 ),
+        .\No_ECC.Sl_Rdy_reg_10 (\No_ECC.Sl_Rdy_reg_13 ),
+        .\No_ECC.Sl_Rdy_reg_11 (\No_ECC.Sl_Rdy_reg_14 ),
+        .\No_ECC.Sl_Rdy_reg_12 (\No_ECC.Sl_Rdy_reg_15 ),
+        .\No_ECC.Sl_Rdy_reg_13 (\No_ECC.Sl_Rdy_reg_16 ),
         .\No_ECC.Sl_Rdy_reg_2 (\No_ECC.Sl_Rdy_reg_5 ),
         .\No_ECC.Sl_Rdy_reg_3 (\No_ECC.Sl_Rdy_reg_6 ),
         .\No_ECC.Sl_Rdy_reg_4 (\No_ECC.Sl_Rdy_reg_7 ),
         .\No_ECC.Sl_Rdy_reg_5 (\No_ECC.Sl_Rdy_reg_8 ),
+        .\No_ECC.Sl_Rdy_reg_6 (\No_ECC.Sl_Rdy_reg_9 ),
+        .\No_ECC.Sl_Rdy_reg_7 (\No_ECC.Sl_Rdy_reg_10 ),
+        .\No_ECC.Sl_Rdy_reg_8 (\No_ECC.Sl_Rdy_reg_11 ),
+        .\No_ECC.Sl_Rdy_reg_9 (\No_ECC.Sl_Rdy_reg_12 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Shift_Logic_Res31_out),
         .Select_Logic_reg_0(Shift_Logic_Res30_out),
@@ -4366,14 +4374,6 @@ module microblaze_mcs_0_Data_Flow
         .Shift_Logic_Res(Shift_Logic_Res32_out),
         .\Using_FPGA.Native (ALU_I_n_4),
         .\Using_FPGA.Native_0 (\No_ECC.Sl_Rdy_reg_1 ),
-        .\cipr_rd_dff_all[24].fdr_i (\cipr_rd_dff_all[24].fdr_i ),
-        .\cipr_rd_dff_all[25].fdr_i (\cipr_rd_dff_all[25].fdr_i ),
-        .\cipr_rd_dff_all[26].fdr_i (\cipr_rd_dff_all[26].fdr_i ),
-        .\cipr_rd_dff_all[27].fdr_i (\cipr_rd_dff_all[27].fdr_i ),
-        .\cipr_rd_dff_all[28].fdr_i (\cipr_rd_dff_all[28].fdr_i ),
-        .\cipr_rd_dff_all[29].fdr_i (\cipr_rd_dff_all[29].fdr_i ),
-        .\cipr_rd_dff_all[30].fdr_i (\cipr_rd_dff_all[30].fdr_i ),
-        .\cipr_rd_dff_all[31].fdr_i (\cipr_rd_dff_all[31].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_Shift_Logic_Module Shift_Logic_Module_I
        (.EX_Op2(EX_Op2),
@@ -4612,8 +4612,6 @@ module microblaze_mcs_0_Decode
     ALU_Carry,
     \Using_FPGA.Native_47 ,
     Reg_zero,
-    Sl_Rdy,
-    lmb_as,
     Reg2_Data,
     EX_Result,
     \Size_17to32.imm_Reg_reg[0] ,
@@ -4626,6 +4624,8 @@ module microblaze_mcs_0_Decode
     \Using_FPGA.Native_49 ,
     \Using_FPGA.Native_50 ,
     \Using_FPGA.Native_51 ,
+    Sl_Rdy,
+    lmb_as,
     New_Value,
     \Using_FPGA.Native_52 ,
     reset_temp,
@@ -4733,8 +4733,6 @@ module microblaze_mcs_0_Decode
   input ALU_Carry;
   input \Using_FPGA.Native_47 ;
   input Reg_zero;
-  input Sl_Rdy;
-  input lmb_as;
   input [0:31]Reg2_Data;
   input [0:31]EX_Result;
   input [15:0]\Size_17to32.imm_Reg_reg[0] ;
@@ -4747,6 +4745,8 @@ module microblaze_mcs_0_Decode
   input \Using_FPGA.Native_49 ;
   input \Using_FPGA.Native_50 ;
   input \Using_FPGA.Native_51 ;
+  input Sl_Rdy;
+  input lmb_as;
   input New_Value;
   input \Using_FPGA.Native_52 ;
   input reset_temp;
@@ -4802,6 +4802,7 @@ module microblaze_mcs_0_Decode
   wire PC_Incr;
   wire POR_FF_I;
   wire PreFetch_Buffer_I_n_1;
+  wire PreFetch_Buffer_I_n_100;
   wire PreFetch_Buffer_I_n_101;
   wire PreFetch_Buffer_I_n_102;
   wire PreFetch_Buffer_I_n_103;
@@ -4814,8 +4815,8 @@ module microblaze_mcs_0_Decode
   wire PreFetch_Buffer_I_n_110;
   wire PreFetch_Buffer_I_n_111;
   wire PreFetch_Buffer_I_n_112;
-  wire PreFetch_Buffer_I_n_113;
-  wire PreFetch_Buffer_I_n_114;
+  wire PreFetch_Buffer_I_n_115;
+  wire PreFetch_Buffer_I_n_116;
   wire PreFetch_Buffer_I_n_117;
   wire PreFetch_Buffer_I_n_118;
   wire PreFetch_Buffer_I_n_119;
@@ -4827,23 +4828,22 @@ module microblaze_mcs_0_Decode
   wire PreFetch_Buffer_I_n_125;
   wire PreFetch_Buffer_I_n_126;
   wire PreFetch_Buffer_I_n_127;
-  wire PreFetch_Buffer_I_n_128;
+  wire PreFetch_Buffer_I_n_38;
   wire PreFetch_Buffer_I_n_5;
   wire PreFetch_Buffer_I_n_72;
   wire PreFetch_Buffer_I_n_73;
-  wire PreFetch_Buffer_I_n_74;
-  wire PreFetch_Buffer_I_n_78;
-  wire PreFetch_Buffer_I_n_79;
+  wire PreFetch_Buffer_I_n_75;
   wire PreFetch_Buffer_I_n_8;
-  wire PreFetch_Buffer_I_n_80;
-  wire PreFetch_Buffer_I_n_87;
+  wire PreFetch_Buffer_I_n_84;
+  wire PreFetch_Buffer_I_n_85;
+  wire PreFetch_Buffer_I_n_86;
+  wire PreFetch_Buffer_I_n_89;
   wire PreFetch_Buffer_I_n_90;
-  wire PreFetch_Buffer_I_n_91;
-  wire PreFetch_Buffer_I_n_93;
+  wire PreFetch_Buffer_I_n_92;
+  wire PreFetch_Buffer_I_n_94;
   wire PreFetch_Buffer_I_n_95;
-  wire PreFetch_Buffer_I_n_96;
+  wire PreFetch_Buffer_I_n_97;
   wire PreFetch_Buffer_I_n_98;
-  wire PreFetch_Buffer_I_n_99;
   wire [1:0]Q;
   wire R;
   wire [0:4]Reg1_Addr;
@@ -4941,10 +4941,10 @@ module microblaze_mcs_0_Decode
   wire \Using_FPGA.Native_7 ;
   wire \Using_FPGA.Native_8 ;
   wire \Using_FPGA.Native_9 ;
-  wire \Using_FPGA.Native_i_2__16_n_0 ;
-  wire \Using_FPGA.Native_i_3__10_n_0 ;
-  wire \Using_FPGA.Native_i_3__9_n_0 ;
-  wire \Using_FPGA.Native_i_4__1_n_0 ;
+  wire \Using_FPGA.Native_i_2__23_n_0 ;
+  wire \Using_FPGA.Native_i_3__11_n_0 ;
+  wire \Using_FPGA.Native_i_3__12_n_0 ;
+  wire \Using_FPGA.Native_i_4__0_n_0 ;
   wire \Using_FPGA.Native_i_5_n_0 ;
   wire \Using_FPGA.OpSel1_SPR_Select_LUT_1_n_0 ;
   wire \Using_FPGA.OpSel1_SPR_Select_LUT_2_n_0 ;
@@ -4985,9 +4985,9 @@ module microblaze_mcs_0_Decode
   wire iFetch_In_Progress;
   wire iFetch_In_Progress_i_1_n_0;
   wire inHibit_EX;
-  wire inHibit_EX0;
   wire inHibit_EX1;
   wire inHibit_EX_i_1_n_0;
+  wire inHibit_EX_i_2_n_0;
   wire is_lwx_I;
   wire is_swx_I_reg_n_0;
   wire jump2_I_reg_n_0;
@@ -5022,7 +5022,7 @@ module microblaze_mcs_0_Decode
   wire lopt_8;
   wire lopt_9;
   wire mbar_decode_I;
-  wire mbar_first_i_2_n_0;
+  wire mbar_first_i_3_n_0;
   wire mbar_first_reg_n_0;
   wire mbar_hold_I_reg_n_0;
   wire mbar_is_sleep;
@@ -5063,7 +5063,7 @@ module microblaze_mcs_0_Decode
   FDRE Compare_Instr_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_114),
+        .D(PreFetch_Buffer_I_n_120),
         .Q(Compare_Instr),
         .R(1'b0));
   FDRE \Logic_Oper_reg[0] 
@@ -5078,14 +5078,14 @@ module microblaze_mcs_0_Decode
         .D(p_1_in),
         .Q(Q[0]),
         .R(out));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \No_ECC.lmb_as_i_1 
        (.I0(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .I1(reset_temp),
         .O(\No_ECC.lmb_as_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'h00B0)) 
     \No_ECC.lmb_as_i_1__0 
@@ -5099,7 +5099,7 @@ module microblaze_mcs_0_Decode
         .CI(mbar_is_sleep_reg_0),
         .Clk(Clk),
         .Compare_Instr(Compare_Instr),
-        .Compare_Instr_reg(PreFetch_Buffer_I_n_114),
+        .Compare_Instr_reg(PreFetch_Buffer_I_n_120),
         .D(D),
         .DATA_OUTA(DATA_OUTA),
         .Doublet(Doublet),
@@ -5125,118 +5125,117 @@ module microblaze_mcs_0_Decode
         .\Result_Sel_reg[0] (PreFetch_Buffer_I_n_1),
         .\Result_Sel_reg[1] (PreFetch_Buffer_I_n_5),
         .S(S),
-        .SR(PreFetch_Buffer_I_n_90),
+        .SR(PreFetch_Buffer_I_n_89),
         .Select_Logic0(Select_Logic0),
-        .Sext16_reg(PreFetch_Buffer_I_n_119),
+        .Sext16_reg(PreFetch_Buffer_I_n_117),
         .Sext16_reg_0(Sext16),
-        .Sext8_reg(PreFetch_Buffer_I_n_120),
+        .Sext8_reg(PreFetch_Buffer_I_n_118),
         .Sext8_reg_0(Sext8),
-        .Sign_Extend_reg(PreFetch_Buffer_I_n_72),
+        .Sign_Extend_reg(PreFetch_Buffer_I_n_73),
         .\Size_17to32.imm_Reg_reg[0] (Imm_Value[0]),
         .\Size_17to32.imm_Reg_reg[0]_0 (\Size_17to32.imm_Reg_reg[0] ),
         .\Size_17to32.imm_Reg_reg[1] (Imm_Value[1]),
         .Sl_Rdy(Sl_Rdy),
-        .Unsigned_Op_reg(PreFetch_Buffer_I_n_99),
+        .Unsigned_Op_reg(PreFetch_Buffer_I_n_98),
         .Use_Imm_Reg(Use_Imm_Reg),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (Reg1_Addr[2]),
-        .\Using_FPGA.Native (Reg1_Addr[1]),
-        .\Using_FPGA.Native_0 (\Using_FPGA.Native ),
-        .\Using_FPGA.Native_1 (\Using_FPGA.Native_0 ),
-        .\Using_FPGA.Native_10 (\Using_FPGA.Native_9 ),
-        .\Using_FPGA.Native_11 (\Using_FPGA.Native_10 ),
-        .\Using_FPGA.Native_12 (\Using_FPGA.Native_11 ),
-        .\Using_FPGA.Native_13 (\Using_FPGA.Native_12 ),
-        .\Using_FPGA.Native_14 (\Using_FPGA.Native_13 ),
-        .\Using_FPGA.Native_15 (\Using_FPGA.Native_14 ),
-        .\Using_FPGA.Native_16 (\Using_FPGA.Native_15 ),
-        .\Using_FPGA.Native_17 (\Using_FPGA.Native_16 ),
-        .\Using_FPGA.Native_18 (\Using_FPGA.Native_17 ),
-        .\Using_FPGA.Native_19 (\Using_FPGA.Native_18 ),
-        .\Using_FPGA.Native_2 (\Using_FPGA.Native_1 ),
-        .\Using_FPGA.Native_20 (\Using_FPGA.Native_19 ),
-        .\Using_FPGA.Native_21 (\Using_FPGA.Native_20 ),
-        .\Using_FPGA.Native_22 (\Using_FPGA.Native_21 ),
-        .\Using_FPGA.Native_23 (\Using_FPGA.Native_22 ),
-        .\Using_FPGA.Native_24 (\Using_FPGA.Native_23 ),
-        .\Using_FPGA.Native_25 (\Using_FPGA.Native_24 ),
-        .\Using_FPGA.Native_26 (\Using_FPGA.Native_25 ),
-        .\Using_FPGA.Native_27 (\Using_FPGA.Native_26 ),
-        .\Using_FPGA.Native_28 (\Using_FPGA.Native_27 ),
-        .\Using_FPGA.Native_29 (\Using_FPGA.Native_28 ),
-        .\Using_FPGA.Native_3 (\Using_FPGA.Native_2 ),
-        .\Using_FPGA.Native_30 (\Using_FPGA.Native_29 ),
-        .\Using_FPGA.Native_31 (\Using_FPGA.Native_30 ),
-        .\Using_FPGA.Native_32 (\Using_FPGA.Native_31 ),
-        .\Using_FPGA.Native_33 (PreFetch_Buffer_I_n_78),
-        .\Using_FPGA.Native_34 (PreFetch_Buffer_I_n_79),
-        .\Using_FPGA.Native_35 (PreFetch_Buffer_I_n_80),
-        .\Using_FPGA.Native_36 (PreFetch_Buffer_I_n_87),
-        .\Using_FPGA.Native_37 (PreFetch_Buffer_I_n_106),
-        .\Using_FPGA.Native_38 (PreFetch_Buffer_I_n_113),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (Reg1_Addr[1]),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (Reg1_Addr[2]),
+        .\Using_FPGA.Native (\Using_FPGA.Native ),
+        .\Using_FPGA.Native_0 (\Using_FPGA.Native_0 ),
+        .\Using_FPGA.Native_1 (\Using_FPGA.Native_1 ),
+        .\Using_FPGA.Native_10 (\Using_FPGA.Native_10 ),
+        .\Using_FPGA.Native_11 (\Using_FPGA.Native_11 ),
+        .\Using_FPGA.Native_12 (\Using_FPGA.Native_12 ),
+        .\Using_FPGA.Native_13 (\Using_FPGA.Native_13 ),
+        .\Using_FPGA.Native_14 (\Using_FPGA.Native_14 ),
+        .\Using_FPGA.Native_15 (\Using_FPGA.Native_15 ),
+        .\Using_FPGA.Native_16 (\Using_FPGA.Native_16 ),
+        .\Using_FPGA.Native_17 (\Using_FPGA.Native_17 ),
+        .\Using_FPGA.Native_18 (\Using_FPGA.Native_18 ),
+        .\Using_FPGA.Native_19 (\Using_FPGA.Native_19 ),
+        .\Using_FPGA.Native_2 (\Using_FPGA.Native_2 ),
+        .\Using_FPGA.Native_20 (\Using_FPGA.Native_20 ),
+        .\Using_FPGA.Native_21 (\Using_FPGA.Native_21 ),
+        .\Using_FPGA.Native_22 (\Using_FPGA.Native_22 ),
+        .\Using_FPGA.Native_23 (\Using_FPGA.Native_23 ),
+        .\Using_FPGA.Native_24 (\Using_FPGA.Native_24 ),
+        .\Using_FPGA.Native_25 (\Using_FPGA.Native_25 ),
+        .\Using_FPGA.Native_26 (\Using_FPGA.Native_26 ),
+        .\Using_FPGA.Native_27 (\Using_FPGA.Native_27 ),
+        .\Using_FPGA.Native_28 (\Using_FPGA.Native_28 ),
+        .\Using_FPGA.Native_29 (\Using_FPGA.Native_29 ),
+        .\Using_FPGA.Native_3 (\Using_FPGA.Native_3 ),
+        .\Using_FPGA.Native_30 (\Using_FPGA.Native_30 ),
+        .\Using_FPGA.Native_31 (\Using_FPGA.Native_31 ),
+        .\Using_FPGA.Native_32 (PreFetch_Buffer_I_n_72),
+        .\Using_FPGA.Native_33 (PreFetch_Buffer_I_n_75),
+        .\Using_FPGA.Native_34 (PreFetch_Buffer_I_n_84),
+        .\Using_FPGA.Native_35 (PreFetch_Buffer_I_n_85),
+        .\Using_FPGA.Native_36 (PreFetch_Buffer_I_n_86),
+        .\Using_FPGA.Native_37 (PreFetch_Buffer_I_n_105),
+        .\Using_FPGA.Native_38 (PreFetch_Buffer_I_n_112),
         .\Using_FPGA.Native_39 (\Using_FPGA.Native_44 ),
-        .\Using_FPGA.Native_4 (\Using_FPGA.Native_3 ),
+        .\Using_FPGA.Native_4 (\Using_FPGA.Native_4 ),
         .\Using_FPGA.Native_40 (\Using_FPGA.Native_45 ),
         .\Using_FPGA.Native_41 (Jump),
         .\Using_FPGA.Native_42 (\Using_FPGA.Force_Val2_FDRSE_n_0 ),
-        .\Using_FPGA.Native_5 (\Using_FPGA.Native_4 ),
-        .\Using_FPGA.Native_6 (\Using_FPGA.Native_5 ),
-        .\Using_FPGA.Native_7 (\Using_FPGA.Native_6 ),
-        .\Using_FPGA.Native_8 (\Using_FPGA.Native_7 ),
-        .\Using_FPGA.Native_9 (\Using_FPGA.Native_8 ),
-        .\Using_FPGA.set_BIP_I_reg (PreFetch_Buffer_I_n_109),
+        .\Using_FPGA.Native_5 (\Using_FPGA.Native_5 ),
+        .\Using_FPGA.Native_6 (\Using_FPGA.Native_6 ),
+        .\Using_FPGA.Native_7 (\Using_FPGA.Native_7 ),
+        .\Using_FPGA.Native_8 (\Using_FPGA.Native_8 ),
+        .\Using_FPGA.Native_9 (\Using_FPGA.Native_9 ),
+        .\Using_FPGA.set_BIP_I_reg (PreFetch_Buffer_I_n_108),
         .\Using_FPGA.set_BIP_I_reg_0 (\Using_FPGA.set_BIP_I_reg_n_0 ),
         .\Using_FPGA.take_Intr_2nd_Phase_reg (Select_Logic_reg_0),
         .\Using_FPGA.take_Intr_2nd_Phase_reg_0 (\Using_FPGA.Using_Breakable_Pipe.Take_Intr_MUXCY_2_n_0 ),
-        .\Using_LWX_SWX_instr.reservation_reg (PreFetch_Buffer_I_n_95),
-        .\Using_LWX_SWX_instr.reservation_reg_0 (PreFetch_Buffer_I_n_96),
+        .\Using_LWX_SWX_instr.reservation_reg (PreFetch_Buffer_I_n_94),
+        .\Using_LWX_SWX_instr.reservation_reg_0 (PreFetch_Buffer_I_n_95),
         .\Using_LWX_SWX_instr.reservation_reg_1 (\Using_LWX_SWX_instr.reservation_reg_n_0 ),
         .byte_i12_out(byte_i12_out),
-        .byte_i_reg(PreFetch_Buffer_I_n_128),
+        .byte_i_reg(PreFetch_Buffer_I_n_127),
         .d_AS_I15_out(d_AS_I15_out),
-        .doublet_i_reg(PreFetch_Buffer_I_n_127),
+        .doublet_i_reg(PreFetch_Buffer_I_n_126),
         .enable_Interrupts_I(enable_Interrupts_I),
         .ex_Valid(ex_Valid),
-        .ex_Valid_reg(PreFetch_Buffer_I_n_93),
+        .ex_Valid_reg(PreFetch_Buffer_I_n_92),
         .force1_i29_out(force1_i29_out),
         .force_Val1_i27_out(force_Val1_i27_out),
         .inHibit_EX(inHibit_EX),
-        .inHibit_EX0(inHibit_EX0),
         .inHibit_EX1(inHibit_EX1),
-        .inHibit_EX_reg(PreFetch_Buffer_I_n_105),
+        .inHibit_EX_reg(PreFetch_Buffer_I_n_104),
         .is_lwx_I(is_lwx_I),
-        .is_lwx_I_reg(PreFetch_Buffer_I_n_125),
-        .is_swx_I_reg(PreFetch_Buffer_I_n_124),
+        .is_lwx_I_reg(PreFetch_Buffer_I_n_122),
+        .is_swx_I_reg(PreFetch_Buffer_I_n_121),
         .is_swx_I_reg_0(is_swx_I_reg_n_0),
         .jump2_I_reg(Reg1_Addr[0]),
-        .jump2_I_reg_0(PreFetch_Buffer_I_n_73),
-        .jump2_I_reg_1(PreFetch_Buffer_I_n_74),
-        .jump2_I_reg_2(jump2_I_reg_n_0),
+        .jump2_I_reg_0(PreFetch_Buffer_I_n_38),
+        .jump2_I_reg_1(jump2_I_reg_n_0),
         .lmb_as(lmb_as),
         .lmb_reg_read_Q(lmb_reg_read_Q),
         .lmb_reg_write(lmb_reg_write),
         .lmb_reg_write_reg(lmb_reg_write_reg),
         .load_Store_i(load_Store_i),
         .load_Store_i2(load_Store_i2),
-        .load_Store_i_reg(PreFetch_Buffer_I_n_122),
+        .load_Store_i_reg(PreFetch_Buffer_I_n_123),
         .load_Store_i_reg_0(\Using_FPGA.Force2_FDRE_n_1 ),
         .lopt(\^lopt_3 ),
         .lopt_1(\^lopt_4 ),
-        .mbar_first_reg(Reg1_Addr[3]),
-        .mbar_first_reg_0(mbar_first_i_2_n_0),
-        .mbar_hold_I_reg(PreFetch_Buffer_I_n_111),
+        .mbar_decode_I_reg(Reg1_Addr[3]),
+        .mbar_first_reg(mbar_first_i_3_n_0),
+        .mbar_hold_I_reg(PreFetch_Buffer_I_n_110),
         .mbar_hold_I_reg_0(mbar_hold_I_reg_n_0),
         .mbar_is_sleep_reg(Buffer_Addr[0]),
         .mbar_is_sleep_reg_0(Buffer_Addr[1]),
         .mbar_is_sleep_reg_1(Buffer_Addr[2]),
         .missed_IFetch(missed_IFetch),
-        .missed_IFetch_reg(PreFetch_Buffer_I_n_112),
-        .mtsmsr_write_i_reg(PreFetch_Buffer_I_n_107),
+        .missed_IFetch_reg(PreFetch_Buffer_I_n_111),
+        .mtsmsr_write_i_reg(PreFetch_Buffer_I_n_106),
         .mtsmsr_write_i_reg_0(mtsmsr_write_i_reg_n_0),
         .mul_Executing0(mul_Executing0),
         .mul_Executing_reg(normal_piperun),
         .mul_Executing_reg_0(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
-        .nonvalid_IFetch_n_reg(PreFetch_Buffer_I_n_98),
-        .nonvalid_IFetch_n_reg_0(PreFetch_Buffer_I_n_108),
+        .nonvalid_IFetch_n_reg(PreFetch_Buffer_I_n_97),
+        .nonvalid_IFetch_n_reg_0(PreFetch_Buffer_I_n_107),
         .nonvalid_IFetch_n_reg_1(nonvalid_IFetch_n_reg_n_0),
         .of_mbar_decode(of_mbar_decode),
         .out(out),
@@ -5245,30 +5244,30 @@ module microblaze_mcs_0_Decode
         .pc_write_I(pc_write_I),
         .reset_BIP_I8_out(reset_BIP_I8_out),
         .select_ALU_Carry(select_ALU_Carry),
-        .select_ALU_Carry_reg(PreFetch_Buffer_I_n_121),
+        .select_ALU_Carry_reg(PreFetch_Buffer_I_n_119),
         .swx_ready(swx_ready),
-        .swx_ready_reg(PreFetch_Buffer_I_n_123),
+        .swx_ready_reg(PreFetch_Buffer_I_n_124),
         .use_Reg_Neg_DI_i26_out(use_Reg_Neg_DI_i26_out),
         .use_Reg_Neg_S_i28_out(use_Reg_Neg_S_i28_out),
-        .using_Imm_reg(PreFetch_Buffer_I_n_110),
-        .\write_Addr_I_reg[1] ({PreFetch_Buffer_I_n_101,PreFetch_Buffer_I_n_102,PreFetch_Buffer_I_n_103,PreFetch_Buffer_I_n_104}),
-        .\write_Addr_I_reg[4] (PreFetch_Buffer_I_n_91),
-        .write_Carry_I_reg(PreFetch_Buffer_I_n_118),
+        .using_Imm_reg(PreFetch_Buffer_I_n_109),
+        .\write_Addr_I_reg[1] ({PreFetch_Buffer_I_n_100,PreFetch_Buffer_I_n_101,PreFetch_Buffer_I_n_102,PreFetch_Buffer_I_n_103}),
+        .\write_Addr_I_reg[4] (PreFetch_Buffer_I_n_90),
+        .write_Carry_I_reg(PreFetch_Buffer_I_n_116),
         .write_Carry_I_reg_0(write_Carry_I_reg_n_0),
-        .write_Reg_reg(PreFetch_Buffer_I_n_117),
-        .writing_reg(PreFetch_Buffer_I_n_126));
+        .write_Reg_reg(PreFetch_Buffer_I_n_115),
+        .writing_reg(PreFetch_Buffer_I_n_125));
   FDRE \Result_Sel_reg[0] 
        (.C(Clk),
         .CE(normal_piperun),
         .D(PreFetch_Buffer_I_n_1),
         .Q(\Using_FPGA.Native_46 [1]),
-        .R(PreFetch_Buffer_I_n_90));
+        .R(PreFetch_Buffer_I_n_89));
   FDRE \Result_Sel_reg[1] 
        (.C(Clk),
         .CE(normal_piperun),
         .D(PreFetch_Buffer_I_n_5),
         .Q(\Using_FPGA.Native_46 [0]),
-        .R(PreFetch_Buffer_I_n_90));
+        .R(PreFetch_Buffer_I_n_89));
   FDRE Select_Logic_reg
        (.C(Clk),
         .CE(normal_piperun),
@@ -5278,13 +5277,13 @@ module microblaze_mcs_0_Decode
   FDRE Sext16_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_119),
+        .D(PreFetch_Buffer_I_n_117),
         .Q(Sext16),
         .R(1'b0));
   FDRE Sext8_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_120),
+        .D(PreFetch_Buffer_I_n_118),
         .Q(Sext8),
         .R(1'b0));
   FDRE Shift_Carry_In_reg
@@ -5311,7 +5310,7 @@ module microblaze_mcs_0_Decode
        (.I0(Imm_Value[10]),
         .I1(Imm_Value[9]),
         .I2(normal_piperun),
-        .I3(PreFetch_Buffer_I_n_72),
+        .I3(PreFetch_Buffer_I_n_73),
         .I4(Exception_Kind),
         .I5(Sign_Extend),
         .O(Sign_Extend_i_1_n_0));
@@ -5326,7 +5325,7 @@ module microblaze_mcs_0_Decode
         .CE(normal_piperun),
         .D(Imm_Value[14]),
         .Q(Unsigned_Op),
-        .R(PreFetch_Buffer_I_n_99));
+        .R(PreFetch_Buffer_I_n_98));
   LUT6 #(
     .INIT(64'h7F007F0000007F00)) 
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_i_1 
@@ -5370,8 +5369,8 @@ module microblaze_mcs_0_Decode
         .out(out),
         .write_Carry_I_reg(write_Carry_I_reg_n_0));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY \Using_FPGA.ALU_Carry_MUXCY 
-       (.\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Using_FPGA.I_correct_Carry_Select_n_0 ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Using_FPGA.MULT_AND_I_n_0 ),
+       (.\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\Using_FPGA.I_correct_Carry_Select_n_0 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (\Using_FPGA.MULT_AND_I_n_0 ),
         .\Using_FPGA.Native_0 (\Using_FPGA.ALU_Carry_MUXCY_n_0 ),
         .lopt(\^lopt_5 ),
         .lopt_1(\^lopt_6 ),
@@ -5386,7 +5385,7 @@ module microblaze_mcs_0_Decode
   microblaze_mcs_0_microblaze_v9_5_2_MB_FDRE_1 \Using_FPGA.ALU_OP1_FDRE 
        (.ALU_Op(ALU_Op[1]),
         .Clk(Clk),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg (PreFetch_Buffer_I_n_78),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg (PreFetch_Buffer_I_n_84),
         .mul_Executing_reg(normal_piperun),
         .out(out));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_2 \Using_FPGA.Correct_Carry_MUXCY 
@@ -5406,7 +5405,7 @@ module microblaze_mcs_0_Decode
         .Clk(Clk),
         .I175_in(I175_in),
         .R(R),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (PreFetch_Buffer_I_n_87),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (PreFetch_Buffer_I_n_75),
         .ex_Valid_reg(\Using_FPGA.Force2_FDRE_n_1 ),
         .jump2_I_reg(jump2_I_reg_n_0),
         .lmb_reg_read_Q_reg(lmb_reg_read_Q_reg),
@@ -5424,11 +5423,11 @@ module microblaze_mcs_0_Decode
        (.Clk(Clk),
         .Exception_Kind(Exception_Kind),
         .\Using_FPGA.Native_0 (\Using_FPGA.Force_Val2_FDRSE_n_0 ),
-        .\Using_FPGA.Native_1 (PreFetch_Buffer_I_n_113));
+        .\Using_FPGA.Native_1 (PreFetch_Buffer_I_n_112));
   microblaze_mcs_0_MB_LUT4__parameterized21 \Using_FPGA.I_correct_Carry_Select 
-       (.\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (PreFetch_Buffer_I_n_80),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (PreFetch_Buffer_I_n_106),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (PreFetch_Buffer_I_n_79),
+       (.\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (PreFetch_Buffer_I_n_86),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (PreFetch_Buffer_I_n_105),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (PreFetch_Buffer_I_n_85),
         .\Using_FPGA.Native_0 (\Using_FPGA.I_correct_Carry_Select_n_0 ));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_6 \Using_FPGA.Intr_Carry_MUXCY 
        (.\Using_FPGA.Native_0 (\Using_FPGA.Intr_Carry_MUXCY_n_0 ),
@@ -5437,8 +5436,8 @@ module microblaze_mcs_0_Decode
         .lopt_1(\^lopt_6 ),
         .write_Carry_I_reg(\Using_FPGA.ALU_Carry_MUXCY_n_0 ));
   microblaze_mcs_0_MB_MULT_AND \Using_FPGA.MULT_AND_I 
-       (.\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (PreFetch_Buffer_I_n_80),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (PreFetch_Buffer_I_n_79),
+       (.\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (PreFetch_Buffer_I_n_86),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (PreFetch_Buffer_I_n_85),
         .\Using_FPGA.Native_0 (\Using_FPGA.MULT_AND_I_n_0 ));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_7 \Using_FPGA.MUXCY_JUMP_CARRY 
        (.Reg_zero(Reg_zero),
@@ -5453,7 +5452,7 @@ module microblaze_mcs_0_Decode
         .ex_Valid_reg(\Using_FPGA.force_jump2_LUT4_n_0 ),
         .lopt(\^lopt_7 ),
         .lopt_1(lopt_8),
-        .lopt_2(PreFetch_Buffer_I_n_98),
+        .lopt_2(PreFetch_Buffer_I_n_97),
         .lopt_3(lopt_9),
         .lopt_4(S),
         .lopt_5(lopt_10),
@@ -5461,11 +5460,11 @@ module microblaze_mcs_0_Decode
         .lopt_7(\Synchronize.use_sync_reset.sync_reg[2] ));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9 \Using_FPGA.MUXCY_JUMP_CARRY3 
        (.CI60_in(CI60_in),
-        .Jump(Jump),
-        .\Using_FPGA.Native_0 (PreFetch_Buffer_I_n_98),
+        .\Using_FPGA.Native_0 (PreFetch_Buffer_I_n_97),
         .lopt(\^lopt_7 ),
-        .lopt_1(lopt_8));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+        .lopt_1(lopt_8),
+        .nonvalid_IFetch_n_reg(Jump));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__100 
@@ -5473,7 +5472,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_38 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__101 
@@ -5481,7 +5480,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_39 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__102 
@@ -5489,7 +5488,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_40 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \Using_FPGA.Native_i_1__118 
@@ -5499,7 +5498,7 @@ module microblaze_mcs_0_Decode
         .I3(Sext16),
         .I4(\Data_Flow_I/Result_Mux_I/p_0_in2_out ),
         .O(data_Read_Mask[1]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Using_FPGA.Native_i_1__119 
@@ -5509,9 +5508,9 @@ module microblaze_mcs_0_Decode
         .O(data_Read_Mask[0]));
   LUT6 #(
     .INIT(64'hBAAABABABAAABAAA)) 
-    \Using_FPGA.Native_i_1__85 
+    \Using_FPGA.Native_i_1__84 
        (.I0(reset_delay),
-        .I1(\Using_FPGA.Native_i_2__16_n_0 ),
+        .I1(\Using_FPGA.Native_i_2__23_n_0 ),
         .I2(ex_Valid),
         .I3(I214_out),
         .I4(writing_reg_n_0),
@@ -5533,7 +5532,7 @@ module microblaze_mcs_0_Decode
         .I2(Shift_Carry_In),
         .I3(Shift_Oper[0]),
         .O(msb));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hEA)) 
     \Using_FPGA.Native_i_1__92 
@@ -5541,7 +5540,7 @@ module microblaze_mcs_0_Decode
         .I1(ex_Valid),
         .I2(\Using_FPGA.reset_BIP_I_reg_n_0 ),
         .O(MSR_Rst));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'hAAEA)) 
     \Using_FPGA.Native_i_1__93 
@@ -5550,7 +5549,7 @@ module microblaze_mcs_0_Decode
         .I2(write_Carry_I_reg_n_0),
         .I3(New_Carry),
         .O(\Using_FPGA.Native_32 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__95 
@@ -5558,7 +5557,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_33 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__96 
@@ -5566,7 +5565,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_34 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__97 
@@ -5574,7 +5573,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_35 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__98 
@@ -5582,7 +5581,7 @@ module microblaze_mcs_0_Decode
         .I1(\Using_FPGA.Native_50 ),
         .I2(Sext16),
         .O(\Using_FPGA.Native_36 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Using_FPGA.Native_i_1__99 
@@ -5592,23 +5591,23 @@ module microblaze_mcs_0_Decode
         .O(\Using_FPGA.Native_37 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \Using_FPGA.Native_i_2__15 
+    \Using_FPGA.Native_i_2__22 
        (.I0(writing_reg_n_0),
         .O(I186_in));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
-    \Using_FPGA.Native_i_2__16 
+    \Using_FPGA.Native_i_2__23 
        (.I0(Write_Addr[3]),
         .I1(Write_Addr[4]),
         .I2(Write_Addr[0]),
         .I3(Write_Addr[1]),
         .I4(Write_Addr[2]),
-        .O(\Using_FPGA.Native_i_2__16_n_0 ));
+        .O(\Using_FPGA.Native_i_2__23_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
     .INIT(32'hFCECACEC)) 
-    \Using_FPGA.Native_i_2__35 
+    \Using_FPGA.Native_i_2__42 
        (.I0(\Using_FPGA.set_BIP_I_reg_n_0 ),
         .I1(MSR[2]),
         .I2(ex_Valid),
@@ -5617,10 +5616,10 @@ module microblaze_mcs_0_Decode
         .O(\Using_FPGA.Native_41 ));
   LUT6 #(
     .INIT(64'hFECE3202FFFFFFFF)) 
-    \Using_FPGA.Native_i_2__36 
+    \Using_FPGA.Native_i_2__43 
        (.I0(MSR[1]),
-        .I1(\Using_FPGA.Native_i_3__10_n_0 ),
-        .I2(\Using_FPGA.Native_i_4__1_n_0 ),
+        .I1(\Using_FPGA.Native_i_3__12_n_0 ),
+        .I2(\Using_FPGA.Native_i_4__0_n_0 ),
         .I3(\Using_FPGA.Native_52 ),
         .I4(LWX_SWX_Carry),
         .I5(\Using_FPGA.Native_i_5_n_0 ),
@@ -5628,39 +5627,39 @@ module microblaze_mcs_0_Decode
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'hFCECACEC)) 
-    \Using_FPGA.Native_i_2__37 
+    \Using_FPGA.Native_i_2__44 
        (.I0(\Using_FPGA.enable_Interrupts_I_reg_n_0 ),
         .I1(MSR[0]),
         .I2(ex_Valid),
         .I3(mtsmsr_write_i_reg_n_0),
         .I4(Op1_Low[0]),
         .O(\Using_FPGA.Native_43 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT4 #(
-    .INIT(16'h8880)) 
-    \Using_FPGA.Native_i_3__10 
-       (.I0(load_Store_i),
-        .I1(ex_Valid),
-        .I2(is_lwx_I),
-        .I3(is_swx_I_reg_n_0),
-        .O(\Using_FPGA.Native_i_3__10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \Using_FPGA.Native_i_3__9 
+    \Using_FPGA.Native_i_3__11 
        (.I0(Write_Addr[2]),
         .I1(Write_Addr[1]),
         .I2(Write_Addr[0]),
         .I3(Write_Addr[4]),
         .I4(Write_Addr[3]),
-        .O(\Using_FPGA.Native_i_3__9_n_0 ));
+        .O(\Using_FPGA.Native_i_3__11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT4 #(
+    .INIT(16'h8880)) 
+    \Using_FPGA.Native_i_3__12 
+       (.I0(load_Store_i),
+        .I1(ex_Valid),
+        .I2(is_lwx_I),
+        .I3(is_swx_I_reg_n_0),
+        .O(\Using_FPGA.Native_i_3__12_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \Using_FPGA.Native_i_4__1 
+    \Using_FPGA.Native_i_4__0 
        (.I0(mtsmsr_write_i_reg_n_0),
         .I1(ex_Valid),
-        .O(\Using_FPGA.Native_i_4__1_n_0 ));
+        .O(\Using_FPGA.Native_i_4__0_n_0 ));
   LUT2 #(
     .INIT(4'h7)) 
     \Using_FPGA.Native_i_5 
@@ -5822,8 +5821,8 @@ module microblaze_mcs_0_Decode
         .nonvalid_IFetch_n_reg(\Using_FPGA.force_jump2_LUT4_n_0 ));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_19 \Using_FPGA.iFetch_MuxCY_1 
        (.CI(CI),
-        .Jump(Jump),
         .S(S),
+        .\Using_FPGA.Native_0 (Jump),
         .lopt(lopt_9));
   microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_20 \Using_FPGA.iFetch_MuxCY_2 
        (.CI(CI),
@@ -5856,7 +5855,7 @@ module microblaze_mcs_0_Decode
   FDRE \Using_FPGA.set_BIP_I_reg 
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_109),
+        .D(PreFetch_Buffer_I_n_108),
         .Q(\Using_FPGA.set_BIP_I_reg_n_0 ),
         .R(1'b0));
   FDRE \Using_FPGA.take_Intr_2nd_Phase_reg 
@@ -5871,9 +5870,9 @@ module microblaze_mcs_0_Decode
        (.I0(\Using_LWX_SWX_instr.reservation_reg_n_0 ),
         .I1(is_lwx_I),
         .I2(Set_BIP),
-        .I3(PreFetch_Buffer_I_n_96),
+        .I3(PreFetch_Buffer_I_n_95),
         .I4(is_swx_I_reg_n_0),
-        .I5(PreFetch_Buffer_I_n_95),
+        .I5(PreFetch_Buffer_I_n_94),
         .O(\Using_LWX_SWX_instr.reservation_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
@@ -5891,7 +5890,7 @@ module microblaze_mcs_0_Decode
   FDRE byte_i_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_128),
+        .D(PreFetch_Buffer_I_n_127),
         .Q(Byte),
         .R(1'b0));
   FDRE d_AS_I_reg
@@ -5903,8 +5902,8 @@ module microblaze_mcs_0_Decode
   LUT5 #(
     .INIT(32'hFFEFFFE0)) 
     doublet_Read_i_i_1
-       (.I0(p_1_in),
-        .I1(PreFetch_Buffer_I_n_8),
+       (.I0(PreFetch_Buffer_I_n_8),
+        .I1(p_1_in),
         .I2(normal_piperun),
         .I3(byte_i12_out),
         .I4(\Data_Flow_I/Result_Mux_I/p_0_in3_out ),
@@ -5918,13 +5917,13 @@ module microblaze_mcs_0_Decode
   FDRE doublet_i_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_127),
+        .D(PreFetch_Buffer_I_n_126),
         .Q(Doublet),
         .R(1'b0));
   FDRE ex_Valid_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_93),
+        .D(PreFetch_Buffer_I_n_92),
         .Q(ex_Valid),
         .R(out));
   FDRE ex_first_cycle_reg
@@ -5933,7 +5932,7 @@ module microblaze_mcs_0_Decode
         .D(normal_piperun),
         .Q(ex_first_cycle),
         .R(out));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT4 #(
     .INIT(16'hAEEE)) 
     iFetch_In_Progress_i_1
@@ -5949,15 +5948,25 @@ module microblaze_mcs_0_Decode
         .Q(iFetch_In_Progress),
         .R(out));
   LUT6 #(
-    .INIT(64'h00000000CECEFECE)) 
+    .INIT(64'hAA2AAA2A0000AA2A)) 
     inHibit_EX_i_1
-       (.I0(inHibit_EX),
-        .I1(Exception_Kind),
-        .I2(normal_piperun),
-        .I3(PreFetch_Buffer_I_n_105),
-        .I4(PreFetch_Buffer_I_n_74),
-        .I5(inHibit_EX0),
+       (.I0(inHibit_EX_i_2_n_0),
+        .I1(lmb_as),
+        .I2(Sl_Rdy),
+        .I3(nonvalid_IFetch_n_reg_n_0),
+        .I4(Select_Logic_reg_0),
+        .I5(Exception_Kind),
         .O(inHibit_EX_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFF10FFFFFF5000)) 
+    inHibit_EX_i_2
+       (.I0(PreFetch_Buffer_I_n_72),
+        .I1(Jump),
+        .I2(PreFetch_Buffer_I_n_104),
+        .I3(normal_piperun),
+        .I4(Exception_Kind),
+        .I5(inHibit_EX),
+        .O(inHibit_EX_i_2_n_0));
   FDRE inHibit_EX_reg
        (.C(Clk),
         .CE(1'b1),
@@ -5967,19 +5976,19 @@ module microblaze_mcs_0_Decode
   FDRE is_lwx_I_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_125),
+        .D(PreFetch_Buffer_I_n_122),
         .Q(is_lwx_I),
         .R(1'b0));
   FDRE is_swx_I_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_124),
+        .D(PreFetch_Buffer_I_n_121),
         .Q(is_swx_I_reg_n_0),
         .R(1'b0));
   FDRE jump2_I_reg
        (.C(Clk),
         .CE(normal_piperun),
-        .D(PreFetch_Buffer_I_n_73),
+        .D(PreFetch_Buffer_I_n_38),
         .Q(jump2_I_reg_n_0),
         .R(out));
   LUT6 #(
@@ -5992,7 +6001,7 @@ module microblaze_mcs_0_Decode
         .I4(load_Store_i),
         .I5(writing_reg_n_0),
         .O(lmb_reg_read0));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h4F)) 
     lmb_reg_read_i_2
@@ -6010,7 +6019,7 @@ module microblaze_mcs_0_Decode
         .I4(writing_reg_n_0),
         .I5(LWX_SWX_Carry),
         .O(lmb_reg_write0));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT2 #(
     .INIT(4'h7)) 
     lmb_reg_write_i_2
@@ -6026,7 +6035,7 @@ module microblaze_mcs_0_Decode
   FDRE load_Store_i_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_122),
+        .D(PreFetch_Buffer_I_n_123),
         .Q(load_Store_i),
         .R(1'b0));
   FDRE mbar_decode_I_reg
@@ -6037,13 +6046,13 @@ module microblaze_mcs_0_Decode
         .R(out));
   LUT5 #(
     .INIT(32'hA8A8AAA8)) 
-    mbar_first_i_2
+    mbar_first_i_3
        (.I0(mbar_first_reg_n_0),
         .I1(ex_first_cycle),
         .I2(mbar_sleep),
         .I3(iFetch_In_Progress),
         .I4(Write_Addr[4]),
-        .O(mbar_first_i_2_n_0));
+        .O(mbar_first_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
     mbar_first_reg
@@ -6055,7 +6064,7 @@ module microblaze_mcs_0_Decode
   FDRE mbar_hold_I_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_111),
+        .D(PreFetch_Buffer_I_n_110),
         .Q(mbar_hold_I_reg_n_0),
         .R(1'b0));
   FDRE mbar_is_sleep_reg
@@ -6083,13 +6092,13 @@ module microblaze_mcs_0_Decode
   FDRE missed_IFetch_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_112),
+        .D(PreFetch_Buffer_I_n_111),
         .Q(missed_IFetch),
         .R(out));
   FDRE mtsmsr_write_i_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_107),
+        .D(PreFetch_Buffer_I_n_106),
         .Q(mtsmsr_write_i_reg_n_0),
         .R(1'b0));
   FDRE mul_Executing_reg
@@ -6101,14 +6110,14 @@ module microblaze_mcs_0_Decode
   FDSE nonvalid_IFetch_n_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_108),
+        .D(PreFetch_Buffer_I_n_107),
         .Q(nonvalid_IFetch_n_reg_n_0),
         .S(out));
   LUT5 #(
-    .INIT(32'hFF4FFF40)) 
+    .INIT(32'hFF2FFF20)) 
     quadlet_Read_i_i_1
-       (.I0(p_1_in),
-        .I1(PreFetch_Buffer_I_n_8),
+       (.I0(PreFetch_Buffer_I_n_8),
+        .I1(p_1_in),
         .I2(normal_piperun),
         .I3(byte_i12_out),
         .I4(\Data_Flow_I/Result_Mux_I/p_0_in2_out ),
@@ -6130,19 +6139,19 @@ module microblaze_mcs_0_Decode
   FDRE select_ALU_Carry_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_121),
+        .D(PreFetch_Buffer_I_n_119),
         .Q(select_ALU_Carry),
         .R(1'b0));
   FDRE swx_ready_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_123),
+        .D(PreFetch_Buffer_I_n_124),
         .Q(swx_ready),
         .R(1'b0));
   FDRE using_Imm_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_110),
+        .D(PreFetch_Buffer_I_n_109),
         .Q(Use_Imm_Reg),
         .R(1'b0));
   LUT5 #(
@@ -6162,32 +6171,32 @@ module microblaze_mcs_0_Decode
         .R(1'b0));
   FDRE \write_Addr_I_reg[1] 
        (.C(Clk),
-        .CE(PreFetch_Buffer_I_n_91),
-        .D(PreFetch_Buffer_I_n_101),
+        .CE(PreFetch_Buffer_I_n_90),
+        .D(PreFetch_Buffer_I_n_100),
         .Q(Write_Addr[1]),
         .R(1'b0));
   FDRE \write_Addr_I_reg[2] 
        (.C(Clk),
-        .CE(PreFetch_Buffer_I_n_91),
-        .D(PreFetch_Buffer_I_n_102),
+        .CE(PreFetch_Buffer_I_n_90),
+        .D(PreFetch_Buffer_I_n_101),
         .Q(Write_Addr[2]),
         .R(1'b0));
   FDRE \write_Addr_I_reg[3] 
        (.C(Clk),
-        .CE(PreFetch_Buffer_I_n_91),
-        .D(PreFetch_Buffer_I_n_103),
+        .CE(PreFetch_Buffer_I_n_90),
+        .D(PreFetch_Buffer_I_n_102),
         .Q(Write_Addr[3]),
         .R(1'b0));
   FDRE \write_Addr_I_reg[4] 
        (.C(Clk),
-        .CE(PreFetch_Buffer_I_n_91),
-        .D(PreFetch_Buffer_I_n_104),
+        .CE(PreFetch_Buffer_I_n_90),
+        .D(PreFetch_Buffer_I_n_103),
         .Q(Write_Addr[4]),
         .R(1'b0));
   FDRE write_Carry_I_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_118),
+        .D(PreFetch_Buffer_I_n_116),
         .Q(write_Carry_I_reg_n_0),
         .R(1'b0));
   microblaze_mcs_0_MB_LUT4 write_Reg_I_LUT
@@ -6195,17 +6204,17 @@ module microblaze_mcs_0_Decode
         .I214_out(I214_out),
         .I3(I3),
         .lmb_reg_read_Q_reg(lmb_reg_read_Q_reg),
-        .\write_Addr_I_reg[2] (\Using_FPGA.Native_i_3__9_n_0 ));
+        .\write_Addr_I_reg[2] (\Using_FPGA.Native_i_3__11_n_0 ));
   FDRE write_Reg_reg
        (.C(Clk),
         .CE(1'b1),
-        .D(PreFetch_Buffer_I_n_117),
+        .D(PreFetch_Buffer_I_n_115),
         .Q(I214_out),
         .R(1'b0));
   FDRE writing_reg
        (.C(Clk),
         .CE(normal_piperun),
-        .D(PreFetch_Buffer_I_n_126),
+        .D(PreFetch_Buffer_I_n_125),
         .Q(writing_reg_n_0),
         .R(out));
 endmodule
@@ -6337,82 +6346,228 @@ endmodule
 
 (* ORIG_REF_NAME = "GPI_Module" *) 
 module microblaze_mcs_0_GPI_Module
-   (\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ,
+   (\Using_FPGA.Native ,
     Q,
+    \Using_FPGA.Native_0 ,
+    \Using_FPGA.Native_1 ,
+    \Using_FPGA.Native_2 ,
+    \Using_FPGA.Native_3 ,
+    \Using_FPGA.Native_4 ,
+    \Using_FPGA.Native_5 ,
+    \Using_FPGA.Native_6 ,
+    INTC_CIPR,
+    lmb_reg_read_Q_reg,
+    lmb_reg_write_reg,
+    \lmb_abus_Q_reg[1] ,
     lmb_reg_read_reg,
     GPI1,
     Clk);
-  output [7:0]\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
-  input [4:0]Q;
+  output \Using_FPGA.Native ;
+  output [7:0]Q;
+  output \Using_FPGA.Native_0 ;
+  output \Using_FPGA.Native_1 ;
+  output \Using_FPGA.Native_2 ;
+  output \Using_FPGA.Native_3 ;
+  output \Using_FPGA.Native_4 ;
+  output \Using_FPGA.Native_5 ;
+  output \Using_FPGA.Native_6 ;
+  input [7:0]INTC_CIPR;
+  input lmb_reg_read_Q_reg;
+  input lmb_reg_write_reg;
+  input [4:0]\lmb_abus_Q_reg[1] ;
   input lmb_reg_read_reg;
-  input [7:0]GPI1;
+  input [15:0]GPI1;
   input Clk;
 
   wire Clk;
-  wire [7:0]GPI1;
-  wire [4:0]Q;
-  wire [7:0]\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
-  wire \Using_GPI.GPI_In[7]_i_1_n_0 ;
+  wire [15:0]GPI1;
+  wire [15:8]GPI_In;
+  wire [7:0]INTC_CIPR;
+  wire [7:0]Q;
+  wire \Using_FPGA.Native ;
+  wire \Using_FPGA.Native_0 ;
+  wire \Using_FPGA.Native_1 ;
+  wire \Using_FPGA.Native_2 ;
+  wire \Using_FPGA.Native_3 ;
+  wire \Using_FPGA.Native_4 ;
+  wire \Using_FPGA.Native_5 ;
+  wire \Using_FPGA.Native_6 ;
+  wire \Using_GPI.GPI_In[15]_i_1_n_0 ;
+  wire [4:0]\lmb_abus_Q_reg[1] ;
+  wire lmb_reg_read_Q_reg;
   wire lmb_reg_read_reg;
+  wire lmb_reg_write_reg;
 
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__15 
+       (.I0(GPI_In[9]),
+        .I1(INTC_CIPR[1]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_0 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__16 
+       (.I0(GPI_In[10]),
+        .I1(INTC_CIPR[2]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_1 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__17 
+       (.I0(GPI_In[11]),
+        .I1(INTC_CIPR[3]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_2 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__18 
+       (.I0(GPI_In[12]),
+        .I1(INTC_CIPR[4]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_3 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__19 
+       (.I0(GPI_In[13]),
+        .I1(INTC_CIPR[5]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_4 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__20 
+       (.I0(GPI_In[14]),
+        .I1(INTC_CIPR[6]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_5 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_2__21 
+       (.I0(GPI_In[15]),
+        .I1(INTC_CIPR[7]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native_6 ));
+  LUT4 #(
+    .INIT(16'h111F)) 
+    \Using_FPGA.Native_i_3__10 
+       (.I0(GPI_In[8]),
+        .I1(INTC_CIPR[0]),
+        .I2(lmb_reg_read_Q_reg),
+        .I3(lmb_reg_write_reg),
+        .O(\Using_FPGA.Native ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFEFFFFFF)) 
-    \Using_GPI.GPI_In[7]_i_1 
-       (.I0(Q[4]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(Q[3]),
+    \Using_GPI.GPI_In[15]_i_1 
+       (.I0(\lmb_abus_Q_reg[1] [4]),
+        .I1(\lmb_abus_Q_reg[1] [1]),
+        .I2(\lmb_abus_Q_reg[1] [0]),
+        .I3(\lmb_abus_Q_reg[1] [3]),
         .I4(lmb_reg_read_reg),
-        .I5(Q[2]),
-        .O(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .I5(\lmb_abus_Q_reg[1] [2]),
+        .O(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[0] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[0]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [0]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[0]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[10] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[10]),
+        .Q(GPI_In[10]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[11] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[11]),
+        .Q(GPI_In[11]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[12] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[12]),
+        .Q(GPI_In[12]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[13] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[13]),
+        .Q(GPI_In[13]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[14] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[14]),
+        .Q(GPI_In[14]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[15] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[15]),
+        .Q(GPI_In[15]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[1] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[1]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [1]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[1]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[2] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[2]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [2]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[2]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[3] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[3]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [3]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[3]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[4] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[4]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [4]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[4]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[5] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[5]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [5]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[5]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[6] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[6]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [6]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[6]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
   FDRE \Using_GPI.GPI_In_reg[7] 
        (.C(Clk),
         .CE(1'b1),
         .D(GPI1[7]),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [7]),
-        .R(\Using_GPI.GPI_In[7]_i_1_n_0 ));
+        .Q(Q[7]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[8] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[8]),
+        .Q(GPI_In[8]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
+  FDRE \Using_GPI.GPI_In_reg[9] 
+       (.C(Clk),
+        .CE(1'b1),
+        .D(GPI1[9]),
+        .Q(GPI_In[9]),
+        .R(\Using_GPI.GPI_In[15]_i_1_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "GPO_Module" *) 
@@ -6508,7 +6663,6 @@ endmodule
 (* ORIG_REF_NAME = "Iomodule_core" *) 
 module microblaze_mcs_0_Iomodule_core
    (UART_Tx,
-    Extend_Data_Read,
     Data_Read,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
@@ -6533,26 +6687,23 @@ module microblaze_mcs_0_Iomodule_core
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ,
+    \Using_FPGA.Native_14 ,
+    \Using_FPGA.Native_15 ,
+    \Using_FPGA.Native_16 ,
+    \Using_FPGA.Native_17 ,
+    \Using_FPGA.Native_18 ,
+    \Using_FPGA.Native_19 ,
+    \Using_FPGA.Native_20 ,
+    \Using_FPGA.Native_21 ,
     UART_Interrupt,
     GPO1,
     Clk,
     SR,
     UART_Rx,
-    sel_LSB,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ,
-    lmb_reg_write_reg,
-    \No_ECC.Sl_Rdy_reg ,
-    DATA_OUTB,
     Sl_Rdy,
     lmb_as,
-    lmb_reg_write_reg_0,
+    DATA_OUTB,
+    lmb_reg_write_reg,
     lmb_reg_read_Q_reg,
     Q,
     lmb_reg_read_reg,
@@ -6560,7 +6711,6 @@ module microblaze_mcs_0_Iomodule_core
     D,
     GPI1);
   output UART_Tx;
-  output [15:0]Extend_Data_Read;
   output Data_Read;
   output \Using_FPGA.Native ;
   output \Using_FPGA.Native_0 ;
@@ -6585,44 +6735,39 @@ module microblaze_mcs_0_Iomodule_core
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
+  output \Using_FPGA.Native_14 ;
+  output \Using_FPGA.Native_15 ;
+  output \Using_FPGA.Native_16 ;
+  output \Using_FPGA.Native_17 ;
+  output \Using_FPGA.Native_18 ;
+  output \Using_FPGA.Native_19 ;
+  output \Using_FPGA.Native_20 ;
+  output \Using_FPGA.Native_21 ;
   output UART_Interrupt;
   output [7:0]GPO1;
   input Clk;
   input [0:0]SR;
   input UART_Rx;
-  input [1:0]sel_LSB;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ;
-  input lmb_reg_write_reg;
-  input \No_ECC.Sl_Rdy_reg ;
-  input [23:0]DATA_OUTB;
   input Sl_Rdy;
   input lmb_as;
-  input lmb_reg_write_reg_0;
+  input [15:0]DATA_OUTB;
+  input lmb_reg_write_reg;
   input lmb_reg_read_Q_reg;
   input [5:0]Q;
   input lmb_reg_read_reg;
   input [0:0]E;
   input [7:0]D;
-  input [7:0]GPI1;
+  input [15:0]GPI1;
 
   wire Clk;
   wire [7:0]D;
-  wire [23:0]DATA_OUTB;
+  wire [15:0]DATA_OUTB;
   wire Data_Read;
   wire [0:0]E;
-  wire [15:0]Extend_Data_Read;
-  wire [7:0]GPI1;
+  wire [15:0]GPI1;
   wire [7:0]GPI_In;
   wire [7:0]GPO1;
-  wire [6:0]INTC_CIPR;
-  wire \No_ECC.Sl_Rdy_reg ;
+  wire [15:0]INTC_CIPR;
   wire [5:0]Q;
   wire [7:0]RX_Data;
   wire RX_Data_Exists;
@@ -6638,18 +6783,10 @@ module microblaze_mcs_0_Iomodule_core
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
@@ -6657,7 +6794,15 @@ module microblaze_mcs_0_Iomodule_core
   wire \Using_FPGA.Native_11 ;
   wire \Using_FPGA.Native_12 ;
   wire \Using_FPGA.Native_13 ;
+  wire \Using_FPGA.Native_14 ;
+  wire \Using_FPGA.Native_15 ;
+  wire \Using_FPGA.Native_16 ;
+  wire \Using_FPGA.Native_17 ;
+  wire \Using_FPGA.Native_18 ;
+  wire \Using_FPGA.Native_19 ;
   wire \Using_FPGA.Native_2 ;
+  wire \Using_FPGA.Native_20 ;
+  wire \Using_FPGA.Native_21 ;
   wire \Using_FPGA.Native_3 ;
   wire \Using_FPGA.Native_4 ;
   wire \Using_FPGA.Native_5 ;
@@ -6673,23 +6818,32 @@ module microblaze_mcs_0_Iomodule_core
   wire lmb_reg_read_Q_reg;
   wire lmb_reg_read_reg;
   wire lmb_reg_write_reg;
-  wire lmb_reg_write_reg_0;
   wire [6:3]p_0_out;
-  wire [1:0]sel_LSB;
 
   microblaze_mcs_0_GPI_Module GPI_I1
        (.Clk(Clk),
         .GPI1(GPI1),
-        .Q(Q[4:0]),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 (GPI_In),
-        .lmb_reg_read_reg(lmb_reg_read_reg));
+        .INTC_CIPR(INTC_CIPR[15:8]),
+        .Q(GPI_In),
+        .\Using_FPGA.Native (\Using_FPGA.Native_14 ),
+        .\Using_FPGA.Native_0 (\Using_FPGA.Native_15 ),
+        .\Using_FPGA.Native_1 (\Using_FPGA.Native_16 ),
+        .\Using_FPGA.Native_2 (\Using_FPGA.Native_17 ),
+        .\Using_FPGA.Native_3 (\Using_FPGA.Native_18 ),
+        .\Using_FPGA.Native_4 (\Using_FPGA.Native_19 ),
+        .\Using_FPGA.Native_5 (\Using_FPGA.Native_20 ),
+        .\Using_FPGA.Native_6 (\Using_FPGA.Native_21 ),
+        .\lmb_abus_Q_reg[1] (Q[4:0]),
+        .lmb_reg_read_Q_reg(lmb_reg_read_Q_reg),
+        .lmb_reg_read_reg(lmb_reg_read_reg),
+        .lmb_reg_write_reg(lmb_reg_write_reg));
   microblaze_mcs_0_GPO_Module GPO_I1
        (.Clk(Clk),
         .D(D),
         .GPO1(GPO1),
         .Q(Q),
         .SR(SR),
-        .lmb_reg_write_reg(lmb_reg_write_reg_0));
+        .lmb_reg_write_reg(lmb_reg_write_reg));
   microblaze_mcs_0_FIT_Module \Using_UART.No_Dynamic_BaudRate.UART_FIT_I 
        (.Clk(Clk),
         .FDRE_I(\Using_UART.No_Dynamic_BaudRate.UART_FIT_I_n_0 ));
@@ -6697,8 +6851,9 @@ module microblaze_mcs_0_Iomodule_core
        (.Clk(Clk),
         .D(p_0_out[6:5]),
         .INTC_CIPR({INTC_CIPR[6:5],INTC_CIPR[3],INTC_CIPR[0]}),
-        .Q({RX_Data[6:5],RX_Data[3],RX_Data[0]}),
+        .Q({GPI_In[6:5],GPI_In[3],GPI_In[0]}),
         .RX_Data_Received(RX_Data_Received),
+        .\RX_Data_reg[6] ({RX_Data[6:5],RX_Data[3],RX_Data[0]}),
         .RX_Frame_Error(RX_Frame_Error),
         .SR(SR),
         .TX_Data_Transmitted(TX_Data_Transmitted),
@@ -6707,12 +6862,11 @@ module microblaze_mcs_0_Iomodule_core
         .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ),
-        .\Using_GPI.GPI_In_reg[6] ({GPI_In[6:5],GPI_In[3],GPI_In[0]}),
         .frame_error_reg_0(\Using_UART_RX.UART_RX_I1_n_4 ),
         .\lmb_abus_Q_reg[1] (Q[4:0]),
         .lmb_reg_read_Q_reg(lmb_reg_read_Q_reg),
         .lmb_reg_read_reg(lmb_reg_read_reg),
-        .lmb_reg_write_reg(lmb_reg_write_reg_0),
+        .lmb_reg_write_reg(lmb_reg_write_reg),
         .overrun_error_reg_0(\Using_UART.Uart_Control_Status_I1_n_6 ),
         .rx_data_exists_i_reg(\Using_UART_RX.UART_RX_I1_n_2 ),
         .tx_buffer_empty_i_reg({p_0_out[3],RX_Data_Exists}));
@@ -6744,46 +6898,34 @@ module microblaze_mcs_0_Iomodule_core
        (.Clk(Clk),
         .DATA_OUTB(DATA_OUTB),
         .Data_Read(Data_Read),
-        .Extend_Data_Read(Extend_Data_Read),
-        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
-        .Q(Q[4:0]),
+        .Q({GPI_In[7],GPI_In[4],GPI_In[2:1]}),
         .\RX_Data_reg[7] ({RX_Data[7],RX_Data[4],RX_Data[2:1]}),
         .Sl_Rdy(Sl_Rdy),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ({INTC_CIPR[6:5],INTC_CIPR[3],INTC_CIPR[0]}),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ),
-        .\Using_FPGA.Native (\Using_FPGA.Native ),
-        .\Using_FPGA.Native_0 (\Using_FPGA.Native_0 ),
-        .\Using_FPGA.Native_1 (\Using_FPGA.Native_1 ),
-        .\Using_FPGA.Native_10 (\Using_FPGA.Native_10 ),
-        .\Using_FPGA.Native_11 (\Using_FPGA.Native_11 ),
-        .\Using_FPGA.Native_12 (\Using_FPGA.Native_12 ),
-        .\Using_FPGA.Native_13 (\Using_FPGA.Native_13 ),
-        .\Using_FPGA.Native_2 (\Using_FPGA.Native_2 ),
-        .\Using_FPGA.Native_3 (\Using_FPGA.Native_3 ),
-        .\Using_FPGA.Native_4 (\Using_FPGA.Native_4 ),
-        .\Using_FPGA.Native_5 (\Using_FPGA.Native_5 ),
-        .\Using_FPGA.Native_6 (\Using_FPGA.Native_6 ),
-        .\Using_FPGA.Native_7 (\Using_FPGA.Native_7 ),
-        .\Using_FPGA.Native_8 (\Using_FPGA.Native_8 ),
-        .\Using_FPGA.Native_9 (\Using_FPGA.Native_9 ),
-        .\Using_GPI.GPI_In_reg[7] ({GPI_In[7],GPI_In[4],GPI_In[2:1]}),
+        .\Using_FPGA.Native ({INTC_CIPR[15:8],INTC_CIPR[6:5],INTC_CIPR[3],INTC_CIPR[0]}),
+        .\Using_FPGA.Native_0 (\Using_FPGA.Native ),
+        .\Using_FPGA.Native_1 (\Using_FPGA.Native_0 ),
+        .\Using_FPGA.Native_10 (\Using_FPGA.Native_9 ),
+        .\Using_FPGA.Native_11 (\Using_FPGA.Native_10 ),
+        .\Using_FPGA.Native_12 (\Using_FPGA.Native_11 ),
+        .\Using_FPGA.Native_13 (\Using_FPGA.Native_12 ),
+        .\Using_FPGA.Native_14 (\Using_FPGA.Native_13 ),
+        .\Using_FPGA.Native_2 (\Using_FPGA.Native_1 ),
+        .\Using_FPGA.Native_3 (\Using_FPGA.Native_2 ),
+        .\Using_FPGA.Native_4 (\Using_FPGA.Native_3 ),
+        .\Using_FPGA.Native_5 (\Using_FPGA.Native_4 ),
+        .\Using_FPGA.Native_6 (\Using_FPGA.Native_5 ),
+        .\Using_FPGA.Native_7 (\Using_FPGA.Native_6 ),
+        .\Using_FPGA.Native_8 (\Using_FPGA.Native_7 ),
+        .\Using_FPGA.Native_9 (\Using_FPGA.Native_8 ),
+        .\lmb_abus_Q_reg[1] (Q[4:0]),
         .lmb_as(lmb_as),
         .lmb_reg_read_Q_reg(lmb_reg_read_Q_reg),
         .lmb_reg_read_reg(lmb_reg_read_reg),
-        .lmb_reg_write_reg(lmb_reg_write_reg),
-        .lmb_reg_write_reg_0(lmb_reg_write_reg_0),
-        .sel_LSB(sel_LSB));
+        .lmb_reg_write_reg(lmb_reg_write_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_FDE" *) 
@@ -7764,14 +7906,15 @@ module microblaze_mcs_0_MB_FDR
     load_Store_i2,
     d_AS_I15_out,
     mul_Executing0,
-    inHibit_EX0,
     inHibit_EX1,
-    E,
-    \Using_FPGA.Native_0 ,
+    jump2_I_reg,
     use_Reg_Neg_S_i28_out,
-    \Using_FPGA.Native_1 ,
+    \Using_FPGA.Native_0 ,
     force_Val1_i27_out,
     use_Reg_Neg_DI_i26_out,
+    Reg_Test_Equal_N_i7_out,
+    E,
+    \Using_FPGA.Native_1 ,
     SR,
     \write_Addr_I_reg[4] ,
     pc_write_I,
@@ -7787,20 +7930,20 @@ module microblaze_mcs_0_MB_FDR
     nonvalid_IFetch_n_reg_0,
     \Using_FPGA.set_BIP_I_reg ,
     using_Imm_reg,
+    mbar_hold_I_reg,
     missed_IFetch_reg,
     \Using_FPGA.Native_2 ,
-    Compare_Instr_reg,
     \Using_FPGA.Native_3 ,
     write_Reg_reg,
-    jump2_I_reg,
     write_Carry_I_reg,
     Sext16_reg,
     Sext8_reg,
     select_ALU_Carry_reg,
-    load_Store_i_reg,
-    swx_ready_reg,
+    Compare_Instr_reg,
     is_swx_I_reg,
     is_lwx_I_reg,
+    load_Store_i_reg,
+    swx_ready_reg,
     \write_Addr_I_reg[4]_0 ,
     doublet_i_reg,
     byte_i_reg,
@@ -7816,22 +7959,19 @@ module microblaze_mcs_0_MB_FDR
     inHibit_EX,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
-    mbar_first_reg,
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
+    mbar_first_reg,
     Exception_Kind,
-    nonvalid_IFetch_n_reg_1,
-    Sl_Rdy,
-    lmb_as,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ,
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
     mul_Executing_reg_0,
     load_Store_i_reg_0,
     load_Store_i,
@@ -7843,37 +7983,39 @@ module microblaze_mcs_0_MB_FDR
     swx_ready,
     jump2_I_reg_0,
     mtsmsr_write_i_reg_0,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ,
     \Synchronize.use_sync_reset.sync_reg[2] ,
     LMB_Ready,
+    nonvalid_IFetch_n_reg_1,
     \Using_FPGA.set_BIP_I_reg_0 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 ,
     Use_Imm_Reg,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ,
+    mbar_hold_I_reg_0,
+    Sl_Rdy,
+    lmb_as,
     missed_IFetch,
     \Using_FPGA.Native_7 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 ,
-    Compare_Instr,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ,
     \Using_FPGA.take_Intr_2nd_Phase_reg_0 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ,
     I214_out,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
     write_Carry_I_reg_0,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ,
     Sext16_reg_0,
     Imm_Value,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ,
     \Using_FPGA.take_Intr_2nd_Phase_reg_1 ,
     Sext8_reg_0,
     select_ALU_Carry,
-    \Using_LWX_SWX_instr.reservation_reg_1 ,
-    is_swx_I_reg_0,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ,
+    Compare_Instr,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 ,
+    is_swx_I_reg_0,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ,
     is_lwx_I,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_5 ,
+    \Using_LWX_SWX_instr.reservation_reg_1 ,
     Doublet,
     Byte);
   output \Size_17to32.imm_Reg_reg[15] ;
@@ -7882,14 +8024,15 @@ module microblaze_mcs_0_MB_FDR
   output load_Store_i2;
   output d_AS_I15_out;
   output mul_Executing0;
-  output inHibit_EX0;
   output inHibit_EX1;
-  output [0:0]E;
-  output \Using_FPGA.Native_0 ;
+  output jump2_I_reg;
   output use_Reg_Neg_S_i28_out;
-  output \Using_FPGA.Native_1 ;
+  output \Using_FPGA.Native_0 ;
   output force_Val1_i27_out;
   output use_Reg_Neg_DI_i26_out;
+  output Reg_Test_Equal_N_i7_out;
+  output [0:0]E;
+  output \Using_FPGA.Native_1 ;
   output [0:0]SR;
   output [0:0]\write_Addr_I_reg[4] ;
   output pc_write_I;
@@ -7905,20 +8048,20 @@ module microblaze_mcs_0_MB_FDR
   output nonvalid_IFetch_n_reg_0;
   output \Using_FPGA.set_BIP_I_reg ;
   output using_Imm_reg;
+  output mbar_hold_I_reg;
   output missed_IFetch_reg;
   output \Using_FPGA.Native_2 ;
-  output Compare_Instr_reg;
   output \Using_FPGA.Native_3 ;
   output write_Reg_reg;
-  output jump2_I_reg;
   output write_Carry_I_reg;
   output Sext16_reg;
   output Sext8_reg;
   output select_ALU_Carry_reg;
-  output load_Store_i_reg;
-  output swx_ready_reg;
+  output Compare_Instr_reg;
   output is_swx_I_reg;
   output is_lwx_I_reg;
+  output load_Store_i_reg;
+  output swx_ready_reg;
   output [0:0]\write_Addr_I_reg[4]_0 ;
   output doublet_i_reg;
   output byte_i_reg;
@@ -7934,22 +8077,19 @@ module microblaze_mcs_0_MB_FDR
   input inHibit_EX;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
-  input mbar_first_reg;
   input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
+  input mbar_first_reg;
   input [0:0]Exception_Kind;
-  input nonvalid_IFetch_n_reg_1;
-  input Sl_Rdy;
-  input lmb_as;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
   input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ;
-  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ;
+  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   input mul_Executing_reg_0;
   input load_Store_i_reg_0;
   input load_Store_i;
@@ -7961,37 +8101,39 @@ module microblaze_mcs_0_MB_FDR
   input swx_ready;
   input jump2_I_reg_0;
   input mtsmsr_write_i_reg_0;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ;
   input \Synchronize.use_sync_reset.sync_reg[2] ;
   input LMB_Ready;
+  input nonvalid_IFetch_n_reg_1;
   input \Using_FPGA.set_BIP_I_reg_0 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 ;
   input Use_Imm_Reg;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ;
+  input mbar_hold_I_reg_0;
+  input Sl_Rdy;
+  input lmb_as;
   input missed_IFetch;
   input \Using_FPGA.Native_7 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 ;
-  input Compare_Instr;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ;
   input \Using_FPGA.take_Intr_2nd_Phase_reg_0 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ;
   input I214_out;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   input write_Carry_I_reg_0;
   input \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
   input Sext16_reg_0;
   input [0:0]Imm_Value;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
+  input [0:0]\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   input \Using_FPGA.take_Intr_2nd_Phase_reg_1 ;
   input Sext8_reg_0;
   input select_ALU_Carry;
-  input \Using_LWX_SWX_instr.reservation_reg_1 ;
-  input is_swx_I_reg_0;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ;
+  input Compare_Instr;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 ;
+  input is_swx_I_reg_0;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ;
   input is_lwx_I;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_5 ;
+  input \Using_LWX_SWX_instr.reservation_reg_1 ;
   input Doublet;
   input Byte;
 
@@ -8011,6 +8153,7 @@ module microblaze_mcs_0_MB_FDR
   wire \No_ECC.Sl_Rdy_reg ;
   wire R;
   wire R_0;
+  wire Reg_Test_Equal_N_i7_out;
   wire S3_out;
   wire S94_out;
   wire [0:0]SR;
@@ -8034,21 +8177,19 @@ module microblaze_mcs_0_MB_FDR
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_9 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_4 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_5 ;
   wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
+  wire [0:0]\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
@@ -8059,6 +8200,7 @@ module microblaze_mcs_0_MB_FDR
   wire \Using_FPGA.Native_6 ;
   wire \Using_FPGA.Native_7 ;
   wire \Using_FPGA.Native_i_2_n_0 ;
+  wire \Using_FPGA.Native_i_3__0_n_0 ;
   wire \Using_FPGA.set_BIP_I_reg ;
   wire \Using_FPGA.set_BIP_I_reg_0 ;
   wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
@@ -8075,7 +8217,6 @@ module microblaze_mcs_0_MB_FDR
   wire ex_Valid_reg;
   wire force_Val1_i27_out;
   wire inHibit_EX;
-  wire inHibit_EX0;
   wire inHibit_EX1;
   wire is_lwx_I;
   wire is_lwx_I_reg;
@@ -8093,8 +8234,9 @@ module microblaze_mcs_0_MB_FDR
   wire load_Store_i_i_2_n_0;
   wire load_Store_i_reg;
   wire load_Store_i_reg_0;
-  wire mbar_first_i_3_n_0;
   wire mbar_first_reg;
+  wire mbar_hold_I_reg;
+  wire mbar_hold_I_reg_0;
   wire missed_IFetch;
   wire missed_IFetch_reg;
   wire mtsmsr_write_i_reg;
@@ -8121,16 +8263,16 @@ module microblaze_mcs_0_MB_FDR
   wire write_Reg_reg;
 
   LUT6 #(
-    .INIT(64'h00000000222E2222)) 
+    .INIT(64'h0000000022222E22)) 
     Compare_Instr_i_1
        (.I0(Compare_Instr),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 ),
+        .I3(Imm_Value),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
         .I5(Compare_Instr_i_3_n_0),
         .O(Compare_Instr_reg));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hEC)) 
     Compare_Instr_i_3
@@ -8138,7 +8280,7 @@ module microblaze_mcs_0_MB_FDR
         .I1(out),
         .I2(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .O(Compare_Instr_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hEC)) 
     \Result_Sel[0]_i_1 
@@ -8159,7 +8301,7 @@ module microblaze_mcs_0_MB_FDR
         .I1(mul_Executing_reg),
         .I2(Imm_Value),
         .I3(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ),
         .I5(\Using_FPGA.take_Intr_2nd_Phase_reg_1 ),
         .O(Sext16_reg));
   LUT6 #(
@@ -8167,22 +8309,21 @@ module microblaze_mcs_0_MB_FDR
     Sext8_i_1
        (.I0(Sext8_reg_0),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
-        .I3(Imm_Value),
-        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ),
+        .I2(Imm_Value),
+        .I3(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ),
+        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ),
         .I5(\Using_FPGA.take_Intr_2nd_Phase_reg_1 ),
         .O(Sext8_reg));
-  LUT6 #(
-    .INIT(64'h0000000008000000)) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
     \Size_17to32.imm_Reg[0]_i_1 
        (.I0(\Size_17to32.imm_Reg_reg[15] ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
-        .I2(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
+        .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hEA)) 
     Unsigned_Op_i_1
@@ -8207,70 +8348,80 @@ module microblaze_mcs_0_MB_FDR
         .I1(\Using_FPGA.Native_6 ),
         .O(S3_out));
   LUT6 #(
-    .INIT(64'hFEAEAEAEFEAEFEAE)) 
+    .INIT(64'hFEFEFEAEAEAEAEAE)) 
     \Using_FPGA.Native_i_1__121 
        (.I0(S94_out),
         .I1(\Using_FPGA.Native_7 ),
         .I2(mul_Executing_reg),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 ),
-        .I4(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ),
+        .I5(\Using_FPGA.Native_i_3__0_n_0 ),
         .O(\Using_FPGA.Native_2 ));
   LUT6 #(
     .INIT(64'h0040000000000000)) 
     \Using_FPGA.Native_i_1__128 
        (.I0(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
         .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
         .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ),
-        .O(\Using_FPGA.Native_1 ));
+        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
+        .O(\Using_FPGA.Native_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT4 #(
+    .INIT(16'h2008)) 
+    \Using_FPGA.Native_i_1__43 
+       (.I0(\Using_FPGA.Native_0 ),
+        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
+        .O(use_Reg_Neg_S_i28_out));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \Using_FPGA.Native_i_1__44 
+       (.I0(\Using_FPGA.Native_0 ),
+        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
+        .O(force_Val1_i27_out));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT4 #(
+    .INIT(16'h2008)) 
+    \Using_FPGA.Native_i_1__45 
+       (.I0(\Using_FPGA.Native_0 ),
+        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
+        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
+        .O(use_Reg_Neg_DI_i26_out));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT4 #(
+    .INIT(16'h0220)) 
+    \Using_FPGA.Native_i_1__47 
+       (.I0(\Using_FPGA.Native_0 ),
+        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
+        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
+        .O(Reg_Test_Equal_N_i7_out));
   LUT6 #(
     .INIT(64'hAAABAAAABBBBBBBB)) 
-    \Using_FPGA.Native_i_1__44 
+    \Using_FPGA.Native_i_1__48 
        (.I0(Exception_Kind),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
         .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
-        .I5(\Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ),
-        .O(\Using_FPGA.Native_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT4 #(
-    .INIT(16'h2008)) 
-    \Using_FPGA.Native_i_1__49 
-       (.I0(\Using_FPGA.Native_1 ),
-        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
-        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
-        .O(use_Reg_Neg_S_i28_out));
-  LUT3 #(
-    .INIT(8'h08)) 
-    \Using_FPGA.Native_i_1__50 
-       (.I0(\Using_FPGA.Native_1 ),
-        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
-        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .O(force_Val1_i27_out));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT4 #(
-    .INIT(16'h2008)) 
-    \Using_FPGA.Native_i_1__51 
-       (.I0(\Using_FPGA.Native_1 ),
-        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
-        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
-        .O(use_Reg_Neg_DI_i26_out));
+        .I5(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
+        .O(\Using_FPGA.Native_1 ));
   (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    \Using_FPGA.Native_i_1__52 
+    \Using_FPGA.Native_i_1__51 
        (.I0(\Using_FPGA.Native_5 ),
         .I1(mul_Executing_reg_0),
         .O(pc_write_I));
   LUT3 #(
     .INIT(8'hEA)) 
-    \Using_FPGA.Native_i_1__54 
+    \Using_FPGA.Native_i_1__53 
        (.I0(Exception_Kind),
         .I1(inHibit_EX),
         .I2(\Using_FPGA.Native_5 ),
@@ -8288,7 +8439,7 @@ module microblaze_mcs_0_MB_FDR
         .O(load_Store_i2));
   LUT2 #(
     .INIT(4'hB)) 
-    \Using_FPGA.Native_i_1__87 
+    \Using_FPGA.Native_i_1__86 
        (.I0(\Size_17to32.imm_Reg_reg[15] ),
         .I1(jump2_I_reg_0),
         .O(nonvalid_IFetch_n_reg));
@@ -8299,16 +8450,6 @@ module microblaze_mcs_0_MB_FDR
         .I1(D0_in),
         .I2(\Using_FPGA.Native_4 ),
         .O(\Using_FPGA.Native_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAFFFFAAAAFFBF)) 
-    \Using_FPGA.Native_i_2__38 
-       (.I0(\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ),
-        .O(\Using_FPGA.Native_3 ));
   (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h8)) 
@@ -8316,17 +8457,37 @@ module microblaze_mcs_0_MB_FDR
        (.I0(\Using_FPGA.Native_5 ),
         .I1(inHibit_EX),
         .O(S94_out));
+  LUT6 #(
+    .INIT(64'hBBBABBBBBBBBBBBB)) 
+    \Using_FPGA.Native_i_2__45 
+       (.I0(\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
+        .O(\Using_FPGA.Native_3 ));
+  LUT6 #(
+    .INIT(64'hFFFBFFFFFFFFFFFF)) 
+    \Using_FPGA.Native_i_3__0 
+       (.I0(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .O(\Using_FPGA.Native_i_3__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'h00080A0A)) 
     \Using_FPGA.set_BIP_I_i_1 
        (.I0(\Using_FPGA.set_BIP_I_reg_0 ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 ),
         .I2(out),
         .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I4(mul_Executing_reg),
         .O(\Using_FPGA.set_BIP_I_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Using_FPGA.take_Intr_2nd_Phase_i_1 
@@ -8356,21 +8517,21 @@ module microblaze_mcs_0_MB_FDR
        (.I0(Byte),
         .I1(mul_Executing_reg),
         .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
         .I4(byte_i12_out),
         .I5(out),
         .O(byte_i_reg));
   LUT6 #(
-    .INIT(64'h0700000000000000)) 
+    .INIT(64'h0070000000000000)) 
     d_AS_I_i_1
        (.I0(\Using_FPGA.Native_5 ),
         .I1(inHibit_EX),
-        .I2(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I3(mul_Executing_reg),
+        .I2(mul_Executing_reg),
+        .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
         .O(d_AS_I15_out));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
     .INIT(16'hAA2A)) 
     doublet_Read_i_i_2
@@ -8384,12 +8545,12 @@ module microblaze_mcs_0_MB_FDR
     doublet_i_i_1
        (.I0(Doublet),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
         .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
         .I4(byte_i12_out),
         .I5(out),
         .O(doublet_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hF7F7FF00)) 
     ex_Valid_i_1
@@ -8399,34 +8560,14 @@ module microblaze_mcs_0_MB_FDR
         .I3(load_Store_i_reg_0),
         .I4(mul_Executing_reg),
         .O(ex_Valid_reg));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT5 #(
-    .INIT(32'hF8FFFFFF)) 
-    inHibit_EX_i_3
-       (.I0(\Using_FPGA.Native_5 ),
-        .I1(inHibit_EX),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .O(jump2_I_reg));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT5 #(
-    .INIT(32'h4F444444)) 
-    inHibit_EX_i_4
-       (.I0(Exception_Kind),
-        .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I2(nonvalid_IFetch_n_reg_1),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .O(inHibit_EX0));
   LUT6 #(
-    .INIT(64'h0000000022222E22)) 
+    .INIT(64'h000000002222222E)) 
     is_lwx_I_i_1
        (.I0(is_lwx_I),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_5 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_9 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ),
         .I5(is_swx_I),
         .O(is_lwx_I_reg));
   LUT6 #(
@@ -8440,15 +8581,25 @@ module microblaze_mcs_0_MB_FDR
         .I5(mul_Executing_reg),
         .O(is_swx_I));
   LUT6 #(
-    .INIT(64'h000000002E222222)) 
+    .INIT(64'h00000000222E2222)) 
     is_swx_I_i_1
        (.I0(is_swx_I_reg_0),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_9 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
         .I5(is_swx_I),
         .O(is_swx_I_reg));
+  LUT6 #(
+    .INIT(64'hEFEFEFFFFFFFFFFF)) 
+    jump2_I_i_2
+       (.I0(S94_out),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .O(jump2_I_reg));
   LUT6 #(
     .INIT(64'h000000002EEE2222)) 
     load_Store_i_i_1
@@ -8459,7 +8610,7 @@ module microblaze_mcs_0_MB_FDR
         .I4(load_Store_i_i_2_n_0),
         .I5(is_swx_I),
         .O(load_Store_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h40)) 
     load_Store_i_i_2
@@ -8467,24 +8618,26 @@ module microblaze_mcs_0_MB_FDR
         .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
         .O(load_Store_i_i_2_n_0));
-  LUT5 #(
-    .INIT(32'hB8888888)) 
+  LUT6 #(
+    .INIT(64'hFFEFEFEF00202020)) 
     mbar_first_i_1
-       (.I0(mbar_first_reg),
-        .I1(mbar_first_i_3_n_0),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .O(mul_Executing0));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT4 #(
-    .INIT(16'hFDDD)) 
-    mbar_first_i_3
-       (.I0(mul_Executing_reg),
+       (.I0(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I2(inHibit_EX),
-        .I3(\Using_FPGA.Native_5 ),
-        .O(mbar_first_i_3_n_0));
+        .I2(mul_Executing_reg),
+        .I3(inHibit_EX),
+        .I4(\Using_FPGA.Native_5 ),
+        .I5(mbar_first_reg),
+        .O(mul_Executing0));
+  LUT6 #(
+    .INIT(64'h00000000303000AA)) 
+    mbar_hold_I_i_1
+       (.I0(mbar_hold_I_reg_0),
+        .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I3(mul_Executing_reg_0),
+        .I4(mul_Executing_reg),
+        .I5(out),
+        .O(mbar_hold_I_reg));
   (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'h707F7070)) 
@@ -8495,15 +8648,15 @@ module microblaze_mcs_0_MB_FDR
         .I3(mul_Executing_reg_0),
         .I4(\Using_FPGA.Native_5 ),
         .O(missed_IFetch_reg));
-  LUT6 #(
-    .INIT(64'h003000A00030AAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT5 #(
+    .INIT(32'h30A030AA)) 
     mtsmsr_write_i_i_1
        (.I0(mtsmsr_write_i_reg_0),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 ),
-        .I3(\Synchronize.use_sync_reset.sync_reg[2] ),
-        .I4(mul_Executing_reg),
-        .I5(out),
+        .I2(\Synchronize.use_sync_reset.sync_reg[2] ),
+        .I3(mul_Executing_reg),
+        .I4(out),
         .O(mtsmsr_write_i_reg));
   LUT6 #(
     .INIT(64'hFF11FFFFF0F0F0F0)) 
@@ -8515,7 +8668,7 @@ module microblaze_mcs_0_MB_FDR
         .I4(\Using_FPGA.Native_5 ),
         .I5(nonvalid_IFetch_n_reg_1),
         .O(nonvalid_IFetch_n_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'h000300AA)) 
     select_ALU_Carry_i_1
@@ -8525,7 +8678,7 @@ module microblaze_mcs_0_MB_FDR
         .I3(out),
         .I4(mul_Executing_reg),
         .O(select_ALU_Carry_reg));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     swx_ready_i_1
@@ -8539,19 +8692,19 @@ module microblaze_mcs_0_MB_FDR
     using_Imm_i_1
        (.I0(Use_Imm_Reg),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 ),
         .I3(\Using_FPGA.Native_5 ),
         .I4(inHibit_EX),
         .I5(out),
         .O(using_Imm_reg));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \write_Addr_I[1]_i_1 
        (.I0(mul_Executing_reg),
         .I1(out),
         .O(\write_Addr_I_reg[4] ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \write_Addr_I[4]_i_1 
@@ -8559,7 +8712,7 @@ module microblaze_mcs_0_MB_FDR
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
         .O(\write_Addr_I_reg[4]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'h000C00AA)) 
     write_Carry_I_i_1
@@ -8574,8 +8727,8 @@ module microblaze_mcs_0_MB_FDR
     write_Reg_i_1
        (.I0(I214_out),
         .I1(mul_Executing_reg),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_4 ),
-        .I3(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .I4(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I5(Unsigned_Op_reg),
         .O(write_Reg_reg));
@@ -8686,7 +8839,7 @@ module microblaze_mcs_0_MB_FDRSE_583
         .R(\Synchronize.use_sync_reset.sync_reg[2] ));
   LUT3 #(
     .INIT(8'hB8)) 
-    \Using_FPGA.Native_i_1__11 
+    \Using_FPGA.Native_i_1__10 
        (.I0(MSR),
         .I1(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .I2(\Using_FPGA.Native_1 ),
@@ -8734,7 +8887,7 @@ module microblaze_mcs_0_MB_FDRSE_584
         .R(MSR_Rst));
   LUT3 #(
     .INIT(8'hB8)) 
-    \Using_FPGA.Native_i_1__10 
+    \Using_FPGA.Native_i_1__9 
        (.I0(MSR),
         .I1(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .I2(PC_OF),
@@ -9763,16 +9916,16 @@ endmodule
 (* ORIG_REF_NAME = "MB_LUT4" *) 
 module microblaze_mcs_0_MB_LUT4__parameterized21
    (\Using_FPGA.Native_0 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 );
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 );
   output \Using_FPGA.Native_0 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
 
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   wire \Using_FPGA.Native_0 ;
 
@@ -9780,9 +9933,9 @@ module microblaze_mcs_0_MB_LUT4__parameterized21
   LUT4 #(
     .INIT(16'h00F0)) 
     \Using_FPGA.Native 
-       (.I0(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+       (.I0(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I1(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I3(1'b0),
         .O(\Using_FPGA.Native_0 ));
 endmodule
@@ -15844,13 +15997,13 @@ endmodule
 (* ORIG_REF_NAME = "MB_MULT_AND" *) 
 module microblaze_mcs_0_MB_MULT_AND
    (\Using_FPGA.Native_0 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1 );
   output \Using_FPGA.Native_0 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
 
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   wire \Using_FPGA.Native_0 ;
 
@@ -15860,7 +16013,7 @@ module microblaze_mcs_0_MB_MULT_AND
   LUT2 #(
     .INIT(4'h8)) 
     \Using_FPGA.Native 
-       (.I0(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+       (.I0(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I1(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
         .O(\Using_FPGA.Native_0 ));
 endmodule
@@ -21051,36 +21204,44 @@ endmodule
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E
    (\Result_Sel_reg[0] ,
-    write_Reg_reg,
+    mtsmsr_write_i_reg,
+    \Size_17to32.imm_Reg_reg[15] ,
     \Using_FPGA.Native ,
+    \Using_FPGA.set_BIP_I_reg ,
+    \Using_FPGA.Native_0 ,
     Compare_Instr_reg,
     writing_reg,
     CI,
     DATA_OUTA,
-    \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
     \Using_FPGA.Native_2 ,
+    \Using_FPGA.Native_3 ,
     Clk,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
     \Using_FPGA.take_Intr_2nd_Phase_reg );
   output \Result_Sel_reg[0] ;
-  output write_Reg_reg;
+  output mtsmsr_write_i_reg;
+  output \Size_17to32.imm_Reg_reg[15] ;
   output \Using_FPGA.Native ;
+  output \Using_FPGA.set_BIP_I_reg ;
+  output \Using_FPGA.Native_0 ;
   output Compare_Instr_reg;
   output writing_reg;
   input CI;
   input [0:0]DATA_OUTA;
-  input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
   input \Using_FPGA.Native_2 ;
+  input \Using_FPGA.Native_3 ;
   input Clk;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
   input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   input \Using_FPGA.take_Intr_2nd_Phase_reg ;
@@ -21090,8 +21251,10 @@ module microblaze_mcs_0_MB_SRL16E
   wire Compare_Instr_reg;
   wire [0:0]DATA_OUTA;
   wire \Result_Sel_reg[0] ;
+  wire \Size_17to32.imm_Reg_reg[15] ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
@@ -21099,10 +21262,13 @@ module microblaze_mcs_0_MB_SRL16E
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
   wire \Using_FPGA.Native_2 ;
+  wire \Using_FPGA.Native_3 ;
+  wire \Using_FPGA.set_BIP_I_reg ;
   wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  wire write_Reg_reg;
+  wire mtsmsr_write_i_reg;
   wire writing_reg;
 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'hE)) 
     Compare_Instr_i_2
@@ -21116,34 +21282,63 @@ module microblaze_mcs_0_MB_SRL16E
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
     \Use_unisim.MB_SRL16E_I1 
-       (.A0(\Using_FPGA.Native_0 ),
-        .A1(\Using_FPGA.Native_1 ),
-        .A2(\Using_FPGA.Native_2 ),
+       (.A0(\Using_FPGA.Native_1 ),
+        .A1(\Using_FPGA.Native_2 ),
+        .A2(\Using_FPGA.Native_3 ),
         .A3(1'b0),
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Result_Sel_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT4 #(
-    .INIT(16'hDFFF)) 
-    \Using_FPGA.Native_i_4 
-       (.I0(\Result_Sel_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(\Using_FPGA.Native ));
   LUT6 #(
-    .INIT(64'h0000000000002000)) 
-    write_Reg_i_4
+    .INIT(64'h1120110011001100)) 
+    \Using_FPGA.Native_i_1__49 
        (.I0(\Result_Sel_reg[0] ),
         .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
         .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
         .I5(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
-        .O(write_Reg_reg));
+        .O(\Using_FPGA.Native ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT4 #(
+    .INIT(16'hDFFF)) 
+    \Using_FPGA.enable_Interrupts_I_i_2 
+       (.I0(\Result_Sel_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .O(\Size_17to32.imm_Reg_reg[15] ));
   (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'h00200000)) 
+    \Using_FPGA.set_BIP_I_i_3 
+       (.I0(\Result_Sel_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .O(\Using_FPGA.set_BIP_I_reg ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'hFFDFFFFF)) 
+    mbar_decode_I_i_2
+       (.I0(\Result_Sel_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .O(\Using_FPGA.Native_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT4 #(
+    .INIT(16'hDFFF)) 
+    mtsmsr_write_i_i_3
+       (.I0(\Result_Sel_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .O(mtsmsr_write_i_reg));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     writing_i_1
@@ -21156,33 +21351,54 @@ endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_26
-   (\Using_FPGA.enable_Interrupts_I_reg ,
+   (\Using_FPGA.Native ,
+    Reg_Test_Equal_i,
     enable_Interrupts_I,
     CI,
     DATA_OUTA,
-    \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
+    \Using_FPGA.Native_2 ,
     Clk,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 );
-  output \Using_FPGA.enable_Interrupts_I_reg ;
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ,
+    \Using_FPGA.take_Intr_2nd_Phase_reg );
+  output \Using_FPGA.Native ;
+  output Reg_Test_Equal_i;
   output enable_Interrupts_I;
   input CI;
   input [0:0]DATA_OUTA;
-  input \Using_FPGA.Native ;
   input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
+  input \Using_FPGA.Native_2 ;
   input Clk;
+  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ;
+  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
+  wire Reg_Test_Equal_i;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ;
+  wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
-  wire \Using_FPGA.enable_Interrupts_I_reg ;
+  wire \Using_FPGA.Native_2 ;
+  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
   wire enable_Interrupts_I;
 
   (* box_type = "PRIMITIVE" *) 
@@ -21192,26 +21408,37 @@ module microblaze_mcs_0_MB_SRL16E_26
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
     \Use_unisim.MB_SRL16E_I1 
-       (.A0(\Using_FPGA.Native ),
-        .A1(\Using_FPGA.Native_0 ),
-        .A2(\Using_FPGA.Native_1 ),
+       (.A0(\Using_FPGA.Native_0 ),
+        .A1(\Using_FPGA.Native_1 ),
+        .A2(\Using_FPGA.Native_2 ),
         .A3(1'b0),
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
-        .Q(\Using_FPGA.enable_Interrupts_I_reg ));
-  LUT2 #(
-    .INIT(4'h2)) 
+        .Q(\Using_FPGA.Native ));
+  LUT4 #(
+    .INIT(16'hF9FF)) 
+    \Using_FPGA.Native_i_1__46 
+       (.I0(\Using_FPGA.Native ),
+        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .O(Reg_Test_Equal_i));
+  LUT5 #(
+    .INIT(32'h00000200)) 
     \Using_FPGA.enable_Interrupts_I_i_1 
-       (.I0(\Using_FPGA.enable_Interrupts_I_reg ),
+       (.I0(\Using_FPGA.Native ),
         .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 ),
+        .I4(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .O(enable_Interrupts_I));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_27
    (jump2_I_reg,
-    jump2_I_reg_0,
+    inHibit_EX_reg,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native ,
@@ -21220,11 +21447,10 @@ module microblaze_mcs_0_MB_SRL16E_27
     Clk,
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
     p_1_in45_in,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
-    inHibit_EX_reg);
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 );
   output jump2_I_reg;
-  output jump2_I_reg_0;
+  output inHibit_EX_reg;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native ;
@@ -21233,9 +21459,8 @@ module microblaze_mcs_0_MB_SRL16E_27
   input Clk;
   input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   input p_1_in45_in;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
-  input inHibit_EX_reg;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
 
   wire CI;
   wire Clk;
@@ -21248,7 +21473,6 @@ module microblaze_mcs_0_MB_SRL16E_27
   wire \Using_FPGA.Native_1 ;
   wire inHibit_EX_reg;
   wire jump2_I_reg;
-  wire jump2_I_reg_0;
   wire p_1_in45_in;
 
   (* box_type = "PRIMITIVE" *) 
@@ -21266,52 +21490,57 @@ module microblaze_mcs_0_MB_SRL16E_27
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(jump2_I_reg));
-  LUT6 #(
-    .INIT(64'h00000000E2CCE200)) 
-    jump2_I_i_1
+  LUT5 #(
+    .INIT(32'h1D000000)) 
+    inHibit_EX_i_3
        (.I0(jump2_I_reg),
         .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I2(p_1_in45_in),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I5(inHibit_EX_reg),
-        .O(jump2_I_reg_0));
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .O(inHibit_EX_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_28
-   (\Using_FPGA.Native ,
-    \Using_FPGA.Native_0 ,
+   (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
+    D,
+    \Using_FPGA.Native ,
     \Using_FPGA.set_BIP_I_reg ,
     CI,
     DATA_OUTA,
+    \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
     \Using_FPGA.Native_2 ,
-    \Using_FPGA.Native_3 ,
     Clk,
+    Exception_Kind,
+    \Using_FPGA.take_Intr_2nd_Phase_reg ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
     mul_Executing_reg,
     \Using_FPGA.set_BIP_I_reg_0 );
+  output \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
+  output D;
   output \Using_FPGA.Native ;
-  output \Using_FPGA.Native_0 ;
   output \Using_FPGA.set_BIP_I_reg ;
   input CI;
   input [0:0]DATA_OUTA;
+  input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
   input \Using_FPGA.Native_2 ;
-  input \Using_FPGA.Native_3 ;
   input Clk;
+  input [0:0]Exception_Kind;
+  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   input mul_Executing_reg;
@@ -21319,7 +21548,9 @@ module microblaze_mcs_0_MB_SRL16E_28
 
   wire CI;
   wire Clk;
+  wire D;
   wire [0:0]DATA_OUTA;
+  wire [0:0]Exception_Kind;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
@@ -21327,13 +21558,14 @@ module microblaze_mcs_0_MB_SRL16E_28
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
   wire \Using_FPGA.Native_2 ;
-  wire \Using_FPGA.Native_3 ;
   wire \Using_FPGA.set_BIP_I_reg ;
   wire \Using_FPGA.set_BIP_I_reg_0 ;
+  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
   wire mul_Executing_reg;
 
   (* box_type = "PRIMITIVE" *) 
@@ -21343,28 +21575,35 @@ module microblaze_mcs_0_MB_SRL16E_28
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
     \Use_unisim.MB_SRL16E_I1 
-       (.A0(\Using_FPGA.Native_1 ),
-        .A1(\Using_FPGA.Native_2 ),
-        .A2(\Using_FPGA.Native_3 ),
+       (.A0(\Using_FPGA.Native_0 ),
+        .A1(\Using_FPGA.Native_1 ),
+        .A2(\Using_FPGA.Native_2 ),
         .A3(1'b0),
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
-        .Q(\Using_FPGA.Native ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFF7FFFFFF)) 
-    \Using_FPGA.Native_i_2__2 
+        .Q(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ));
+  LUT3 #(
+    .INIT(8'h02)) 
+    \Using_FPGA.Native_i_1__50 
        (.I0(\Using_FPGA.Native ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
-        .O(\Using_FPGA.Native_0 ));
+        .I1(Exception_Kind),
+        .I2(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .O(D));
+  LUT6 #(
+    .INIT(64'hFFFFF7FFFFFFFFFF)) 
+    \Using_FPGA.Native_i_2__3 
+       (.I0(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .O(\Using_FPGA.Native ));
   LUT5 #(
     .INIT(32'h08FF0800)) 
     \Using_FPGA.set_BIP_I_i_2 
-       (.I0(\Using_FPGA.Native ),
+       (.I0(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .I1(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
         .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
         .I3(mul_Executing_reg),
@@ -21375,27 +21614,45 @@ endmodule
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_29
    (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
+    write_Reg_reg,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
-    Clk);
+    Clk,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 );
   output \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
+  output write_Reg_reg;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native ;
   input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
   input Clk;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
+  wire write_Reg_reg;
 
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
@@ -21412,18 +21669,28 @@ module microblaze_mcs_0_MB_SRL16E_29
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ));
+  LUT6 #(
+    .INIT(64'h002FFFFF00FFFFFF)) 
+    write_Reg_i_2
+       (.I0(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .O(write_Reg_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_30
-   (mbar_first_reg,
+   (mbar_decode_I_reg,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
     Clk);
-  output mbar_first_reg;
+  output mbar_decode_I_reg;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native ;
@@ -21437,7 +21704,7 @@ module microblaze_mcs_0_MB_SRL16E_30
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
-  wire mbar_first_reg;
+  wire mbar_decode_I_reg;
 
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
@@ -21453,7 +21720,7 @@ module microblaze_mcs_0_MB_SRL16E_30
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
-        .Q(mbar_first_reg));
+        .Q(mbar_decode_I_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -21638,13 +21905,6 @@ module microblaze_mcs_0_MB_SRL16E_32
   wire \Using_FPGA.Native_7 ;
   wire \Using_FPGA.Native_8 ;
   wire \Using_FPGA.Native_9 ;
-  wire \Using_FPGA.Native_i_2__18_n_0 ;
-  wire \Using_FPGA.Native_i_2__19_n_0 ;
-  wire \Using_FPGA.Native_i_2__20_n_0 ;
-  wire \Using_FPGA.Native_i_2__21_n_0 ;
-  wire \Using_FPGA.Native_i_2__22_n_0 ;
-  wire \Using_FPGA.Native_i_2__23_n_0 ;
-  wire \Using_FPGA.Native_i_2__24_n_0 ;
   wire \Using_FPGA.Native_i_2__25_n_0 ;
   wire \Using_FPGA.Native_i_2__26_n_0 ;
   wire \Using_FPGA.Native_i_2__27_n_0 ;
@@ -21654,6 +21914,13 @@ module microblaze_mcs_0_MB_SRL16E_32
   wire \Using_FPGA.Native_i_2__31_n_0 ;
   wire \Using_FPGA.Native_i_2__32_n_0 ;
   wire \Using_FPGA.Native_i_2__33_n_0 ;
+  wire \Using_FPGA.Native_i_2__34_n_0 ;
+  wire \Using_FPGA.Native_i_2__35_n_0 ;
+  wire \Using_FPGA.Native_i_2__36_n_0 ;
+  wire \Using_FPGA.Native_i_2__37_n_0 ;
+  wire \Using_FPGA.Native_i_2__38_n_0 ;
+  wire \Using_FPGA.Native_i_2__39_n_0 ;
+  wire \Using_FPGA.Native_i_2__40_n_0 ;
   wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
 
   (* box_type = "PRIMITIVE" *) 
@@ -21673,7 +21940,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .Q(\Size_17to32.imm_Reg_reg[0] ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__15 
+    \Using_FPGA.Native_i_1__14 
        (.I0(Reg2_Data[0]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21683,7 +21950,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__16 
+    \Using_FPGA.Native_i_1__15 
        (.I0(Reg2_Data[1]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21693,7 +21960,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_0 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__17 
+    \Using_FPGA.Native_i_1__16 
        (.I0(Reg2_Data[2]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21703,7 +21970,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_1 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__18 
+    \Using_FPGA.Native_i_1__17 
        (.I0(Reg2_Data[3]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21713,7 +21980,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_2 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__19 
+    \Using_FPGA.Native_i_1__18 
        (.I0(Reg2_Data[4]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21723,7 +21990,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_3 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__20 
+    \Using_FPGA.Native_i_1__19 
        (.I0(Reg2_Data[5]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21733,7 +22000,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_4 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__21 
+    \Using_FPGA.Native_i_1__20 
        (.I0(Reg2_Data[6]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21743,7 +22010,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_5 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__22 
+    \Using_FPGA.Native_i_1__21 
        (.I0(Reg2_Data[7]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21753,7 +22020,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_6 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__23 
+    \Using_FPGA.Native_i_1__22 
        (.I0(Reg2_Data[8]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21763,7 +22030,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_7 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__24 
+    \Using_FPGA.Native_i_1__23 
        (.I0(Reg2_Data[9]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21773,7 +22040,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_8 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__25 
+    \Using_FPGA.Native_i_1__24 
        (.I0(Reg2_Data[10]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21783,7 +22050,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_9 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__26 
+    \Using_FPGA.Native_i_1__25 
        (.I0(Reg2_Data[11]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21793,7 +22060,7 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_10 ));
   LUT6 #(
     .INIT(64'h3202FFFF32020000)) 
-    \Using_FPGA.Native_i_1__27 
+    \Using_FPGA.Native_i_1__26 
        (.I0(Reg2_Data[12]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
@@ -21803,8 +22070,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_11 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__28 
-       (.I0(\Using_FPGA.Native_i_2__33_n_0 ),
+    \Using_FPGA.Native_i_1__27 
+       (.I0(\Using_FPGA.Native_i_2__40_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [0]),
         .I3(Use_Imm_Reg),
@@ -21812,8 +22079,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_12 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__29 
-       (.I0(\Using_FPGA.Native_i_2__32_n_0 ),
+    \Using_FPGA.Native_i_1__28 
+       (.I0(\Using_FPGA.Native_i_2__39_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [1]),
         .I3(Use_Imm_Reg),
@@ -21821,8 +22088,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_13 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__30 
-       (.I0(\Using_FPGA.Native_i_2__31_n_0 ),
+    \Using_FPGA.Native_i_1__29 
+       (.I0(\Using_FPGA.Native_i_2__38_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [2]),
         .I3(Use_Imm_Reg),
@@ -21830,8 +22097,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_14 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__31 
-       (.I0(\Using_FPGA.Native_i_2__30_n_0 ),
+    \Using_FPGA.Native_i_1__30 
+       (.I0(\Using_FPGA.Native_i_2__37_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [3]),
         .I3(Use_Imm_Reg),
@@ -21839,8 +22106,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_15 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__32 
-       (.I0(\Using_FPGA.Native_i_2__29_n_0 ),
+    \Using_FPGA.Native_i_1__31 
+       (.I0(\Using_FPGA.Native_i_2__36_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [4]),
         .I3(Use_Imm_Reg),
@@ -21848,8 +22115,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_16 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__33 
-       (.I0(\Using_FPGA.Native_i_2__28_n_0 ),
+    \Using_FPGA.Native_i_1__32 
+       (.I0(\Using_FPGA.Native_i_2__35_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [5]),
         .I3(Use_Imm_Reg),
@@ -21857,8 +22124,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_17 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__34 
-       (.I0(\Using_FPGA.Native_i_2__27_n_0 ),
+    \Using_FPGA.Native_i_1__33 
+       (.I0(\Using_FPGA.Native_i_2__34_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [6]),
         .I3(Use_Imm_Reg),
@@ -21866,8 +22133,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_18 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__35 
-       (.I0(\Using_FPGA.Native_i_2__26_n_0 ),
+    \Using_FPGA.Native_i_1__34 
+       (.I0(\Using_FPGA.Native_i_2__33_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [7]),
         .I3(Use_Imm_Reg),
@@ -21875,8 +22142,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_19 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__36 
-       (.I0(\Using_FPGA.Native_i_2__25_n_0 ),
+    \Using_FPGA.Native_i_1__35 
+       (.I0(\Using_FPGA.Native_i_2__32_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [8]),
         .I3(Use_Imm_Reg),
@@ -21884,8 +22151,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_20 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__37 
-       (.I0(\Using_FPGA.Native_i_2__24_n_0 ),
+    \Using_FPGA.Native_i_1__36 
+       (.I0(\Using_FPGA.Native_i_2__31_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [9]),
         .I3(Use_Imm_Reg),
@@ -21893,8 +22160,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_21 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__38 
-       (.I0(\Using_FPGA.Native_i_2__23_n_0 ),
+    \Using_FPGA.Native_i_1__37 
+       (.I0(\Using_FPGA.Native_i_2__30_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [10]),
         .I3(Use_Imm_Reg),
@@ -21902,8 +22169,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_22 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__39 
-       (.I0(\Using_FPGA.Native_i_2__22_n_0 ),
+    \Using_FPGA.Native_i_1__38 
+       (.I0(\Using_FPGA.Native_i_2__29_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [11]),
         .I3(Use_Imm_Reg),
@@ -21911,8 +22178,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_23 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__40 
-       (.I0(\Using_FPGA.Native_i_2__21_n_0 ),
+    \Using_FPGA.Native_i_1__39 
+       (.I0(\Using_FPGA.Native_i_2__28_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [12]),
         .I3(Use_Imm_Reg),
@@ -21920,8 +22187,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_24 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__41 
-       (.I0(\Using_FPGA.Native_i_2__20_n_0 ),
+    \Using_FPGA.Native_i_1__40 
+       (.I0(\Using_FPGA.Native_i_2__27_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [13]),
         .I3(Use_Imm_Reg),
@@ -21929,8 +22196,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_25 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__42 
-       (.I0(\Using_FPGA.Native_i_2__19_n_0 ),
+    \Using_FPGA.Native_i_1__41 
+       (.I0(\Using_FPGA.Native_i_2__26_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [14]),
         .I3(Use_Imm_Reg),
@@ -21938,8 +22205,8 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_26 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \Using_FPGA.Native_i_1__43 
-       (.I0(\Using_FPGA.Native_i_2__18_n_0 ),
+    \Using_FPGA.Native_i_1__42 
+       (.I0(\Using_FPGA.Native_i_2__25_n_0 ),
         .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .I2(\Size_17to32.imm_Reg_reg[0]_0 [15]),
         .I3(Use_Imm_Reg),
@@ -21947,132 +22214,132 @@ module microblaze_mcs_0_MB_SRL16E_32
         .O(\Using_FPGA.Native_27 ));
   LUT4 #(
     .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__18 
+    \Using_FPGA.Native_i_2__25 
        (.I0(Reg2_Data[28]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
         .I3(EX_Result[28]),
-        .O(\Using_FPGA.Native_i_2__18_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__19 
-       (.I0(Reg2_Data[27]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[27]),
-        .O(\Using_FPGA.Native_i_2__19_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__20 
-       (.I0(Reg2_Data[26]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[26]),
-        .O(\Using_FPGA.Native_i_2__20_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__21 
-       (.I0(Reg2_Data[25]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[25]),
-        .O(\Using_FPGA.Native_i_2__21_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__22 
-       (.I0(Reg2_Data[24]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[24]),
-        .O(\Using_FPGA.Native_i_2__22_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__23 
-       (.I0(Reg2_Data[23]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[23]),
-        .O(\Using_FPGA.Native_i_2__23_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__24 
-       (.I0(Reg2_Data[22]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[22]),
-        .O(\Using_FPGA.Native_i_2__24_n_0 ));
-  LUT4 #(
-    .INIT(16'h3202)) 
-    \Using_FPGA.Native_i_2__25 
-       (.I0(Reg2_Data[21]),
-        .I1(Exception_Kind),
-        .I2(Res_Forward2),
-        .I3(EX_Result[21]),
         .O(\Using_FPGA.Native_i_2__25_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__26 
-       (.I0(Reg2_Data[20]),
+       (.I0(Reg2_Data[27]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[20]),
+        .I3(EX_Result[27]),
         .O(\Using_FPGA.Native_i_2__26_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__27 
-       (.I0(Reg2_Data[19]),
+       (.I0(Reg2_Data[26]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[19]),
+        .I3(EX_Result[26]),
         .O(\Using_FPGA.Native_i_2__27_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__28 
-       (.I0(Reg2_Data[18]),
+       (.I0(Reg2_Data[25]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[18]),
+        .I3(EX_Result[25]),
         .O(\Using_FPGA.Native_i_2__28_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__29 
-       (.I0(Reg2_Data[17]),
+       (.I0(Reg2_Data[24]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[17]),
+        .I3(EX_Result[24]),
         .O(\Using_FPGA.Native_i_2__29_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__30 
-       (.I0(Reg2_Data[16]),
+       (.I0(Reg2_Data[23]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[16]),
+        .I3(EX_Result[23]),
         .O(\Using_FPGA.Native_i_2__30_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__31 
-       (.I0(Reg2_Data[15]),
+       (.I0(Reg2_Data[22]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[15]),
+        .I3(EX_Result[22]),
         .O(\Using_FPGA.Native_i_2__31_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__32 
-       (.I0(Reg2_Data[14]),
+       (.I0(Reg2_Data[21]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
-        .I3(EX_Result[14]),
+        .I3(EX_Result[21]),
         .O(\Using_FPGA.Native_i_2__32_n_0 ));
   LUT4 #(
     .INIT(16'h3202)) 
     \Using_FPGA.Native_i_2__33 
+       (.I0(Reg2_Data[20]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[20]),
+        .O(\Using_FPGA.Native_i_2__33_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__34 
+       (.I0(Reg2_Data[19]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[19]),
+        .O(\Using_FPGA.Native_i_2__34_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__35 
+       (.I0(Reg2_Data[18]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[18]),
+        .O(\Using_FPGA.Native_i_2__35_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__36 
+       (.I0(Reg2_Data[17]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[17]),
+        .O(\Using_FPGA.Native_i_2__36_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__37 
+       (.I0(Reg2_Data[16]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[16]),
+        .O(\Using_FPGA.Native_i_2__37_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__38 
+       (.I0(Reg2_Data[15]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[15]),
+        .O(\Using_FPGA.Native_i_2__38_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__39 
+       (.I0(Reg2_Data[14]),
+        .I1(Exception_Kind),
+        .I2(Res_Forward2),
+        .I3(EX_Result[14]),
+        .O(\Using_FPGA.Native_i_2__39_n_0 ));
+  LUT4 #(
+    .INIT(16'h3202)) 
+    \Using_FPGA.Native_i_2__40 
        (.I0(Reg2_Data[13]),
         .I1(Exception_Kind),
         .I2(Res_Forward2),
         .I3(EX_Result[13]),
-        .O(\Using_FPGA.Native_i_2__33_n_0 ));
+        .O(\Using_FPGA.Native_i_2__40_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -22205,9 +22472,7 @@ endmodule
 module microblaze_mcs_0_MB_SRL16E_36
    (\Result_Sel_reg[1] ,
     \Using_FPGA.Native ,
-    \Size_17to32.imm_Reg_reg[15] ,
     is_swx_I_reg,
-    using_Imm_reg,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native_0 ,
@@ -22215,17 +22480,11 @@ module microblaze_mcs_0_MB_SRL16E_36
     \Using_FPGA.Native_2 ,
     Clk,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
-    \Using_FPGA.take_Intr_2nd_Phase_reg ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
-    Imm_Value);
+    Imm_Value,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 );
   output \Result_Sel_reg[1] ;
   output \Using_FPGA.Native ;
-  output \Size_17to32.imm_Reg_reg[15] ;
   output is_swx_I_reg;
-  output using_Imm_reg;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native_0 ;
@@ -22233,39 +22492,22 @@ module microblaze_mcs_0_MB_SRL16E_36
   input \Using_FPGA.Native_2 ;
   input Clk;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
-  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
   input [0:0]Imm_Value;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
   wire [0:0]Imm_Value;
   wire \Result_Sel_reg[1] ;
-  wire \Size_17to32.imm_Reg_reg[15] ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
   wire \Using_FPGA.Native_2 ;
-  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
   wire is_swx_I_reg;
-  wire using_Imm_reg;
 
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \Size_17to32.imm_Reg[0]_i_3 
-       (.I0(\Result_Sel_reg[1] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .O(\Size_17to32.imm_Reg_reg[15] ));
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
   (* srl_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[1].SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
@@ -22281,35 +22523,22 @@ module microblaze_mcs_0_MB_SRL16E_36
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Result_Sel_reg[1] ));
-  LUT6 #(
-    .INIT(64'hFFFFFFBFFFFFFFFF)) 
-    \Using_FPGA.enable_Interrupts_I_i_2 
-       (.I0(\Size_17to32.imm_Reg_reg[15] ),
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \Using_FPGA.Native_i_3__1 
+       (.I0(\Result_Sel_reg[1] ),
         .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
         .O(\Using_FPGA.Native ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'hFF7F)) 
     is_lwx_I_i_2
        (.I0(\Result_Sel_reg[1] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I2(Imm_Value),
         .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
         .O(is_swx_I_reg));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFBF)) 
-    using_Imm_i_2
-       (.I0(\Size_17to32.imm_Reg_reg[15] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(using_Imm_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -23016,7 +23245,7 @@ module microblaze_mcs_0_MB_SRL16E_43
         .Q(\Shift_Oper_reg[1] ));
   LUT6 #(
     .INIT(64'h88BB88B8888888B8)) 
-    \Using_FPGA.Native_i_1__14 
+    \Using_FPGA.Native_i_1__13 
        (.I0(\Shift_Oper_reg[1] ),
         .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I2(Reg2_Data),
@@ -23158,7 +23387,7 @@ module microblaze_mcs_0_MB_SRL16E_44
         .Q(Imm_Value));
   LUT6 #(
     .INIT(64'hBBBBBBB8BB88BBB8)) 
-    \Using_FPGA.Native_i_1__13 
+    \Using_FPGA.Native_i_1__12 
        (.I0(Imm_Value),
         .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I2(Reg2_Data),
@@ -23300,7 +23529,7 @@ module microblaze_mcs_0_MB_SRL16E_45
         .Q(Imm_Value));
   LUT6 #(
     .INIT(64'h88BB88B8888888B8)) 
-    \Using_FPGA.Native_i_1__12 
+    \Using_FPGA.Native_i_1__11 
        (.I0(Imm_Value),
         .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I2(Reg2_Data),
@@ -23354,28 +23583,55 @@ endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_47
-   (\Size_17to32.imm_Reg_reg[15] ,
+   (mbar_decode_I_reg,
+    using_Imm_reg,
+    of_mbar_decode,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
-    Clk);
-  output \Size_17to32.imm_Reg_reg[15] ;
+    Clk,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
+    \Using_FPGA.take_Intr_2nd_Phase_reg ,
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 );
+  output mbar_decode_I_reg;
+  output using_Imm_reg;
+  output of_mbar_decode;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native ;
   input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
   input Clk;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
+  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
-  wire \Size_17to32.imm_Reg_reg[15] ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
+  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
+  wire mbar_decode_I_reg;
+  wire of_mbar_decode;
+  wire using_Imm_reg;
 
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
@@ -23391,7 +23647,25 @@ module microblaze_mcs_0_MB_SRL16E_47
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
-        .Q(\Size_17to32.imm_Reg_reg[15] ));
+        .Q(mbar_decode_I_reg));
+  LUT4 #(
+    .INIT(16'h0008)) 
+    mbar_decode_I_i_1
+       (.I0(mbar_decode_I_reg),
+        .I1(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .O(of_mbar_decode));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFF7)) 
+    using_Imm_i_2
+       (.I0(mbar_decode_I_reg),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I5(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .O(using_Imm_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -23439,51 +23713,27 @@ endmodule
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_49
    (\Size_17to32.imm_Reg_reg[15] ,
+    CI,
+    DATA_OUTA,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
-    CI,
-    DATA_OUTA,
-    \Using_FPGA.Native_2 ,
-    \Using_FPGA.Native_3 ,
-    \Using_FPGA.Native_4 ,
-    Clk,
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
-    \Using_FPGA.take_Intr_2nd_Phase_reg ,
-    MSR);
+    Clk);
   output \Size_17to32.imm_Reg_reg[15] ;
-  output \Using_FPGA.Native ;
-  output \Using_FPGA.Native_0 ;
-  output \Using_FPGA.Native_1 ;
   input CI;
   input [0:0]DATA_OUTA;
-  input \Using_FPGA.Native_2 ;
-  input \Using_FPGA.Native_3 ;
-  input \Using_FPGA.Native_4 ;
+  input \Using_FPGA.Native ;
+  input \Using_FPGA.Native_0 ;
+  input \Using_FPGA.Native_1 ;
   input Clk;
-  input \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
-  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  input [1:0]MSR;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
-  wire [1:0]MSR;
   wire \Size_17to32.imm_Reg_reg[15] ;
-  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
-  wire \Using_FPGA.Native_2 ;
-  wire \Using_FPGA.Native_3 ;
-  wire \Using_FPGA.Native_4 ;
-  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
 
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
@@ -23492,69 +23742,40 @@ module microblaze_mcs_0_MB_SRL16E_49
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
     \Use_unisim.MB_SRL16E_I1 
-       (.A0(\Using_FPGA.Native_2 ),
-        .A1(\Using_FPGA.Native_3 ),
-        .A2(\Using_FPGA.Native_4 ),
+       (.A0(\Using_FPGA.Native ),
+        .A1(\Using_FPGA.Native_0 ),
+        .A2(\Using_FPGA.Native_1 ),
         .A3(1'b0),
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Size_17to32.imm_Reg_reg[15] ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \Using_FPGA.Native_i_1__122 
-       (.I0(\Using_FPGA.Native ),
-        .I1(MSR[0]),
-        .O(\Using_FPGA.Native_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \Using_FPGA.Native_i_1__127 
-       (.I0(\Using_FPGA.Native ),
-        .I1(MSR[1]),
-        .O(\Using_FPGA.Native_1 ));
-  LUT5 #(
-    .INIT(32'h0000FE00)) 
-    \Using_FPGA.Native_i_2__0 
-       (.I0(\Size_17to32.imm_Reg_reg[15] ),
-        .I1(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I4(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .O(\Using_FPGA.Native ));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_50
    (Select_Logic_reg,
-    is_swx_I_reg,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
-    Clk,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 );
+    Clk);
   output Select_Logic_reg;
-  output is_swx_I_reg;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native ;
   input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
   input Clk;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
   wire Select_Logic_reg;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
-  wire is_swx_I_reg;
 
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
@@ -23571,86 +23792,81 @@ module microblaze_mcs_0_MB_SRL16E_50
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(Select_Logic_reg));
-  LUT2 #(
-    .INIT(4'h2)) 
-    is_swx_I_i_2
-       (.I0(Select_Logic_reg),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(is_swx_I_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_51
    (\Logic_Oper_reg[0] ,
-    \Using_FPGA.Native ,
+    jump2_I_reg,
     write_Reg_reg,
-    write_Reg_reg_0,
-    Reg_Test_Equal_i,
-    \Using_FPGA.Native_0 ,
-    \Size_17to32.imm_Reg_reg[15] ,
-    is_lwx_I_reg,
-    \Using_FPGA.Native_1 ,
+    Sign_Extend_reg,
+    Sext16_reg,
+    mbar_hold_I_reg,
+    \Using_FPGA.Native ,
     mtsmsr_write_i_reg,
     CI,
     DATA_OUTA,
+    \Using_FPGA.Native_0 ,
+    \Using_FPGA.Native_1 ,
     \Using_FPGA.Native_2 ,
-    \Using_FPGA.Native_3 ,
-    \Using_FPGA.Native_4 ,
     Clk,
+    p_1_in45_in,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
+    inHibit_EX_reg,
+    Imm_Value,
+    \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
+    Exception_Kind,
+    out,
+    mul_Executing_reg,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_FPGA.take_Intr_2nd_Phase_reg ,
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
-    Imm_Value,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
-    \Using_FPGA.take_Intr_2nd_Phase_reg_0 ,
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ,
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 );
+    \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 );
   output \Logic_Oper_reg[0] ;
-  output \Using_FPGA.Native ;
+  output jump2_I_reg;
   output write_Reg_reg;
-  output write_Reg_reg_0;
-  output Reg_Test_Equal_i;
-  output \Using_FPGA.Native_0 ;
-  output \Size_17to32.imm_Reg_reg[15] ;
-  output is_lwx_I_reg;
-  output \Using_FPGA.Native_1 ;
+  output Sign_Extend_reg;
+  output Sext16_reg;
+  output mbar_hold_I_reg;
+  output \Using_FPGA.Native ;
   output mtsmsr_write_i_reg;
   input CI;
   input [0:0]DATA_OUTA;
+  input \Using_FPGA.Native_0 ;
+  input \Using_FPGA.Native_1 ;
   input \Using_FPGA.Native_2 ;
-  input \Using_FPGA.Native_3 ;
-  input \Using_FPGA.Native_4 ;
   input Clk;
+  input p_1_in45_in;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
+  input inHibit_EX_reg;
+  input [2:0]Imm_Value;
+  input \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  input [0:0]Exception_Kind;
+  input [0:0]out;
+  input mul_Executing_reg;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  input \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
-  input [1:0]Imm_Value;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ;
+  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
-  input \Using_FPGA.take_Intr_2nd_Phase_reg_0 ;
-  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
-  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
-  wire [1:0]Imm_Value;
+  wire [0:0]Exception_Kind;
+  wire [2:0]Imm_Value;
   wire \Logic_Oper_reg[0] ;
-  wire Reg_Test_Equal_i;
-  wire \Size_17to32.imm_Reg_reg[15] ;
+  wire Sext16_reg;
+  wire Sign_Extend_reg;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
@@ -23660,212 +23876,20 @@ module microblaze_mcs_0_MB_SRL16E_51
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
-  wire \Using_FPGA.Native ;
-  wire \Using_FPGA.Native_0 ;
-  wire \Using_FPGA.Native_1 ;
-  wire \Using_FPGA.Native_2 ;
-  wire \Using_FPGA.Native_3 ;
-  wire \Using_FPGA.Native_4 ;
-  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  wire \Using_FPGA.take_Intr_2nd_Phase_reg_0 ;
-  wire is_lwx_I_reg;
-  wire mtsmsr_write_i_reg;
-  wire write_Reg_reg;
-  wire write_Reg_reg_0;
-
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \Size_17to32.imm_Reg[0]_i_2 
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(\Size_17to32.imm_Reg_reg[15] ));
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
-  (* srl_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[4].SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(\Using_FPGA.Native_2 ),
-        .A1(\Using_FPGA.Native_3 ),
-        .A2(\Using_FPGA.Native_4 ),
-        .A3(1'b0),
-        .CE(CI),
-        .CLK(Clk),
-        .D(DATA_OUTA),
-        .Q(\Logic_Oper_reg[0] ));
-  LUT5 #(
-    .INIT(32'hFFFEFEFF)) 
-    \Using_FPGA.Native_i_1__47 
-       (.I0(\Using_FPGA.Native_0 ),
-        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .I2(\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
-        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
-        .I4(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 ),
-        .O(Reg_Test_Equal_i));
-  LUT6 #(
-    .INIT(64'h00000000CDCCCCCC)) 
-    \Using_FPGA.Native_i_2__1 
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I5(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .O(\Using_FPGA.Native ));
-  LUT6 #(
-    .INIT(64'hFEFFFFFFFFFFFFFF)) 
-    \Using_FPGA.Native_i_3 
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I5(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(write_Reg_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'h02)) 
-    \Using_FPGA.Native_i_3__11 
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
-        .O(\Using_FPGA.Native_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT5 #(
-    .INIT(32'hF7FFFFFF)) 
-    \Using_FPGA.Native_i_3__12 
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(\Using_FPGA.Native_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    is_lwx_I_i_3
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(is_lwx_I_reg));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
-    mtsmsr_write_i_i_2
-       (.I0(\Logic_Oper_reg[0] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
-        .O(mtsmsr_write_i_reg));
-  LUT6 #(
-    .INIT(64'hFFF4FFF4FFF4F4F4)) 
-    write_Reg_i_3
-       (.I0(write_Reg_reg_0),
-        .I1(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
-        .I4(Imm_Value[1]),
-        .I5(Imm_Value[0]),
-        .O(write_Reg_reg));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module microblaze_mcs_0_MB_SRL16E_52
-   (\Logic_Oper_reg[1] ,
-    mtsmsr_write_i_reg,
-    write_Reg_reg,
-    Sext16_reg,
-    Sign_Extend_reg,
-    \Using_FPGA.Native ,
-    D,
-    \Using_FPGA.Native_0 ,
-    of_mbar_decode,
-    mbar_hold_I_reg,
-    CI,
-    DATA_OUTA,
-    \Using_FPGA.Native_1 ,
-    \Using_FPGA.Native_2 ,
-    \Using_FPGA.Native_3 ,
-    Clk,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
-    out,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    Exception_Kind,
-    mul_Executing_reg,
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ,
-    \Using_FPGA.take_Intr_2nd_Phase_reg ,
-    \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ,
-    mbar_hold_I_reg_0,
-    mul_Executing_reg_0);
-  output \Logic_Oper_reg[1] ;
-  output mtsmsr_write_i_reg;
-  output write_Reg_reg;
-  output Sext16_reg;
-  output Sign_Extend_reg;
-  output \Using_FPGA.Native ;
-  output D;
-  output \Using_FPGA.Native_0 ;
-  output of_mbar_decode;
-  output mbar_hold_I_reg;
-  input CI;
-  input [0:0]DATA_OUTA;
-  input \Using_FPGA.Native_1 ;
-  input \Using_FPGA.Native_2 ;
-  input \Using_FPGA.Native_3 ;
-  input Clk;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
-  input [0:0]out;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
-  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input [0:0]Exception_Kind;
-  input mul_Executing_reg;
-  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
-  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  input \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ;
-  input mbar_hold_I_reg_0;
-  input mul_Executing_reg_0;
-
-  wire CI;
-  wire Clk;
-  wire D;
-  wire [0:0]DATA_OUTA;
-  wire [0:0]Exception_Kind;
-  wire \Logic_Oper_reg[1] ;
-  wire Sext16_reg;
-  wire Sign_Extend_reg;
-  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
   wire \Using_FPGA.Native_2 ;
-  wire \Using_FPGA.Native_3 ;
-  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
+  wire inHibit_EX_reg;
+  wire jump2_I_reg;
   wire mbar_hold_I_reg;
-  wire mbar_hold_I_reg_0;
   wire mtsmsr_write_i_reg;
   wire mul_Executing_reg;
-  wire mul_Executing_reg_0;
-  wire of_mbar_decode;
   wire [0:0]out;
+  wire p_1_in45_in;
+  wire write_Reg_i_4_n_0;
   wire write_Reg_reg;
 
   LUT4 #(
@@ -23877,15 +23901,169 @@ module microblaze_mcs_0_MB_SRL16E_52
         .I3(mul_Executing_reg),
         .O(Sext16_reg));
   LUT6 #(
-    .INIT(64'h0000000400000000)) 
+    .INIT(64'h0000010000000000)) 
     Sign_Extend_i_2
-       (.I0(\Logic_Oper_reg[1] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+       (.I0(\Logic_Oper_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
         .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
         .O(Sign_Extend_reg));
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
+  (* srl_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[4].SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(\Using_FPGA.Native_0 ),
+        .A1(\Using_FPGA.Native_1 ),
+        .A2(\Using_FPGA.Native_2 ),
+        .A3(1'b0),
+        .CE(CI),
+        .CLK(Clk),
+        .D(DATA_OUTA),
+        .Q(\Logic_Oper_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \Using_FPGA.Native_i_3__13 
+       (.I0(\Logic_Oper_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .O(\Using_FPGA.Native ));
+  LUT5 #(
+    .INIT(32'h0000DAD0)) 
+    jump2_I_i_1
+       (.I0(\Logic_Oper_reg[0] ),
+        .I1(p_1_in45_in),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
+        .I4(inHibit_EX_reg),
+        .O(jump2_I_reg));
+  LUT6 #(
+    .INIT(64'h0020000000000000)) 
+    mbar_first_i_2
+       (.I0(\Logic_Oper_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
+        .I4(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .O(mbar_hold_I_reg));
+  LUT6 #(
+    .INIT(64'h0000001000000000)) 
+    mtsmsr_write_i_i_2
+       (.I0(\Logic_Oper_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
+        .I3(out),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
+        .I5(Imm_Value[0]),
+        .O(mtsmsr_write_i_reg));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFE0E0FFE0)) 
+    write_Reg_i_3
+       (.I0(Imm_Value[1]),
+        .I1(Imm_Value[2]),
+        .I2(Sign_Extend_reg),
+        .I3(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I5(write_Reg_i_4_n_0),
+        .O(write_Reg_reg));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT5 #(
+    .INIT(32'h00400000)) 
+    write_Reg_i_4
+       (.I0(\Logic_Oper_reg[0] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .O(write_Reg_i_4_n_0));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module microblaze_mcs_0_MB_SRL16E_52
+   (\Logic_Oper_reg[1] ,
+    \Using_FPGA.Native ,
+    write_Reg_reg,
+    \Using_FPGA.Native_0 ,
+    is_swx_I_reg,
+    \Using_FPGA.Native_1 ,
+    \Using_FPGA.Native_2 ,
+    CI,
+    DATA_OUTA,
+    \Using_FPGA.Native_3 ,
+    \Using_FPGA.Native_4 ,
+    \Using_FPGA.Native_5 ,
+    Clk,
+    Imm_Value,
+    \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ,
+    \Using_FPGA.take_Intr_2nd_Phase_reg ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ,
+    \Using_FPGA.take_Intr_2nd_Phase_reg_0 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ,
+    MSR);
+  output \Logic_Oper_reg[1] ;
+  output \Using_FPGA.Native ;
+  output write_Reg_reg;
+  output \Using_FPGA.Native_0 ;
+  output is_swx_I_reg;
+  output \Using_FPGA.Native_1 ;
+  output \Using_FPGA.Native_2 ;
+  input CI;
+  input [0:0]DATA_OUTA;
+  input \Using_FPGA.Native_3 ;
+  input \Using_FPGA.Native_4 ;
+  input \Using_FPGA.Native_5 ;
+  input Clk;
+  input [0:0]Imm_Value;
+  input \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
+  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ;
+  input \Using_FPGA.take_Intr_2nd_Phase_reg_0 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ;
+  input [1:0]MSR;
+
+  wire CI;
+  wire Clk;
+  wire [0:0]DATA_OUTA;
+  wire [0:0]Imm_Value;
+  wire \Logic_Oper_reg[1] ;
+  wire [1:0]MSR;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[4].RAMB36_I1 ;
+  wire \Using_FPGA.Native ;
+  wire \Using_FPGA.Native_0 ;
+  wire \Using_FPGA.Native_1 ;
+  wire \Using_FPGA.Native_2 ;
+  wire \Using_FPGA.Native_3 ;
+  wire \Using_FPGA.Native_4 ;
+  wire \Using_FPGA.Native_5 ;
+  wire \Using_FPGA.Native_i_4_n_0 ;
+  wire \Using_FPGA.take_Intr_2nd_Phase_reg ;
+  wire \Using_FPGA.take_Intr_2nd_Phase_reg_0 ;
+  wire is_swx_I_reg;
+  wire write_Reg_reg;
+
   (* box_type = "PRIMITIVE" *) 
   (* srl_bus_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers " *) 
   (* srl_name = "U0/\microblaze_I/MicroBlaze_Core_I/Area.Core/Decode_I/PreFetch_Buffer_I/PreFetch_Buffers[5].SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
@@ -23893,115 +24071,100 @@ module microblaze_mcs_0_MB_SRL16E_52
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
     \Use_unisim.MB_SRL16E_I1 
-       (.A0(\Using_FPGA.Native_1 ),
-        .A1(\Using_FPGA.Native_2 ),
-        .A2(\Using_FPGA.Native_3 ),
+       (.A0(\Using_FPGA.Native_3 ),
+        .A1(\Using_FPGA.Native_4 ),
+        .A2(\Using_FPGA.Native_5 ),
         .A3(1'b0),
         .CE(CI),
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Logic_Oper_reg[1] ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \Using_FPGA.Native_i_1__122 
+       (.I0(\Using_FPGA.Native ),
+        .I1(MSR[0]),
+        .O(\Using_FPGA.Native_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \Using_FPGA.Native_i_1__127 
+       (.I0(\Using_FPGA.Native ),
+        .I1(MSR[1]),
+        .O(\Using_FPGA.Native_2 ));
   LUT6 #(
-    .INIT(64'h004000AA000000AA)) 
-    \Using_FPGA.Native_i_1__45 
-       (.I0(\Logic_Oper_reg[1] ),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I5(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
-        .O(\Using_FPGA.Native ));
-  LUT4 #(
-    .INIT(16'h0007)) 
-    \Using_FPGA.Native_i_1__46 
-       (.I0(\Using_FPGA.Native_0 ),
-        .I1(\Using_B36_S4.The_BRAMs[3].RAMB36_I1 ),
-        .I2(Exception_Kind),
+    .INIT(64'h0000000000FE0000)) 
+    \Using_FPGA.Native_i_2__0 
+       (.I0(Imm_Value),
+        .I1(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
+        .I2(write_Reg_reg),
         .I3(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .O(D));
+        .I4(\Using_FPGA.Native_i_4_n_0 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .O(\Using_FPGA.Native ));
+  LUT6 #(
+    .INIT(64'h00000000FFFF0008)) 
+    \Using_FPGA.Native_i_2__1 
+       (.I0(\Logic_Oper_reg[1] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .I5(\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
+        .O(\Using_FPGA.Native_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFF7FF)) 
+    \Using_FPGA.Native_i_3 
+       (.I0(\Logic_Oper_reg[1] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
+        .O(write_Reg_reg));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
-    .INIT(32'h00400000)) 
-    \Using_FPGA.Native_i_2__39 
+    .INIT(32'hF7FFFFFF)) 
+    \Using_FPGA.Native_i_4 
+       (.I0(\Logic_Oper_reg[1] ),
+        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
+        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 ),
+        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 ),
+        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .O(\Using_FPGA.Native_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    is_lwx_I_i_3
        (.I0(\Logic_Oper_reg[1] ),
         .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .O(\Using_FPGA.Native_0 ));
-  LUT4 #(
-    .INIT(16'h2000)) 
-    mbar_decode_I_i_1
-       (.I0(\Using_FPGA.Native_0 ),
-        .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I2(\Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .O(of_mbar_decode));
-  LUT5 #(
-    .INIT(32'h0000CC0A)) 
-    mbar_hold_I_i_1
-       (.I0(mbar_hold_I_reg_0),
-        .I1(of_mbar_decode),
-        .I2(mul_Executing_reg_0),
-        .I3(mul_Executing_reg),
-        .I4(out),
-        .O(mbar_hold_I_reg));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFF7FFFFF)) 
-    mtsmsr_write_i_i_3
-       (.I0(\Logic_Oper_reg[1] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[4].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
-        .I5(out),
-        .O(mtsmsr_write_i_reg));
-  LUT6 #(
-    .INIT(64'h3733373F3F3F3F3F)) 
-    write_Reg_i_2
-       (.I0(\Logic_Oper_reg[1] ),
-        .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 ),
-        .I2(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I4(\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ),
-        .I5(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
-        .O(write_Reg_reg));
+        .O(is_swx_I_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_mcs_0_MB_SRL16E_53
    (p_1_in45_in,
-    inHibit_EX_reg,
     CI,
     DATA_OUTA,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
-    Clk,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 );
+    Clk);
   output p_1_in45_in;
-  output inHibit_EX_reg;
   input CI;
   input [0:0]DATA_OUTA;
   input \Using_FPGA.Native ;
   input \Using_FPGA.Native_0 ;
   input \Using_FPGA.Native_1 ;
   input Clk;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
-  wire inHibit_EX_reg;
   wire p_1_in45_in;
 
   (* box_type = "PRIMITIVE" *) 
@@ -24019,14 +24182,6 @@ module microblaze_mcs_0_MB_SRL16E_53
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(p_1_in45_in));
-  LUT4 #(
-    .INIT(16'h4700)) 
-    inHibit_EX_i_2
-       (.I0(p_1_in45_in),
-        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
-        .O(inHibit_EX_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -24089,7 +24244,6 @@ endmodule
 module microblaze_mcs_0_MB_SRL16E_55
    (\Using_FPGA.Native ,
     force1_i29_out,
-    Reg_Test_Equal_N_i7_out,
     \write_Addr_I_reg[2] ,
     CI,
     DATA_OUTA,
@@ -24097,14 +24251,12 @@ module microblaze_mcs_0_MB_SRL16E_55
     \Using_FPGA.Native_1 ,
     \Using_FPGA.Native_2 ,
     Clk,
-    \Using_FPGA.take_Intr_2nd_Phase_reg ,
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ,
-    out);
+    \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ,
+    out,
+    \Using_FPGA.take_Intr_2nd_Phase_reg );
   output \Using_FPGA.Native ;
   output force1_i29_out;
-  output Reg_Test_Equal_N_i7_out;
   output [0:0]\write_Addr_I_reg[2] ;
   input CI;
   input [0:0]DATA_OUTA;
@@ -24112,19 +24264,16 @@ module microblaze_mcs_0_MB_SRL16E_55
   input \Using_FPGA.Native_1 ;
   input \Using_FPGA.Native_2 ;
   input Clk;
-  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
-  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
   input [0:0]out;
+  input \Using_FPGA.take_Intr_2nd_Phase_reg ;
 
   wire CI;
   wire Clk;
   wire [0:0]DATA_OUTA;
-  wire Reg_Test_Equal_N_i7_out;
   wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
@@ -24149,25 +24298,15 @@ module microblaze_mcs_0_MB_SRL16E_55
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Using_FPGA.Native ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT5 #(
-    .INIT(32'h00000006)) 
-    \Using_FPGA.Native_i_1__48 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \Using_FPGA.Native_i_2__2 
        (.I0(\Using_FPGA.Native ),
-        .I1(\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 ),
-        .I2(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I3(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .I4(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
-        .O(Reg_Test_Equal_N_i7_out));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \Using_FPGA.Native_i_2__3 
-       (.I0(\Using_FPGA.Native ),
-        .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .I1(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .I2(\Using_B36_S4.The_BRAMs[2].RAMB36_I1 ),
-        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
         .O(force1_i29_out));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h54)) 
     \write_Addr_I[2]_i_1 
@@ -24189,6 +24328,8 @@ module microblaze_mcs_0_MB_SRL16E_56
     \Using_FPGA.Native_1 ,
     Clk,
     \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
     \Using_FPGA.take_Intr_2nd_Phase_reg ,
     out);
   output \Using_FPGA.reset_BIP_I_reg ;
@@ -24201,6 +24342,8 @@ module microblaze_mcs_0_MB_SRL16E_56
   input \Using_FPGA.Native_1 ;
   input Clk;
   input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   input \Using_FPGA.take_Intr_2nd_Phase_reg ;
   input [0:0]out;
 
@@ -24208,6 +24351,8 @@ module microblaze_mcs_0_MB_SRL16E_56
   wire Clk;
   wire [0:0]DATA_OUTA;
   wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
@@ -24232,20 +24377,21 @@ module microblaze_mcs_0_MB_SRL16E_56
         .CLK(Clk),
         .D(DATA_OUTA),
         .Q(\Using_FPGA.reset_BIP_I_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'h00000200)) 
     \Using_FPGA.reset_BIP_I_i_1 
        (.I0(\Using_FPGA.reset_BIP_I_reg ),
         .I1(\Using_B36_S4.The_BRAMs[0].RAMB36_I1 ),
+        .I2(\Using_B36_S4.The_BRAMs[1].RAMB36_I1 ),
+        .I3(\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ),
+        .I4(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .O(reset_BIP_I8_out));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
-    .INIT(8'h0E)) 
+    .INIT(8'h54)) 
     \write_Addr_I[3]_i_1 
-       (.I0(\Using_FPGA.reset_BIP_I_reg ),
-        .I1(\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .I2(out),
+       (.I0(out),
+        .I1(\Using_FPGA.reset_BIP_I_reg ),
+        .I2(\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .O(\write_Addr_I_reg[3] ));
 endmodule
 
@@ -24426,12 +24572,12 @@ module microblaze_mcs_0_MicroBlaze
     DATA_OUTA,
     lmb_reg_read_Q_reg,
     LMB_Ready,
-    Sl_Rdy,
-    lmb_as,
     lmb_reg_read_Q,
     lmb_reg_write,
     \No_ECC.Sl_Rdy_reg_0 ,
     lmb_reg_write_reg,
+    Sl_Rdy,
+    lmb_as,
     reset_temp,
     POR_FF_I,
     Extend_Data_Read,
@@ -24443,14 +24589,14 @@ module microblaze_mcs_0_MicroBlaze
     \No_ECC.Sl_Rdy_reg_5 ,
     \No_ECC.Sl_Rdy_reg_6 ,
     \No_ECC.Sl_Rdy_reg_7 ,
-    \cipr_rd_dff_all[24].fdr_i ,
-    \cipr_rd_dff_all[25].fdr_i ,
-    \cipr_rd_dff_all[26].fdr_i ,
-    \cipr_rd_dff_all[27].fdr_i ,
-    \cipr_rd_dff_all[28].fdr_i ,
-    \cipr_rd_dff_all[29].fdr_i ,
-    \cipr_rd_dff_all[30].fdr_i ,
-    \cipr_rd_dff_all[31].fdr_i );
+    \No_ECC.Sl_Rdy_reg_8 ,
+    \No_ECC.Sl_Rdy_reg_9 ,
+    \No_ECC.Sl_Rdy_reg_10 ,
+    \No_ECC.Sl_Rdy_reg_11 ,
+    \No_ECC.Sl_Rdy_reg_12 ,
+    \No_ECC.Sl_Rdy_reg_13 ,
+    \No_ECC.Sl_Rdy_reg_14 ,
+    \No_ECC.Sl_Rdy_reg_15 );
   output [1:0]sel_LSB;
   output [0:31]DATA_INB;
   output LMB_AddrStrobe;
@@ -24467,12 +24613,12 @@ module microblaze_mcs_0_MicroBlaze
   input [0:31]DATA_OUTA;
   input lmb_reg_read_Q_reg;
   input LMB_Ready;
-  input Sl_Rdy;
-  input lmb_as;
   input lmb_reg_read_Q;
   input lmb_reg_write;
   input \No_ECC.Sl_Rdy_reg_0 ;
   input lmb_reg_write_reg;
+  input Sl_Rdy;
+  input lmb_as;
   input reset_temp;
   input POR_FF_I;
   input [15:0]Extend_Data_Read;
@@ -24484,14 +24630,14 @@ module microblaze_mcs_0_MicroBlaze
   input \No_ECC.Sl_Rdy_reg_5 ;
   input \No_ECC.Sl_Rdy_reg_6 ;
   input \No_ECC.Sl_Rdy_reg_7 ;
-  input \cipr_rd_dff_all[24].fdr_i ;
-  input \cipr_rd_dff_all[25].fdr_i ;
-  input \cipr_rd_dff_all[26].fdr_i ;
-  input \cipr_rd_dff_all[27].fdr_i ;
-  input \cipr_rd_dff_all[28].fdr_i ;
-  input \cipr_rd_dff_all[29].fdr_i ;
-  input \cipr_rd_dff_all[30].fdr_i ;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_8 ;
+  input \No_ECC.Sl_Rdy_reg_9 ;
+  input \No_ECC.Sl_Rdy_reg_10 ;
+  input \No_ECC.Sl_Rdy_reg_11 ;
+  input \No_ECC.Sl_Rdy_reg_12 ;
+  input \No_ECC.Sl_Rdy_reg_13 ;
+  input \No_ECC.Sl_Rdy_reg_14 ;
+  input \No_ECC.Sl_Rdy_reg_15 ;
 
   wire [12:0]ADDRARDADDR;
   wire [12:0]ADDRBWRADDR;
@@ -24506,25 +24652,25 @@ module microblaze_mcs_0_MicroBlaze
   wire \No_ECC.Sl_Rdy_reg ;
   wire \No_ECC.Sl_Rdy_reg_0 ;
   wire \No_ECC.Sl_Rdy_reg_1 ;
+  wire \No_ECC.Sl_Rdy_reg_10 ;
+  wire \No_ECC.Sl_Rdy_reg_11 ;
+  wire \No_ECC.Sl_Rdy_reg_12 ;
+  wire \No_ECC.Sl_Rdy_reg_13 ;
+  wire \No_ECC.Sl_Rdy_reg_14 ;
+  wire \No_ECC.Sl_Rdy_reg_15 ;
   wire \No_ECC.Sl_Rdy_reg_2 ;
   wire \No_ECC.Sl_Rdy_reg_3 ;
   wire \No_ECC.Sl_Rdy_reg_4 ;
   wire \No_ECC.Sl_Rdy_reg_5 ;
   wire \No_ECC.Sl_Rdy_reg_6 ;
   wire \No_ECC.Sl_Rdy_reg_7 ;
+  wire \No_ECC.Sl_Rdy_reg_8 ;
+  wire \No_ECC.Sl_Rdy_reg_9 ;
   wire \No_ECC.lmb_as_reg ;
   wire \No_ECC.lmb_as_reg_0 ;
   wire POR_FF_I;
   wire Sl_Rdy;
   wire [0:3]WEB;
-  wire \cipr_rd_dff_all[24].fdr_i ;
-  wire \cipr_rd_dff_all[25].fdr_i ;
-  wire \cipr_rd_dff_all[26].fdr_i ;
-  wire \cipr_rd_dff_all[27].fdr_i ;
-  wire \cipr_rd_dff_all[28].fdr_i ;
-  wire \cipr_rd_dff_all[29].fdr_i ;
-  wire \cipr_rd_dff_all[30].fdr_i ;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire lmb_as;
   wire lmb_reg_read0;
   wire lmb_reg_read_Q;
@@ -24548,26 +24694,26 @@ module microblaze_mcs_0_MicroBlaze
         .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\No_ECC.Sl_Rdy_reg_0 (\No_ECC.Sl_Rdy_reg_0 ),
         .\No_ECC.Sl_Rdy_reg_1 (\No_ECC.Sl_Rdy_reg_1 ),
+        .\No_ECC.Sl_Rdy_reg_10 (\No_ECC.Sl_Rdy_reg_10 ),
+        .\No_ECC.Sl_Rdy_reg_11 (\No_ECC.Sl_Rdy_reg_11 ),
+        .\No_ECC.Sl_Rdy_reg_12 (\No_ECC.Sl_Rdy_reg_12 ),
+        .\No_ECC.Sl_Rdy_reg_13 (\No_ECC.Sl_Rdy_reg_13 ),
+        .\No_ECC.Sl_Rdy_reg_14 (\No_ECC.Sl_Rdy_reg_14 ),
+        .\No_ECC.Sl_Rdy_reg_15 (\No_ECC.Sl_Rdy_reg_15 ),
         .\No_ECC.Sl_Rdy_reg_2 (\No_ECC.Sl_Rdy_reg_2 ),
         .\No_ECC.Sl_Rdy_reg_3 (\No_ECC.Sl_Rdy_reg_3 ),
         .\No_ECC.Sl_Rdy_reg_4 (\No_ECC.Sl_Rdy_reg_4 ),
         .\No_ECC.Sl_Rdy_reg_5 (\No_ECC.Sl_Rdy_reg_5 ),
         .\No_ECC.Sl_Rdy_reg_6 (\No_ECC.Sl_Rdy_reg_6 ),
         .\No_ECC.Sl_Rdy_reg_7 (\No_ECC.Sl_Rdy_reg_7 ),
+        .\No_ECC.Sl_Rdy_reg_8 (\No_ECC.Sl_Rdy_reg_8 ),
+        .\No_ECC.Sl_Rdy_reg_9 (\No_ECC.Sl_Rdy_reg_9 ),
         .\No_ECC.lmb_as_reg (\No_ECC.lmb_as_reg ),
         .\No_ECC.lmb_as_reg_0 (\No_ECC.lmb_as_reg_0 ),
         .POR_FF_I(POR_FF_I),
         .Sl_Rdy(Sl_Rdy),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (LMB_AddrStrobe),
         .WEB(WEB),
-        .\cipr_rd_dff_all[24].fdr_i (\cipr_rd_dff_all[24].fdr_i ),
-        .\cipr_rd_dff_all[25].fdr_i (\cipr_rd_dff_all[25].fdr_i ),
-        .\cipr_rd_dff_all[26].fdr_i (\cipr_rd_dff_all[26].fdr_i ),
-        .\cipr_rd_dff_all[27].fdr_i (\cipr_rd_dff_all[27].fdr_i ),
-        .\cipr_rd_dff_all[28].fdr_i (\cipr_rd_dff_all[28].fdr_i ),
-        .\cipr_rd_dff_all[29].fdr_i (\cipr_rd_dff_all[29].fdr_i ),
-        .\cipr_rd_dff_all[30].fdr_i (\cipr_rd_dff_all[30].fdr_i ),
-        .\cipr_rd_dff_all[31].fdr_i (\cipr_rd_dff_all[31].fdr_i ),
         .lmb_as(lmb_as),
         .lmb_reg_read0(lmb_reg_read0),
         .lmb_reg_read_Q(lmb_reg_read_Q),
@@ -24601,12 +24747,12 @@ module microblaze_mcs_0_MicroBlaze_Area
     \Synchronize.use_sync_reset.sync_reg[2] ,
     out,
     \Synchronize.use_sync_reset.sync_reg[2]_0 ,
-    Sl_Rdy,
-    lmb_as,
     lmb_reg_read_Q,
     lmb_reg_write,
     \No_ECC.Sl_Rdy_reg_0 ,
     lmb_reg_write_reg,
+    Sl_Rdy,
+    lmb_as,
     reset_temp,
     POR_FF_I,
     Extend_Data_Read,
@@ -24618,14 +24764,14 @@ module microblaze_mcs_0_MicroBlaze_Area
     \No_ECC.Sl_Rdy_reg_5 ,
     \No_ECC.Sl_Rdy_reg_6 ,
     \No_ECC.Sl_Rdy_reg_7 ,
-    \cipr_rd_dff_all[24].fdr_i ,
-    \cipr_rd_dff_all[25].fdr_i ,
-    \cipr_rd_dff_all[26].fdr_i ,
-    \cipr_rd_dff_all[27].fdr_i ,
-    \cipr_rd_dff_all[28].fdr_i ,
-    \cipr_rd_dff_all[29].fdr_i ,
-    \cipr_rd_dff_all[30].fdr_i ,
-    \cipr_rd_dff_all[31].fdr_i );
+    \No_ECC.Sl_Rdy_reg_8 ,
+    \No_ECC.Sl_Rdy_reg_9 ,
+    \No_ECC.Sl_Rdy_reg_10 ,
+    \No_ECC.Sl_Rdy_reg_11 ,
+    \No_ECC.Sl_Rdy_reg_12 ,
+    \No_ECC.Sl_Rdy_reg_13 ,
+    \No_ECC.Sl_Rdy_reg_14 ,
+    \No_ECC.Sl_Rdy_reg_15 );
   output Select_Logic_reg;
   output [1:0]sel_LSB;
   output [0:31]DATA_INB;
@@ -24646,12 +24792,12 @@ module microblaze_mcs_0_MicroBlaze_Area
   input \Synchronize.use_sync_reset.sync_reg[2] ;
   input [0:0]out;
   input \Synchronize.use_sync_reset.sync_reg[2]_0 ;
-  input Sl_Rdy;
-  input lmb_as;
   input lmb_reg_read_Q;
   input lmb_reg_write;
   input \No_ECC.Sl_Rdy_reg_0 ;
   input lmb_reg_write_reg;
+  input Sl_Rdy;
+  input lmb_as;
   input reset_temp;
   input POR_FF_I;
   input [15:0]Extend_Data_Read;
@@ -24663,14 +24809,14 @@ module microblaze_mcs_0_MicroBlaze_Area
   input \No_ECC.Sl_Rdy_reg_5 ;
   input \No_ECC.Sl_Rdy_reg_6 ;
   input \No_ECC.Sl_Rdy_reg_7 ;
-  input \cipr_rd_dff_all[24].fdr_i ;
-  input \cipr_rd_dff_all[25].fdr_i ;
-  input \cipr_rd_dff_all[26].fdr_i ;
-  input \cipr_rd_dff_all[27].fdr_i ;
-  input \cipr_rd_dff_all[28].fdr_i ;
-  input \cipr_rd_dff_all[29].fdr_i ;
-  input \cipr_rd_dff_all[30].fdr_i ;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_8 ;
+  input \No_ECC.Sl_Rdy_reg_9 ;
+  input \No_ECC.Sl_Rdy_reg_10 ;
+  input \No_ECC.Sl_Rdy_reg_11 ;
+  input \No_ECC.Sl_Rdy_reg_12 ;
+  input \No_ECC.Sl_Rdy_reg_13 ;
+  input \No_ECC.Sl_Rdy_reg_14 ;
+  input \No_ECC.Sl_Rdy_reg_15 ;
 
   wire [12:0]ADDRARDADDR;
   wire [12:0]ADDRBWRADDR;
@@ -24781,12 +24927,20 @@ module microblaze_mcs_0_MicroBlaze_Area
   wire \No_ECC.Sl_Rdy_reg ;
   wire \No_ECC.Sl_Rdy_reg_0 ;
   wire \No_ECC.Sl_Rdy_reg_1 ;
+  wire \No_ECC.Sl_Rdy_reg_10 ;
+  wire \No_ECC.Sl_Rdy_reg_11 ;
+  wire \No_ECC.Sl_Rdy_reg_12 ;
+  wire \No_ECC.Sl_Rdy_reg_13 ;
+  wire \No_ECC.Sl_Rdy_reg_14 ;
+  wire \No_ECC.Sl_Rdy_reg_15 ;
   wire \No_ECC.Sl_Rdy_reg_2 ;
   wire \No_ECC.Sl_Rdy_reg_3 ;
   wire \No_ECC.Sl_Rdy_reg_4 ;
   wire \No_ECC.Sl_Rdy_reg_5 ;
   wire \No_ECC.Sl_Rdy_reg_6 ;
   wire \No_ECC.Sl_Rdy_reg_7 ;
+  wire \No_ECC.Sl_Rdy_reg_8 ;
+  wire \No_ECC.Sl_Rdy_reg_9 ;
   wire \No_ECC.lmb_as_reg ;
   wire \No_ECC.lmb_as_reg_0 ;
   wire [0:1]Op1_Low;
@@ -24818,14 +24972,6 @@ module microblaze_mcs_0_MicroBlaze_Area
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire [0:3]WEB;
   wire [0:4]Write_Addr;
-  wire \cipr_rd_dff_all[24].fdr_i ;
-  wire \cipr_rd_dff_all[25].fdr_i ;
-  wire \cipr_rd_dff_all[26].fdr_i ;
-  wire \cipr_rd_dff_all[27].fdr_i ;
-  wire \cipr_rd_dff_all[28].fdr_i ;
-  wire \cipr_rd_dff_all[29].fdr_i ;
-  wire \cipr_rd_dff_all[30].fdr_i ;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire lmb_as;
   wire lmb_reg_read0;
   wire lmb_reg_read_Q;
@@ -24880,6 +25026,13 @@ module microblaze_mcs_0_MicroBlaze_Area
         .\No_ECC.Sl_Rdy_reg (Data_Flow_I_n_40),
         .\No_ECC.Sl_Rdy_reg_0 (\No_ECC.Sl_Rdy_reg ),
         .\No_ECC.Sl_Rdy_reg_1 ({BRAM_Addr_B[0],BRAM_Addr_B[1]}),
+        .\No_ECC.Sl_Rdy_reg_10 (\No_ECC.Sl_Rdy_reg_9 ),
+        .\No_ECC.Sl_Rdy_reg_11 (\No_ECC.Sl_Rdy_reg_10 ),
+        .\No_ECC.Sl_Rdy_reg_12 (\No_ECC.Sl_Rdy_reg_11 ),
+        .\No_ECC.Sl_Rdy_reg_13 (\No_ECC.Sl_Rdy_reg_12 ),
+        .\No_ECC.Sl_Rdy_reg_14 (\No_ECC.Sl_Rdy_reg_13 ),
+        .\No_ECC.Sl_Rdy_reg_15 (\No_ECC.Sl_Rdy_reg_14 ),
+        .\No_ECC.Sl_Rdy_reg_16 (\No_ECC.Sl_Rdy_reg_15 ),
         .\No_ECC.Sl_Rdy_reg_2 (\No_ECC.Sl_Rdy_reg_1 ),
         .\No_ECC.Sl_Rdy_reg_3 (\No_ECC.Sl_Rdy_reg_2 ),
         .\No_ECC.Sl_Rdy_reg_4 (\No_ECC.Sl_Rdy_reg_3 ),
@@ -24887,6 +25040,7 @@ module microblaze_mcs_0_MicroBlaze_Area
         .\No_ECC.Sl_Rdy_reg_6 (\No_ECC.Sl_Rdy_reg_5 ),
         .\No_ECC.Sl_Rdy_reg_7 (\No_ECC.Sl_Rdy_reg_6 ),
         .\No_ECC.Sl_Rdy_reg_8 (\No_ECC.Sl_Rdy_reg_7 ),
+        .\No_ECC.Sl_Rdy_reg_9 (\No_ECC.Sl_Rdy_reg_8 ),
         .Op1_Low(Op1_Low),
         .Op1_Shift(\MSR_Reg_I/New_Value ),
         .OpSel1_SPR(OpSel1_SPR),
@@ -24961,14 +25115,6 @@ module microblaze_mcs_0_MicroBlaze_Area
         .\Using_FPGA.take_Intr_2nd_Phase_reg_9 (Decode_I_n_59),
         .WEB(WEB),
         .Write_Addr(Write_Addr),
-        .\cipr_rd_dff_all[24].fdr_i (\cipr_rd_dff_all[24].fdr_i ),
-        .\cipr_rd_dff_all[25].fdr_i (\cipr_rd_dff_all[25].fdr_i ),
-        .\cipr_rd_dff_all[26].fdr_i (\cipr_rd_dff_all[26].fdr_i ),
-        .\cipr_rd_dff_all[27].fdr_i (\cipr_rd_dff_all[27].fdr_i ),
-        .\cipr_rd_dff_all[28].fdr_i (\cipr_rd_dff_all[28].fdr_i ),
-        .\cipr_rd_dff_all[29].fdr_i (\cipr_rd_dff_all[29].fdr_i ),
-        .\cipr_rd_dff_all[30].fdr_i (\cipr_rd_dff_all[30].fdr_i ),
-        .\cipr_rd_dff_all[31].fdr_i (\cipr_rd_dff_all[31].fdr_i ),
         .data_Read_Mask({\Result_Mux_I/data_Read_Mask [15],\Result_Mux_I/data_Read_Mask [23]}),
         .load_Store_i_reg(Decode_I_n_86),
         .lopt(lopt),
@@ -25125,12 +25271,12 @@ module microblaze_mcs_0_MicroBlaze_Core
     DATA_OUTA,
     lmb_reg_read_Q_reg,
     LMB_Ready,
-    Sl_Rdy,
-    lmb_as,
     lmb_reg_read_Q,
     lmb_reg_write,
     \No_ECC.Sl_Rdy_reg_0 ,
     lmb_reg_write_reg,
+    Sl_Rdy,
+    lmb_as,
     reset_temp,
     POR_FF_I,
     Extend_Data_Read,
@@ -25142,14 +25288,14 @@ module microblaze_mcs_0_MicroBlaze_Core
     \No_ECC.Sl_Rdy_reg_5 ,
     \No_ECC.Sl_Rdy_reg_6 ,
     \No_ECC.Sl_Rdy_reg_7 ,
-    \cipr_rd_dff_all[24].fdr_i ,
-    \cipr_rd_dff_all[25].fdr_i ,
-    \cipr_rd_dff_all[26].fdr_i ,
-    \cipr_rd_dff_all[27].fdr_i ,
-    \cipr_rd_dff_all[28].fdr_i ,
-    \cipr_rd_dff_all[29].fdr_i ,
-    \cipr_rd_dff_all[30].fdr_i ,
-    \cipr_rd_dff_all[31].fdr_i );
+    \No_ECC.Sl_Rdy_reg_8 ,
+    \No_ECC.Sl_Rdy_reg_9 ,
+    \No_ECC.Sl_Rdy_reg_10 ,
+    \No_ECC.Sl_Rdy_reg_11 ,
+    \No_ECC.Sl_Rdy_reg_12 ,
+    \No_ECC.Sl_Rdy_reg_13 ,
+    \No_ECC.Sl_Rdy_reg_14 ,
+    \No_ECC.Sl_Rdy_reg_15 );
   output [1:0]sel_LSB;
   output [0:31]DATA_INB;
   output \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
@@ -25166,12 +25312,12 @@ module microblaze_mcs_0_MicroBlaze_Core
   input [0:31]DATA_OUTA;
   input lmb_reg_read_Q_reg;
   input LMB_Ready;
-  input Sl_Rdy;
-  input lmb_as;
   input lmb_reg_read_Q;
   input lmb_reg_write;
   input \No_ECC.Sl_Rdy_reg_0 ;
   input lmb_reg_write_reg;
+  input Sl_Rdy;
+  input lmb_as;
   input reset_temp;
   input POR_FF_I;
   input [15:0]Extend_Data_Read;
@@ -25183,14 +25329,14 @@ module microblaze_mcs_0_MicroBlaze_Core
   input \No_ECC.Sl_Rdy_reg_5 ;
   input \No_ECC.Sl_Rdy_reg_6 ;
   input \No_ECC.Sl_Rdy_reg_7 ;
-  input \cipr_rd_dff_all[24].fdr_i ;
-  input \cipr_rd_dff_all[25].fdr_i ;
-  input \cipr_rd_dff_all[26].fdr_i ;
-  input \cipr_rd_dff_all[27].fdr_i ;
-  input \cipr_rd_dff_all[28].fdr_i ;
-  input \cipr_rd_dff_all[29].fdr_i ;
-  input \cipr_rd_dff_all[30].fdr_i ;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_8 ;
+  input \No_ECC.Sl_Rdy_reg_9 ;
+  input \No_ECC.Sl_Rdy_reg_10 ;
+  input \No_ECC.Sl_Rdy_reg_11 ;
+  input \No_ECC.Sl_Rdy_reg_12 ;
+  input \No_ECC.Sl_Rdy_reg_13 ;
+  input \No_ECC.Sl_Rdy_reg_14 ;
+  input \No_ECC.Sl_Rdy_reg_15 ;
 
   wire [12:0]ADDRARDADDR;
   wire [12:0]ADDRBWRADDR;
@@ -25206,12 +25352,20 @@ module microblaze_mcs_0_MicroBlaze_Core
   wire \No_ECC.Sl_Rdy_reg ;
   wire \No_ECC.Sl_Rdy_reg_0 ;
   wire \No_ECC.Sl_Rdy_reg_1 ;
+  wire \No_ECC.Sl_Rdy_reg_10 ;
+  wire \No_ECC.Sl_Rdy_reg_11 ;
+  wire \No_ECC.Sl_Rdy_reg_12 ;
+  wire \No_ECC.Sl_Rdy_reg_13 ;
+  wire \No_ECC.Sl_Rdy_reg_14 ;
+  wire \No_ECC.Sl_Rdy_reg_15 ;
   wire \No_ECC.Sl_Rdy_reg_2 ;
   wire \No_ECC.Sl_Rdy_reg_3 ;
   wire \No_ECC.Sl_Rdy_reg_4 ;
   wire \No_ECC.Sl_Rdy_reg_5 ;
   wire \No_ECC.Sl_Rdy_reg_6 ;
   wire \No_ECC.Sl_Rdy_reg_7 ;
+  wire \No_ECC.Sl_Rdy_reg_8 ;
+  wire \No_ECC.Sl_Rdy_reg_9 ;
   wire \No_ECC.lmb_as_reg ;
   wire \No_ECC.lmb_as_reg_0 ;
   wire POR_FF_I;
@@ -25220,14 +25374,6 @@ module microblaze_mcs_0_MicroBlaze_Core
   wire Sl_Rdy;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire [0:3]WEB;
-  wire \cipr_rd_dff_all[24].fdr_i ;
-  wire \cipr_rd_dff_all[25].fdr_i ;
-  wire \cipr_rd_dff_all[26].fdr_i ;
-  wire \cipr_rd_dff_all[27].fdr_i ;
-  wire \cipr_rd_dff_all[28].fdr_i ;
-  wire \cipr_rd_dff_all[29].fdr_i ;
-  wire \cipr_rd_dff_all[30].fdr_i ;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire lmb_as;
   wire lmb_reg_read0;
   wire lmb_reg_read_Q;
@@ -25251,12 +25397,20 @@ module microblaze_mcs_0_MicroBlaze_Core
         .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\No_ECC.Sl_Rdy_reg_0 (\No_ECC.Sl_Rdy_reg_0 ),
         .\No_ECC.Sl_Rdy_reg_1 (\No_ECC.Sl_Rdy_reg_1 ),
+        .\No_ECC.Sl_Rdy_reg_10 (\No_ECC.Sl_Rdy_reg_10 ),
+        .\No_ECC.Sl_Rdy_reg_11 (\No_ECC.Sl_Rdy_reg_11 ),
+        .\No_ECC.Sl_Rdy_reg_12 (\No_ECC.Sl_Rdy_reg_12 ),
+        .\No_ECC.Sl_Rdy_reg_13 (\No_ECC.Sl_Rdy_reg_13 ),
+        .\No_ECC.Sl_Rdy_reg_14 (\No_ECC.Sl_Rdy_reg_14 ),
+        .\No_ECC.Sl_Rdy_reg_15 (\No_ECC.Sl_Rdy_reg_15 ),
         .\No_ECC.Sl_Rdy_reg_2 (\No_ECC.Sl_Rdy_reg_2 ),
         .\No_ECC.Sl_Rdy_reg_3 (\No_ECC.Sl_Rdy_reg_3 ),
         .\No_ECC.Sl_Rdy_reg_4 (\No_ECC.Sl_Rdy_reg_4 ),
         .\No_ECC.Sl_Rdy_reg_5 (\No_ECC.Sl_Rdy_reg_5 ),
         .\No_ECC.Sl_Rdy_reg_6 (\No_ECC.Sl_Rdy_reg_6 ),
         .\No_ECC.Sl_Rdy_reg_7 (\No_ECC.Sl_Rdy_reg_7 ),
+        .\No_ECC.Sl_Rdy_reg_8 (\No_ECC.Sl_Rdy_reg_8 ),
+        .\No_ECC.Sl_Rdy_reg_9 (\No_ECC.Sl_Rdy_reg_9 ),
         .\No_ECC.lmb_as_reg (\No_ECC.lmb_as_reg ),
         .\No_ECC.lmb_as_reg_0 (\No_ECC.lmb_as_reg_0 ),
         .POR_FF_I(POR_FF_I),
@@ -25266,14 +25420,6 @@ module microblaze_mcs_0_MicroBlaze_Core
         .\Synchronize.use_sync_reset.sync_reg[2]_0 (Reset_DFF_n_2),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .WEB(WEB),
-        .\cipr_rd_dff_all[24].fdr_i (\cipr_rd_dff_all[24].fdr_i ),
-        .\cipr_rd_dff_all[25].fdr_i (\cipr_rd_dff_all[25].fdr_i ),
-        .\cipr_rd_dff_all[26].fdr_i (\cipr_rd_dff_all[26].fdr_i ),
-        .\cipr_rd_dff_all[27].fdr_i (\cipr_rd_dff_all[27].fdr_i ),
-        .\cipr_rd_dff_all[28].fdr_i (\cipr_rd_dff_all[28].fdr_i ),
-        .\cipr_rd_dff_all[29].fdr_i (\cipr_rd_dff_all[29].fdr_i ),
-        .\cipr_rd_dff_all[30].fdr_i (\cipr_rd_dff_all[30].fdr_i ),
-        .\cipr_rd_dff_all[31].fdr_i (\cipr_rd_dff_all[31].fdr_i ),
         .lmb_as(lmb_as),
         .lmb_reg_read0(lmb_reg_read0),
         .lmb_reg_read_Q(lmb_reg_read_Q),
@@ -30424,9 +30570,9 @@ module microblaze_mcs_0_PreFetch_Buffer
     p_1_in,
     p_1_in45_in,
     jump2_I_reg,
-    \Using_FPGA.Native ,
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
-    mbar_first_reg,
+    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ,
+    mbar_decode_I_reg,
     Reg1_Addr,
     \Size_17to32.imm_Reg_reg[0] ,
     \Size_17to32.imm_Reg_reg[1] ,
@@ -30436,8 +30582,9 @@ module microblaze_mcs_0_PreFetch_Buffer
     load_Store_i2,
     d_AS_I15_out,
     mul_Executing0,
-    inHibit_EX0,
     inHibit_EX1,
+    jump2_I_reg_0,
+    \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
     \Using_FPGA.Native_2 ,
@@ -30472,23 +30619,21 @@ module microblaze_mcs_0_PreFetch_Buffer
     \Using_FPGA.Native_31 ,
     \Using_FPGA.Native_32 ,
     Sign_Extend_reg,
-    jump2_I_reg_0,
-    jump2_I_reg_1,
-    E,
-    enable_Interrupts_I,
-    reset_BIP_I8_out,
+    use_Reg_Neg_S_i28_out,
     \Using_FPGA.Native_33 ,
-    \Using_FPGA.Native_34 ,
-    \Using_FPGA.Native_35 ,
-    D,
-    of_mbar_decode,
+    force_Val1_i27_out,
+    use_Reg_Neg_DI_i26_out,
     force1_i29_out,
     Reg_Test_Equal_i,
     Reg_Test_Equal_N_i7_out,
-    use_Reg_Neg_S_i28_out,
+    enable_Interrupts_I,
+    reset_BIP_I8_out,
+    E,
+    \Using_FPGA.Native_34 ,
+    \Using_FPGA.Native_35 ,
     \Using_FPGA.Native_36 ,
-    force_Val1_i27_out,
-    use_Reg_Neg_DI_i26_out,
+    D,
+    of_mbar_decode,
     SR,
     \write_Addr_I_reg[4] ,
     pc_write_I,
@@ -30510,7 +30655,6 @@ module microblaze_mcs_0_PreFetch_Buffer
     mbar_hold_I_reg,
     missed_IFetch_reg,
     \Using_FPGA.Native_38 ,
-    Compare_Instr_reg,
     \Using_FPGA.Native_39 ,
     \Using_FPGA.Native_40 ,
     write_Reg_reg,
@@ -30518,10 +30662,11 @@ module microblaze_mcs_0_PreFetch_Buffer
     Sext16_reg,
     Sext8_reg,
     select_ALU_Carry_reg,
-    load_Store_i_reg,
-    swx_ready_reg,
+    Compare_Instr_reg,
     is_swx_I_reg,
     is_lwx_I_reg,
+    load_Store_i_reg,
+    swx_ready_reg,
     writing_reg,
     doublet_i_reg,
     byte_i_reg,
@@ -30536,11 +30681,8 @@ module microblaze_mcs_0_PreFetch_Buffer
     mul_Executing_reg,
     \Using_FPGA.take_Intr_2nd_Phase_reg ,
     inHibit_EX,
-    mbar_first_reg_0,
+    mbar_first_reg,
     Exception_Kind,
-    nonvalid_IFetch_n_reg_1,
-    Sl_Rdy,
-    lmb_as,
     Reg2_Data,
     Res_Forward2,
     EX_Result,
@@ -30555,21 +30697,24 @@ module microblaze_mcs_0_PreFetch_Buffer
     \No_ECC.Sl_Rdy_reg ,
     lmb_reg_write_reg,
     swx_ready,
-    jump2_I_reg_2,
+    jump2_I_reg_1,
     mtsmsr_write_i_reg_0,
     LMB_Ready,
+    nonvalid_IFetch_n_reg_1,
     \Using_FPGA.set_BIP_I_reg_0 ,
+    Sl_Rdy,
+    lmb_as,
     \Using_FPGA.Native_42 ,
-    Compare_Instr,
     MSR,
     I214_out,
     write_Carry_I_reg_0,
     Sext16_reg_0,
     Sext8_reg_0,
     select_ALU_Carry,
-    \Using_LWX_SWX_instr.reservation_reg_1 ,
+    Compare_Instr,
     is_swx_I_reg_0,
     is_lwx_I,
+    \Using_LWX_SWX_instr.reservation_reg_1 ,
     Doublet,
     Byte,
     lopt,
@@ -30586,9 +30731,9 @@ module microblaze_mcs_0_PreFetch_Buffer
   output [0:0]p_1_in;
   output p_1_in45_in;
   output jump2_I_reg;
-  output \Using_FPGA.Native ;
   output \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
-  output mbar_first_reg;
+  output \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
+  output mbar_decode_I_reg;
   output [0:0]Reg1_Addr;
   output \Size_17to32.imm_Reg_reg[0] ;
   output \Size_17to32.imm_Reg_reg[1] ;
@@ -30598,8 +30743,9 @@ module microblaze_mcs_0_PreFetch_Buffer
   output load_Store_i2;
   output d_AS_I15_out;
   output mul_Executing0;
-  output inHibit_EX0;
   output inHibit_EX1;
+  output jump2_I_reg_0;
+  output \Using_FPGA.Native ;
   output \Using_FPGA.Native_0 ;
   output \Using_FPGA.Native_1 ;
   output \Using_FPGA.Native_2 ;
@@ -30634,23 +30780,21 @@ module microblaze_mcs_0_PreFetch_Buffer
   output \Using_FPGA.Native_31 ;
   output \Using_FPGA.Native_32 ;
   output Sign_Extend_reg;
-  output jump2_I_reg_0;
-  output jump2_I_reg_1;
-  output [0:0]E;
-  output enable_Interrupts_I;
-  output reset_BIP_I8_out;
+  output use_Reg_Neg_S_i28_out;
   output \Using_FPGA.Native_33 ;
-  output \Using_FPGA.Native_34 ;
-  output \Using_FPGA.Native_35 ;
-  output D;
-  output of_mbar_decode;
+  output force_Val1_i27_out;
+  output use_Reg_Neg_DI_i26_out;
   output force1_i29_out;
   output Reg_Test_Equal_i;
   output Reg_Test_Equal_N_i7_out;
-  output use_Reg_Neg_S_i28_out;
+  output enable_Interrupts_I;
+  output reset_BIP_I8_out;
+  output [0:0]E;
+  output \Using_FPGA.Native_34 ;
+  output \Using_FPGA.Native_35 ;
   output \Using_FPGA.Native_36 ;
-  output force_Val1_i27_out;
-  output use_Reg_Neg_DI_i26_out;
+  output D;
+  output of_mbar_decode;
   output [0:0]SR;
   output [0:0]\write_Addr_I_reg[4] ;
   output pc_write_I;
@@ -30672,7 +30816,6 @@ module microblaze_mcs_0_PreFetch_Buffer
   output mbar_hold_I_reg;
   output missed_IFetch_reg;
   output \Using_FPGA.Native_38 ;
-  output Compare_Instr_reg;
   output \Using_FPGA.Native_39 ;
   output \Using_FPGA.Native_40 ;
   output write_Reg_reg;
@@ -30680,10 +30823,11 @@ module microblaze_mcs_0_PreFetch_Buffer
   output Sext16_reg;
   output Sext8_reg;
   output select_ALU_Carry_reg;
-  output load_Store_i_reg;
-  output swx_ready_reg;
+  output Compare_Instr_reg;
   output is_swx_I_reg;
   output is_lwx_I_reg;
+  output load_Store_i_reg;
+  output swx_ready_reg;
   output writing_reg;
   output doublet_i_reg;
   output byte_i_reg;
@@ -30698,11 +30842,8 @@ module microblaze_mcs_0_PreFetch_Buffer
   input mul_Executing_reg;
   input \Using_FPGA.take_Intr_2nd_Phase_reg ;
   input inHibit_EX;
-  input mbar_first_reg_0;
+  input mbar_first_reg;
   input [0:0]Exception_Kind;
-  input nonvalid_IFetch_n_reg_1;
-  input Sl_Rdy;
-  input lmb_as;
   input [0:31]Reg2_Data;
   input Res_Forward2;
   input [0:31]EX_Result;
@@ -30717,21 +30858,24 @@ module microblaze_mcs_0_PreFetch_Buffer
   input \No_ECC.Sl_Rdy_reg ;
   input lmb_reg_write_reg;
   input swx_ready;
-  input jump2_I_reg_2;
+  input jump2_I_reg_1;
   input mtsmsr_write_i_reg_0;
   input LMB_Ready;
+  input nonvalid_IFetch_n_reg_1;
   input \Using_FPGA.set_BIP_I_reg_0 ;
+  input Sl_Rdy;
+  input lmb_as;
   input \Using_FPGA.Native_42 ;
-  input Compare_Instr;
   input [1:0]MSR;
   input I214_out;
   input write_Carry_I_reg_0;
   input Sext16_reg_0;
   input Sext8_reg_0;
   input select_ALU_Carry;
-  input \Using_LWX_SWX_instr.reservation_reg_1 ;
+  input Compare_Instr;
   input is_swx_I_reg_0;
   input is_lwx_I;
+  input \Using_LWX_SWX_instr.reservation_reg_1 ;
   input Doublet;
   input Byte;
   output lopt;
@@ -30765,26 +30909,22 @@ module microblaze_mcs_0_PreFetch_Buffer
   wire PC_Incr;
   wire \PreFetch_Buffers[0].SRL16E_I_n_1 ;
   wire \PreFetch_Buffers[0].SRL16E_I_n_2 ;
-  wire \PreFetch_Buffers[0].SRL16E_I_n_3 ;
+  wire \PreFetch_Buffers[0].SRL16E_I_n_4 ;
+  wire \PreFetch_Buffers[0].SRL16E_I_n_5 ;
+  wire \PreFetch_Buffers[0].SRL16E_I_n_6 ;
   wire \PreFetch_Buffers[10].SRL16E_I_n_0 ;
-  wire \PreFetch_Buffers[12].SRL16E_I_n_2 ;
-  wire \PreFetch_Buffers[1].SRL16E_I_n_1 ;
+  wire \PreFetch_Buffers[12].SRL16E_I_n_3 ;
+  wire \PreFetch_Buffers[13].SRL16E_I_n_1 ;
   wire \PreFetch_Buffers[1].SRL16E_I_n_2 ;
-  wire \PreFetch_Buffers[1].SRL16E_I_n_3 ;
-  wire \PreFetch_Buffers[1].SRL16E_I_n_4 ;
   wire \PreFetch_Buffers[25].SRL16E_I_n_1 ;
-  wire \PreFetch_Buffers[3].SRL16E_I_n_1 ;
-  wire \PreFetch_Buffers[4].SRL16E_I_n_1 ;
+  wire \PreFetch_Buffers[2].SRL16E_I_n_1 ;
   wire \PreFetch_Buffers[4].SRL16E_I_n_2 ;
-  wire \PreFetch_Buffers[4].SRL16E_I_n_3 ;
+  wire \PreFetch_Buffers[4].SRL16E_I_n_4 ;
   wire \PreFetch_Buffers[4].SRL16E_I_n_5 ;
-  wire \PreFetch_Buffers[4].SRL16E_I_n_6 ;
   wire \PreFetch_Buffers[4].SRL16E_I_n_7 ;
-  wire \PreFetch_Buffers[4].SRL16E_I_n_9 ;
-  wire \PreFetch_Buffers[5].SRL16E_I_n_1 ;
   wire \PreFetch_Buffers[5].SRL16E_I_n_2 ;
   wire \PreFetch_Buffers[5].SRL16E_I_n_3 ;
-  wire \PreFetch_Buffers[5].SRL16E_I_n_7 ;
+  wire \PreFetch_Buffers[5].SRL16E_I_n_4 ;
   wire \PreFetch_Buffers[8].SRL16E_I_n_0 ;
   wire \PreFetch_Buffers[9].SRL16E_I_n_0 ;
   wire R;
@@ -30814,6 +30954,7 @@ module microblaze_mcs_0_PreFetch_Buffer
   wire Unsigned_Op_reg;
   wire Use_Imm_Reg;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
@@ -30875,7 +31016,6 @@ module microblaze_mcs_0_PreFetch_Buffer
   wire force1_i29_out;
   wire force_Val1_i27_out;
   wire inHibit_EX;
-  wire inHibit_EX0;
   wire inHibit_EX1;
   wire inHibit_EX_reg;
   wire is_lwx_I;
@@ -30885,7 +31025,6 @@ module microblaze_mcs_0_PreFetch_Buffer
   wire jump2_I_reg;
   wire jump2_I_reg_0;
   wire jump2_I_reg_1;
-  wire jump2_I_reg_2;
   wire lmb_as;
   wire lmb_reg_read_Q;
   wire lmb_reg_write;
@@ -30899,8 +31038,8 @@ module microblaze_mcs_0_PreFetch_Buffer
   wire lopt_2;
   wire lopt_3;
   wire lopt_4;
+  wire mbar_decode_I_reg;
   wire mbar_first_reg;
-  wire mbar_first_reg_0;
   wire mbar_hold_I_reg;
   wire mbar_hold_I_reg_0;
   wire mbar_is_sleep_reg;
@@ -30917,7 +31056,8 @@ module microblaze_mcs_0_PreFetch_Buffer
   wire nonvalid_IFetch_n_reg_0;
   wire nonvalid_IFetch_n_reg_1;
   wire of_mbar_decode;
-  wire of_valid_FDR_I_n_32;
+  wire of_valid_FDR_I_n_33;
+  wire of_valid_FDR_I_n_7;
   wire [0:0]out;
   wire [0:0]p_1_in;
   wire p_1_in45_in;
@@ -30993,72 +31133,91 @@ module microblaze_mcs_0_PreFetch_Buffer
   microblaze_mcs_0_MB_SRL16E \PreFetch_Buffers[0].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
-        .Compare_Instr_reg(\PreFetch_Buffers[0].SRL16E_I_n_3 ),
+        .Compare_Instr_reg(\PreFetch_Buffers[0].SRL16E_I_n_6 ),
         .DATA_OUTA(DATA_OUTA[0]),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
+        .\Size_17to32.imm_Reg_reg[15] (\PreFetch_Buffers[0].SRL16E_I_n_2 ),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\Result_Sel_reg[1] ),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (I2),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Logic_Oper_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (p_1_in),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (I210_in),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
         .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
-        .\Using_FPGA.Native (\PreFetch_Buffers[0].SRL16E_I_n_2 ),
-        .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1),
+        .\Using_FPGA.Native (\Using_FPGA.Native_36 ),
+        .\Using_FPGA.Native_0 (\PreFetch_Buffers[0].SRL16E_I_n_5 ),
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg),
+        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_0),
+        .\Using_FPGA.Native_3 (mbar_is_sleep_reg_1),
+        .\Using_FPGA.set_BIP_I_reg (\PreFetch_Buffers[0].SRL16E_I_n_4 ),
         .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .write_Reg_reg(\PreFetch_Buffers[0].SRL16E_I_n_1 ),
+        .mtsmsr_write_i_reg(\PreFetch_Buffers[0].SRL16E_I_n_1 ),
         .writing_reg(writing_reg));
   microblaze_mcs_0_MB_SRL16E_26 \PreFetch_Buffers[10].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[10]),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\PreFetch_Buffers[1].SRL16E_I_n_1 ),
-        .\Using_FPGA.Native (mbar_is_sleep_reg),
-        .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
-        .\Using_FPGA.enable_Interrupts_I_reg (\PreFetch_Buffers[10].SRL16E_I_n_0 ),
+        .Reg_Test_Equal_i(Reg_Test_Equal_i),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\PreFetch_Buffers[0].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Using_FPGA.Native_33 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 (p_1_in),
+        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (\PreFetch_Buffers[8].SRL16E_I_n_0 ),
+        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 (\PreFetch_Buffers[9].SRL16E_I_n_0 ),
+        .\Using_FPGA.Native (\PreFetch_Buffers[10].SRL16E_I_n_0 ),
+        .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
+        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .enable_Interrupts_I(enable_Interrupts_I));
   microblaze_mcs_0_MB_SRL16E_27 \PreFetch_Buffers[11].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[11]),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I210_in),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I2),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
-        .inHibit_EX_reg(jump2_I_reg_1),
+        .inHibit_EX_reg(inHibit_EX_reg),
         .jump2_I_reg(jump2_I_reg),
-        .jump2_I_reg_0(jump2_I_reg_0),
         .p_1_in45_in(p_1_in45_in));
   microblaze_mcs_0_MB_SRL16E_28 \PreFetch_Buffers[12].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
+        .D(D),
         .DATA_OUTA(DATA_OUTA[12]),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\Result_Sel_reg[0] ),
+        .Exception_Kind(Exception_Kind),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I2),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (\Result_Sel_reg[1] ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (I2),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\Result_Sel_reg[0] ),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Logic_Oper_reg[0] ),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (p_1_in),
         .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (jump2_I_reg),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
-        .\Using_FPGA.Native (\Using_FPGA.Native ),
-        .\Using_FPGA.Native_0 (\Using_FPGA.Native_34 ),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg),
-        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_3 (mbar_is_sleep_reg_1),
-        .\Using_FPGA.set_BIP_I_reg (\PreFetch_Buffers[12].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
+        .\Using_FPGA.Native (\Using_FPGA.Native_35 ),
+        .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
+        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1),
+        .\Using_FPGA.set_BIP_I_reg (\PreFetch_Buffers[12].SRL16E_I_n_3 ),
         .\Using_FPGA.set_BIP_I_reg_0 (\Using_FPGA.set_BIP_I_reg_0 ),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .mul_Executing_reg(mul_Executing_reg));
   microblaze_mcs_0_MB_SRL16E_29 \PreFetch_Buffers[13].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[13]),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I2),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (\Result_Sel_reg[1] ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\Result_Sel_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ),
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1));
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
+        .write_Reg_reg(\PreFetch_Buffers[13].SRL16E_I_n_1 ));
   microblaze_mcs_0_MB_SRL16E_30 \PreFetch_Buffers[14].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
@@ -31066,7 +31225,7 @@ module microblaze_mcs_0_PreFetch_Buffer
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
-        .mbar_first_reg(mbar_first_reg));
+        .mbar_decode_I_reg(mbar_decode_I_reg));
   microblaze_mcs_0_MB_SRL16E_31 \PreFetch_Buffers[15].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
@@ -31089,39 +31248,39 @@ module microblaze_mcs_0_PreFetch_Buffer
         .Use_Imm_Reg(Use_Imm_Reg),
         .\Using_B36_S4.The_BRAMs[4].RAMB36_I1 (\Size_17to32.imm_Reg_reg[1] ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (Imm_Value[0]),
-        .\Using_FPGA.Native (\Using_FPGA.Native_4 ),
-        .\Using_FPGA.Native_0 (\Using_FPGA.Native_5 ),
-        .\Using_FPGA.Native_1 (\Using_FPGA.Native_6 ),
-        .\Using_FPGA.Native_10 (\Using_FPGA.Native_15 ),
-        .\Using_FPGA.Native_11 (\Using_FPGA.Native_16 ),
-        .\Using_FPGA.Native_12 (\Using_FPGA.Native_17 ),
-        .\Using_FPGA.Native_13 (\Using_FPGA.Native_18 ),
-        .\Using_FPGA.Native_14 (\Using_FPGA.Native_19 ),
-        .\Using_FPGA.Native_15 (\Using_FPGA.Native_20 ),
-        .\Using_FPGA.Native_16 (\Using_FPGA.Native_21 ),
-        .\Using_FPGA.Native_17 (\Using_FPGA.Native_22 ),
-        .\Using_FPGA.Native_18 (\Using_FPGA.Native_23 ),
-        .\Using_FPGA.Native_19 (\Using_FPGA.Native_24 ),
-        .\Using_FPGA.Native_2 (\Using_FPGA.Native_7 ),
-        .\Using_FPGA.Native_20 (\Using_FPGA.Native_25 ),
-        .\Using_FPGA.Native_21 (\Using_FPGA.Native_26 ),
-        .\Using_FPGA.Native_22 (\Using_FPGA.Native_27 ),
-        .\Using_FPGA.Native_23 (\Using_FPGA.Native_28 ),
-        .\Using_FPGA.Native_24 (\Using_FPGA.Native_29 ),
-        .\Using_FPGA.Native_25 (\Using_FPGA.Native_30 ),
-        .\Using_FPGA.Native_26 (\Using_FPGA.Native_31 ),
-        .\Using_FPGA.Native_27 (\Using_FPGA.Native_32 ),
+        .\Using_FPGA.Native (\Using_FPGA.Native_3 ),
+        .\Using_FPGA.Native_0 (\Using_FPGA.Native_4 ),
+        .\Using_FPGA.Native_1 (\Using_FPGA.Native_5 ),
+        .\Using_FPGA.Native_10 (\Using_FPGA.Native_14 ),
+        .\Using_FPGA.Native_11 (\Using_FPGA.Native_15 ),
+        .\Using_FPGA.Native_12 (\Using_FPGA.Native_16 ),
+        .\Using_FPGA.Native_13 (\Using_FPGA.Native_17 ),
+        .\Using_FPGA.Native_14 (\Using_FPGA.Native_18 ),
+        .\Using_FPGA.Native_15 (\Using_FPGA.Native_19 ),
+        .\Using_FPGA.Native_16 (\Using_FPGA.Native_20 ),
+        .\Using_FPGA.Native_17 (\Using_FPGA.Native_21 ),
+        .\Using_FPGA.Native_18 (\Using_FPGA.Native_22 ),
+        .\Using_FPGA.Native_19 (\Using_FPGA.Native_23 ),
+        .\Using_FPGA.Native_2 (\Using_FPGA.Native_6 ),
+        .\Using_FPGA.Native_20 (\Using_FPGA.Native_24 ),
+        .\Using_FPGA.Native_21 (\Using_FPGA.Native_25 ),
+        .\Using_FPGA.Native_22 (\Using_FPGA.Native_26 ),
+        .\Using_FPGA.Native_23 (\Using_FPGA.Native_27 ),
+        .\Using_FPGA.Native_24 (\Using_FPGA.Native_28 ),
+        .\Using_FPGA.Native_25 (\Using_FPGA.Native_29 ),
+        .\Using_FPGA.Native_26 (\Using_FPGA.Native_30 ),
+        .\Using_FPGA.Native_27 (\Using_FPGA.Native_31 ),
         .\Using_FPGA.Native_28 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_29 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_3 (\Using_FPGA.Native_8 ),
+        .\Using_FPGA.Native_3 (\Using_FPGA.Native_7 ),
         .\Using_FPGA.Native_30 (mbar_is_sleep_reg_1),
-        .\Using_FPGA.Native_4 (\Using_FPGA.Native_9 ),
-        .\Using_FPGA.Native_5 (\Using_FPGA.Native_10 ),
-        .\Using_FPGA.Native_6 (\Using_FPGA.Native_11 ),
-        .\Using_FPGA.Native_7 (\Using_FPGA.Native_12 ),
-        .\Using_FPGA.Native_8 (\Using_FPGA.Native_13 ),
-        .\Using_FPGA.Native_9 (\Using_FPGA.Native_14 ),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg (of_valid_FDR_I_n_32));
+        .\Using_FPGA.Native_4 (\Using_FPGA.Native_8 ),
+        .\Using_FPGA.Native_5 (\Using_FPGA.Native_9 ),
+        .\Using_FPGA.Native_6 (\Using_FPGA.Native_10 ),
+        .\Using_FPGA.Native_7 (\Using_FPGA.Native_11 ),
+        .\Using_FPGA.Native_8 (\Using_FPGA.Native_12 ),
+        .\Using_FPGA.Native_9 (\Using_FPGA.Native_13 ),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg (of_valid_FDR_I_n_33));
   microblaze_mcs_0_MB_SRL16E_33 \PreFetch_Buffers[17].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
@@ -31152,19 +31311,13 @@ module microblaze_mcs_0_PreFetch_Buffer
         .DATA_OUTA(DATA_OUTA[1]),
         .Imm_Value(Imm_Value[10]),
         .\Result_Sel_reg[1] (\Result_Sel_reg[1] ),
-        .\Size_17to32.imm_Reg_reg[15] (\PreFetch_Buffers[1].SRL16E_I_n_2 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I2),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\Result_Sel_reg[0] ),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (I210_in),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\Result_Sel_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Logic_Oper_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (p_1_in),
-        .\Using_FPGA.Native (\PreFetch_Buffers[1].SRL16E_I_n_1 ),
+        .\Using_FPGA.Native (\Using_FPGA.Native_32 ),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .is_swx_I_reg(\PreFetch_Buffers[1].SRL16E_I_n_3 ),
-        .using_Imm_reg(\PreFetch_Buffers[1].SRL16E_I_n_4 ));
+        .is_swx_I_reg(\PreFetch_Buffers[1].SRL16E_I_n_2 ));
   microblaze_mcs_0_MB_SRL16E_37 \PreFetch_Buffers[20].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
@@ -31228,8 +31381,8 @@ module microblaze_mcs_0_PreFetch_Buffer
         .Reg2_Data(Reg2_Data[26]),
         .Res_Forward2(Res_Forward2),
         .\Shift_Oper_reg[1] (Imm_Value[5]),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_1 ),
-        .\Using_FPGA.Native (\Using_FPGA.Native_3 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[5].SRL16E_I_n_3 ),
+        .\Using_FPGA.Native (\Using_FPGA.Native_2 ),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1));
@@ -31242,8 +31395,8 @@ module microblaze_mcs_0_PreFetch_Buffer
         .Imm_Value(Imm_Value[4]),
         .Reg2_Data(Reg2_Data[27]),
         .Res_Forward2(Res_Forward2),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_1 ),
-        .\Using_FPGA.Native (\Using_FPGA.Native_2 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[5].SRL16E_I_n_3 ),
+        .\Using_FPGA.Native (\Using_FPGA.Native_1 ),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1));
@@ -31256,8 +31409,8 @@ module microblaze_mcs_0_PreFetch_Buffer
         .Imm_Value(Imm_Value[3]),
         .Reg2_Data(Reg2_Data[28]),
         .Res_Forward2(Res_Forward2),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_1 ),
-        .\Using_FPGA.Native (\Using_FPGA.Native_1 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[5].SRL16E_I_n_3 ),
+        .\Using_FPGA.Native (\Using_FPGA.Native_0 ),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1));
@@ -31273,10 +31426,19 @@ module microblaze_mcs_0_PreFetch_Buffer
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[2]),
-        .\Size_17to32.imm_Reg_reg[15] (I210_in),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I2),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (\Using_FPGA.Native_32 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\PreFetch_Buffers[0].SRL16E_I_n_5 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (mbar_decode_I_reg),
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1));
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
+        .mbar_decode_I_reg(I210_in),
+        .of_mbar_decode(of_mbar_decode),
+        .using_Imm_reg(\PreFetch_Buffers[2].SRL16E_I_n_1 ));
   microblaze_mcs_0_MB_SRL16E_48 \PreFetch_Buffers[30].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
@@ -31289,103 +31451,83 @@ module microblaze_mcs_0_PreFetch_Buffer
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[31]),
-        .MSR(MSR),
         .\Size_17to32.imm_Reg_reg[15] (Imm_Value[0]),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\PreFetch_Buffers[0].SRL16E_I_n_2 ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_3 ),
-        .\Using_B36_S4.The_BRAMs[4].RAMB36_I1 (\Size_17to32.imm_Reg_reg[1] ),
-        .\Using_FPGA.Native (\Using_FPGA.Native_0 ),
-        .\Using_FPGA.Native_0 (\Using_FPGA.Native_39 ),
-        .\Using_FPGA.Native_1 (\Using_FPGA.Native_40 ),
-        .\Using_FPGA.Native_2 (mbar_is_sleep_reg),
-        .\Using_FPGA.Native_3 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_4 (mbar_is_sleep_reg_1),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ));
+        .\Using_FPGA.Native (mbar_is_sleep_reg),
+        .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1));
   microblaze_mcs_0_MB_SRL16E_50 \PreFetch_Buffers[3].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[3]),
         .Select_Logic_reg(I2),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
-        .is_swx_I_reg(\PreFetch_Buffers[3].SRL16E_I_n_1 ));
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1));
   microblaze_mcs_0_MB_SRL16E_51 \PreFetch_Buffers[4].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[4]),
-        .Imm_Value(Imm_Value[3:2]),
+        .Exception_Kind(Exception_Kind),
+        .Imm_Value({Imm_Value[3:2],Imm_Value[0]}),
         .\Logic_Oper_reg[0] (\Logic_Oper_reg[0] ),
-        .Reg_Test_Equal_i(Reg_Test_Equal_i),
-        .\Size_17to32.imm_Reg_reg[15] (\PreFetch_Buffers[4].SRL16E_I_n_6 ),
+        .Sext16_reg(\PreFetch_Buffers[4].SRL16E_I_n_4 ),
+        .Sign_Extend_reg(Sign_Extend_reg),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I210_in),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (\PreFetch_Buffers[1].SRL16E_I_n_2 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (I2),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 (\PreFetch_Buffers[0].SRL16E_I_n_1 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 (\Result_Sel_reg[1] ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 (\Result_Sel_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (I2),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\Result_Sel_reg[1] ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 (\Result_Sel_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 (\Using_FPGA.Native_32 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 (\PreFetch_Buffers[0].SRL16E_I_n_1 ),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (Sign_Extend_reg),
-        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (\PreFetch_Buffers[9].SRL16E_I_n_0 ),
-        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 (\PreFetch_Buffers[10].SRL16E_I_n_0 ),
-        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 (\PreFetch_Buffers[8].SRL16E_I_n_0 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\PreFetch_Buffers[5].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (jump2_I_reg),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (mbar_decode_I_reg),
         .\Using_B36_S4.The_BRAMs[4].RAMB36_I1 (\Size_17to32.imm_Reg_reg[1] ),
-        .\Using_FPGA.Native (\PreFetch_Buffers[4].SRL16E_I_n_1 ),
-        .\Using_FPGA.Native_0 (\PreFetch_Buffers[4].SRL16E_I_n_5 ),
-        .\Using_FPGA.Native_1 (\Using_FPGA.Native_37 ),
-        .\Using_FPGA.Native_2 (mbar_is_sleep_reg),
-        .\Using_FPGA.Native_3 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_4 (mbar_is_sleep_reg_1),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg_0 (\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .is_lwx_I_reg(\PreFetch_Buffers[4].SRL16E_I_n_7 ),
-        .mtsmsr_write_i_reg(\PreFetch_Buffers[4].SRL16E_I_n_9 ),
-        .write_Reg_reg(\PreFetch_Buffers[4].SRL16E_I_n_2 ),
-        .write_Reg_reg_0(\PreFetch_Buffers[4].SRL16E_I_n_3 ));
+        .\Using_FPGA.Native (\Using_FPGA.Native_37 ),
+        .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
+        .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
+        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_1),
+        .inHibit_EX_reg(of_valid_FDR_I_n_7),
+        .jump2_I_reg(jump2_I_reg_0),
+        .mbar_hold_I_reg(\PreFetch_Buffers[4].SRL16E_I_n_5 ),
+        .mtsmsr_write_i_reg(\PreFetch_Buffers[4].SRL16E_I_n_7 ),
+        .mul_Executing_reg(mul_Executing_reg),
+        .out(out),
+        .p_1_in45_in(p_1_in45_in),
+        .write_Reg_reg(\PreFetch_Buffers[4].SRL16E_I_n_2 ));
   microblaze_mcs_0_MB_SRL16E_52 \PreFetch_Buffers[5].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
-        .D(D),
         .DATA_OUTA(DATA_OUTA[5]),
-        .Exception_Kind(Exception_Kind),
+        .Imm_Value(Imm_Value[0]),
         .\Logic_Oper_reg[1] (p_1_in),
-        .Sext16_reg(\PreFetch_Buffers[5].SRL16E_I_n_3 ),
-        .Sign_Extend_reg(Sign_Extend_reg),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (I2),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (I210_in),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\Result_Sel_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 (\Result_Sel_reg[1] ),
+        .MSR(MSR),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\PreFetch_Buffers[0].SRL16E_I_n_4 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (I2),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (\Using_FPGA.Native_32 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 (I210_in),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 (\Result_Sel_reg[1] ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 (\Result_Sel_reg[0] ),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Logic_Oper_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (\Using_FPGA.Native ),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 (mbar_first_reg),
         .\Using_B36_S4.The_BRAMs[4].RAMB36_I1 (\Size_17to32.imm_Reg_reg[1] ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (Imm_Value[0]),
-        .\Using_FPGA.Native (\Using_FPGA.Native_35 ),
-        .\Using_FPGA.Native_0 (\PreFetch_Buffers[5].SRL16E_I_n_7 ),
-        .\Using_FPGA.Native_1 (mbar_is_sleep_reg),
-        .\Using_FPGA.Native_2 (mbar_is_sleep_reg_0),
-        .\Using_FPGA.Native_3 (mbar_is_sleep_reg_1),
+        .\Using_FPGA.Native (\Using_FPGA.Native ),
+        .\Using_FPGA.Native_0 (\PreFetch_Buffers[5].SRL16E_I_n_3 ),
+        .\Using_FPGA.Native_1 (\Using_FPGA.Native_39 ),
+        .\Using_FPGA.Native_2 (\Using_FPGA.Native_40 ),
+        .\Using_FPGA.Native_3 (mbar_is_sleep_reg),
+        .\Using_FPGA.Native_4 (mbar_is_sleep_reg_0),
+        .\Using_FPGA.Native_5 (mbar_is_sleep_reg_1),
         .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
-        .mbar_hold_I_reg(mbar_hold_I_reg),
-        .mbar_hold_I_reg_0(mbar_hold_I_reg_0),
-        .mtsmsr_write_i_reg(\PreFetch_Buffers[5].SRL16E_I_n_1 ),
-        .mul_Executing_reg(mul_Executing_reg),
-        .mul_Executing_reg_0(mul_Executing_reg_0),
-        .of_mbar_decode(of_mbar_decode),
-        .out(out),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg_0 (\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
+        .is_swx_I_reg(\PreFetch_Buffers[5].SRL16E_I_n_4 ),
         .write_Reg_reg(\PreFetch_Buffers[5].SRL16E_I_n_2 ));
   microblaze_mcs_0_MB_SRL16E_53 \PreFetch_Buffers[6].SRL16E_I 
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[6]),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (p_1_in),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (jump2_I_reg),
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
-        .inHibit_EX_reg(inHibit_EX_reg),
         .p_1_in45_in(p_1_in45_in));
   microblaze_mcs_0_MB_SRL16E_54 \PreFetch_Buffers[7].SRL16E_I 
        (.CI(CI),
@@ -31401,10 +31543,8 @@ module microblaze_mcs_0_PreFetch_Buffer
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[8]),
-        .Reg_Test_Equal_N_i7_out(Reg_Test_Equal_N_i7_out),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_5 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Using_FPGA.Native_33 ),
         .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (\PreFetch_Buffers[9].SRL16E_I_n_0 ),
-        .\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 (\PreFetch_Buffers[10].SRL16E_I_n_0 ),
         .\Using_FPGA.Native (\PreFetch_Buffers[8].SRL16E_I_n_0 ),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_0),
@@ -31417,7 +31557,9 @@ module microblaze_mcs_0_PreFetch_Buffer
        (.CI(CI),
         .Clk(Clk),
         .DATA_OUTA(DATA_OUTA[9]),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\PreFetch_Buffers[1].SRL16E_I_n_1 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\PreFetch_Buffers[0].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\Logic_Oper_reg[0] ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (p_1_in),
         .\Using_FPGA.Native (mbar_is_sleep_reg),
         .\Using_FPGA.Native_0 (mbar_is_sleep_reg_0),
         .\Using_FPGA.Native_1 (mbar_is_sleep_reg_1),
@@ -31437,11 +31579,12 @@ module microblaze_mcs_0_PreFetch_Buffer
         .E(E),
         .Exception_Kind(Exception_Kind),
         .I214_out(I214_out),
-        .Imm_Value(Imm_Value[6]),
+        .Imm_Value(Imm_Value[0]),
         .LMB_Ready(LMB_Ready),
         .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .R(R),
         .R_0(R_0),
+        .Reg_Test_Equal_N_i7_out(Reg_Test_Equal_N_i7_out),
         .S3_out(S3_out),
         .SR(SR),
         .Select_Logic0(Select_Logic0),
@@ -31451,48 +31594,46 @@ module microblaze_mcs_0_PreFetch_Buffer
         .Sext8_reg_0(Sext8_reg_0),
         .\Size_17to32.imm_Reg_reg[15] (I175_in),
         .Sl_Rdy(Sl_Rdy),
-        .\Synchronize.use_sync_reset.sync_reg[2] (\PreFetch_Buffers[5].SRL16E_I_n_1 ),
+        .\Synchronize.use_sync_reset.sync_reg[2] (\PreFetch_Buffers[4].SRL16E_I_n_7 ),
         .Unsigned_Op_reg(Unsigned_Op_reg),
         .Use_Imm_Reg(Use_Imm_Reg),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1 (\Result_Sel_reg[1] ),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 (\Result_Sel_reg[0] ),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_1 (I210_in),
         .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_2 (I2),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 (\PreFetch_Buffers[1].SRL16E_I_n_2 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 (\PreFetch_Buffers[1].SRL16E_I_n_4 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 (\PreFetch_Buffers[1].SRL16E_I_n_1 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 (\PreFetch_Buffers[0].SRL16E_I_n_3 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 (\PreFetch_Buffers[1].SRL16E_I_n_3 ),
-        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 (\PreFetch_Buffers[3].SRL16E_I_n_1 ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[5].SRL16E_I_n_7 ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\PreFetch_Buffers[4].SRL16E_I_n_6 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_3 (\Using_FPGA.Native_32 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_4 (\PreFetch_Buffers[0].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_5 (\PreFetch_Buffers[0].SRL16E_I_n_4 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_6 (\PreFetch_Buffers[2].SRL16E_I_n_1 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_7 (\PreFetch_Buffers[0].SRL16E_I_n_5 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_8 (\PreFetch_Buffers[0].SRL16E_I_n_6 ),
+        .\Using_B36_S4.The_BRAMs[0].RAMB36_I1_9 (\PreFetch_Buffers[1].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_5 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 (\Logic_Oper_reg[0] ),
         .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_1 (p_1_in),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 (\PreFetch_Buffers[4].SRL16E_I_n_9 ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_3 (\Logic_Oper_reg[0] ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_4 (\PreFetch_Buffers[5].SRL16E_I_n_2 ),
-        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_5 (\PreFetch_Buffers[4].SRL16E_I_n_7 ),
+        .\Using_B36_S4.The_BRAMs[1].RAMB36_I1_2 (\PreFetch_Buffers[5].SRL16E_I_n_4 ),
         .\Using_B36_S4.The_BRAMs[2].RAMB36_I1 (\PreFetch_Buffers[8].SRL16E_I_n_0 ),
         .\Using_B36_S4.The_BRAMs[2].RAMB36_I1_0 (\PreFetch_Buffers[9].SRL16E_I_n_0 ),
         .\Using_B36_S4.The_BRAMs[2].RAMB36_I1_1 (\PreFetch_Buffers[10].SRL16E_I_n_0 ),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (mbar_first_reg),
-        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 (\Using_FPGA.Native_34 ),
-        .\Using_B36_S4.The_BRAMs[4].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_2 ),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1 (\Using_FPGA.Native_35 ),
+        .\Using_B36_S4.The_BRAMs[3].RAMB36_I1_0 (\PreFetch_Buffers[13].SRL16E_I_n_1 ),
         .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 (\PreFetch_Buffers[25].SRL16E_I_n_1 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (Imm_Value[5]),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (Imm_Value[0]),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (Imm_Value[6]),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 (Imm_Value[5]),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\PreFetch_Buffers[4].SRL16E_I_n_2 ),
         .\Using_FPGA.Native_0 (\Using_FPGA.Native_33 ),
-        .\Using_FPGA.Native_1 (\Using_FPGA.Native_36 ),
+        .\Using_FPGA.Native_1 (\Using_FPGA.Native_34 ),
         .\Using_FPGA.Native_2 (\Using_FPGA.Native_38 ),
-        .\Using_FPGA.Native_3 (of_valid_FDR_I_n_32),
+        .\Using_FPGA.Native_3 (of_valid_FDR_I_n_33),
         .\Using_FPGA.Native_4 (\Buffer_DFFs[2].MUXCY_XOR_I_n_1 ),
         .\Using_FPGA.Native_5 (\Using_FPGA.Native_41 ),
         .\Using_FPGA.Native_6 (mbar_is_sleep_reg),
         .\Using_FPGA.Native_7 (\Using_FPGA.Native_42 ),
         .\Using_FPGA.set_BIP_I_reg (\Using_FPGA.set_BIP_I_reg ),
-        .\Using_FPGA.set_BIP_I_reg_0 (\PreFetch_Buffers[12].SRL16E_I_n_2 ),
+        .\Using_FPGA.set_BIP_I_reg_0 (\PreFetch_Buffers[12].SRL16E_I_n_3 ),
         .\Using_FPGA.take_Intr_2nd_Phase_reg (\Using_FPGA.take_Intr_2nd_Phase_reg ),
         .\Using_FPGA.take_Intr_2nd_Phase_reg_0 (\Using_FPGA.take_Intr_2nd_Phase_reg_0 ),
-        .\Using_FPGA.take_Intr_2nd_Phase_reg_1 (\PreFetch_Buffers[5].SRL16E_I_n_3 ),
+        .\Using_FPGA.take_Intr_2nd_Phase_reg_1 (\PreFetch_Buffers[4].SRL16E_I_n_4 ),
         .\Using_LWX_SWX_instr.reservation_reg (\Using_LWX_SWX_instr.reservation_reg ),
         .\Using_LWX_SWX_instr.reservation_reg_0 (\Using_LWX_SWX_instr.reservation_reg_0 ),
         .\Using_LWX_SWX_instr.reservation_reg_1 (\Using_LWX_SWX_instr.reservation_reg_1 ),
@@ -31504,14 +31645,13 @@ module microblaze_mcs_0_PreFetch_Buffer
         .ex_Valid_reg(ex_Valid_reg),
         .force_Val1_i27_out(force_Val1_i27_out),
         .inHibit_EX(inHibit_EX),
-        .inHibit_EX0(inHibit_EX0),
         .inHibit_EX1(inHibit_EX1),
         .is_lwx_I(is_lwx_I),
         .is_lwx_I_reg(is_lwx_I_reg),
         .is_swx_I_reg(is_swx_I_reg),
         .is_swx_I_reg_0(is_swx_I_reg_0),
-        .jump2_I_reg(jump2_I_reg_1),
-        .jump2_I_reg_0(jump2_I_reg_2),
+        .jump2_I_reg(of_valid_FDR_I_n_7),
+        .jump2_I_reg_0(jump2_I_reg_1),
         .lmb_as(lmb_as),
         .lmb_reg_read_Q(lmb_reg_read_Q),
         .lmb_reg_write(lmb_reg_write),
@@ -31520,7 +31660,9 @@ module microblaze_mcs_0_PreFetch_Buffer
         .load_Store_i2(load_Store_i2),
         .load_Store_i_reg(load_Store_i_reg),
         .load_Store_i_reg_0(load_Store_i_reg_0),
-        .mbar_first_reg(mbar_first_reg_0),
+        .mbar_first_reg(mbar_first_reg),
+        .mbar_hold_I_reg(mbar_hold_I_reg),
+        .mbar_hold_I_reg_0(mbar_hold_I_reg_0),
         .missed_IFetch(missed_IFetch),
         .missed_IFetch_reg(missed_IFetch_reg),
         .mtsmsr_write_i_reg(mtsmsr_write_i_reg),
@@ -35280,22 +35422,22 @@ module microblaze_mcs_0_Result_Mux
     Select_Logic_reg_21,
     \No_ECC.Sl_Rdy_reg_5 ,
     Select_Logic_reg_22,
-    \cipr_rd_dff_all[24].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_6 ,
     Select_Logic_reg_23,
-    \cipr_rd_dff_all[25].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_7 ,
     Select_Logic_reg_24,
-    \cipr_rd_dff_all[26].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_8 ,
     Select_Logic_reg_25,
-    \cipr_rd_dff_all[27].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_9 ,
     Select_Logic_reg_26,
-    \cipr_rd_dff_all[28].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_10 ,
     Select_Logic_reg_27,
-    \cipr_rd_dff_all[29].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_11 ,
     \Using_FPGA.Native_0 ,
     Select_Logic_reg_28,
-    \cipr_rd_dff_all[30].fdr_i ,
+    \No_ECC.Sl_Rdy_reg_12 ,
     Select_Logic_reg_29,
-    \cipr_rd_dff_all[31].fdr_i );
+    \No_ECC.Sl_Rdy_reg_13 );
   output [0:31]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input ALU_Result;
@@ -35337,22 +35479,22 @@ module microblaze_mcs_0_Result_Mux
   input Select_Logic_reg_21;
   input \No_ECC.Sl_Rdy_reg_5 ;
   input Select_Logic_reg_22;
-  input \cipr_rd_dff_all[24].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_6 ;
   input Select_Logic_reg_23;
-  input \cipr_rd_dff_all[25].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_7 ;
   input Select_Logic_reg_24;
-  input \cipr_rd_dff_all[26].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_8 ;
   input Select_Logic_reg_25;
-  input \cipr_rd_dff_all[27].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_9 ;
   input Select_Logic_reg_26;
-  input \cipr_rd_dff_all[28].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_10 ;
   input Select_Logic_reg_27;
-  input \cipr_rd_dff_all[29].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_11 ;
   input [1:0]\Using_FPGA.Native_0 ;
   input Select_Logic_reg_28;
-  input \cipr_rd_dff_all[30].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_12 ;
   input Select_Logic_reg_29;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg_13 ;
 
   wire [12:0]ADDRBWRADDR;
   wire ALU_Result;
@@ -35363,10 +35505,18 @@ module microblaze_mcs_0_Result_Mux
   wire \No_ECC.Sl_Rdy_reg ;
   wire \No_ECC.Sl_Rdy_reg_0 ;
   wire \No_ECC.Sl_Rdy_reg_1 ;
+  wire \No_ECC.Sl_Rdy_reg_10 ;
+  wire \No_ECC.Sl_Rdy_reg_11 ;
+  wire \No_ECC.Sl_Rdy_reg_12 ;
+  wire \No_ECC.Sl_Rdy_reg_13 ;
   wire \No_ECC.Sl_Rdy_reg_2 ;
   wire \No_ECC.Sl_Rdy_reg_3 ;
   wire \No_ECC.Sl_Rdy_reg_4 ;
   wire \No_ECC.Sl_Rdy_reg_5 ;
+  wire \No_ECC.Sl_Rdy_reg_6 ;
+  wire \No_ECC.Sl_Rdy_reg_7 ;
+  wire \No_ECC.Sl_Rdy_reg_8 ;
+  wire \No_ECC.Sl_Rdy_reg_9 ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
   wire Select_Logic_reg_0;
@@ -35402,22 +35552,14 @@ module microblaze_mcs_0_Result_Mux
   wire Shift_Logic_Res;
   wire \Using_FPGA.Native ;
   wire [1:0]\Using_FPGA.Native_0 ;
-  wire \cipr_rd_dff_all[24].fdr_i ;
-  wire \cipr_rd_dff_all[25].fdr_i ;
-  wire \cipr_rd_dff_all[26].fdr_i ;
-  wire \cipr_rd_dff_all[27].fdr_i ;
-  wire \cipr_rd_dff_all[28].fdr_i ;
-  wire \cipr_rd_dff_all[29].fdr_i ;
-  wire \cipr_rd_dff_all[30].fdr_i ;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire [1:0]data_Read_Mask;
 
   microblaze_mcs_0_Result_Mux_Bit \Result_Mux_Bits[0].Result_Mux_Bit_I 
        (.EX_Result(EX_Result[0]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_13 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_29),
         .\Using_FPGA.Native (\Using_FPGA.Native_0 [1]),
-        .\cipr_rd_dff_all[31].fdr_i (\cipr_rd_dff_all[31].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_188 \Result_Mux_Bits[10].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[6]),
@@ -35491,10 +35633,10 @@ module microblaze_mcs_0_Result_Mux
         .data_Read_Mask(data_Read_Mask[0]));
   microblaze_mcs_0_Result_Mux_Bit_198 \Result_Mux_Bits[1].Result_Mux_Bit_I 
        (.EX_Result(EX_Result[1]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_12 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_28),
         .\Using_FPGA.Native (\Using_FPGA.Native_0 [0]),
-        .\cipr_rd_dff_all[30].fdr_i (\cipr_rd_dff_all[30].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_199 \Result_Mux_Bits[20].Result_Mux_Bit_I 
        (.ADDRBWRADDR(ADDRBWRADDR[9]),
@@ -35563,9 +35705,9 @@ module microblaze_mcs_0_Result_Mux
   microblaze_mcs_0_Result_Mux_Bit_209 \Result_Mux_Bits[2].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[14]),
         .EX_Result(EX_Result[2]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_11 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_27),
-        .\cipr_rd_dff_all[29].fdr_i (\cipr_rd_dff_all[29].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_210 \Result_Mux_Bits[30].Result_Mux_Bit_I 
        (.EX_Result(EX_Result[30]),
@@ -35582,37 +35724,37 @@ module microblaze_mcs_0_Result_Mux
   microblaze_mcs_0_Result_Mux_Bit_212 \Result_Mux_Bits[3].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[13]),
         .EX_Result(EX_Result[3]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_10 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_26),
-        .\cipr_rd_dff_all[28].fdr_i (\cipr_rd_dff_all[28].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_213 \Result_Mux_Bits[4].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[12]),
         .EX_Result(EX_Result[4]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_9 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_25),
-        .\cipr_rd_dff_all[27].fdr_i (\cipr_rd_dff_all[27].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_214 \Result_Mux_Bits[5].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[11]),
         .EX_Result(EX_Result[5]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_8 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_24),
-        .\cipr_rd_dff_all[26].fdr_i (\cipr_rd_dff_all[26].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_215 \Result_Mux_Bits[6].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[10]),
         .EX_Result(EX_Result[6]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_7 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_23),
-        .\cipr_rd_dff_all[25].fdr_i (\cipr_rd_dff_all[25].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_216 \Result_Mux_Bits[7].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[9]),
         .EX_Result(EX_Result[7]),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg_6 ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg_22),
-        .\cipr_rd_dff_all[24].fdr_i (\cipr_rd_dff_all[24].fdr_i ),
         .data_Read_Mask(data_Read_Mask[1]));
   microblaze_mcs_0_Result_Mux_Bit_217 \Result_Mux_Bits[8].Result_Mux_Bit_I 
        (.BRAM_Addr_B(BRAM_Addr_B[8]),
@@ -35637,28 +35779,28 @@ module microblaze_mcs_0_Result_Mux_Bit
     \Using_FPGA.Native ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[31].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]\Using_FPGA.Native ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
   wire [0:0]\Using_FPGA.Native ;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_279 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[31].fdr_i (\cipr_rd_dff_all[31].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_280 Mul_ALU_Mux
        (.I4(I4),
@@ -36033,28 +36175,28 @@ module microblaze_mcs_0_Result_Mux_Bit_198
     \Using_FPGA.Native ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[30].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]\Using_FPGA.Native ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[30].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
   wire [0:0]\Using_FPGA.Native ;
-  wire \cipr_rd_dff_all[30].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_257 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[30].fdr_i (\cipr_rd_dff_all[30].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_258 Mul_ALU_Mux
        (.I4(I4),
@@ -36405,28 +36547,28 @@ module microblaze_mcs_0_Result_Mux_Bit_209
     BRAM_Addr_B,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[29].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]BRAM_Addr_B;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[29].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]BRAM_Addr_B;
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[29].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_235 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[29].fdr_i (\cipr_rd_dff_all[29].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_236 Mul_ALU_Mux
        (.BRAM_Addr_B(BRAM_Addr_B),
@@ -36505,28 +36647,28 @@ module microblaze_mcs_0_Result_Mux_Bit_212
     BRAM_Addr_B,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[28].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]BRAM_Addr_B;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[28].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]BRAM_Addr_B;
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[28].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_229 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[28].fdr_i (\cipr_rd_dff_all[28].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_230 Mul_ALU_Mux
        (.BRAM_Addr_B(BRAM_Addr_B),
@@ -36541,28 +36683,28 @@ module microblaze_mcs_0_Result_Mux_Bit_213
     BRAM_Addr_B,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[27].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]BRAM_Addr_B;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[27].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]BRAM_Addr_B;
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[27].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_227 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[27].fdr_i (\cipr_rd_dff_all[27].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_228 Mul_ALU_Mux
        (.BRAM_Addr_B(BRAM_Addr_B),
@@ -36577,28 +36719,28 @@ module microblaze_mcs_0_Result_Mux_Bit_214
     BRAM_Addr_B,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[26].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]BRAM_Addr_B;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[26].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]BRAM_Addr_B;
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[26].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_225 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[26].fdr_i (\cipr_rd_dff_all[26].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_226 Mul_ALU_Mux
        (.BRAM_Addr_B(BRAM_Addr_B),
@@ -36613,28 +36755,28 @@ module microblaze_mcs_0_Result_Mux_Bit_215
     BRAM_Addr_B,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[25].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]BRAM_Addr_B;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[25].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]BRAM_Addr_B;
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[25].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_223 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[25].fdr_i (\cipr_rd_dff_all[25].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_224 Mul_ALU_Mux
        (.BRAM_Addr_B(BRAM_Addr_B),
@@ -36649,28 +36791,28 @@ module microblaze_mcs_0_Result_Mux_Bit_216
     BRAM_Addr_B,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[24].fdr_i );
+    \No_ECC.Sl_Rdy_reg );
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input [0:0]BRAM_Addr_B;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[24].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
 
   wire [0:0]BRAM_Addr_B;
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[24].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_221 Data_Shift_Mux
        (.EX_Result(EX_Result),
         .I4(I4),
+        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .\Result_Sel_reg[0] (\Result_Sel_reg[0] ),
         .Select_Logic_reg(Select_Logic_reg),
-        .\cipr_rd_dff_all[24].fdr_i (\cipr_rd_dff_all[24].fdr_i ),
         .data_Read_Mask(data_Read_Mask));
   microblaze_mcs_0_MB_LUT4__parameterized33_222 Mul_ALU_Mux
        (.BRAM_Addr_B(BRAM_Addr_B),
@@ -39654,8 +39796,8 @@ module microblaze_mcs_0_Uart_Control_Status
     lmb_reg_read_Q_reg,
     lmb_reg_write_reg,
     INTC_CIPR,
-    \Using_GPI.GPI_In_reg[6] ,
     Q,
+    \RX_Data_reg[6] ,
     \lmb_abus_Q_reg[1] ,
     lmb_reg_read_reg,
     RX_Data_Received,
@@ -39676,8 +39818,8 @@ module microblaze_mcs_0_Uart_Control_Status
   input lmb_reg_read_Q_reg;
   input lmb_reg_write_reg;
   input [3:0]INTC_CIPR;
-  input [3:0]\Using_GPI.GPI_In_reg[6] ;
   input [3:0]Q;
+  input [3:0]\RX_Data_reg[6] ;
   input [4:0]\lmb_abus_Q_reg[1] ;
   input lmb_reg_read_reg;
   input RX_Data_Received;
@@ -39690,6 +39832,7 @@ module microblaze_mcs_0_Uart_Control_Status
   wire [3:0]INTC_CIPR;
   wire [3:0]Q;
   wire RX_Data_Received;
+  wire [3:0]\RX_Data_reg[6] ;
   wire RX_Frame_Error;
   wire [0:0]SR;
   wire TX_Data_Transmitted;
@@ -39701,7 +39844,6 @@ module microblaze_mcs_0_Uart_Control_Status
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
-  wire [3:0]\Using_GPI.GPI_In_reg[6] ;
   wire error_interrupt_i_1_n_0;
   wire frame_error_reg_0;
   wire [4:0]\lmb_abus_Q_reg[1] ;
@@ -39756,43 +39898,43 @@ module microblaze_mcs_0_Uart_Control_Status
         .R(\UART_Status[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__0 
+    \Using_FPGA.Native_i_3__2 
        (.I0(lmb_reg_read_Q_reg),
         .I1(lmb_reg_write_reg),
         .I2(UART_Status[0]),
         .I3(INTC_CIPR[0]),
-        .I4(\Using_GPI.GPI_In_reg[6] [0]),
-        .I5(Q[0]),
+        .I4(Q[0]),
+        .I5(\RX_Data_reg[6] [0]),
         .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ));
-  LUT6 #(
-    .INIT(64'hEEEEEEEEEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__3 
-       (.I0(lmb_reg_read_Q_reg),
-        .I1(lmb_reg_write_reg),
-        .I2(UART_Status[3]),
-        .I3(INTC_CIPR[1]),
-        .I4(\Using_GPI.GPI_In_reg[6] [1]),
-        .I5(Q[1]),
-        .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEEEEE0)) 
     \Using_FPGA.Native_i_3__5 
        (.I0(lmb_reg_read_Q_reg),
         .I1(lmb_reg_write_reg),
+        .I2(UART_Status[3]),
+        .I3(INTC_CIPR[1]),
+        .I4(Q[1]),
+        .I5(\RX_Data_reg[6] [1]),
+        .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ));
+  LUT6 #(
+    .INIT(64'hEEEEEEEEEEEEEEE0)) 
+    \Using_FPGA.Native_i_3__7 
+       (.I0(lmb_reg_read_Q_reg),
+        .I1(lmb_reg_write_reg),
         .I2(UART_Status[5]),
         .I3(INTC_CIPR[2]),
-        .I4(\Using_GPI.GPI_In_reg[6] [2]),
-        .I5(Q[2]),
+        .I4(Q[2]),
+        .I5(\RX_Data_reg[6] [2]),
         .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__6 
+    \Using_FPGA.Native_i_3__8 
        (.I0(lmb_reg_read_Q_reg),
         .I1(lmb_reg_write_reg),
         .I2(UART_Status[6]),
         .I3(INTC_CIPR[3]),
-        .I4(\Using_GPI.GPI_In_reg[6] [3]),
-        .I5(Q[3]),
+        .I4(Q[3]),
+        .I5(\RX_Data_reg[6] [3]),
         .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
@@ -40296,10 +40438,8 @@ endmodule
 
 (* ORIG_REF_NAME = "intr_ctrl" *) 
 module microblaze_mcs_0_intr_ctrl
-   (\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ,
-    Extend_Data_Read,
+   (\Using_FPGA.Native ,
     Data_Read,
-    \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
     \Using_FPGA.Native_2 ,
@@ -40314,35 +40454,23 @@ module microblaze_mcs_0_intr_ctrl
     \Using_FPGA.Native_11 ,
     \Using_FPGA.Native_12 ,
     \Using_FPGA.Native_13 ,
+    \Using_FPGA.Native_14 ,
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ,
     Clk,
-    sel_LSB,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ,
-    lmb_reg_write_reg,
-    \No_ECC.Sl_Rdy_reg ,
-    DATA_OUTB,
     Sl_Rdy,
     lmb_as,
-    lmb_reg_write_reg_0,
+    DATA_OUTB,
+    lmb_reg_write_reg,
     lmb_reg_read_Q_reg,
-    \Using_GPI.GPI_In_reg[7] ,
-    \RX_Data_reg[7] ,
     Q,
+    \RX_Data_reg[7] ,
+    \lmb_abus_Q_reg[1] ,
     lmb_reg_read_reg);
-  output [3:0]\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
-  output [15:0]Extend_Data_Read;
+  output [11:0]\Using_FPGA.Native ;
   output Data_Read;
-  output \Using_FPGA.Native ;
   output \Using_FPGA.Native_0 ;
   output \Using_FPGA.Native_1 ;
   output \Using_FPGA.Native_2 ;
@@ -40357,62 +40485,42 @@ module microblaze_mcs_0_intr_ctrl
   output \Using_FPGA.Native_11 ;
   output \Using_FPGA.Native_12 ;
   output \Using_FPGA.Native_13 ;
+  output \Using_FPGA.Native_14 ;
   output \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   output \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
+  output \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
-  output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   input Clk;
-  input [1:0]sel_LSB;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ;
-  input lmb_reg_write_reg;
-  input \No_ECC.Sl_Rdy_reg ;
-  input [23:0]DATA_OUTB;
   input Sl_Rdy;
   input lmb_as;
-  input lmb_reg_write_reg_0;
+  input [15:0]DATA_OUTB;
+  input lmb_reg_write_reg;
   input lmb_reg_read_Q_reg;
-  input [3:0]\Using_GPI.GPI_In_reg[7] ;
+  input [3:0]Q;
   input [3:0]\RX_Data_reg[7] ;
-  input [4:0]Q;
+  input [4:0]\lmb_abus_Q_reg[1] ;
   input lmb_reg_read_reg;
 
   wire Clk;
-  wire [23:0]DATA_OUTB;
+  wire [15:0]DATA_OUTB;
   wire Data_Read;
-  wire [15:0]Extend_Data_Read;
   wire [31:1]INTC_CIPR;
-  wire \No_ECC.Sl_Rdy_reg ;
-  wire [4:0]Q;
+  wire [3:0]Q;
   wire R;
   wire [3:0]\RX_Data_reg[7] ;
   wire Sl_Rdy;
-  wire [3:0]\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ;
-  wire \Using_FPGA.Native ;
+  wire [11:0]\Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
   wire \Using_FPGA.Native_10 ;
   wire \Using_FPGA.Native_11 ;
   wire \Using_FPGA.Native_12 ;
   wire \Using_FPGA.Native_13 ;
+  wire \Using_FPGA.Native_14 ;
   wire \Using_FPGA.Native_2 ;
   wire \Using_FPGA.Native_3 ;
   wire \Using_FPGA.Native_4 ;
@@ -40421,362 +40529,208 @@ module microblaze_mcs_0_intr_ctrl
   wire \Using_FPGA.Native_7 ;
   wire \Using_FPGA.Native_8 ;
   wire \Using_FPGA.Native_9 ;
-  wire [3:0]\Using_GPI.GPI_In_reg[7] ;
+  wire [4:0]\lmb_abus_Q_reg[1] ;
   wire lmb_as;
   wire lmb_reg_read_Q_reg;
   wire lmb_reg_read_reg;
   wire lmb_reg_write_reg;
-  wire lmb_reg_write_reg_0;
-  wire [1:0]sel_LSB;
 
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__55 
-       (.I0(Extend_Data_Read[8]),
-        .I1(Data_Read),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ),
-        .O(Extend_Data_Read[0]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__56 
-       (.I0(Extend_Data_Read[9]),
-        .I1(\Using_FPGA.Native ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ),
-        .O(Extend_Data_Read[1]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__57 
-       (.I0(Extend_Data_Read[10]),
-        .I1(\Using_FPGA.Native_0 ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ),
-        .O(Extend_Data_Read[2]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__58 
-       (.I0(Extend_Data_Read[11]),
-        .I1(\Using_FPGA.Native_1 ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ),
-        .O(Extend_Data_Read[3]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__59 
-       (.I0(Extend_Data_Read[12]),
-        .I1(\Using_FPGA.Native_2 ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ),
-        .O(Extend_Data_Read[4]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__60 
-       (.I0(Extend_Data_Read[13]),
-        .I1(\Using_FPGA.Native_3 ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ),
-        .O(Extend_Data_Read[5]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__61 
-       (.I0(Extend_Data_Read[14]),
-        .I1(\Using_FPGA.Native_4 ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ),
-        .O(Extend_Data_Read[6]));
-  LUT5 #(
-    .INIT(32'hFCAA00AA)) 
-    \Using_FPGA.Native_i_1__62 
-       (.I0(Extend_Data_Read[15]),
-        .I1(\Using_FPGA.Native_5 ),
-        .I2(sel_LSB[1]),
-        .I3(sel_LSB[0]),
-        .I4(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ),
-        .O(Extend_Data_Read[7]));
   LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_1__63 
-       (.I0(INTC_CIPR[9]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[1]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_7 ),
-        .O(Extend_Data_Read[9]));
-  LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_1__64 
-       (.I0(INTC_CIPR[10]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[2]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_8 ),
-        .O(Extend_Data_Read[10]));
-  LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_1__65 
-       (.I0(INTC_CIPR[11]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[3]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_9 ),
-        .O(Extend_Data_Read[11]));
-  LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_1__66 
-       (.I0(INTC_CIPR[12]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[4]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_10 ),
-        .O(Extend_Data_Read[12]));
-  LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_1__67 
-       (.I0(INTC_CIPR[13]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[5]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_11 ),
-        .O(Extend_Data_Read[13]));
-  LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_1__68 
-       (.I0(INTC_CIPR[14]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[6]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_12 ),
-        .O(Extend_Data_Read[14]));
-  LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
+    .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__69 
-       (.I0(INTC_CIPR[15]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[7]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_13 ),
-        .O(Extend_Data_Read[15]));
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[1]),
+        .I3(INTC_CIPR[17]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
+        .O(\Using_FPGA.Native_0 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__70 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[9]),
-        .I3(INTC_CIPR[17]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[2]),
+        .I3(INTC_CIPR[18]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native ));
+        .O(\Using_FPGA.Native_1 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__71 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[10]),
-        .I3(INTC_CIPR[18]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[3]),
+        .I3(INTC_CIPR[19]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native_0 ));
+        .O(\Using_FPGA.Native_2 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__72 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[11]),
-        .I3(INTC_CIPR[19]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[4]),
+        .I3(INTC_CIPR[20]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native_1 ));
+        .O(\Using_FPGA.Native_3 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__73 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[12]),
-        .I3(INTC_CIPR[20]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[5]),
+        .I3(INTC_CIPR[21]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native_2 ));
+        .O(\Using_FPGA.Native_4 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__74 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[13]),
-        .I3(INTC_CIPR[21]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[6]),
+        .I3(INTC_CIPR[22]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native_3 ));
+        .O(\Using_FPGA.Native_5 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__75 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[14]),
-        .I3(INTC_CIPR[22]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[7]),
+        .I3(INTC_CIPR[23]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native_4 ));
+        .O(\Using_FPGA.Native_6 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_1__76 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[15]),
-        .I3(INTC_CIPR[23]),
-        .I4(lmb_reg_write_reg_0),
+        .I2(DATA_OUTB[8]),
+        .I3(INTC_CIPR[24]),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
-        .O(\Using_FPGA.Native_5 ));
-  LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__77 
-       (.I0(INTC_CIPR[24]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[16]),
-        .O(\Using_FPGA.Native_6 ));
-  LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__78 
-       (.I0(INTC_CIPR[25]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[17]),
         .O(\Using_FPGA.Native_7 ));
   LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__79 
-       (.I0(INTC_CIPR[26]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[18]),
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__77 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[9]),
+        .I3(INTC_CIPR[25]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
         .O(\Using_FPGA.Native_8 ));
   LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__80 
-       (.I0(INTC_CIPR[27]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[19]),
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__78 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[10]),
+        .I3(INTC_CIPR[26]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
         .O(\Using_FPGA.Native_9 ));
   LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__81 
-       (.I0(INTC_CIPR[28]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[20]),
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__79 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[11]),
+        .I3(INTC_CIPR[27]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
         .O(\Using_FPGA.Native_10 ));
   LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__82 
-       (.I0(INTC_CIPR[29]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[21]),
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__80 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[12]),
+        .I3(INTC_CIPR[28]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
         .O(\Using_FPGA.Native_11 ));
   LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__83 
-       (.I0(INTC_CIPR[30]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[22]),
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__81 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[13]),
+        .I3(INTC_CIPR[29]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
         .O(\Using_FPGA.Native_12 ));
   LUT6 #(
-    .INIT(64'hFFA8A8A8A8A8A8A8)) 
-    \Using_FPGA.Native_i_1__84 
-       (.I0(INTC_CIPR[31]),
-        .I1(lmb_reg_write_reg_0),
-        .I2(lmb_reg_read_Q_reg),
-        .I3(Sl_Rdy),
-        .I4(lmb_as),
-        .I5(DATA_OUTB[23]),
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__82 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[14]),
+        .I3(INTC_CIPR[30]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
         .O(\Using_FPGA.Native_13 ));
   LUT6 #(
-    .INIT(64'h8F88FFFF8F880000)) 
-    \Using_FPGA.Native_i_2__13 
-       (.I0(INTC_CIPR[8]),
-        .I1(lmb_reg_write_reg),
-        .I2(\No_ECC.Sl_Rdy_reg ),
-        .I3(DATA_OUTB[0]),
-        .I4(sel_LSB[1]),
-        .I5(\Using_FPGA.Native_6 ),
-        .O(Extend_Data_Read[8]));
+    .INIT(64'hFF80FF80FF808080)) 
+    \Using_FPGA.Native_i_1__83 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[15]),
+        .I3(INTC_CIPR[31]),
+        .I4(lmb_reg_write_reg),
+        .I5(lmb_reg_read_Q_reg),
+        .O(\Using_FPGA.Native_14 ));
   LUT6 #(
     .INIT(64'hFF80FF80FF808080)) 
     \Using_FPGA.Native_i_2__14 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .I2(DATA_OUTB[8]),
+        .I2(DATA_OUTB[0]),
         .I3(INTC_CIPR[16]),
-        .I4(lmb_reg_write_reg_0),
+        .I4(lmb_reg_write_reg),
         .I5(lmb_reg_read_Q_reg),
         .O(Data_Read));
   LUT5 #(
     .INIT(32'hEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__1 
+    \Using_FPGA.Native_i_3__3 
        (.I0(lmb_reg_read_Q_reg),
-        .I1(lmb_reg_write_reg_0),
+        .I1(lmb_reg_write_reg),
         .I2(INTC_CIPR[1]),
-        .I3(\Using_GPI.GPI_In_reg[7] [0]),
+        .I3(Q[0]),
         .I4(\RX_Data_reg[7] [0]),
         .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ));
   LUT5 #(
     .INIT(32'hEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__2 
+    \Using_FPGA.Native_i_3__4 
        (.I0(lmb_reg_read_Q_reg),
-        .I1(lmb_reg_write_reg_0),
+        .I1(lmb_reg_write_reg),
         .I2(INTC_CIPR[2]),
-        .I3(\Using_GPI.GPI_In_reg[7] [1]),
+        .I3(Q[1]),
         .I4(\RX_Data_reg[7] [1]),
         .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ));
   LUT5 #(
     .INIT(32'hEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__4 
+    \Using_FPGA.Native_i_3__6 
        (.I0(lmb_reg_read_Q_reg),
-        .I1(lmb_reg_write_reg_0),
+        .I1(lmb_reg_write_reg),
         .I2(INTC_CIPR[4]),
-        .I3(\Using_GPI.GPI_In_reg[7] [2]),
+        .I3(Q[2]),
         .I4(\RX_Data_reg[7] [2]),
-        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ));
+        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ));
   LUT5 #(
     .INIT(32'hEEEEEEE0)) 
-    \Using_FPGA.Native_i_3__7 
+    \Using_FPGA.Native_i_3__9 
        (.I0(lmb_reg_read_Q_reg),
-        .I1(lmb_reg_write_reg_0),
+        .I1(lmb_reg_write_reg),
         .I2(INTC_CIPR[7]),
-        .I3(\Using_GPI.GPI_In_reg[7] [3]),
+        .I3(Q[3]),
         .I4(\RX_Data_reg[7] [3]),
-        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ));
+        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -40785,17 +40739,17 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [0]),
+        .Q(\Using_FPGA.Native [0]),
         .R(R));
   LUT6 #(
     .INIT(64'hEFFFFFFFFFFFFFFF)) 
     \cipr_rd_dff_all[0].fdr_i_i_1 
-       (.I0(Q[4]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(Q[3]),
+       (.I0(\lmb_abus_Q_reg[1] [4]),
+        .I1(\lmb_abus_Q_reg[1] [1]),
+        .I2(\lmb_abus_Q_reg[1] [0]),
+        .I3(\lmb_abus_Q_reg[1] [3]),
         .I4(lmb_reg_read_reg),
-        .I5(Q[2]),
+        .I5(\lmb_abus_Q_reg[1] [2]),
         .O(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -40805,7 +40759,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[10]),
+        .Q(\Using_FPGA.Native [6]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -40815,7 +40769,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[11]),
+        .Q(\Using_FPGA.Native [7]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -40825,7 +40779,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[12]),
+        .Q(\Using_FPGA.Native [8]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -40835,7 +40789,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[13]),
+        .Q(\Using_FPGA.Native [9]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -40845,7 +40799,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[14]),
+        .Q(\Using_FPGA.Native [10]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -40855,7 +40809,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[15]),
+        .Q(\Using_FPGA.Native [11]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -41045,7 +40999,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [1]),
+        .Q(\Using_FPGA.Native [1]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -41065,7 +41019,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [2]),
+        .Q(\Using_FPGA.Native [2]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -41075,7 +41029,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 [3]),
+        .Q(\Using_FPGA.Native [3]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -41095,7 +41049,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[8]),
+        .Q(\Using_FPGA.Native [4]),
         .R(R));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -41105,7 +41059,7 @@ module microblaze_mcs_0_intr_ctrl
        (.C(Clk),
         .CE(1'b1),
         .D(1'b0),
-        .Q(INTC_CIPR[9]),
+        .Q(\Using_FPGA.Native [5]),
         .R(R));
 endmodule
 
@@ -41114,7 +41068,6 @@ module microblaze_mcs_0_iomodule
    (UART_Tx,
     lmb_reg_read_Q,
     lmb_reg_write,
-    Extend_Data_Read,
     Data_Read,
     \Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
@@ -41123,7 +41076,6 @@ module microblaze_mcs_0_iomodule
     \Using_FPGA.Native_3 ,
     \Using_FPGA.Native_4 ,
     \Using_FPGA.Native_5 ,
-    is_lwx_I_reg,
     \Using_FPGA.Native_6 ,
     \Using_FPGA.Native_7 ,
     \Using_FPGA.Native_8 ,
@@ -41141,6 +41093,15 @@ module microblaze_mcs_0_iomodule
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ,
     \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ,
+    \Using_FPGA.Native_15 ,
+    \Using_FPGA.Native_16 ,
+    \Using_FPGA.Native_17 ,
+    \Using_FPGA.Native_18 ,
+    \Using_FPGA.Native_19 ,
+    \Using_FPGA.Native_20 ,
+    \Using_FPGA.Native_21 ,
+    \Using_FPGA.Native_22 ,
+    load_Store_i_reg,
     UART_Interrupt,
     GPO1,
     Clk,
@@ -41148,26 +41109,15 @@ module microblaze_mcs_0_iomodule
     SR,
     UART_Rx,
     lmb_reg_write0,
-    sel_LSB,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ,
-    \No_ECC.Sl_Rdy_reg ,
-    DATA_OUTB,
     Sl_Rdy,
     lmb_as,
+    DATA_OUTB,
     D,
     \write_Addr_I_reg[0] ,
     GPI1);
   output UART_Tx;
   output lmb_reg_read_Q;
   output lmb_reg_write;
-  output [15:0]Extend_Data_Read;
   output Data_Read;
   output \Using_FPGA.Native ;
   output \Using_FPGA.Native_0 ;
@@ -41176,7 +41126,6 @@ module microblaze_mcs_0_iomodule
   output \Using_FPGA.Native_3 ;
   output \Using_FPGA.Native_4 ;
   output \Using_FPGA.Native_5 ;
-  output is_lwx_I_reg;
   output \Using_FPGA.Native_6 ;
   output \Using_FPGA.Native_7 ;
   output \Using_FPGA.Native_8 ;
@@ -41194,6 +41143,15 @@ module microblaze_mcs_0_iomodule
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
+  output \Using_FPGA.Native_15 ;
+  output \Using_FPGA.Native_16 ;
+  output \Using_FPGA.Native_17 ;
+  output \Using_FPGA.Native_18 ;
+  output \Using_FPGA.Native_19 ;
+  output \Using_FPGA.Native_20 ;
+  output \Using_FPGA.Native_21 ;
+  output \Using_FPGA.Native_22 ;
+  output load_Store_i_reg;
   output UART_Interrupt;
   output [7:0]GPO1;
   input Clk;
@@ -41201,31 +41159,19 @@ module microblaze_mcs_0_iomodule
   input [0:0]SR;
   input UART_Rx;
   input lmb_reg_write0;
-  input [1:0]sel_LSB;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ;
-  input \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ;
-  input \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ;
-  input \No_ECC.Sl_Rdy_reg ;
-  input [23:0]DATA_OUTB;
   input Sl_Rdy;
   input lmb_as;
+  input [15:0]DATA_OUTB;
   input [5:0]D;
   input [31:0]\write_Addr_I_reg[0] ;
-  input [7:0]GPI1;
+  input [15:0]GPI1;
 
   wire Clk;
   wire [5:0]D;
-  wire [23:0]DATA_OUTB;
+  wire [15:0]DATA_OUTB;
   wire Data_Read;
-  wire [15:0]Extend_Data_Read;
-  wire [7:0]GPI1;
+  wire [15:0]GPI1;
   wire [7:0]GPO1;
-  wire \No_ECC.Sl_Rdy_reg ;
   wire [0:0]SR;
   wire Sl_Rdy;
   wire UART_Interrupt;
@@ -41235,18 +41181,10 @@ module microblaze_mcs_0_iomodule
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ;
   wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ;
   wire \Using_FPGA.Native ;
   wire \Using_FPGA.Native_0 ;
   wire \Using_FPGA.Native_1 ;
@@ -41255,7 +41193,15 @@ module microblaze_mcs_0_iomodule
   wire \Using_FPGA.Native_12 ;
   wire \Using_FPGA.Native_13 ;
   wire \Using_FPGA.Native_14 ;
+  wire \Using_FPGA.Native_15 ;
+  wire \Using_FPGA.Native_16 ;
+  wire \Using_FPGA.Native_17 ;
+  wire \Using_FPGA.Native_18 ;
+  wire \Using_FPGA.Native_19 ;
   wire \Using_FPGA.Native_2 ;
+  wire \Using_FPGA.Native_20 ;
+  wire \Using_FPGA.Native_21 ;
+  wire \Using_FPGA.Native_22 ;
   wire \Using_FPGA.Native_3 ;
   wire \Using_FPGA.Native_4 ;
   wire \Using_FPGA.Native_5 ;
@@ -41263,7 +41209,6 @@ module microblaze_mcs_0_iomodule
   wire \Using_FPGA.Native_7 ;
   wire \Using_FPGA.Native_8 ;
   wire \Using_FPGA.Native_9 ;
-  wire is_lwx_I_reg;
   wire \lmb_abus_Q_reg_n_0_[1] ;
   wire \lmb_abus_Q_reg_n_0_[2] ;
   wire \lmb_abus_Q_reg_n_0_[3] ;
@@ -41275,8 +41220,8 @@ module microblaze_mcs_0_iomodule
   wire lmb_reg_read_reg_n_0;
   wire lmb_reg_write;
   wire lmb_reg_write0;
+  wire load_Store_i_reg;
   wire p_0_in16_in;
-  wire [1:0]sel_LSB;
   (* RTL_KEEP = "soft" *) wire uart_tx_write;
   wire uart_tx_write_inferred_i_2_n_0;
   wire [31:0]\write_Addr_I_reg[0] ;
@@ -41288,10 +41233,8 @@ module microblaze_mcs_0_iomodule
         .DATA_OUTB(DATA_OUTB),
         .Data_Read(Data_Read),
         .E(uart_tx_write),
-        .Extend_Data_Read(Extend_Data_Read),
         .GPI1(GPI1),
         .GPO1(GPO1),
-        .\No_ECC.Sl_Rdy_reg (\No_ECC.Sl_Rdy_reg ),
         .Q({p_0_in16_in,\lmb_abus_Q_reg_n_0_[1] ,\lmb_abus_Q_reg_n_0_[2] ,\lmb_abus_Q_reg_n_0_[3] ,\lmb_abus_Q_reg_n_0_[4] ,\lmb_abus_Q_reg_n_0_[5] }),
         .SR(SR),
         .Sl_Rdy(Sl_Rdy),
@@ -41302,18 +41245,10 @@ module microblaze_mcs_0_iomodule
         .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ),
         .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ),
         .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 ),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 (\Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ),
         .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 ),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 (\Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 ),
         .\Using_FPGA.Native (\Using_FPGA.Native ),
         .\Using_FPGA.Native_0 (\Using_FPGA.Native_0 ),
         .\Using_FPGA.Native_1 (\Using_FPGA.Native_1 ),
@@ -41321,7 +41256,15 @@ module microblaze_mcs_0_iomodule
         .\Using_FPGA.Native_11 (\Using_FPGA.Native_11 ),
         .\Using_FPGA.Native_12 (\Using_FPGA.Native_12 ),
         .\Using_FPGA.Native_13 (\Using_FPGA.Native_13 ),
+        .\Using_FPGA.Native_14 (\Using_FPGA.Native_15 ),
+        .\Using_FPGA.Native_15 (\Using_FPGA.Native_16 ),
+        .\Using_FPGA.Native_16 (\Using_FPGA.Native_17 ),
+        .\Using_FPGA.Native_17 (\Using_FPGA.Native_18 ),
+        .\Using_FPGA.Native_18 (\Using_FPGA.Native_19 ),
+        .\Using_FPGA.Native_19 (\Using_FPGA.Native_20 ),
         .\Using_FPGA.Native_2 (\Using_FPGA.Native_2 ),
+        .\Using_FPGA.Native_20 (\Using_FPGA.Native_21 ),
+        .\Using_FPGA.Native_21 (\Using_FPGA.Native_22 ),
         .\Using_FPGA.Native_3 (\Using_FPGA.Native_3 ),
         .\Using_FPGA.Native_4 (\Using_FPGA.Native_4 ),
         .\Using_FPGA.Native_5 (\Using_FPGA.Native_5 ),
@@ -41332,12 +41275,10 @@ module microblaze_mcs_0_iomodule
         .lmb_as(lmb_as),
         .lmb_reg_read_Q_reg(lmb_reg_read_Q),
         .lmb_reg_read_reg(lmb_reg_read_reg_n_0),
-        .lmb_reg_write_reg(is_lwx_I_reg),
-        .lmb_reg_write_reg_0(lmb_reg_write),
-        .sel_LSB(sel_LSB));
+        .lmb_reg_write_reg(lmb_reg_write));
   LUT4 #(
     .INIT(16'hFEEE)) 
-    \Using_FPGA.Native_i_1__86 
+    \Using_FPGA.Native_i_1__85 
        (.I0(lmb_reg_read_Q),
         .I1(lmb_reg_write),
         .I2(lmb_as),
@@ -41345,10 +41286,10 @@ module microblaze_mcs_0_iomodule
         .O(\Using_FPGA.Native_14 ));
   LUT2 #(
     .INIT(4'hE)) 
-    \Using_FPGA.Native_i_3__8 
+    is_lwx_I_i_5
        (.I0(lmb_reg_write),
         .I1(lmb_reg_read_Q),
-        .O(is_lwx_I_reg));
+        .O(load_Store_i_reg));
   FDRE \lmb_abus_Q_reg[0] 
        (.C(Clk),
         .CE(1'b1),
@@ -41692,67 +41633,125 @@ endmodule
 module microblaze_mcs_0_lmb_bram_if_cntlr
    (lmb_as,
     Sl_Rdy,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ,
-    \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ,
-    is_lwx_I_reg,
+    Extend_Data_Read,
+    load_Store_i_reg,
     \Using_LWX_SWX_instr.reservation_reg ,
     Clk,
     POR_FF_I,
-    lmb_reg_read_Q_reg,
+    Data_Read,
     sel_LSB,
+    lmb_reg_read_Q_reg,
     DATA_OUTB,
+    \No_ECC.Sl_Rdy_reg_0 ,
     lmb_reg_read_Q_reg_0,
+    \No_ECC.Sl_Rdy_reg_1 ,
     lmb_reg_read_Q_reg_1,
+    \No_ECC.Sl_Rdy_reg_2 ,
     lmb_reg_read_Q_reg_2,
+    \No_ECC.Sl_Rdy_reg_3 ,
     lmb_reg_read_Q_reg_3,
+    \No_ECC.Sl_Rdy_reg_4 ,
     lmb_reg_read_Q_reg_4,
+    \No_ECC.Sl_Rdy_reg_5 ,
     lmb_reg_read_Q_reg_5,
-    lmb_reg_read_Q_reg_6);
+    \No_ECC.Sl_Rdy_reg_6 ,
+    lmb_reg_read_Q_reg_6,
+    \Using_GPI.GPI_In_reg[8] ,
+    \No_ECC.Sl_Rdy_reg_7 ,
+    \Using_GPI.GPI_In_reg[9] ,
+    \No_ECC.Sl_Rdy_reg_8 ,
+    \Using_GPI.GPI_In_reg[10] ,
+    \No_ECC.Sl_Rdy_reg_9 ,
+    \Using_GPI.GPI_In_reg[11] ,
+    \No_ECC.Sl_Rdy_reg_10 ,
+    \Using_GPI.GPI_In_reg[12] ,
+    \No_ECC.Sl_Rdy_reg_11 ,
+    \Using_GPI.GPI_In_reg[13] ,
+    \No_ECC.Sl_Rdy_reg_12 ,
+    \Using_GPI.GPI_In_reg[14] ,
+    \No_ECC.Sl_Rdy_reg_13 ,
+    \Using_GPI.GPI_In_reg[15] ,
+    \No_ECC.Sl_Rdy_reg_14 );
   output lmb_as;
   output Sl_Rdy;
-  output \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
-  output \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
-  output \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ;
-  output \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ;
-  output \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
-  output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
-  output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
-  output \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
-  output is_lwx_I_reg;
+  output [15:0]Extend_Data_Read;
+  output load_Store_i_reg;
   input \Using_LWX_SWX_instr.reservation_reg ;
   input Clk;
   input POR_FF_I;
+  input Data_Read;
+  input [1:0]sel_LSB;
   input lmb_reg_read_Q_reg;
-  input [0:0]sel_LSB;
-  input [7:0]DATA_OUTB;
+  input [15:0]DATA_OUTB;
+  input \No_ECC.Sl_Rdy_reg_0 ;
   input lmb_reg_read_Q_reg_0;
+  input \No_ECC.Sl_Rdy_reg_1 ;
   input lmb_reg_read_Q_reg_1;
+  input \No_ECC.Sl_Rdy_reg_2 ;
   input lmb_reg_read_Q_reg_2;
+  input \No_ECC.Sl_Rdy_reg_3 ;
   input lmb_reg_read_Q_reg_3;
+  input \No_ECC.Sl_Rdy_reg_4 ;
   input lmb_reg_read_Q_reg_4;
+  input \No_ECC.Sl_Rdy_reg_5 ;
   input lmb_reg_read_Q_reg_5;
+  input \No_ECC.Sl_Rdy_reg_6 ;
   input lmb_reg_read_Q_reg_6;
+  input \Using_GPI.GPI_In_reg[8] ;
+  input \No_ECC.Sl_Rdy_reg_7 ;
+  input \Using_GPI.GPI_In_reg[9] ;
+  input \No_ECC.Sl_Rdy_reg_8 ;
+  input \Using_GPI.GPI_In_reg[10] ;
+  input \No_ECC.Sl_Rdy_reg_9 ;
+  input \Using_GPI.GPI_In_reg[11] ;
+  input \No_ECC.Sl_Rdy_reg_10 ;
+  input \Using_GPI.GPI_In_reg[12] ;
+  input \No_ECC.Sl_Rdy_reg_11 ;
+  input \Using_GPI.GPI_In_reg[13] ;
+  input \No_ECC.Sl_Rdy_reg_12 ;
+  input \Using_GPI.GPI_In_reg[14] ;
+  input \No_ECC.Sl_Rdy_reg_13 ;
+  input \Using_GPI.GPI_In_reg[15] ;
+  input \No_ECC.Sl_Rdy_reg_14 ;
 
   wire Clk;
-  wire [7:0]DATA_OUTB;
+  wire [15:0]DATA_OUTB;
+  wire Data_Read;
+  wire [15:0]Extend_Data_Read;
+  wire \No_ECC.Sl_Rdy_reg_0 ;
+  wire \No_ECC.Sl_Rdy_reg_1 ;
+  wire \No_ECC.Sl_Rdy_reg_10 ;
+  wire \No_ECC.Sl_Rdy_reg_11 ;
+  wire \No_ECC.Sl_Rdy_reg_12 ;
+  wire \No_ECC.Sl_Rdy_reg_13 ;
+  wire \No_ECC.Sl_Rdy_reg_14 ;
+  wire \No_ECC.Sl_Rdy_reg_2 ;
+  wire \No_ECC.Sl_Rdy_reg_3 ;
+  wire \No_ECC.Sl_Rdy_reg_4 ;
+  wire \No_ECC.Sl_Rdy_reg_5 ;
+  wire \No_ECC.Sl_Rdy_reg_6 ;
+  wire \No_ECC.Sl_Rdy_reg_7 ;
+  wire \No_ECC.Sl_Rdy_reg_8 ;
+  wire \No_ECC.Sl_Rdy_reg_9 ;
   wire POR_FF_I;
   wire Sl_Rdy;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ;
-  wire \Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ;
+  wire \Using_FPGA.Native_i_2__10_n_0 ;
+  wire \Using_FPGA.Native_i_2__11_n_0 ;
+  wire \Using_FPGA.Native_i_2__12_n_0 ;
+  wire \Using_FPGA.Native_i_2__5_n_0 ;
+  wire \Using_FPGA.Native_i_2__6_n_0 ;
+  wire \Using_FPGA.Native_i_2__7_n_0 ;
+  wire \Using_FPGA.Native_i_2__8_n_0 ;
+  wire \Using_FPGA.Native_i_2__9_n_0 ;
+  wire \Using_GPI.GPI_In_reg[10] ;
+  wire \Using_GPI.GPI_In_reg[11] ;
+  wire \Using_GPI.GPI_In_reg[12] ;
+  wire \Using_GPI.GPI_In_reg[13] ;
+  wire \Using_GPI.GPI_In_reg[14] ;
+  wire \Using_GPI.GPI_In_reg[15] ;
+  wire \Using_GPI.GPI_In_reg[8] ;
+  wire \Using_GPI.GPI_In_reg[9] ;
   wire \Using_LWX_SWX_instr.reservation_reg ;
-  wire is_lwx_I_reg;
   wire lmb_as;
   wire lmb_reg_read_Q_reg;
   wire lmb_reg_read_Q_reg_0;
@@ -41762,7 +41761,8 @@ module microblaze_mcs_0_lmb_bram_if_cntlr
   wire lmb_reg_read_Q_reg_4;
   wire lmb_reg_read_Q_reg_5;
   wire lmb_reg_read_Q_reg_6;
-  wire [0:0]sel_LSB;
+  wire load_Store_i_reg;
+  wire [1:0]sel_LSB;
 
   FDRE \No_ECC.Sl_Rdy_reg 
        (.C(Clk),
@@ -41777,85 +41777,237 @@ module microblaze_mcs_0_lmb_bram_if_cntlr
         .Q(lmb_as),
         .R(1'b0));
   LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__54 
+       (.I0(Extend_Data_Read[8]),
+        .I1(Data_Read),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__5_n_0 ),
+        .O(Extend_Data_Read[0]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__55 
+       (.I0(Extend_Data_Read[9]),
+        .I1(\No_ECC.Sl_Rdy_reg_0 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__6_n_0 ),
+        .O(Extend_Data_Read[1]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__56 
+       (.I0(Extend_Data_Read[10]),
+        .I1(\No_ECC.Sl_Rdy_reg_1 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__7_n_0 ),
+        .O(Extend_Data_Read[2]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__57 
+       (.I0(Extend_Data_Read[11]),
+        .I1(\No_ECC.Sl_Rdy_reg_2 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__8_n_0 ),
+        .O(Extend_Data_Read[3]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__58 
+       (.I0(Extend_Data_Read[12]),
+        .I1(\No_ECC.Sl_Rdy_reg_3 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__9_n_0 ),
+        .O(Extend_Data_Read[4]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__59 
+       (.I0(Extend_Data_Read[13]),
+        .I1(\No_ECC.Sl_Rdy_reg_4 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__10_n_0 ),
+        .O(Extend_Data_Read[5]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__60 
+       (.I0(Extend_Data_Read[14]),
+        .I1(\No_ECC.Sl_Rdy_reg_5 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__11_n_0 ),
+        .O(Extend_Data_Read[6]));
+  LUT5 #(
+    .INIT(32'hFCAA00AA)) 
+    \Using_FPGA.Native_i_1__61 
+       (.I0(Extend_Data_Read[15]),
+        .I1(\No_ECC.Sl_Rdy_reg_6 ),
+        .I2(sel_LSB[1]),
+        .I3(sel_LSB[0]),
+        .I4(\Using_FPGA.Native_i_2__12_n_0 ),
+        .O(Extend_Data_Read[7]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__62 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[9]),
+        .I3(\Using_GPI.GPI_In_reg[9] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_8 ),
+        .O(Extend_Data_Read[9]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__63 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[10]),
+        .I3(\Using_GPI.GPI_In_reg[10] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_9 ),
+        .O(Extend_Data_Read[10]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__64 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[11]),
+        .I3(\Using_GPI.GPI_In_reg[11] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_10 ),
+        .O(Extend_Data_Read[11]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__65 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[12]),
+        .I3(\Using_GPI.GPI_In_reg[12] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_11 ),
+        .O(Extend_Data_Read[12]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__66 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[13]),
+        .I3(\Using_GPI.GPI_In_reg[13] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_12 ),
+        .O(Extend_Data_Read[13]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__67 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[14]),
+        .I3(\Using_GPI.GPI_In_reg[14] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_13 ),
+        .O(Extend_Data_Read[14]));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_1__68 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[15]),
+        .I3(\Using_GPI.GPI_In_reg[15] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_14 ),
+        .O(Extend_Data_Read[15]));
+  LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__10 
        (.I0(lmb_reg_read_Q_reg_4),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[5]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 ));
+        .O(\Using_FPGA.Native_i_2__10_n_0 ));
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__11 
        (.I0(lmb_reg_read_Q_reg_5),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[6]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 ));
+        .O(\Using_FPGA.Native_i_2__11_n_0 ));
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__12 
        (.I0(lmb_reg_read_Q_reg_6),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[7]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+        .O(\Using_FPGA.Native_i_2__12_n_0 ));
+  LUT6 #(
+    .INIT(64'h80FFFFFF80FF0000)) 
+    \Using_FPGA.Native_i_2__13 
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
+        .I2(DATA_OUTB[8]),
+        .I3(\Using_GPI.GPI_In_reg[8] ),
+        .I4(sel_LSB[1]),
+        .I5(\No_ECC.Sl_Rdy_reg_7 ),
+        .O(Extend_Data_Read[8]));
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__5 
        (.I0(lmb_reg_read_Q_reg),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[0]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ));
+        .O(\Using_FPGA.Native_i_2__5_n_0 ));
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__6 
        (.I0(lmb_reg_read_Q_reg_0),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[1]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 ));
+        .O(\Using_FPGA.Native_i_2__6_n_0 ));
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__7 
        (.I0(lmb_reg_read_Q_reg_1),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[2]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 ));
+        .O(\Using_FPGA.Native_i_2__7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__8 
        (.I0(lmb_reg_read_Q_reg_2),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[3]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 ));
+        .O(\Using_FPGA.Native_i_2__8_n_0 ));
   LUT5 #(
     .INIT(32'hFBBBBBBB)) 
     \Using_FPGA.Native_i_2__9 
        (.I0(lmb_reg_read_Q_reg_3),
-        .I1(sel_LSB),
+        .I1(sel_LSB[1]),
         .I2(DATA_OUTB[4]),
         .I3(lmb_as),
         .I4(Sl_Rdy),
-        .O(\Using_B36_S4.The_BRAMs[6].RAMB36_I1 ));
+        .O(\Using_FPGA.Native_i_2__9_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h7)) 
-    \Using_FPGA.Native_i_4__0 
+    \Using_LWX_SWX_instr.reservation_i_5 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
-        .O(is_lwx_I_reg));
+        .O(load_Store_i_reg));
 endmodule
 
 (* ORIG_REF_NAME = "lmb_bram_if_cntlr" *) 
@@ -41894,7 +42046,7 @@ module microblaze_mcs_0_lmb_bram_if_cntlr__parameterized1
         .R(1'b0));
   LUT2 #(
     .INIT(4'h8)) 
-    \Using_FPGA.Native_i_1__53 
+    \Using_FPGA.Native_i_1__52 
        (.I0(Sl_Rdy),
         .I1(lmb_as),
         .O(LMB_Ready));
@@ -42003,7 +42155,7 @@ module microblaze_mcs_0_mb_sync_bit
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \Using_FPGA.Native_i_1__9 
+    \Using_FPGA.Native_i_1__88 
        (.I0(sync[2]),
         .O(\Using_B36_S4.The_BRAMs[7].RAMB36_I1 ));
   LUT2 #(
@@ -42018,7 +42170,7 @@ endmodule
 (* C_FIT1_INTERRUPT = "0" *) (* C_FIT1_No_CLOCKS = "6216" *) (* C_FIT2_INTERRUPT = "0" *) 
 (* C_FIT2_No_CLOCKS = "6216" *) (* C_FIT3_INTERRUPT = "0" *) (* C_FIT3_No_CLOCKS = "6216" *) 
 (* C_FIT4_INTERRUPT = "0" *) (* C_FIT4_No_CLOCKS = "6216" *) (* C_FREQ = "100000000" *) 
-(* C_GPI1_INTERRUPT = "0" *) (* C_GPI1_SIZE = "8" *) (* C_GPI2_INTERRUPT = "0" *) 
+(* C_GPI1_INTERRUPT = "0" *) (* C_GPI1_SIZE = "16" *) (* C_GPI2_INTERRUPT = "0" *) 
 (* C_GPI2_SIZE = "32" *) (* C_GPI3_INTERRUPT = "0" *) (* C_GPI3_SIZE = "32" *) 
 (* C_GPI4_INTERRUPT = "0" *) (* C_GPI4_SIZE = "32" *) (* C_GPO1_INIT = "0" *) 
 (* C_GPO1_SIZE = "8" *) (* C_GPO2_INIT = "0" *) (* C_GPO2_SIZE = "32" *) 
@@ -42143,7 +42295,7 @@ module microblaze_mcs_0_microblaze_mcs
   output [31:0]GPO2;
   output [31:0]GPO3;
   output [31:0]GPO4;
-  input [7:0]GPI1;
+  input [15:0]GPI1;
   output GPI1_Interrupt;
   input [31:0]GPI2;
   output GPI2_Interrupt;
@@ -42177,7 +42329,7 @@ module microblaze_mcs_0_microblaze_mcs
   wire BRAM_EN_B;
   wire [0:3]BRAM_WEN_B;
   wire Clk;
-  wire [7:0]GPI1;
+  wire [15:0]GPI1;
   wire [31:0]GPI2;
   wire [31:0]GPI3;
   wire [31:0]GPI4;
@@ -42204,17 +42356,18 @@ module microblaze_mcs_0_microblaze_mcs
   wire UART_Interrupt;
   wire UART_Rx;
   wire UART_Tx;
-  wire dlmb_cntlr_n_10;
-  wire dlmb_cntlr_n_2;
-  wire dlmb_cntlr_n_3;
-  wire dlmb_cntlr_n_4;
-  wire dlmb_cntlr_n_5;
-  wire dlmb_cntlr_n_6;
-  wire dlmb_cntlr_n_7;
-  wire dlmb_cntlr_n_8;
-  wire dlmb_cntlr_n_9;
+  wire dlmb_cntlr_n_18;
   wire dlmb_n_0;
   wire ilmb_n_1;
+  wire iomodule_0_n_10;
+  wire iomodule_0_n_11;
+  wire iomodule_0_n_12;
+  wire iomodule_0_n_13;
+  wire iomodule_0_n_14;
+  wire iomodule_0_n_15;
+  wire iomodule_0_n_16;
+  wire iomodule_0_n_17;
+  wire iomodule_0_n_18;
   wire iomodule_0_n_19;
   wire iomodule_0_n_20;
   wire iomodule_0_n_21;
@@ -42226,6 +42379,7 @@ module microblaze_mcs_0_microblaze_mcs
   wire iomodule_0_n_27;
   wire iomodule_0_n_28;
   wire iomodule_0_n_29;
+  wire iomodule_0_n_3;
   wire iomodule_0_n_30;
   wire iomodule_0_n_31;
   wire iomodule_0_n_32;
@@ -42233,14 +42387,12 @@ module microblaze_mcs_0_microblaze_mcs
   wire iomodule_0_n_34;
   wire iomodule_0_n_35;
   wire iomodule_0_n_36;
-  wire iomodule_0_n_37;
-  wire iomodule_0_n_38;
-  wire iomodule_0_n_39;
-  wire iomodule_0_n_40;
-  wire iomodule_0_n_41;
-  wire iomodule_0_n_42;
-  wire iomodule_0_n_43;
-  wire iomodule_0_n_44;
+  wire iomodule_0_n_4;
+  wire iomodule_0_n_5;
+  wire iomodule_0_n_6;
+  wire iomodule_0_n_7;
+  wire iomodule_0_n_8;
+  wire iomodule_0_n_9;
   wire lmb_as;
   wire lmb_as_1;
   wire lmb_reg_read0;
@@ -42655,29 +42807,46 @@ module microblaze_mcs_0_microblaze_mcs
         .SR(LMB_Rst_reg_n_0));
   microblaze_mcs_0_lmb_bram_if_cntlr dlmb_cntlr
        (.Clk(Clk),
-        .DATA_OUTB({Sl_DBus[24],Sl_DBus[25],Sl_DBus[26],Sl_DBus[27],Sl_DBus[28],Sl_DBus[29],Sl_DBus[30],Sl_DBus[31]}),
+        .DATA_OUTB({Sl_DBus[16],Sl_DBus[17],Sl_DBus[18],Sl_DBus[19],Sl_DBus[20],Sl_DBus[21],Sl_DBus[22],Sl_DBus[23],Sl_DBus[24],Sl_DBus[25],Sl_DBus[26],Sl_DBus[27],Sl_DBus[28],Sl_DBus[29],Sl_DBus[30],Sl_DBus[31]}),
+        .Data_Read(iomodule_0_n_3),
+        .Extend_Data_Read({\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [16],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [17],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [18],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [19],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [20],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [21],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [22],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [23],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [24],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [25],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [26],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [27],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [28],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [29],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [30],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [31]}),
+        .\No_ECC.Sl_Rdy_reg_0 (iomodule_0_n_4),
+        .\No_ECC.Sl_Rdy_reg_1 (iomodule_0_n_5),
+        .\No_ECC.Sl_Rdy_reg_10 (iomodule_0_n_14),
+        .\No_ECC.Sl_Rdy_reg_11 (iomodule_0_n_15),
+        .\No_ECC.Sl_Rdy_reg_12 (iomodule_0_n_16),
+        .\No_ECC.Sl_Rdy_reg_13 (iomodule_0_n_17),
+        .\No_ECC.Sl_Rdy_reg_14 (iomodule_0_n_18),
+        .\No_ECC.Sl_Rdy_reg_2 (iomodule_0_n_6),
+        .\No_ECC.Sl_Rdy_reg_3 (iomodule_0_n_7),
+        .\No_ECC.Sl_Rdy_reg_4 (iomodule_0_n_8),
+        .\No_ECC.Sl_Rdy_reg_5 (iomodule_0_n_9),
+        .\No_ECC.Sl_Rdy_reg_6 (iomodule_0_n_10),
+        .\No_ECC.Sl_Rdy_reg_7 (iomodule_0_n_11),
+        .\No_ECC.Sl_Rdy_reg_8 (iomodule_0_n_12),
+        .\No_ECC.Sl_Rdy_reg_9 (iomodule_0_n_13),
         .POR_FF_I(microblaze_I_n_57),
         .Sl_Rdy(Sl_Rdy),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 (dlmb_cntlr_n_6),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (dlmb_cntlr_n_7),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 (dlmb_cntlr_n_8),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 (dlmb_cntlr_n_9),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (dlmb_cntlr_n_2),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (dlmb_cntlr_n_3),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 (dlmb_cntlr_n_4),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 (dlmb_cntlr_n_5),
+        .\Using_GPI.GPI_In_reg[10] (iomodule_0_n_30),
+        .\Using_GPI.GPI_In_reg[11] (iomodule_0_n_31),
+        .\Using_GPI.GPI_In_reg[12] (iomodule_0_n_32),
+        .\Using_GPI.GPI_In_reg[13] (iomodule_0_n_33),
+        .\Using_GPI.GPI_In_reg[14] (iomodule_0_n_34),
+        .\Using_GPI.GPI_In_reg[15] (iomodule_0_n_35),
+        .\Using_GPI.GPI_In_reg[8] (iomodule_0_n_28),
+        .\Using_GPI.GPI_In_reg[9] (iomodule_0_n_29),
         .\Using_LWX_SWX_instr.reservation_reg (microblaze_I_n_56),
-        .is_lwx_I_reg(dlmb_cntlr_n_10),
         .lmb_as(lmb_as),
-        .lmb_reg_read_Q_reg(iomodule_0_n_37),
-        .lmb_reg_read_Q_reg_0(iomodule_0_n_38),
-        .lmb_reg_read_Q_reg_1(iomodule_0_n_39),
-        .lmb_reg_read_Q_reg_2(iomodule_0_n_40),
-        .lmb_reg_read_Q_reg_3(iomodule_0_n_41),
-        .lmb_reg_read_Q_reg_4(iomodule_0_n_42),
-        .lmb_reg_read_Q_reg_5(iomodule_0_n_43),
-        .lmb_reg_read_Q_reg_6(iomodule_0_n_44),
-        .sel_LSB(\MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB [1]));
+        .lmb_reg_read_Q_reg(iomodule_0_n_20),
+        .lmb_reg_read_Q_reg_0(iomodule_0_n_21),
+        .lmb_reg_read_Q_reg_1(iomodule_0_n_22),
+        .lmb_reg_read_Q_reg_2(iomodule_0_n_23),
+        .lmb_reg_read_Q_reg_3(iomodule_0_n_24),
+        .lmb_reg_read_Q_reg_4(iomodule_0_n_25),
+        .lmb_reg_read_Q_reg_5(iomodule_0_n_26),
+        .lmb_reg_read_Q_reg_6(iomodule_0_n_27),
+        .load_Store_i_reg(dlmb_cntlr_n_18),
+        .sel_LSB(\MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB ));
   microblaze_mcs_0_lmb_v10 ilmb
        (.Clk(Clk),
         .\No_ECC.Sl_Rdy_reg (ilmb_n_1),
@@ -42693,56 +42862,53 @@ module microblaze_mcs_0_microblaze_mcs
   microblaze_mcs_0_iomodule iomodule_0
        (.Clk(Clk),
         .D({BRAM_Addr_B[24],BRAM_Addr_B[25],BRAM_Addr_B[26],BRAM_Addr_B[27],BRAM_Addr_B[28],BRAM_Addr_B[29]}),
-        .DATA_OUTB({Sl_DBus[0],Sl_DBus[1],Sl_DBus[2],Sl_DBus[3],Sl_DBus[4],Sl_DBus[5],Sl_DBus[6],Sl_DBus[7],Sl_DBus[8],Sl_DBus[9],Sl_DBus[10],Sl_DBus[11],Sl_DBus[12],Sl_DBus[13],Sl_DBus[14],Sl_DBus[15],Sl_DBus[16],Sl_DBus[17],Sl_DBus[18],Sl_DBus[19],Sl_DBus[20],Sl_DBus[21],Sl_DBus[22],Sl_DBus[23]}),
-        .Data_Read(iomodule_0_n_19),
-        .Extend_Data_Read({\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [16],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [17],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [18],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [19],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [20],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [21],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [22],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [23],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [24],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [25],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [26],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [27],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [28],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [29],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [30],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [31]}),
+        .DATA_OUTB({Sl_DBus[0],Sl_DBus[1],Sl_DBus[2],Sl_DBus[3],Sl_DBus[4],Sl_DBus[5],Sl_DBus[6],Sl_DBus[7],Sl_DBus[8],Sl_DBus[9],Sl_DBus[10],Sl_DBus[11],Sl_DBus[12],Sl_DBus[13],Sl_DBus[14],Sl_DBus[15]}),
+        .Data_Read(iomodule_0_n_3),
         .GPI1(GPI1),
         .GPO1(GPO1),
-        .\No_ECC.Sl_Rdy_reg (dlmb_cntlr_n_10),
         .SR(LMB_Rst_reg_n_0),
         .Sl_Rdy(Sl_Rdy),
         .UART_Interrupt(UART_Interrupt),
         .UART_Rx(UART_Rx),
         .UART_Tx(UART_Tx),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 (iomodule_0_n_41),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (iomodule_0_n_42),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 (iomodule_0_n_43),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 (iomodule_0_n_44),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_3 (dlmb_cntlr_n_6),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_4 (dlmb_cntlr_n_7),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_5 (dlmb_cntlr_n_8),
-        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_6 (dlmb_cntlr_n_9),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (iomodule_0_n_37),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (iomodule_0_n_38),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 (iomodule_0_n_39),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 (iomodule_0_n_40),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_3 (dlmb_cntlr_n_2),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_4 (dlmb_cntlr_n_3),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_5 (dlmb_cntlr_n_4),
-        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_6 (dlmb_cntlr_n_5),
-        .\Using_FPGA.Native (iomodule_0_n_20),
-        .\Using_FPGA.Native_0 (iomodule_0_n_21),
-        .\Using_FPGA.Native_1 (iomodule_0_n_22),
-        .\Using_FPGA.Native_10 (iomodule_0_n_32),
-        .\Using_FPGA.Native_11 (iomodule_0_n_33),
-        .\Using_FPGA.Native_12 (iomodule_0_n_34),
-        .\Using_FPGA.Native_13 (iomodule_0_n_35),
-        .\Using_FPGA.Native_14 (iomodule_0_n_36),
-        .\Using_FPGA.Native_2 (iomodule_0_n_23),
-        .\Using_FPGA.Native_3 (iomodule_0_n_24),
-        .\Using_FPGA.Native_4 (iomodule_0_n_25),
-        .\Using_FPGA.Native_5 (iomodule_0_n_26),
-        .\Using_FPGA.Native_6 (iomodule_0_n_28),
-        .\Using_FPGA.Native_7 (iomodule_0_n_29),
-        .\Using_FPGA.Native_8 (iomodule_0_n_30),
-        .\Using_FPGA.Native_9 (iomodule_0_n_31),
-        .is_lwx_I_reg(iomodule_0_n_27),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1 (iomodule_0_n_24),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_0 (iomodule_0_n_25),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_1 (iomodule_0_n_26),
+        .\Using_B36_S4.The_BRAMs[6].RAMB36_I1_2 (iomodule_0_n_27),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1 (iomodule_0_n_20),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_0 (iomodule_0_n_21),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_1 (iomodule_0_n_22),
+        .\Using_B36_S4.The_BRAMs[7].RAMB36_I1_2 (iomodule_0_n_23),
+        .\Using_FPGA.Native (iomodule_0_n_4),
+        .\Using_FPGA.Native_0 (iomodule_0_n_5),
+        .\Using_FPGA.Native_1 (iomodule_0_n_6),
+        .\Using_FPGA.Native_10 (iomodule_0_n_15),
+        .\Using_FPGA.Native_11 (iomodule_0_n_16),
+        .\Using_FPGA.Native_12 (iomodule_0_n_17),
+        .\Using_FPGA.Native_13 (iomodule_0_n_18),
+        .\Using_FPGA.Native_14 (iomodule_0_n_19),
+        .\Using_FPGA.Native_15 (iomodule_0_n_28),
+        .\Using_FPGA.Native_16 (iomodule_0_n_29),
+        .\Using_FPGA.Native_17 (iomodule_0_n_30),
+        .\Using_FPGA.Native_18 (iomodule_0_n_31),
+        .\Using_FPGA.Native_19 (iomodule_0_n_32),
+        .\Using_FPGA.Native_2 (iomodule_0_n_7),
+        .\Using_FPGA.Native_20 (iomodule_0_n_33),
+        .\Using_FPGA.Native_21 (iomodule_0_n_34),
+        .\Using_FPGA.Native_22 (iomodule_0_n_35),
+        .\Using_FPGA.Native_3 (iomodule_0_n_8),
+        .\Using_FPGA.Native_4 (iomodule_0_n_9),
+        .\Using_FPGA.Native_5 (iomodule_0_n_10),
+        .\Using_FPGA.Native_6 (iomodule_0_n_11),
+        .\Using_FPGA.Native_7 (iomodule_0_n_12),
+        .\Using_FPGA.Native_8 (iomodule_0_n_13),
+        .\Using_FPGA.Native_9 (iomodule_0_n_14),
         .lmb_as(lmb_as),
         .lmb_reg_read0(lmb_reg_read0),
         .lmb_reg_read_Q(lmb_reg_read_Q),
         .lmb_reg_write(lmb_reg_write),
         .lmb_reg_write0(lmb_reg_write0),
-        .sel_LSB(\MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB ),
+        .load_Store_i_reg(iomodule_0_n_36),
         .\write_Addr_I_reg[0] ({BRAM_Din_B[0],BRAM_Din_B[1],BRAM_Din_B[2],BRAM_Din_B[3],BRAM_Din_B[4],BRAM_Din_B[5],BRAM_Din_B[6],BRAM_Din_B[7],BRAM_Din_B[8],BRAM_Din_B[9],BRAM_Din_B[10],BRAM_Din_B[11],BRAM_Din_B[12],BRAM_Din_B[13],BRAM_Din_B[14],BRAM_Din_B[15],BRAM_Din_B[16],BRAM_Din_B[17],BRAM_Din_B[18],BRAM_Din_B[19],BRAM_Din_B[20],BRAM_Din_B[21],BRAM_Din_B[22],BRAM_Din_B[23],BRAM_Din_B[24],BRAM_Din_B[25],BRAM_Din_B[26],BRAM_Din_B[27],BRAM_Din_B[28],BRAM_Din_B[29],BRAM_Din_B[30],BRAM_Din_B[31]}));
   microblaze_mcs_0_lmb_bram lmb_bram_I
        (.ADDRARDADDR({BRAM_Addr_A[17],BRAM_Addr_A[18],BRAM_Addr_A[19],BRAM_Addr_A[20],BRAM_Addr_A[21],BRAM_Addr_A[22],BRAM_Addr_A[23],BRAM_Addr_A[24],BRAM_Addr_A[25],BRAM_Addr_A[26],BRAM_Addr_A[27],BRAM_Addr_A[28],BRAM_Addr_A[29]}),
@@ -42761,39 +42927,39 @@ module microblaze_mcs_0_microblaze_mcs
         .Clk(Clk),
         .DATA_INB(BRAM_Din_B),
         .DATA_OUTA(LMB_ReadDBus),
-        .Data_Read(iomodule_0_n_19),
+        .Data_Read(iomodule_0_n_3),
         .Extend_Data_Read({\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [16],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [17],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [18],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [19],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [20],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [21],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [22],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [23],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [24],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [25],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [26],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [27],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [28],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [29],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [30],\MicroBlaze_Core_I/Area.Core/Extend_Data_Read [31]}),
         .LMB_AddrStrobe(LMB_AddrStrobe),
         .LMB_Ready(LMB_Ready),
         .\No_ECC.Sl_Rdy_reg (microblaze_I_n_57),
-        .\No_ECC.Sl_Rdy_reg_0 (dlmb_cntlr_n_10),
-        .\No_ECC.Sl_Rdy_reg_1 (iomodule_0_n_20),
-        .\No_ECC.Sl_Rdy_reg_2 (iomodule_0_n_21),
-        .\No_ECC.Sl_Rdy_reg_3 (iomodule_0_n_22),
-        .\No_ECC.Sl_Rdy_reg_4 (iomodule_0_n_23),
-        .\No_ECC.Sl_Rdy_reg_5 (iomodule_0_n_24),
-        .\No_ECC.Sl_Rdy_reg_6 (iomodule_0_n_25),
-        .\No_ECC.Sl_Rdy_reg_7 (iomodule_0_n_26),
+        .\No_ECC.Sl_Rdy_reg_0 (dlmb_cntlr_n_18),
+        .\No_ECC.Sl_Rdy_reg_1 (iomodule_0_n_4),
+        .\No_ECC.Sl_Rdy_reg_10 (iomodule_0_n_13),
+        .\No_ECC.Sl_Rdy_reg_11 (iomodule_0_n_14),
+        .\No_ECC.Sl_Rdy_reg_12 (iomodule_0_n_15),
+        .\No_ECC.Sl_Rdy_reg_13 (iomodule_0_n_16),
+        .\No_ECC.Sl_Rdy_reg_14 (iomodule_0_n_17),
+        .\No_ECC.Sl_Rdy_reg_15 (iomodule_0_n_18),
+        .\No_ECC.Sl_Rdy_reg_2 (iomodule_0_n_5),
+        .\No_ECC.Sl_Rdy_reg_3 (iomodule_0_n_6),
+        .\No_ECC.Sl_Rdy_reg_4 (iomodule_0_n_7),
+        .\No_ECC.Sl_Rdy_reg_5 (iomodule_0_n_8),
+        .\No_ECC.Sl_Rdy_reg_6 (iomodule_0_n_9),
+        .\No_ECC.Sl_Rdy_reg_7 (iomodule_0_n_10),
+        .\No_ECC.Sl_Rdy_reg_8 (iomodule_0_n_11),
+        .\No_ECC.Sl_Rdy_reg_9 (iomodule_0_n_12),
         .\No_ECC.lmb_as_reg (microblaze_I_n_55),
         .\No_ECC.lmb_as_reg_0 (microblaze_I_n_56),
         .POR_FF_I(dlmb_n_0),
         .Sl_Rdy(Sl_Rdy_0),
         .WEB(BRAM_WEN_B),
-        .\cipr_rd_dff_all[24].fdr_i (iomodule_0_n_28),
-        .\cipr_rd_dff_all[25].fdr_i (iomodule_0_n_29),
-        .\cipr_rd_dff_all[26].fdr_i (iomodule_0_n_30),
-        .\cipr_rd_dff_all[27].fdr_i (iomodule_0_n_31),
-        .\cipr_rd_dff_all[28].fdr_i (iomodule_0_n_32),
-        .\cipr_rd_dff_all[29].fdr_i (iomodule_0_n_33),
-        .\cipr_rd_dff_all[30].fdr_i (iomodule_0_n_34),
-        .\cipr_rd_dff_all[31].fdr_i (iomodule_0_n_35),
         .lmb_as(lmb_as_1),
         .lmb_reg_read0(lmb_reg_read0),
         .lmb_reg_read_Q(lmb_reg_read_Q),
-        .lmb_reg_read_Q_reg(iomodule_0_n_36),
+        .lmb_reg_read_Q_reg(iomodule_0_n_19),
         .lmb_reg_write(lmb_reg_write),
         .lmb_reg_write0(lmb_reg_write0),
-        .lmb_reg_write_reg(iomodule_0_n_27),
+        .lmb_reg_write_reg(iomodule_0_n_36),
         .reset_temp(\MicroBlaze_Core_I/reset_temp ),
         .sel_LSB(\MicroBlaze_Core_I/Area.Core/Byte_Doublet_Handle_I/sel_LSB ));
   FDRE \reset_vec_reg[0] 
@@ -42876,13 +43042,13 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_FDRE
         .R(out));
   LUT2 #(
     .INIT(4'h8)) 
-    \Using_FPGA.Native_i_1__88 
+    \Using_FPGA.Native_i_1__87 
        (.I0(write_Carry_I_reg),
         .I1(ex_Valid),
         .O(Write_Carry));
   LUT6 #(
     .INIT(64'h7F7F3FFF40400000)) 
-    \Using_FPGA.Native_i_2__17 
+    \Using_FPGA.Native_i_2__24 
        (.I0(\Using_LWX_SWX_instr.reservation_reg ),
         .I1(load_Store_i),
         .I2(ex_Valid),
@@ -45085,7 +45251,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_FDRE_549
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'hB888)) 
-    \Using_FPGA.Native_i_2__34 
+    \Using_FPGA.Native_i_2__41 
        (.I0(\Using_FPGA.Native_0 ),
         .I1(Sext16),
         .I2(\Using_FPGA.Native_16 ),
@@ -45745,20 +45911,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_221
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[24].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[24].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[24].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -45768,7 +45934,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_221
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[24].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -45780,20 +45946,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_223
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[25].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[25].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[25].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -45803,7 +45969,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_223
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[25].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -45815,20 +45981,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_225
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[26].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[26].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[26].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -45838,7 +46004,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_225
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[26].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -45850,20 +46016,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_227
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[27].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[27].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[27].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -45873,7 +46039,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_227
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[27].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -45885,20 +46051,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_229
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[28].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[28].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[28].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -45908,7 +46074,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_229
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[28].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -45984,20 +46150,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_235
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[29].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[29].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[29].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -46007,7 +46173,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_235
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[29].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -46351,20 +46517,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_257
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[30].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[30].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[30].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -46374,7 +46540,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_257
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[30].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -46736,20 +46902,20 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_279
     \Result_Sel_reg[0] ,
     Select_Logic_reg,
     data_Read_Mask,
-    \cipr_rd_dff_all[31].fdr_i ,
+    \No_ECC.Sl_Rdy_reg ,
     I4);
   output [0:0]EX_Result;
   input [1:0]\Result_Sel_reg[0] ;
   input Select_Logic_reg;
   input [0:0]data_Read_Mask;
-  input \cipr_rd_dff_all[31].fdr_i ;
+  input \No_ECC.Sl_Rdy_reg ;
   input I4;
 
   wire [0:0]EX_Result;
   wire I4;
+  wire \No_ECC.Sl_Rdy_reg ;
   wire [1:0]\Result_Sel_reg[0] ;
   wire Select_Logic_reg;
-  wire \cipr_rd_dff_all[31].fdr_i ;
   wire [0:0]data_Read_Mask;
 
   (* box_type = "PRIMITIVE" *) 
@@ -46759,7 +46925,7 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_LUT6__parameterized0_279
        (.I0(\Result_Sel_reg[0] [0]),
         .I1(Select_Logic_reg),
         .I2(data_Read_Mask),
-        .I3(\cipr_rd_dff_all[31].fdr_i ),
+        .I3(\No_ECC.Sl_Rdy_reg ),
         .I4(I4),
         .I5(\Result_Sel_reg[0] [1]),
         .O(EX_Result));
@@ -46768,22 +46934,22 @@ endmodule
 (* ORIG_REF_NAME = "microblaze_v9_5_2_MB_MUXCY" *) 
 module microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY
    (\Using_FPGA.Native_0 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ,
-    \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ,
+    \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ,
     write_Carry_I_reg,
     lopt,
     lopt_1,
     lopt_2);
   output \Using_FPGA.Native_0 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  input \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  input \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   input write_Carry_I_reg;
   output lopt;
   input lopt_1;
   input lopt_2;
 
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1 ;
-  wire \Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1 ;
+  wire \Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 ;
   wire \Using_FPGA.Native_0 ;
   wire \^lopt_1 ;
   wire \^lopt_2 ;
@@ -46804,9 +46970,9 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY
        (.CI(write_Carry_I_reg),
         .CO({\NLW_Using_FPGA.Native_CARRY4_CO_UNCONNECTED [3:2],\^lopt_1 ,\NLW_Using_FPGA.Native_CARRY4_CO_UNCONNECTED [0]}),
         .CYINIT(1'b0),
-        .DI({\NLW_Using_FPGA.Native_CARRY4_DI_UNCONNECTED [3:2],\^lopt_2 ,\Using_B36_S4.The_BRAMs[1].RAMB36_I1_0 }),
+        .DI({\NLW_Using_FPGA.Native_CARRY4_DI_UNCONNECTED [3:2],\^lopt_2 ,\Using_B36_S4.The_BRAMs[0].RAMB36_I1_0 }),
         .O(\NLW_Using_FPGA.Native_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_Using_FPGA.Native_CARRY4_S_UNCONNECTED [3:2],lopt_3,\Using_B36_S4.The_BRAMs[1].RAMB36_I1 }));
+        .S({\NLW_Using_FPGA.Native_CARRY4_S_UNCONNECTED [3:2],lopt_3,\Using_B36_S4.The_BRAMs[0].RAMB36_I1 }));
 endmodule
 
 (* ORIG_REF_NAME = "microblaze_v9_5_2_MB_MUXCY" *) 
@@ -47017,17 +47183,17 @@ endmodule
 module microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_19
    (CI,
     S,
-    Jump,
+    \Using_FPGA.Native_0 ,
     lopt);
   output CI;
   input S;
-  input Jump;
+  input \Using_FPGA.Native_0 ;
   output lopt;
 
   wire \<const1> ;
   wire CI;
-  wire Jump;
   wire S;
+  wire \Using_FPGA.Native_0 ;
 
   assign lopt = \<const1> ;
   VCC VCC
@@ -47441,12 +47607,12 @@ endmodule
 
 (* ORIG_REF_NAME = "microblaze_v9_5_2_MB_MUXCY" *) 
 module microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9
-   (Jump,
+   (nonvalid_IFetch_n_reg,
     \Using_FPGA.Native_0 ,
     CI60_in,
     lopt,
     lopt_1);
-  output Jump;
+  output nonvalid_IFetch_n_reg;
   input \Using_FPGA.Native_0 ;
   input CI60_in;
   input lopt;
@@ -47454,11 +47620,11 @@ module microblaze_mcs_0_microblaze_v9_5_2_MB_MUXCY_9
 
   wire \<const0> ;
   wire CI60_in;
-  wire Jump;
   wire \Using_FPGA.Native_0 ;
+  wire nonvalid_IFetch_n_reg;
 
-  assign Jump = lopt;
   assign lopt_1 = \<const0> ;
+  assign nonvalid_IFetch_n_reg = lopt;
   GND GND
        (.G(\<const0> ));
 endmodule
