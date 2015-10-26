@@ -93,7 +93,7 @@ if { $::argc > 0 } {
 set origin_dir [file dirname [info script]]
 
 # Create project
-create_project myproject $origin_dir/myproject
+create_project project2 $origin_dir/project2
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
