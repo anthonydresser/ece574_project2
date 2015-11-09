@@ -25,14 +25,14 @@ module top_level(
     input   reset,
     input   rx,
     inout   SDA,
-    output SCL,
+    output  SCL,
     output  tx,
-    output locked,
-    output sclk,
-    output sync_out,
-    output dout
+    output  locked,
+    output  sclk,
+    output  sync_out,
+    output  dacout
 //    input [7:0] sw,
-//    output [7:0]    leds,
+//    output [14:0]    leds,
 //    output [7:0] an,
 //    output [6:0] seg
     );
@@ -44,7 +44,8 @@ module top_level(
     
     assign sync_out = sync;
     assign sclk = clk_10M;
-//    assign leds = temp_data[7:0];
+//    assign leds[12:0] = temp_data[12:0];
+//    assign leds[14:13] = {TMP_INT, TMP_CT};
     
     microblaze_mcs_0 mcs_0 (
       .Clk(clk_100M),                        // input wire Clk
@@ -78,7 +79,7 @@ module top_level(
         .reset(reset),
         .load({8'b0, gpo}),
         .sync(sync),
-        .dout(dout));
+        .dout(dacout));
         
       I2C_Interface i2c
       (

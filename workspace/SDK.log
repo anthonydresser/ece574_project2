@@ -71,3 +71,12 @@
 14:08:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
 19:04:55 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
 19:04:56 INFO  : XSDB server has started successfully.
+22:12:53 INFO  : Project hw_platform_1's source hardware specification located at C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+22:13:15 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml into \hw_platform_1\system.xml.
+22:13:16 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0.bmm into \hw_platform_1\microblaze_mcs_0.bmm.
+22:13:16 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:13:18 INFO  : 
+22:13:20 INFO  : 
+22:13:21 INFO  : Updating hardware inferred compiler options for hello_world.
+22:13:21 INFO  : Clearing existing target manager status.

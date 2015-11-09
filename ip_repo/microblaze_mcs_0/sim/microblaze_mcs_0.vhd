@@ -246,7 +246,7 @@ BEGIN
       C_AVOID_PRIMITIVES => 0,
       C_PATH => "mcs_0/U0",
       C_FREQ => 100000000,
-      C_MEMSIZE => 131072,
+      C_MEMSIZE => 32768,
       C_DEBUG_ENABLED => 0,
       C_JTAG_CHAIN => 2,
       C_TRACE => 0,

@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
--- Date        : Sat Nov 07 23:16:44 2015
+-- Date        : Sun Nov 08 22:13:46 2015
 -- Host        : Windows running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               C:/Users/Anthony/Documents/ece574_project2/ip_repo/microblaze_mcs_0/microblaze_mcs_0_stub.vhdl

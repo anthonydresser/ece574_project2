@@ -79,7 +79,7 @@ void rxHandler(){
 }
 
 void timerTick(){
-	xil_printf("Temperature %d.%d\n\r", (short) ((XIOModule_DiscreteRead(&gpi, 1)/128.0)*1.8 + 32.0)); // read switches (channel 1)
+	xil_printf("Temperature %d\n\r", (short)((XIOModule_DiscreteRead(&gpi, 1)/128.0)*1.8 + 32.0)); // read switches (channel 1)
 }
 
 int main()
