@@ -24,10 +24,9 @@ module i2c_tb(
     );
     
     wire SDA;
-    reg reset, SDA_reg, clk;
+    reg reset, clk;
     wire [15:0] dout;
     wire SCL;
-    reg OE = 1;
     
     I2C_Interface uut (
         .SCL(SCL),
@@ -36,8 +35,6 @@ module i2c_tb(
         .dout(dout),
         .clk(clk)
     );
-    
-    assign SDA = (OE == 1) ? SDA_reg : 1'bz;
     
     always
     begin
@@ -51,7 +48,7 @@ module i2c_tb(
         reset = 1;
         #50;
         reset = 0;
-        #10000;
+        #1000;
     end
     
 endmodule

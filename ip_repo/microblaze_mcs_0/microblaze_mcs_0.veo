@@ -59,9 +59,14 @@ microblaze_mcs_0 your_instance_name (
   .Reset(Reset),                    // input wire Reset
   .UART_Rx(UART_Rx),                // input wire UART_Rx
   .UART_Tx(UART_Tx),                // output wire UART_Tx
+  .UART_Interrupt(UART_Interrupt),  // output wire UART_Interrupt
+  .FIT1_Interrupt(FIT1_Interrupt),  // output wire FIT1_Interrupt
+  .FIT1_Toggle(FIT1_Toggle),        // output wire FIT1_Toggle
   .GPO1(GPO1),                      // output wire [7 : 0] GPO1
   .GPI1(GPI1),                      // input wire [15 : 0] GPI1
-  .GPI1_Interrupt(GPI1_Interrupt)  // output wire GPI1_Interrupt
+  .GPI1_Interrupt(GPI1_Interrupt),  // output wire GPI1_Interrupt
+  .INTC_Interrupt(INTC_Interrupt),  // input wire [0 : 0] INTC_Interrupt
+  .INTC_IRQ(INTC_IRQ)              // output wire INTC_IRQ
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

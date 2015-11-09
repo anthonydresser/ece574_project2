@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Anthony Dresser Mailbox # 87
 // 
 // Create Date: 10/19/2015 08:15:48 PM
 // Design Name: 
@@ -9,7 +9,8 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: I2C interface to interface with the temperature sensor on the Nexys4DDR
+// board. Refer to datasheet for I2C interface details.
 // 
 // Dependencies: 
 // 
@@ -28,23 +29,21 @@ module I2C_Interface(
     input clk
     );
     
-    parameter [2:0] s0 = 3'b000, s1 = 3'b001, s2 = 3'b010, s3 = 3'b011, s4 = 3'b100, s5 = 3'b101, s6 = 3'b110;
-    parameter [6:0] MSBADDR = 7'b1010001, LSBADDR = 7'b1010011;
+    parameter [3:0] s0 = 4'b0000, s1 = 4'b0001, s2 = 4'b0010, s3 = 4'b0011, s4 = 4'b0100, s5 = 4'b0101, s6 = 4'b0110, s7 = 4'b0111, s8 = 4'b1000, s9 = 4'b1001;
+    parameter [7:0] deviceAddr = 8'b10010111, MSBADDR = 8'b00000000;
     
-    reg [2:0] current_state, next_state;
-    reg [7:0] MSB, LSB;
-    reg [6:0] addrShift;
+    reg [3:0] current_state, next_state;
+    reg [15:0] doutreg;
+    reg [7:0] addrShift;
     reg [7:0] count;
-    reg startCount;
+    reg startCount, addrShiftStart, dataShiftStart;
     reg SDA_reg;
-    reg OE;
+    reg OE, CE;
     
     wire clk_200K;
     
-    assign SCL = clk_200K;
-    
     //state memory
-    always @(posedge clk_200K, posedge reset)
+    always @(negedge clk_200K, posedge reset)
         if(reset)
             current_state <= s0;
         else
@@ -53,88 +52,133 @@ module I2C_Interface(
     //next_state logic
     always @(current_state, count)
         case(current_state)
-            s0:
-                next_state <= s1;
-            s1:
-                next_state <= s2;
-            s2:
-                if(count == 8)
-                    next_state <= s3;
+            s0: next_state = s1;
+            s1: next_state = s2;
+            s2: if(count == 7)
+                    next_state = s3;
                 else
-                    next_state <= s2;
-            s3:
-                next_state <= s4;
-            s4:
-                if(count == 7)
-                    next_state <= s5;
+                    next_state = s2;
+            s3: next_state = s4;
+            s4: if(count == 7)
+                    next_state = s5;
                 else
-                    next_state <= s4;
-            s5:
-                next_state <= s6;
-            s6:
-                if(count == 8)
-                    next_state <= s6;
+                    next_state = s4;
+            s5: next_state = s6;
+            s6: if(count == 7)
+                    next_state = s7;
                 else
-                    next_state <= s0;
+                    next_state = s6;
+            s7: next_state = s0;
+            default: next_state = s0;
         endcase
     
-    //state_output logic
-    always @(posedge clk_200K)
+    always @(current_state, addrShift[7])
         case(current_state)
-            // start a transaction
+            // Pull SDA High for start of transmission
             s0: begin
-                    OE <= 1'b1;
-                    SDA_reg <= 1'b1;
-                    startCount <= 1'b0;
-                    addrShift <= MSBADDR;
-                    dout <= {MSB, LSB};
+                    CE = 0;
+                    OE = 1;
+                    SDA_reg = 1;
+                    startCount = 0;
+                    addrShiftStart = 0;
+                    dataShiftStart = 0;
                 end
-            // pull SDA low
+            // Pull SDA Low for start of transmission
             s1: begin
-                    OE <= 1'b1;
-                    SDA_reg <= 1'b0;
-                    startCount <= 1'b0;
-                    addrShift <= MSBADDR;
+                    addrShiftStart = 0;
+                    dataShiftStart = 0;
+                    CE = 0;
+                    OE = 1;
+                    SDA_reg = 0;
+                    startCount = 0;
                 end
-            //shift address
+            // shift device address
             s2: begin
-                    OE <= 1'b1;
-                    startCount <= 1'b1;
-                    SDA_reg <= addrShift[6];
-                    addrShift <= {addrShift[5:0], addrShift[6]};
+                    addrShiftStart = 1;
+                    dataShiftStart = 0;
+                    SDA_reg = addrShift[7];
+                    CE = 1;
+                    OE = 1;
+                    startCount = 1;
                 end
-            //reset counter before reading
+            // ack from device
             s3: begin
-                    OE <= 1'b0;
-                    startCount <= 1'b0;
-                    addrShift <= MSBADDR;
+                    addrShiftStart = 0;
+                    dataShiftStart = 0;
+                    SDA_reg = 0;
+                    CE = 1;
+                    OE = 0;
+                    startCount <= 0;
                 end
-            // read MSB
+            // shift in MSB data from temp sensor
             s4: begin
-                    OE <= 1'b0;
-                    startCount <= 1'b1;
-                    MSB <= {MSB[7:1], SDA};
-                    addrShift <= MSBADDR;
+                    addrShiftStart = 0;
+                    dataShiftStart = 1;
+                    SDA_reg = 0;
+                    CE = 1;
+                    OE = 0;
+                    startCount = 1;
                 end
-            // reset before LSB
+            // ack
             s5: begin
-                    OE <= 1'b0;
-                    startCount <= 1'b0;
-                    addrShift <= MSBADDR;
-                end
-            // read LSB
-            s6: begin
-                    OE <= 1'b0;
-                    startCount <= 1'b1;
-                    LSB <= {LSB[7:1], SDA};
-                    addrShift <= MSBADDR;
-                end
+                   addrShiftStart = 0;
+                   dataShiftStart = 0;
+                   CE = 1;
+                   OE = 1;
+                   SDA_reg = 0;
+                   startCount = 0;
+               end
+           // shift in LSB data from temp sensor
+           s6: begin
+                   addrShiftStart = 0;
+                   dataShiftStart = 1;
+                   SDA_reg = 0;
+                   CE = 1;
+                   OE = 0;
+                   startCount = 1;
+               end
+           // no ack
+           s7: begin
+                   addrShiftStart = 0;
+                   dataShiftStart = 0;
+                   OE = 1;
+                   CE = 1;
+                   SDA_reg = 1;
+                   startCount = 0;
+               end
+           // default: should never get here
+           default: begin
+                       addrShiftStart = 0;
+                       dataShiftStart = 0;
+                       OE = 1;
+                       CE = 1;
+                       SDA_reg = 1;
+                       startCount = 0;
+                   end
         endcase
         
     assign SDA = (OE == 1) ? SDA_reg : 1'bz;
+    
+    assign SCL = (CE == 1) ? clk_200K : 1'b1;
+    
+    always @(posedge clk_200K)
+        if(current_state == s7)
+            dout <= doutreg;
+    
+    // shift addr register
+    always@(negedge clk_200K)
+        if(addrShiftStart == 1)
+            addrShift <= {addrShift[6:0], addrShift[7]};
+        else
+            addrShift <= deviceAddr;
+    
+   // shift in data
+    always@(negedge clk_200K)
+        if(dataShiftStart == 1)
+            doutreg <= {doutreg[14:0], SDA};
         
     // counter
-    always @(posedge clk_200K)
+    always @(negedge clk_200K)
         if(startCount == 1)
             count <= count + 1;
         else

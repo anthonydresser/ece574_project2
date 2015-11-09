@@ -5,3 +5,69 @@
 19:20:03 INFO  : XSDB server has started successfully.
 19:42:22 INFO  : Launching XSDB server: xsdb -n /media/anthony/2c64b5b6-1b3a-4d17-b826-2d12c1f743ce/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
 19:42:24 INFO  : XSDB server has started successfully.
+11:47:19 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+11:47:20 INFO  : XSDB server has started successfully.
+11:54:50 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+11:54:51 INFO  : XSDB server has started successfully.
+14:09:09 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+14:09:10 INFO  : XSDB server has started successfully.
+13:58:47 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+13:58:48 INFO  : XSDB server has started successfully.
+21:30:21 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+21:30:22 INFO  : XSDB server has started successfully.
+19:22:42 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+19:22:44 INFO  : XSDB server has started successfully.
+19:37:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:37:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744534A" && level==0} -index 0' command is executed.
+19:37:10 ERROR : couldn't open "C:/Users/Anthony/Documents/ece574_project2/workspace/hw_platform_0/download.bit": no such file or directory
+20:14:40 INFO  : Project 'hw_platform_1' created. You can now create BSPs and application projects targeting this hardware platform.
+20:32:23 INFO  : Project hw_platform_1's source hardware specification located at C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:32:41 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml into \hw_platform_1\system.xml.
+20:32:42 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0.bmm into \hw_platform_1\microblaze_mcs_0.bmm.
+20:32:42 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:32:44 INFO  : 
+20:32:45 INFO  : 
+20:32:47 INFO  : Updating hardware inferred compiler options for hello_world.
+20:32:47 INFO  : Clearing existing target manager status.
+20:45:57 INFO  : Project 'hw_platform_1' created. You can now create BSPs and application projects targeting this hardware platform.
+22:59:24 INFO  : Project hw_platform_1's source hardware specification located at C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+22:59:50 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml into \hw_platform_1\system.xml.
+22:59:50 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0.bmm into \hw_platform_1\microblaze_mcs_0.bmm.
+22:59:50 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:59:52 INFO  : 
+22:59:54 INFO  : 
+22:59:55 INFO  : Updating hardware inferred compiler options for hello_world.
+22:59:55 INFO  : Clearing existing target manager status.
+23:01:10 INFO  : Project hw_platform_1's source hardware specification located at C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:01:24 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml into \hw_platform_1\system.xml.
+23:01:25 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0.bmm into \hw_platform_1\microblaze_mcs_0.bmm.
+23:01:25 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:01:27 INFO  : 
+23:01:28 INFO  : 
+23:01:30 INFO  : Updating hardware inferred compiler options for hello_world.
+23:01:30 INFO  : Clearing existing target manager status.
+23:05:51 INFO  : Project hw_platform_1's source hardware specification located at C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:05:58 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml into \hw_platform_1\system.xml.
+23:05:58 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0.bmm into \hw_platform_1\microblaze_mcs_0.bmm.
+23:05:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:06:00 INFO  : 
+23:06:01 INFO  : 
+23:06:03 INFO  : Updating hardware inferred compiler options for hello_world.
+23:06:03 INFO  : Clearing existing target manager status.
+23:09:19 INFO  : Project 'hw_platform_1' created. You can now create BSPs and application projects targeting this hardware platform.
+23:15:56 INFO  : Project hw_platform_1's source hardware specification located at C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:16:01 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0_sdk.xml into \hw_platform_1\system.xml.
+23:16:02 INFO  : Copied contents of C:\Users\Anthony\Documents\ece574_project2\ip_repo\microblaze_mcs_0\microblaze_mcs_0.bmm into \hw_platform_1\microblaze_mcs_0.bmm.
+23:16:02 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:16:04 INFO  : 
+23:16:05 INFO  : 
+23:16:07 INFO  : Updating hardware inferred compiler options for hello_world.
+23:16:07 INFO  : Clearing existing target manager status.
+14:08:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:04:55 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+19:04:56 INFO  : XSDB server has started successfully.

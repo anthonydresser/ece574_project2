@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: Anthony Dresser
+// Engineer: Anthony Dresser Mailbox # 87
 // 
-// Create Date:    22:57:55 02/02/2015 
+// Create Date: 10/19/2015 04:41:31 PM
 // Design Name: 
 // Module Name:    dacinterface 
 // Project Name: 
 // Target Devices: 
-// Tool versions: 
+// Tool Versions: 
 // Description: The logic for interfacing with the DAC, includes a clk which is
 // powering both the shift and the counters, which provide different frequencies.
 // Reset resets all the counters. Load is the value that the Shift register is 
@@ -26,7 +26,7 @@ module dac_interface(
 	input clk,
 	input reset,
 	input [15:0] load,
-	output dout,
+	output reg dout,
 	output reg sync
     );
     
@@ -34,10 +34,10 @@ module dac_interface(
 
 	reg [15:0]shift;
 	reg [4:0]cnt;
-	reg current_state, next_state;
+	reg current_state, next_state, shiftStart;
 	
 	// state memory logic //
-	always @(posedge clk, posedge reset)
+	always @(negedge clk, posedge reset)
         if(reset)
            current_state <= s0;
         else
@@ -54,22 +54,28 @@ module dac_interface(
         endcase
         
     // state output //
-    always @(posedge clk)
+    always @(current_state, shift[15])
         case(current_state)
             s0: begin
-                    sync <= 1;
-                    shift <= load;
+                    sync = 1;
+                    shiftStart = 0;
+                    dout = 0;
                 end
             s1: begin
-                    sync <= 0;
-                    shift <= {shift[14:0], 1'b0};
+                    sync = 0;
+                    shiftStart = 1;
+                    dout = shift[15];
                 end
         endcase
     
-    assign dout = shift[15];
+    always @(negedge clk)
+        if(shiftStart == 1)
+            shift <= {shift[14:0], 1'b0};
+        else
+            shift <= load;
     
     // counter
-	always @ (posedge clk)
+	always @ (negedge clk)
 	   if(sync == 0)
 	       cnt <= cnt + 1;
        else

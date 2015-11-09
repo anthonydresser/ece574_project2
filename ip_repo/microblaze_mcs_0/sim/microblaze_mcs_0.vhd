@@ -62,9 +62,14 @@ ENTITY microblaze_mcs_0 IS
     Reset : IN STD_LOGIC;
     UART_Rx : IN STD_LOGIC;
     UART_Tx : OUT STD_LOGIC;
+    UART_Interrupt : OUT STD_LOGIC;
+    FIT1_Interrupt : OUT STD_LOGIC;
+    FIT1_Toggle : OUT STD_LOGIC;
     GPO1 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     GPI1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    GPI1_Interrupt : OUT STD_LOGIC
+    GPI1_Interrupt : OUT STD_LOGIC;
+    INTC_Interrupt : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    INTC_IRQ : OUT STD_LOGIC
   );
 END microblaze_mcs_0;
 
@@ -228,8 +233,11 @@ ARCHITECTURE microblaze_mcs_0_arch OF microblaze_mcs_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF Reset: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.Rst RST";
   ATTRIBUTE X_INTERFACE_INFO OF UART_Rx: SIGNAL IS "xilinx.com:interface:uart:1.0 UART RxD";
   ATTRIBUTE X_INTERFACE_INFO OF UART_Tx: SIGNAL IS "xilinx.com:interface:uart:1.0 UART TxD";
+  ATTRIBUTE X_INTERFACE_INFO OF UART_Interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 INTERRUPT.UART_Interrupt INTERRUPT";
+  ATTRIBUTE X_INTERFACE_INFO OF FIT1_Interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 INTERRUPT.FIT1_Interrupt INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF GPO1: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO1 TRI_O";
   ATTRIBUTE X_INTERFACE_INFO OF GPI1: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO1 TRI_I";
+  ATTRIBUTE X_INTERFACE_INFO OF INTC_Interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 INTC_Interrupt INTERRUPT";
 BEGIN
   U0 : microblaze_mcs
     GENERIC MAP (
@@ -238,7 +246,7 @@ BEGIN
       C_AVOID_PRIMITIVES => 0,
       C_PATH => "mcs_0/U0",
       C_FREQ => 100000000,
-      C_MEMSIZE => 32768,
+      C_MEMSIZE => 131072,
       C_DEBUG_ENABLED => 0,
       C_JTAG_CHAIN => 2,
       C_TRACE => 0,
@@ -249,13 +257,13 @@ BEGIN
       C_UART_DATA_BITS => 8,
       C_UART_USE_PARITY => 0,
       C_UART_ODD_PARITY => 0,
-      C_UART_RX_INTERRUPT => 0,
+      C_UART_RX_INTERRUPT => 1,
       C_UART_TX_INTERRUPT => 0,
       C_UART_ERROR_INTERRUPT => 0,
       C_UART_PROG_BAUDRATE => 0,
-      C_USE_FIT1 => 0,
-      C_FIT1_No_CLOCKS => 6216,
-      C_FIT1_INTERRUPT => 0,
+      C_USE_FIT1 => 1,
+      C_FIT1_No_CLOCKS => 100000000,
+      C_FIT1_INTERRUPT => 1,
       C_USE_FIT2 => 0,
       C_FIT2_No_CLOCKS => 6216,
       C_FIT2_INTERRUPT => 0,
@@ -309,10 +317,10 @@ BEGIN
       C_USE_GPI4 => 0,
       C_GPI4_SIZE => 32,
       C_GPI4_INTERRUPT => 0,
-      C_INTC_USE_EXT_INTR => 0,
+      C_INTC_USE_EXT_INTR => 1,
       C_INTC_INTR_SIZE => 1,
-      C_INTC_LEVEL_EDGE => X"0000",
-      C_INTC_POSITIVE => X"FFFF",
+      C_INTC_LEVEL_EDGE => X"0001",
+      C_INTC_POSITIVE => X"0001",
       C_INTC_ASYNC_INTR => X"FFFF",
       C_INTC_NUM_SYNC_FF => 2
     )
@@ -323,6 +331,9 @@ BEGIN
       IO_Ready => '0',
       UART_Rx => UART_Rx,
       UART_Tx => UART_Tx,
+      UART_Interrupt => UART_Interrupt,
+      FIT1_Interrupt => FIT1_Interrupt,
+      FIT1_Toggle => FIT1_Toggle,
       PIT1_Enable => '0',
       PIT2_Enable => '0',
       PIT3_Enable => '0',
@@ -333,6 +344,7 @@ BEGIN
       GPI2 => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
       GPI3 => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
       GPI4 => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
-      INTC_Interrupt => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1))
+      INTC_Interrupt => INTC_Interrupt,
+      INTC_IRQ => INTC_IRQ
     );
 END microblaze_mcs_0_arch;

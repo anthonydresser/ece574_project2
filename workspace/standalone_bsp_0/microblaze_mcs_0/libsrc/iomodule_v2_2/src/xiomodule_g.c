@@ -41,6 +41,7 @@
 #include "xiomodule.h"
 
 
+extern void XNullHandler (void *);
 
 /*
 * The configuration table for devices
@@ -95,6 +96,10 @@ XIOModule_Config XIOModule_ConfigTable[] =
 			XPAR_IOMODULE_0_GPO4_INIT,
 		},
 		{
+			{
+				XNullHandler,
+				(void *) XNULL
+			}
 		}
 
 	}

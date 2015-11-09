@@ -50,43 +50,65 @@
 #include "xparameters.h" // add
 #include "xiomodule.h" // add
 
-const int sineArray[] = {128, 76, 33, 6, 1, 17, 53, 101, 154, 202, 238, 254, 249, 222, 179, 128};
-const int triArray[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+const u8 sineArray[16] = {64, 88, 109, 123, 127, 123, 109, 88, 64, 40, 19, 5, 0, 5, 19, 40};
+const u8 triArray[16] = {16, 32, 48, 64, 80, 96, 112, 127, 112, 96, 80, 64, 48, 32, 16, 0};
+XIOModule gpi, gpo;
+u8 i = 0;
+u8 arrayFlag = 0;
+
+void syncHandler(){
+	if(arrayFlag == 0){
+		XIOModule_DiscreteWrite(&gpo, 1, sineArray[i]);
+		i = (i + 1) % 16;
+	} else {
+		XIOModule_DiscreteWrite(&gpo, 1, triArray[i]);
+		i = (i + 1) % 16;
+	}
+}
+
+void rxHandler(){
+	u8 rx_buf;
+	XIOModule_Recv(&gpo, &rx_buf, 1);
+	if(rx_buf == 's'){
+		xil_printf("Sine Wave @ 10KHz\n\r");
+		arrayFlag = 0;
+	} else if(rx_buf == 't'){
+		xil_printf("Triangle Wave @ 10KHz\n\r");
+		arrayFlag = 1;
+	}
+}
+
+void timerTick(){
+	xil_printf("Temperature %d.%d\n\r", (short) ((XIOModule_DiscreteRead(&gpi, 1)/128.0)*1.8 + 32.0)); // read switches (channel 1)
+}
 
 int main()
 {
-	 int counter = 0, i = 0;
 	 init_platform();
-	 int temp = 0;
-	 int temptemp = 0;
-	 u32 data;
-	 XIOModule gpi;
-	 XIOModule gpo;
-	 xil_printf("Reading switches and writing to LED port\n\r");
-	 data = XIOModule_Initialize(&gpi, XPAR_IOMODULE_0_DEVICE_ID);
-	 data = XIOModule_Start(&gpi);
-	 data = XIOModule_Initialize(&gpo, XPAR_IOMODULE_0_DEVICE_ID);
-	 data = XIOModule_Start(&gpo);
-	 while (1)
-	 {
-		 if(counter == 9){
-			 counter = 0;
-			 XIOModule_DiscreteWrite(&gpo, 1, triArray[i]);
-			 if(i > 15){
-				 i = 0;
-			 } else {
-				 i++;
-			 }
-		 } else {
-			 counter++;
-		 }
-		 temptemp = XIOModule_DiscreteRead(&gpi, 1); // read switches (channel 1)
-		 if(temptemp != temp){
-			 temp = temptemp;
-			 xil_printf("temperature is %d\n", temp);
-		 }
 
-	 }
+	 XIOModule_Initialize(&gpi, XPAR_IOMODULE_0_DEVICE_ID);
+	 XIOModule_Start(&gpi);
+	 XIOModule_Initialize(&gpo, XPAR_IOMODULE_0_DEVICE_ID);
+	 XIOModule_Start(&gpo);
+
+	 microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID);
+
+	 XIOModule_Connect(&gpo, XIN_IOMODULE_FIT_1_INTERRUPT_INTR, timerTick,
+	                    NULL); // register timerTick() as our interrupt handler
+	 XIOModule_Enable(&gpo, XIN_IOMODULE_FIT_1_INTERRUPT_INTR); // enable the interrupt
+
+	 XIOModule_Connect(&gpo, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, rxHandler,
+			  	  	  	NULL);
+	 XIOModule_Enable(&gpo, XIN_IOMODULE_UART_RX_INTERRUPT_INTR); // enable the interrupt
+
+	 XIOModule_Connect(&gpo, XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR, syncHandler,
+	  			  	  	  	NULL);
+	 XIOModule_Enable(&gpo, XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR); // enable the interrupt
+
+	 microblaze_enable_interrupts();
+	 xil_printf("Anthony Dresser, November 6, 2015\n\r");
+	 while (1)
+	 {}
 
 	 cleanup_platform();
 	 return 0;

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Anthony Dresser Mailbox # 87
 // 
 // Create Date: 10/19/2015 04:41:31 PM
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: Top level module for 
 // 
 // Dependencies: 
 // 
@@ -29,27 +29,36 @@ module top_level(
     output  tx,
     output locked,
     output sclk,
-    output sync,
-    output dout,
+    output sync_out,
+    output dout
 //    input [7:0] sw,
-    output [7:0]    leds
+//    output [7:0]    leds,
+//    output [7:0] an,
+//    output [6:0] seg
     );
     
     wire clk_100M, clk_10M;
     wire [7:0] gpo;
     wire [15:0] temp_data;
+    wire sync;
     
+    assign sync_out = sync;
     assign sclk = clk_10M;
-    assign leds = gpo;
+//    assign leds = temp_data[7:0];
     
     microblaze_mcs_0 mcs_0 (
-      .Clk(clk_100M), // input wire Clk
-      .Reset(reset), // input wire Reset
-      .UART_Rx(rx), // input wire UART_Rx
-      .UART_Tx(tx), // output wire UART_Tx
-      .GPO1(gpo), // output wire [7 : 0] GPO1
-      .GPI1(temp_data), // input wire [15 : 0] GPI1
-      .GPI1_Interrupt()  // output wire GPI1_Interrupt
+      .Clk(clk_100M),                        // input wire Clk
+      .Reset(reset),                    // input wire Reset
+      .UART_Rx(rx),                // input wire UART_Rx
+      .UART_Tx(tx),                // output wire UART_Tx
+      .UART_Interrupt(),  // output wire UART_Interrupt
+      .FIT1_Interrupt(),  // output wire FIT1_Interrupt
+      .FIT1_Toggle(),        // output wire FIT1_Toggle
+      .GPO1(gpo),                      // output wire [7 : 0] GPO1
+      .GPI1(temp_data),                      // input wire [15 : 0] GPI1
+      .GPI1_Interrupt(),  // output wire GPI1_Interrupt
+      .INTC_Interrupt(sync),  // input wire [0 : 0] INTC_Interrupt
+      .INTC_IRQ()              // output wire INTC_IRQ
     );
     
       clk_wiz_0 mmcm
@@ -78,5 +87,13 @@ module top_level(
         .reset(reset),
         .dout(temp_data),
         .clk(clk_10M));
+        
+//    seven_seg display
+//    (
+//        .clk(clk_10M),
+//        .data({16'b0, temp_data}),
+//        .rs(reset),
+//        .an(an),
+//        .seg(seg));
     
 endmodule
